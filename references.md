@@ -21,7 +21,7 @@ Cf.: “All the systems suffer from the shift to a different genre or to a diffe
   * [UDPipe at EvaLatin 2020: Contextualized Embeddings and Treebank Embeddings](https://aclanthology.org/2020.lt4hala-1.20.pdf) (Straka and Strakova, 2020).
   * [JHUBC’s Submission to LT4HALA EvaLatin 2020](https://aclanthology.org/2020.lt4hala-1.18.pdf) (Wu and Nicolai, 2020).
   * [A Gradient Boosting-Seq2Seq System for Latin POS Tagging and Lemmatization](https://aclanthology.org/2020.lt4hala-1.19.pdf) (Celano, 2020).
-  * [Voting for POS Tagging of Latin Texts: Using the Flair of FLAIR to Better Ensemble Classifiers by Example of Latin](https://aclanthology.org/2020.lt4hala-1.21.pdf) (Stoeckel et al., 2019).
+  * [Voting for POS Tagging of Latin Texts: Using the Flair of FLAIR to Better Ensemble Classifiers by Example of Latin](https://aclanthology.org/2020.lt4hala-1.21.pdf) (Stoeckel et al., 2020).
   * [Data-driven Choices in Neural Part-of-Speech Tagging for Latin](https://aclanthology.org/2020.lt4hala-1.17.pdf) (Bacon, 2020).
 
 * [The Annotation of Liber Abbaci, a Domain-Specific Latin Resource](http://ceur-ws.org/Vol-3033/paper24.pdf) (Grotto et al., 2021).  
