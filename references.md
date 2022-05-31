@@ -2,7 +2,7 @@
 
 ### About parsing Latin:
 * **CoNLL Shared Task 2018** on Multilingual Parsing from Raw Text to Universal Dependencies. Results here: https://universaldependencies.org/conll18/results-las.html.
-* **CoNLL Shared Task 2018** on Multilingual Parsing from Raw Text to Universal Dependencies.
+* **CoNLL Shared Task 2017** on Multilingual Parsing from Raw Text to Universal Dependencies.
 
 * [More Data and New Tools. Advances in Parsing the Index Thomisticus Treebank](http://ceur-ws.org/Vol-2989/long_paper20.pdf) (Gamba et al., 2021).
 * [Differentia compositionem facit. A Slower-paced and Reliable Parser for Latin](https://aclanthology.org/L16-1108.pdf) (Ponti and Passarotti, 2016).  
