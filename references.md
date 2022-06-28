@@ -46,3 +46,4 @@ Other about Latin variability:
 * [A Treebank-based Approach to the Supprema Constructio in Dante’s Latin Work](http://www.lrec-conf.org/proceedings/lrec2022/workshops/LT4HALA/pdf/2022.lt4hala2022-1.8.pdf) (Cecchini and Pedonese, 2022).
 * [Parser Training with Heterogeneous Treebanks](https://aclanthology.org/P18-2098.pdf) (Stymne et al, 2018).  
 See also [Parsing with Pretrained Language Models, Multiple Datasets, and Dataset Embeddings](https://aclanthology.org/2021.tlt-1.9.pdf) (van der Goot and de Lhoneux, 2021).
+* [Treebank Embedding Vectors for Out-of-Domain Dependency Parsing](https://aclanthology.org/2020.acl-main.778.pdf) (Wagner et al., 2020).
