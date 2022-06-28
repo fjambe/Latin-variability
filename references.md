@@ -12,9 +12,13 @@ Cf. “Although both the treebanks adopt the same annotation guidelines, it seem
 *	[Improvements in Parsing the Index Thomisticus Treebank. Revision, Combination and a Feature Model for Medieval Latin](http://www.lrec-conf.org/proceedings/lrec2010/pdf/178_Paper.pdf) (Passarotti and Dell’Orletta, 2010).
 
 * [Investigation of Transfer Languages for Parsing Latin: Italic Branch vs. Hellenic Branch](https://aclanthology.org/2021.nodalida-main.32.pdf) (Karamolegkou and Stymne, 2021).
+* [Accurate Dependency Parsing and Tagging of Latin](http://www.lrec-conf.org/proceedings/lrec2022/workshops/LT4HALA/pdf/2022.lt4hala2022-1.3.pdf) ( Nehrdich and Hellwig, 2022).
+* [Linguistic Annotation of Neo-Latin Mathematical Texts: a Pilot-Study to Improve the Automatic Parsing of the Archimedes Latinus](http://www.lrec-conf.org/proceedings/lrec2022/workshops/LT4HALA/pdf/2022.lt4hala2022-1.18.pdf) (Fantli and de Lhoneux, 2022).
 
 ### About Latin variability:
-* **EvaLatin 2022**: lemmatisation, POS tagging and morphological features.
+* **EvaLatin 2022**: [Overview of the EvaLatin 2022 Evaluation Campaign](http://www.lrec-conf.org/proceedings/lrec2022/workshops/LT4HALA/pdf/2022.lt4hala2022-1.29.pdf) (Spurgnoli et al., 2022).
+  * [An ELECTRA Model for Latin Token Tagging Tasks](http://www.lrec-conf.org/proceedings/lrec2022/workshops/LT4HALA/pdf/2022.lt4hala2022-1.30.pdf) (Mercelis and Keersmaekers, 2022).
+  * [Transformer-based Part-of-Speech Tagging and Lemmatization for Latin](http://www.lrec-conf.org/proceedings/lrec2022/workshops/LT4HALA/pdf/2022.lt4hala2022-1.31.pdf) (Wrobel and Nowak, 2022).
 * **EvaLatin 2020**: [Overview of the EvaLatin 2020 Evaluation Campaign](http://aclanthology.lst.uni-saarland.de/2020.lt4hala-1.16.pdf) (Sprugnoli et al. 2020).  
 Lemmatisation and POS tagging. Cross-genre and Cross-time subtasks to evaluate the portability of NLP tools for Latin across different genres and time periods, by analyzing the impact of genre-specific and diachronic features.  
 Cf.: “All the systems suffer from the shift to a different genre or to a different time period with a drop in the performances which, in some cases, exceeds 10 points. Taking a more in-depth look at the results, we can notice that, in general, the participating systems perform better on the Medieval text by Thomas Aquinas than on the Classical poems by Horace in the Lemmatization task, whereas the opposite is true for the PoS tagging task.”   
@@ -32,6 +36,13 @@ Focus on historical languages, Medieval Latin included.
 * [Practitioner’s view: A comparison and a survey of lemmatization and morphological tagging in German and Latin](https://www.researchgate.net/publication/334382605_Practitioner's_view_A_comparison_and_a_survey_of_lemmatization_and_morphological_tagging_in_German_and_Latin) (Gleim et al., 2019).  
 State of the art in 2019 about lemmatisation and tagging. Lower results are reported in case of out-of-domain data.
 
+Other about Latin variability:
+* [A Companion to the Latin Language](https://www.wiley.com/en-gb/A+Companion+to+the+Latin+Language-p-9781405186056) - Part III, Latin Through Time (ed. by James Clackson).
+* [Early and Late Latin. Continuity or Change?](https://www.cambridge.org/core/books/early-and-late-latin/9D876F7C79B4BF3FADC377B538D70696) (ed. by J.N. Adams and N. Vincent).
 
 ### Other:
-* [Automatic discovery of Latin syntactic changes](https://aclanthology.org/W16-2120) (Elsner and Lane, 2016)
+* [Latin BERT: A Contextual Language Model for Classical Philology](https://arxiv.org/pdf/2009.10053.pdf) (Bamman and Burns, 2020).
+* [Automatic discovery of Latin syntactic changes](https://aclanthology.org/W16-2120) (Elsner and Lane, 2016).
+* [A Treebank-based Approach to the Supprema Constructio in Dante’s Latin Work](http://www.lrec-conf.org/proceedings/lrec2022/workshops/LT4HALA/pdf/2022.lt4hala2022-1.8.pdf) (Cecchini and Pedonese, 2022).
+* [Parser Training with Heterogeneous Treebanks](https://aclanthology.org/P18-2098.pdf) (Stymne et al, 2018).  
+See also [Parsing with Pretrained Language Models, Multiple Datasets, and Dataset Embeddings](https://aclanthology.org/2021.tlt-1.9.pdf) (van der Goot and de Lhoneux, 2021).
