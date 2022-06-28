@@ -62,4 +62,6 @@ No new model is trained for Perseus as the treebank did not change since v2.2 (a
 |PROIEL v2.10|39.10%|50.86%|43.16%|53.08%|**73.51%**|**77.45%**|39.43%|48.62%|
 |UDante v2.10|50.78%|58.51%|36.95%|45.78%|26.72%|40.41%|**50.81%**|**57.32%**|
 
-For ITTB and PROIEL optimized parameters were made available (see [UDPipe Models](https://ufal.mff.cuni.cz/udpipe/1/models#universal_dependencies_25_models)). As for LLCT and UDante, accuracy scored reported above are obtained with the following settings: ... 
+For ITTB and PROIEL optimized parameters were made available (see [UDPipe Models](https://ufal.mff.cuni.cz/udpipe/1/models#universal_dependencies_25_models)). As for LLCT and UDante, accuracy scored reported above are obtained with the following settings:  
+LLCT: `learning_rate=0.01, transition_system=swap, transition_oracle=static_lazy, structured_interval=8`.  
+UDante: `learning_rate=0.01, transition_system=projective, transition_oracle=dynamic, structured_interval=8`.
