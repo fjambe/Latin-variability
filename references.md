@@ -12,8 +12,8 @@ Cf. “Although both the treebanks adopt the same annotation guidelines, it seem
 *	[Improvements in Parsing the Index Thomisticus Treebank. Revision, Combination and a Feature Model for Medieval Latin](http://www.lrec-conf.org/proceedings/lrec2010/pdf/178_Paper.pdf) (Passarotti and Dell’Orletta, 2010).
 
 * [Investigation of Transfer Languages for Parsing Latin: Italic Branch vs. Hellenic Branch](https://aclanthology.org/2021.nodalida-main.32.pdf) (Karamolegkou and Stymne, 2021).
-* [Accurate Dependency Parsing and Tagging of Latin](http://www.lrec-conf.org/proceedings/lrec2022/workshops/LT4HALA/pdf/2022.lt4hala2022-1.3.pdf) ( Nehrdich and Hellwig, 2022).
-* [Linguistic Annotation of Neo-Latin Mathematical Texts: a Pilot-Study to Improve the Automatic Parsing of the Archimedes Latinus](http://www.lrec-conf.org/proceedings/lrec2022/workshops/LT4HALA/pdf/2022.lt4hala2022-1.18.pdf) (Fantli and de Lhoneux, 2022).
+* [Accurate Dependency Parsing and Tagging of Latin](http://www.lrec-conf.org/proceedings/lrec2022/workshops/LT4HALA/pdf/2022.lt4hala2022-1.3.pdf) (Nehrdich and Hellwig, 2022).
+* [Linguistic Annotation of Neo-Latin Mathematical Texts: a Pilot-Study to Improve the Automatic Parsing of the Archimedes Latinus](http://www.lrec-conf.org/proceedings/lrec2022/workshops/LT4HALA/pdf/2022.lt4hala2022-1.18.pdf) (Fantoli and de Lhoneux, 2022).
 
 ### About Latin variability:
 * **EvaLatin 2022**: [Overview of the EvaLatin 2022 Evaluation Campaign](http://www.lrec-conf.org/proceedings/lrec2022/workshops/LT4HALA/pdf/2022.lt4hala2022-1.29.pdf) (Spurgnoli et al., 2022).
