@@ -16,7 +16,7 @@ Cf. “Although both the treebanks adopt the same annotation guidelines, it seem
 * [Linguistic Annotation of Neo-Latin Mathematical Texts: a Pilot-Study to Improve the Automatic Parsing of the Archimedes Latinus](http://www.lrec-conf.org/proceedings/lrec2022/workshops/LT4HALA/pdf/2022.lt4hala2022-1.18.pdf) (Fantoli and de Lhoneux, 2022).
 
 ### About Latin variability:
-* **EvaLatin 2022**: [Overview of the EvaLatin 2022 Evaluation Campaign](http://www.lrec-conf.org/proceedings/lrec2022/workshops/LT4HALA/pdf/2022.lt4hala2022-1.29.pdf) (Spurgnoli et al., 2022).
+* **EvaLatin 2022**: [Overview of the EvaLatin 2022 Evaluation Campaign](http://www.lrec-conf.org/proceedings/lrec2022/workshops/LT4HALA/pdf/2022.lt4hala2022-1.29.pdf) (Sprugnoli et al., 2022).
   * [An ELECTRA Model for Latin Token Tagging Tasks](http://www.lrec-conf.org/proceedings/lrec2022/workshops/LT4HALA/pdf/2022.lt4hala2022-1.30.pdf) (Mercelis and Keersmaekers, 2022).
   * [Transformer-based Part-of-Speech Tagging and Lemmatization for Latin](http://www.lrec-conf.org/proceedings/lrec2022/workshops/LT4HALA/pdf/2022.lt4hala2022-1.31.pdf) (Wrobel and Nowak, 2022).
 * **EvaLatin 2020**: [Overview of the EvaLatin 2020 Evaluation Campaign](http://aclanthology.lst.uni-saarland.de/2020.lt4hala-1.16.pdf) (Sprugnoli et al. 2020).  
