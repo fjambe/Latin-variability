@@ -25,10 +25,9 @@
 |UDante v2.10|55.07%|67.73%|56.69%|68.52%|45.81%|61.03%|39.24%|53.52%|
 
 ## New models
-
-No new model is trained for Perseus as the treebank did not change since v2.2 (available UDPipe models are trained on UD v2.5).
  
 * Default embeddings and parameters (`--accuracy` option)
+No new model is trained for Perseus as the treebank did not change since v2.2 (available UDPipe models are trained on UD v2.5).
 
 ||`ITTB-v210.udpipe`||`LLCT-v210.udpipe`||`PROIEL-v210.udpipe`||`UDante-v210.udpipe`||
 | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -63,5 +62,5 @@ No new model is trained for Perseus as the treebank did not change since v2.2 (a
 |UDante v2.10|50.78%|58.51%|36.95%|45.78%|26.72%|40.41%|**50.81%**|**57.32%**|
 
 For ITTB and PROIEL optimized parameters were made available (see [UDPipe Models](https://ufal.mff.cuni.cz/udpipe/1/models#universal_dependencies_25_models)). As for LLCT and UDante, accuracy scored reported above are obtained with the following settings:  
-LLCT: `learning_rate=0.01, transition_system=swap, transition_oracle=static_lazy, structured_interval=8`.  
+LLCT: `learning_rate=0.02, transition_system=swap, transition_oracle=static_lazy, structured_interval=8`.  
 UDante: `learning_rate=0.01, transition_system=projective, transition_oracle=dynamic, structured_interval=8`.
