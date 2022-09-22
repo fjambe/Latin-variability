@@ -27,6 +27,7 @@
 ## New models
  
 * Default embeddings and parameters (`--accuracy` option)
+
 No new model is trained for Perseus as the treebank did not change since v2.2 (available UDPipe models are trained on UD v2.5).
 
 ||`ITTB-v210.udpipe`||`LLCT-v210.udpipe`||`PROIEL-v210.udpipe`||`UDante-v210.udpipe`||
@@ -40,27 +41,27 @@ No new model is trained for Perseus as the treebank did not change since v2.2 (a
 
 * FastText-Facebook embeddings and default parameters (`--accuracy` option)
 
-||`ITTB-emb-v210.udpipe`||`LLCT-emb-v210.udpipe`||`PROIEL-emb-v210.udpipe`||`UDante-emb-v210.udpipe`||
-| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-||LAS|UAS|LAS|UAS|LAS|UAS|LAS|UAS|
-|ITTB v2.10|**83.11%**|**85.00%**|46.51%|55.46%|28.44%|41.93%|58.83%|65.65%|
-|LLCT v2.10|44.04%|50.48%|**91.05%**|**91.93%**|37.53%|48.68%|42.10%|49.23%|
-|Perseus v2.10|33.23%|46.96%|41.04%|50.92%|38.47%|53.91%|32.97%|45.98%|
-|PROIEL v2.10|38.76%|51.32%|44.21%|54.54%|**72.73%**|**76.71%**|37.91%|48.26%|
-|UDante v2.10|50.55%|58.73%|36.96%|47.15%|25.52%|38.76%|**52.69%**|**59.88%**|
+||`ITTB-emb-v210.udpipe`||`LLCT-emb-v210.udpipe`||`Perseus-emb-v210.udpipe`||`PROIEL-emb-v210.udpipe`||`UDante-emb-v210.udpipe`||
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+||LAS|UAS|LAS|UAS|LAS|UAS|LAS|UAS|LAS|UAS|
+|ITTB v2.10|**83.11%**|**85.00%**|46.51%|55.46%|26.30%|36.40%|28.44%|41.93%|58.83%|65.65%|
+|LLCT v2.10|44.04%|50.48%|**91.05%**|**91.93%**|25.82%|34.84%|37.53%|48.68%|42.10%|49.23%|
+|Perseus v2.10|33.23%|46.96%|41.04%|50.92%|**59.17%**|**65.08%**|38.47%|53.91%|32.97%|45.98%|
+|PROIEL v2.10|38.76%|51.32%|44.21%|54.54%|38.12%|48.97%|**72.73%**|**76.71%**|37.91%|48.26%|
+|UDante v2.10|50.55%|58.73%|36.96%|47.15%|20.42%|30.91%|25.52%|38.76%|**52.69%**|**59.88%**|
 
 * FastText-Facebook embeddings and optimized parameters (`--accuracy` option)
 
 
-||`ITTB-param--emb-v210.udpipe`||`LLCT-param--emb-v210.udpipe`||`PROIEL-param--emb-v210.udpipe`||`UDante-param--emb-v210.udpipe`||
-| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-||LAS|UAS|LAS|UAS|LAS|UAS|LAS|UAS|
-|ITTB v2.10|**84.51%**|**86.23%**|44.25%|52.16%|30.54%|45.43%|59.93%|65.77%|
-|LLCT v2.10|44.22%|50.16%|**93.02%**|**93.85%**|40.37%|52.10%|45.57%|53.42%|
-|Perseus v2.10|33.28%|44.21%|39.85%|48.71%|38.93%|55.16%|35.64%|45.79%|
-|PROIEL v2.10|39.10%|50.86%|43.16%|53.08%|**73.51%**|**77.45%**|39.43%|48.62%|
-|UDante v2.10|50.78%|58.51%|36.95%|45.78%|26.72%|40.41%|**50.81%**|**57.32%**|
+||`ITTB-param--emb-v210.udpipe`||`LLCT-param--emb-v210.udpipe`||`Perseus-param-emb-v210.udpipe`||`PROIEL-param--emb-v210.udpipe`||`UDante-param--emb-v210.udpipe`||
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+||LAS|UAS|LAS|UAS|LAS|UAS|LAS|UAS|LAS|UAS|
+|ITTB v2.10|**84.51%**|**86.23%**|44.25%|52.16%|29.54%|40.56%|30.54%|45.43%|59.93%|65.77%|
+|LLCT v2.10|44.22%|50.16%|**93.02%**|**93.85%**|28.92%|37.44%|40.37%|52.10%|45.57%|53.42%|
+|Perseus v2.10|33.28%|44.21%|39.85%|48.71%|**61.80%**|**67.18%**|38.93%|55.16%|35.64%|45.79%|
+|PROIEL v2.10|39.10%|50.86%|43.16%|53.08%|41.52%|52.36%|**73.51%**|**77.45%**|39.43%|48.62%|
+|UDante v2.10|50.78%|58.51%|36.95%|45.78%|22.44%|32.41%|26.72%|40.41%|**50.81%**|**57.32%**|
 
-For ITTB and PROIEL optimized parameters were made available (see [UDPipe Models](https://ufal.mff.cuni.cz/udpipe/1/models#universal_dependencies_25_models)). As for LLCT and UDante, accuracy scored reported above are obtained with the following settings:  
+For ITTB, Perseus and PROIEL optimized parameters were made available (see [UDPipe Models](https://ufal.mff.cuni.cz/udpipe/1/models#universal_dependencies_25_models)). As for LLCT and UDante, accuracy scored reported above are obtained with the following settings:  
 LLCT: `learning_rate=0.02, transition_system=swap, transition_oracle=static_lazy, structured_interval=8`.  
 UDante: `learning_rate=0.01, transition_system=projective, transition_oracle=dynamic, structured_interval=8`.
