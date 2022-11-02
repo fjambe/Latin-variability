@@ -12,9 +12,9 @@ import udapi.block.ud.convert1to2
 import udapi.block.ud.fixpunct
 
 split = sys.argv[1] # train/dev/test
-UD_folder = 'path/to/folder/containing/all/UD/Latin/treebanks'
+UD_folder = '/home/federica/Desktop/latin/UD_devbranch' # path to the folder containing all UD Latin treebanks
 filename = f'{UD_folder}/UD_Latin-LLCT-dev/la_llct-ud-{split}.conllu'
-output_folder = '/path/to/folder/where/output/is/stored'
+output_folder = '/home/federica/Desktop/latin/harmonization/harmonized-treebanks'
 doc = udapi.Document(filename)
 
 
@@ -25,8 +25,9 @@ determiners = ['aliqualis', 'aliqui', 'alius', 'alter', 'alteruter', 'ambo', 'ce
 for node in doc.nodes:
 
 	# MWT
-	company = udapi.block.ud.la.addmwt.AddMwt()
-	company.process_node(node)
+	if node.form != 'tecum':
+		company = udapi.block.ud.la.addmwt.AddMwt()
+		company.process_node(node)
 	
 	
 	# discourse particles	
@@ -46,7 +47,7 @@ for node in doc.nodes:
 	if node.deprel == 'advmod' and node.upos != 'ADV' and node.lemma != 'non':
 		if node.lemma == 'sicut' and node.next_node.form == 'et':
 			et = node.next_node
-			et.parent.deprel = 'advcl:cmpr'
+			et.parent.deprel = 'advcl:cmp'
 			node.upos, node.deprel = 'SCONJ', 'mark'
 			node.parent = et.parent
 			et.parent, et.deprel = node, 'fixed'
@@ -82,7 +83,12 @@ for node in doc.nodes:
 			node.parent = num.parent
 			num.parent = node
 			node.deprel = num.deprel
-			num.deprel = 'flat'		
+			num.deprel = 'flat'	
+			
+	# Degree
+	if node.feats['Degree'] == 'Sup':
+		node.feats['Degree'] = 'Abs'
+			
 		
 	# SCONJ
 	if node.lemma == 'nisi' and node.deprel == 'cc':
@@ -110,7 +116,7 @@ for node in doc.nodes:
 				
 	# COMPLEX CONSTRUCTIONS
 	
-	# ablative absolute
+	# absolute ablative
 	if node.parent.deprel == 'advcl' and node.parent.feats['Case'] == 'Abl' and node.feats['Case'] == 'Abl' and node.deprel.startswith('nsubj'):
 		case = [s for s in node.siblings if s.deprel == 'case']
 		if len(case) == 0:
@@ -180,9 +186,11 @@ for node in doc.nodes:
 
 
 	# comparative clauses
+	if node.deprel == 'advcl:cmpr':
+		node.deprel = 'advcl:cmp'
 	compar = ['quam', 'quasi', 'quemadmodum', 'sicut', 'tamquam', 'uelut']
 	if node.parent.deprel == 'advcl' and node.lemma in compar:
-		node.parent.deprel = 'advcl:cmpr'
+		node.parent.deprel = 'advcl:cmp'
 		node.feats['ConjType'] = 'Cmpr' 
 		if node.upos != 'SCONJ':
 			node.upos = 'SCONJ'
@@ -191,17 +199,17 @@ for node in doc.nodes:
 	# ut
 	if node.lemma == 'ut' and node.parent.deprel == 'advcl':
 		if node.parent.feats['Mood'] == 'Ind' and node.parent.lemma in ['decerno', 'dico', 'lego', 'memoro']: # ut dixi
-			node.parent.deprel = 'advcl:cmpr'
+			node.parent.deprel = 'advcl:cmp'
 			node.feats['ConjType'] = 'Cmpr' 
 		elif node.parent.feats['VerbForm'] == 'Part': # ut dictum est
 			aux = [s for s in node.siblings if s.deprel == 'aux:pass' and s.form in ['est', 'sunt']]
 			if aux:
-				node.parent.deprel = 'advcl:cmpr'
+				node.parent.deprel = 'advcl:cmp'
 				node.feats['ConjType'] = 'Cmpr'
 	# comparative forms + quam
 	if node.lemma == 'quam' and node.parent.deprel == 'advcl' and 'ior' in node.parent.parent.form:
 		node.upos, node.deprel = 'SCONJ', 'mark' # already like this, just managing errors
-		node.parent.deprel = 'advcl:cmpr'
+		node.parent.deprel = 'advcl:cmp'
 		node.feats['ConjType'], node.feats['PronType'] = 'Cmpr', 'Rel' 
 		
 		

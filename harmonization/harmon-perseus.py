@@ -11,33 +11,13 @@ import udapi.block.ud.la.addmwt
 import udapi.block.ud.convert1to2
 import udapi.block.ud.setspaceafterfromtext
 import udapi.block.ud.fixpunct
-import udapi.block.ud.complywithtext
+
 
 split = sys.argv[1] # train/test
-UD_folder = 'path/to/folder/containing/all/UD/Latin/treebanks'
+UD_folder = '/home/federica/Desktop/latin/UDv210-Latin' # path to the folder containing all UD Latin treebanks
 filename = f'{UD_folder}/UD_Latin-Perseus/la_perseus-ud-{split}.conllu'
-output_folder = '/path/to/folder/where/output/is/stored'
-#doc = udapi.Document(filename)
-
-
-# adjusting nec and neque
-fin = open(filename, 'rt')
-fout = open(f'{output_folder}/nec-perseus-{split}.conllu', 'wt')
-for line in fin:
-	if line.startswith('# text = '):
-		if ' c ne ' in line:
-			fout.write(line.replace(' c ne ', ' ne c '))
-		elif ' que ne ' in line:
-			fout.write(line.replace(' que ne ', ' ne que '))
-		else:
-			fout.write(line)
-	else:
-		fout.write(line)
-	
-fin.close()
-fout.close()				
-
-doc = udapi.Document(f'{output_folder}/nec-perseus-{split}.conllu')				
+output_folder = '/home/federica/Desktop/latin/harmonization/harmonized-treebanks'
+doc = udapi.Document(filename)		
 
 
 determiners = ['aliqualis', 'aliqui', 'alius', 'alter', 'alteruter', 'ambo', 'ceterus', 'complura', 'complures', 'cunctus', 'eiusmodi', 'hic', 'huiusmodi', 'idem', 'ille', 'ipse', 'iste', 'meus', 'multus', 'neuter', 'nonnullus', 'noster', 'nullus', 'omnis', 'paucus', 'plerusque', 'qualis', 'quamplures', 'quantus', 'quantuslibet', 'qui', 'quicumque', 'quidam', 'quilibet', 'quispiam', 'quisquam', 'quisque', 'quot', 'reliquus', 'solus', 'suus', 'talis', 'tantus', 'tot', 'totidem', 'totus', 'tuus', 'uester', 'vester', 'voster', 'ullus', 'uniuersus', 'unusquisque', 'uterque']
@@ -50,7 +30,9 @@ for node in doc.nodes:
 	if node.form == 'ne' and node.prev_node.form in ['c', 'que']:
 		conj = node.prev_node
 		conj.shift_after_node(node)
-		conj.parent = node.parent	
+		conj.parent = node.parent
+		node.root.text = None
+		node.root.text = node.root.get_sentence()	
 	
 
 	# X upos
@@ -202,7 +184,7 @@ for node in doc.nodes:
 		elif node.feats['Case'] == 'Loc':
 			node.deprel = 'obl'
 		elif [d for d in node.descendants if d.lemma == 'tamquam']:
-			node.deprel = 'advcl:cmpr'
+			node.deprel = 'advcl:cmp'
 	# quid
 	if node.form.lower() == 'quid' and node.deprel == 'advmod':
 		node.upos, node.lemma, node.feats = 'ADV', node.form, ''
@@ -280,9 +262,12 @@ for node in doc.nodes:
 		
 		
 	# AUXiliaries
-	if node.lemma == 'sum' and node.deprel in ['aux', 'cop']:
+	if node.lemma == 'sum' and node.deprel in ['aux', 'aux:pass', 'cop']:
 		node.upos = 'AUX'
-		
+	
+	# Degree
+	if node.feats['Degree'] == 'Sup':
+		node.feats['Degree'] = 'Abs'	
 
 	# (indirect) objects
 	if node.deprel == 'iobj':
@@ -368,7 +353,7 @@ for node in doc.nodes:
 					break
 	
 	
-	# ablative absolute
+	# absolute ablative
 	if node.parent.deprel == 'advcl' and node.parent.feats['Case'] == 'Abl' and node.feats['Case'] == 'Abl' and node.deprel.startswith('nsubj'):
 		case = [s for s in node.siblings if s.deprel == 'case']
 		if len(case) == 0:
@@ -376,21 +361,23 @@ for node in doc.nodes:
 		
 		
 	# comparative clauses
+	if node.deprel == 'advcl:cmpr':
+		node.deprel = 'advcl:cmp'	
 	if node.lemma == 'magis':
 		node.upos, node.feats = 'ADV', ''
 		node.feats['Degree'] = 'Cmp'
 	if node.parent.deprel == 'advcl' and node.lemma in ['quam', 'quemadmodum', 'sicut', 'tamquam', 'velut'] and node.upos == 'SCONJ':
-		node.parent.deprel = 'advcl:cmpr'
+		node.parent.deprel = 'advcl:cmp'
 		if node.lemma == 'quam':
 			node.feats = 'ConjType=Cmpr|PronType=Rel'
 	# ut
 	if node.lemma == 'ut' and node.parent.deprel == 'advcl':
 		if node.parent.feats['Mood'] == 'Ind' and node.lemma in ['aio', 'consto', 'dico', 'infero', 'possum', 'praeadico', 'puto', 'scio', 'soleo', 'tabesco', 'video']: # ut dixi
-			node.parent.deprel = 'advcl:cmpr'
+			node.parent.deprel = 'advcl:cmp'
 	if node.lemma == 'ut' and node.parent.upos not in ['AUX', 'VERB']:
 		tobe = [s for s in node.siblings if s.deprel == 'cop']
 		if not tobe:
-			node.parent.deprel = 'advcl:cmpr'
+			node.parent.deprel = 'advcl:cmp'
 		# no 'dictum est' comparative clauses et similia, no comparative clauses w/ nominal predicates are found
 	
 	

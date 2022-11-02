@@ -13,9 +13,9 @@ import udapi.block.ud.setspaceafterfromtext
 import udapi.block.ud.fixpunct
 
 split = sys.argv[1] # train/dev/test
-UD_folder = 'path/to/folder/containing/all/UD/Latin/treebanks'
+UD_folder = '/home/federica/Desktop/latin/UD_devbranch' # path to the folder containing all UD Latin treebanks
 filename = f'{UD_folder}/UD_Latin-ITTB-dev/la_ittb-ud-{split}.conllu'
-output_folder = '/path/to/folder/where/output/is/stored'
+output_folder = '/home/federica/Desktop/latin/harmonization/harmonized-treebanks'
 doc = udapi.Document(filename)
 
 
@@ -75,7 +75,7 @@ for node in doc.nodes:
 			
 			
 	#  ADVerbs
-	if node.deprel == 'advmod' and node.upos != 'ADV': # all instances of Byblical references (e.g. 'dicitur enim hebr. 3-1', train-s19672)
+	if node.deprel == 'advmod' and node.upos != 'ADV': # all instances of biblical references (e.g. 'dicitur enim hebr. 3-1', train-s19672)
 		if node.parent.deprel != 'obl':
 			node.deprel = 'obl'
 		else:
@@ -95,12 +95,6 @@ for node in doc.nodes:
 		node.deprel = 'advmod:tmod'
 		node.feats['AdvType'] = 'Tim'
 			
-		
-	# interjections
-	if node.lemma == 'o' and node.deprel == 'advmod:emph': # only interjection found
-		node.upos = 'INTJ'
-		node.deprel = 'vocative'
-			
 				
 	# NUMerals
 	if node.upos == 'NUM' and node.deprel == 'amod':
@@ -113,18 +107,25 @@ for node in doc.nodes:
 	# case
 	if node.deprel == 'case' and node.feats['AdpType'] == 'Prep' and node > node.parent: # prepositions depending on wrong head and following correct head
 		sib = [s for s in node.siblings]
+		non = node.parent
 		if len(sib) == 1:
 			node.parent = sib[0]
+			if non.lemma == 'non': # in this case there is always a mismatch of dependencies
+				sib[0].parent = non.parent
 		elif sib == []: # only 2 occurrences
 			continue
 		elif len(sib) > 1:
 			sib2 = [s for s in sib if s.deprel not in ['cc', 'punct', 'mark', 'advmod', 'conj']]
 			if len(sib2) == 1:
 				node.parent = sib2[0]
+				if non.lemma == 'non':
+					sib[0].parent = non.parent
 			else:
 				noun = [s for s in sib if s.upos == 'NOUN']
 				if len(noun) == 1 or len(noun) > 1:
 					node.parent = noun[0]
+					if non.lemma == 'non':
+						sib[0].parent = non.parent
 				else: # only 1 occurrence
 					continue
 	
@@ -159,7 +160,11 @@ for node in doc.nodes:
 		elif node.parent.feats['Voice'] == 'Act':
 			node.deprel = 'aux'		
 		
+	# Degree
+	if node.feats['Degree'] == 'Sup':
+		node.feats['Degree'] = 'Abs'
 		
+			
 	# expl:pass
 	if node.deprel == 'expl:pass':
 		if node.parent.feats['Voice'] == 'Act' or node.parent.feats['VerbForm'] == 'Ger':
@@ -177,7 +182,7 @@ for node in doc.nodes:
 	if node.lemma == 'qualis' and node.deprel == 'acl':
 		node.deprel = 'acl:relcl'
 	# inversion with elliptical subjects in relative clauses
-	if node.feats['PronType'] == 'Rel' and node.upos == 'PRON' and node.parent.deprel == 'csubj':
+	if node.feats['PronType'] == 'Rel' and node.upos == 'PRON' and node.form == 'quod' and node.parent.deprel == 'csubj':
 		head = node.parent
 		dependents = [d for d in head.siblings]
 		subjects = []
@@ -185,7 +190,7 @@ for node in doc.nodes:
 			if d.deprel.startswith('nsubj'):
 				subjects.append(d)
 		if len(subjects) == 0:
-			if head.parent.feats['Voice'] == 'Act':
+			if head.parent.feats['Voice'] in ['', 'Act']:
 				node.deprel = 'nsubj'
 			if head.parent.feats['Voice'] == 'Pass':
 				if head.parent.lemma[-1] == 'r':
@@ -210,47 +215,49 @@ for node in doc.nodes:
 		
 		
 	# comparative clauses
+	if node.deprel == 'advcl:cmpr':
+		node.deprel = 'advcl:cmp'
 	compar = ['quam', 'quasi', 'quemadmodum', 'sicut', 'tamquam', 'uelut']
-	if node.parent.deprel == 'advcl:cmpr' and node.lemma in compar and node.upos == 'ADV':
+	if node.parent.deprel == 'advcl:cmp' and node.lemma in compar and node.upos == 'ADV':
 		node.upos, node.deprel = 'SCONJ', 'mark'
 		node.feats['ConjType'] = 'Cmpr'
 	if node.parent.deprel == 'advcl' and node.lemma in compar and node.upos == 'SCONJ':
 		sib = [s for s in node.siblings if s.deprel == 'mark' and s.upos == 'SCONJ']
 		if sib:
 			if node < sib[0]:
-				node.parent.deprel = 'advcl:cmpr'
+				node.parent.deprel = 'advcl:cmp'
 				node.deprel = 'mark'
 				node.feats['ConjType'] = 'Cmpr'
 	# ut
 	if node.lemma == 'ut' and node.parent.deprel == 'advcl' and node < node.parent:
 		if node.parent.feats['Mood'] == 'Ind': # ut dicitur
-			node.parent.deprel = 'advcl:cmpr'
+			node.parent.deprel = 'advcl:cmp'
 			node.upos, node.deprel = 'SCONJ', 'mark'
 			node.feats['ConjType'] = 'Cmpr'
 		elif node.parent.feats['VerbForm'] == 'Part': # ut dictum/ostensum est
 			aux = [s for s in node.siblings if s.deprel == 'aux:pass' and s.form in ['est', 'sunt']] # mood is not annotated wrt to sum
 			if aux:
-				node.parent.deprel = 'advcl:cmpr'
+				node.parent.deprel = 'advcl:cmp'
 				node.upos, node.deprel = 'SCONJ', 'mark'
 				node.feats['ConjType'] = 'Cmpr'
 		elif node.parent.upos not in ['AUX', 'VERB']:
 			copula = [s for s in node.siblings if s.deprel == 'cop' and s.form in ['est', 'sunt']] # mood is not annotated wrt to sum
 			tobe = [s for s in node.siblings if s.deprel == 'cop']
 			if copula:
-				node.parent.deprel = 'advcl:cmpr'
+				node.parent.deprel = 'advcl:cmp'
 				node.upos, node.deprel = 'SCONJ', 'mark'
 				node.feats['ConjType'] = 'Cmpr'
 			elif not tobe:
-				node.parent.deprel = 'advcl:cmpr'
+				node.parent.deprel = 'advcl:cmp'
 				node.upos, node.deprel = 'SCONJ', 'mark'
 				node.feats['ConjType'] = 'Cmpr'
 	# quasi
 	if node.lemma == 'quasi' and node.deprel == 'mark' and node.parent.deprel == 'advcl':
-		node.parent.deprel = 'advcl:cmpr'
+		node.parent.deprel = 'advcl:cmp'
 	# magis quam, alius quam, comparative + quam
 	if node.lemma == 'quam' and node.parent.deprel == 'advcl':
 		node.upos, node.deprel = 'SCONJ', 'mark' # already like this, just managing errors
-		node.parent.deprel = 'advcl:cmpr'
+		node.parent.deprel = 'advcl:cmp'
 		node.feats['ConjType'], node.feats['PronType'] = 'Cmpr', 'Rel'
 	if node.lemma == 'quam' and node.parent.deprel == 'conj': # tam...quam
 		kids = [k for k in node.parent.siblings if k.lemma == 'tam']
@@ -258,11 +265,11 @@ for node in doc.nodes:
 			node.deprel, node.upos = 'mark', 'SCONJ'
 			node.feats['ConjType'], node.feats['PronType'] = 'Cmpr', 'Rel'
 			father = node.parent
-			father.deprel = 'advcl:cmpr'
+			father.deprel = 'advcl:cmp'
 			kids[0].deprel = 'advmod:emph'
 	
 	
-	# ablative absolute
+	# absolute ablative
 	if node.parent.deprel == 'advcl' and node.parent.feats['Case'] == 'Abl' and node.feats['Case'] == 'Abl' and node.deprel.startswith('nsubj'):
 		case = [s for s in node.siblings if s.deprel == 'case']
 		if len(case) == 0:

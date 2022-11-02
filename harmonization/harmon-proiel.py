@@ -13,28 +13,30 @@ import udapi.block.ud.setspaceafterfromtext
 import udapi.block.ud.fixpunct
 
 split = sys.argv[1] # train/dev/test
-UD_folder = 'path/to/folder/containing/all/UD/Latin/treebanks'
+UD_folder = '/home/federica/Desktop/latin/UDv210-Latin' # path to the folder containing all UD Latin treebanks
 filename = f'{UD_folder}/UD_Latin-PROIEL/la_proiel-ud-{split}.conllu'
-output_folder = '/path/to/folder/where/output/is/stored'
+output_folder = '/home/federica/Desktop/latin/harmonization/harmonized-treebanks'
 doc = udapi.Document(filename)
 
 
 determiners = ['aliqualis', 'aliqui', 'alius', 'alter', 'alteruter', 'ambo', 'ceterus', 'complura', 'complures', 'cunctus', 'eiusmodi', 'hic', 'huiusmodi', 'idem', 'ille', 'ipse', 'iste', 'meus', 'multus', 'neuter', 'nonnullus', 'noster', 'nullus', 'omnis', 'paucus', 'plerusque', 'qualis', 'quamplures', 'quantus', 'quantuslibet', 'qui', 'quicumque', 'quidam', 'quilibet', 'quispiam', 'quisquam', 'quisque', 'quot', 'quotquot', 'reliquus', 'solus', 'suus', 'talis', 'tantus', 'tot', 'totidem', 'totus', 'tuus', 'uester', 'vester', 'voster', 'ullus', 'uniuersus', 'unusquisque', 'uterque']
 
+nums = ['i', 'ii', 'iii', 'iiii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x', 'xi', 'xii', 'xiii', 'xiv', 'xv', 'xvi', 'xvii', 'xviii'] # numerals occurring in dates
 
 # Iterate over all nodes in the document (in all trees)
 for node in doc.nodes:
 	
 	# MWT
 	company = udapi.block.ud.la.addmwt.AddMwt()
-	company.process_node(node)
+	if node.form.lower() not in ['a.', 'a.d.', 'd.', 'kal.', 'kalend.', 'non.', 'non.iun.', 'decembr.', 'febr.', 'novembr.', 'quint.', 'sext.']: # dates are dealt with specifically, because they show more complexity and inconsistencies
+		company.process_node(node)
 	# postprocessing of abbreviation+dot combinations, that in the previous step were provisionally treated like MWTs
 	# MWT line is removed, so that in the end they have been simply tokenised
 	if node.multiword_token:
 		mwt = node.multiword_token
 		if mwt.form.endswith('.') and len(mwt.form) > 1 and mwt.form != '...':
 			mwt.remove()
-			
+	
 	# setting SpaceAfter=No when relevant
 	space = udapi.block.ud.setspaceafterfromtext.SetSpaceAfterFromText()
 	space.process_tree(node.root)
@@ -78,43 +80,169 @@ for node in doc.nodes:
 				node.deprel = 'obl:arg'
 			else:
 				node.deprel = 'obj'
+	# ADVerbs
+	if node.lemma == 'tamen' and node.deprel == 'discourse':
+		node.deprel = 'advmod'
+	if node.deprel == 'advmod' and node.upos != 'ADV':
+		adp = [k for k in node.children if k.deprel == 'case']
+		if adp:
+			node.deprel = 'obl'
+		elif node.parent.upos == 'NOUN' and node.upos == 'ADJ' and node.feats['Case'] == node.parent.feats['Case'] and node.feats['Number'] == node.parent.feats['Number']:
+			node.deprel = 'amod'
+		elif node.upos == 'ADJ':
+			node.deprel = 'advcl:pred' # mostly accurate, despite some rare exceptions
+		elif node.feats['Case'] == 'Dat':
+			node.deprel = 'obl:arg'
+		elif node.feats['Case'] == 'Abl':
+			node.deprel = 'obl'
+		elif node.lemma == 'ut':
+			node.upos = 'ADV'
+		elif node.lemma in ['donec', 'quia', 'quoniam', 'si']:
+			node.deprel = 'mark'
+		elif node.lemma == 'vel':
+			node.deprel = 'advmod:emph'
+	if node.lemma in ['et', 'vel'] and node.upos == 'ADV' and node.deprel in ['advmod', 'discourse']:
+		node.deprel = 'advmod:emph'
+	# locative and temporal adverbs
+	if node.form in ['alibi', 'foris', 'hic', 'hinc', 'huc', 'ibi', 'ibidem', 'illuc', 'inde', 'procul', 'qua', 'quo', 'ubi', 'ubicumque', 'ubique', 'unde', 'undique'] and node.form == node.lemma and node.deprel == 'advmod':
+		node.deprel = 'advmod:lmod'
+		node.feats['AdvType'] = 'Loc'
+	if node.form in ['ante', 'cotidie', 'hodie', 'iam', 'interim', 'nonnunquam', 'nunc', 'olim', 'post', 'postea', 'pridem', 'prius', 'quando', 'quandoque', 'saepe', 'semper', 'tum', 'tunc'] and node.form == node.lemma and node.deprel == 'advmod':
+		node.deprel = 'advmod:tmod'
+		node.feats['AdvType'] = 'Tim'
+	# negation	
+	if node.lemma in ['haud', 'non'] and node.deprel not in ['conj', 'root']:
+		node.upos, node.deprel = 'PART', 'advmod:neg'		
+		
 
-
-	# kalendae		
-	if node.form.lower().startswith('kal'):
-		node.lemma = 'kalendae'
+	# dates
+	if node.form.lower().startswith('a.d'):
+		d = node.create_child()
+		d.shift_after_node(node)
+		d.form, d.lemma, d.feats = 'd', 'dies', 'Case=Acc|Gender=Masc|Number=Sing'
+		d.upos, d.deprel, d.parent = 'NOUN', 'obl:tmod', node.parent
+		d.misc['DeletedPunct'] = '.' if node.form.startswith('a.d.') else ''
+		kids = [k for k in node.children if k.deprel != 'fixed']
+		for k in kids:
+			k.parent = d
+		ad = re.match( 'a\.d\..+', node.form.lower()) # a.d.numeral
+		if node.form.lower() in ['a.d', 'a.d.']:
+			num = [k for k in node.children if k.deprel == 'fixed' and k > d and k.form.lower() in nums]
+			if num:
+				num[0].upos, num[0].feats['NumForm'] = 'NUM', 'Roman'
+				num[0].lemma = num[0].form
+				num[0].deprel, num[0].parent = 'nummod', d
+		elif ad:
+			num = node.create_child()
+			num.shift_after_node(d)
+			num.form = node.form.split('.')[-1]
+			num.lemma, num.feats['NumForm'] = num.form, 'Roman'
+			num.upos, num.deprel, num.parent = 'NUM', 'nummod', d
+		node.form, node.lemma, node.upos, node.feats = 'a', 'ante', 'ADP', 'AdpType=Prep'
+		node.misc['DeletedPunct'] = '.'
+		if node.deprel != 'root':
+			node.deprel = 'case'
+			node.parent = d
+		node.root.text = None
+		node.root.text = node.root.get_sentence()
+	
+	if node.form == 'd.' and node.prev_node.form.lower() in ['a.', 'a']:
+		ante = node.prev_node
+		node.form, node.lemma, node.feats = 'd', 'dies', 'Case=Acc|Gender=Masc|Number=Sing'
+		node.upos, node.deprel, node.parent = 'NOUN', 'obl:tmod', ante.parent
+		node.misc['DeletedPunct'] = '.'
+		ante.upos, ante.deprel, ante.parent = 'ADP', 'case', node
+		ante.lemma, ante.feats = 'ante', 'AdpType=Prep'
+		ante.form = ante.form[:-1] if ante.form[-1] == '.' else ante.form
+		ante.misc['DeletedPunct'] = '.' if ante.form.lower() == 'a.' else ''
+		kids = [k for k in ante.children if k.deprel != 'fixed']
+		for k in kids:
+			k.parent = node
+		if node.next_node.form.lower() in nums:
+			num = node.next_node
+			num.upos, num.lemma, num.feats['NumForm'], num.deprel, num.parent = 'NUM', num.form, 'Roman', 'nummod', node
+		node.root.text = None
+		node.root.text = node.root.get_sentence()
+	
+	if node.form == 'diem' and node.prev_node.form.lower() == 'ante' and node.upos == 'ADV':
+		ante = node.prev_node
+		node.upos, node.lemma, node.feats = 'NOUN', 'dies', 'Case=Acc|Gender=Masc|Number=Sing'
+		node.deprel, node.parent = 'obl:tmod', ante.parent
+		ante.upos, ante.lemma, ante.feats = 'ADP', 'ante', 'AdpType=Prep'
+		ante.deprel, ante.parent = 'case', node
+		kids = [k for k in ante.children if k.deprel != 'fixed']
+		for k in kids:
+			k.parent = node
+		if node.next_node.form.lower() in nums:
+			node.next_node.upos, node.next_node.deprel, node.next_node.parent = 'NUM', 'nummod', node
+		node.root.text = None
+		node.root.text = node.root.get_sentence()
+			
+	if node.form.lower() in ['decembr.', 'febr.', 'iun', 'novembr.', 'quint.', 'sext.']:
+		node.misc['DeletedPunct'] = '.'
+		node.form = node.form[:-1]
+		node.lemma = 'december' if node.form.lower() == 'decembr' else 'februarius' if node.form.lower() == 'febr' else 'iunius' if node.form.lower() == 'iun' else 'november' if node.form.lower() == 'novembr' else 'quintilis' if node.form.lower() == 'quint' else 'sextilis'
+		node.root.text = None
+		node.root.text = node.root.get_sentence()
+		
+	if node.form.lower().startswith(('idus', 'kal', 'non')) and node.feats['Polarity'] != 'Neg': # no abbreviations of Idus found
 		node.upos = 'NOUN'
 		node.feats = 'Gender=Fem|Number=Plur' # cannot assign case
+		if node.form.lower() == 'idus':
+			node.lemma = 'Idus'
+			if node.next_node and node.next_node.deprel == 'fixed':
+				d = node.parent.parent
+				node.next_node.parent = d
 		if node.deprel != 'root':
-			node.deprel = 'obl'
-		if '.' in node.form and node.form[-1] != '.':
+			node.deprel = 'nmod'
+			if node.parent.form.lower() in ['a', 'ante']:
+				d = node.parent.parent
+				node.parent = d
+		calend = re.match( r'(kal|non)\..+', node.form.lower()) # any string that starts with kal or non, includes a dot, and other characters
+		if calend:
 			month = node.create_child()
 			month.shift_after_node(node)
 			month.form = node.form.split('.')[1]
-			node.form = node.form.split('.')[0] + '.'
+			node.form = node.form.split('.')[0]
+			node.misc['DeletedPunct'] = '.'
 			month.upos = 'ADJ'
-			month.xpos = 'Df'
+			if node.prev_node.prev_node.lemma == 'dies':
+				node.parent = node.prev_node.prev_node
 			month.parent = node
-			if node.form[-2:] == 'is' and node.form[-3] != 'i':
+			node.lemma = 'kalendae' if node.form.lower().startswith('kal') else 'nonae'
+			month.lemma = month.form # approximation
+			if (month.form[-2:] == 'is' and month.form[-3] != 'i') or month.form[-1] == 'i': # genitive
 				month.deprel = 'nmod'
 				month.feats = 'Case=Gen|Gender=Masc|Number=Sing'
 			else:
 				month.deprel = 'amod'
 				month.feats = 'Gender=Fem|Number=Plur'
-			node.misc['SpaceAfter'] = 'No'
 			if month.form.endswith('as'):
+				month.upos = 'ADJ'
 				month.feats['Case'] = 'Acc'
 				node.feats['Case'] = 'Acc'
 				month.lemma = month.form.replace('as', 'us')
 			elif month.form.endswith('ibus') or month.form.endswith('iis'):
 				month.feats['Case'] = 'Abl'
 				node.feats['Case'] = 'Abl'
+		elif not calend and node.feats['Polarity'] != 'Neg':
+			node.form = node.form[:-1] if node.form[-1] == '.' else node.form
+			node.lemma = 'kalendae' if node.form.lower().startswith('kal') else 'nonae'
+			node.misc['DeletedPunct'] = '.'
+		node.root.text = None
+		node.root.text = node.root.get_sentence()
+	
 	if node.form == 'Maias.':
 		node.form, node.lemma = 'Maias', 'Maius'
-		node.misc['SpaceAfter'] = 'No'
-	if node.prev_node.lemma == 'kalendae' and node.form[0].isupper() and node.upos != 'PROPN':
+		node.feats = 'Case=Acc|Gender=Fem|Number=Plur'
+		node.misc['DeletedPunct'] = '.'
+		node.root.text = None
+		node.root.text = node.root.get_sentence()
+	
+	if node.deprel == 'fixed' and node.upos == 'ADV' and node.form[0].isupper(): 
 		node.upos = 'ADJ'
-		node.parent = node.prev_node
+		if node.prev_node.form.lower().startswith(('idus', 'kal', 'non')):
+			node.parent = node.prev_node
 		if node.form == 'Mai':
 			node.deprel, node.lemma = 'nmod', 'Maius'
 		elif node.form[-2:] == 'is' and node.form[-3] != 'i':	
@@ -123,11 +251,48 @@ for node in doc.nodes:
 				node.feats = 'Case=Gen|Gender=Masc|Number=Sing'
 		else:
 			node.deprel = 'amod'
+			node.feats = node.parent.feats
 			
-	if node.lemma in ['calendar', 'expression']:
-		node.lemma = node.form
-			
+	if node.lemma in ['calendar', 'expression', 'calendar.expression']: # correcting less systematic inconsistencies
+		if node.form.lower() in ['pr', 'prid', 'pridie', 'postridie']:
+			node.lemma = 'pridie' if node.form.startswith('pr') else 'postridie'
+		elif node.form.lower().startswith('ian'):
+			node.lemma = 'ianuarius'
+		elif node.form.lower() == 'ante':
+			node.lemma, node.upos, node.feats = 'ante', 'ADP', 'AdpType=Prep'
+		elif node.form.lower() == 'a' and node.next_node.form.lower() == 'd':
+			d = node.next_node
+			node.lemma, node.upos, node.feats = 'ante', 'ADP', 'AdpType=Prep'
+			d.lemma, d.upos, d.feats = 'dies', 'NOUN', 'Case=Acc|Gender=Masc|Number=Sing' # deprel?
+			d.parent, d.deprel = node.parent, 'obl:tmod' # not trivial deprel, see train 75863 (just one occurrence)
+			node.parent, node.deprel = d, 'case'
+			num = d.next_node
+			num.lemma, num.feats['NumForm'] = num.form, 'Roman'
+			num.upos, num.deprel, num.parent = 'NUM', 'nummod', d
+		elif node.form.lower() in ['idibus', 'idus']: 
+			node.lemma, node.upos = 'idus', 'NOUN'
+			node.feats = 'Case=Abl|Gender=Fem|Number=Plur' if node.form.lower() == 'idibus' else 'Case=Acc|Gender=Fem|Number=Plur'
+			node.deprel = 'obl:tmod' if node.deprel == 'advmod' else node.deprel
+			if node.next_node and node.next_node.lemma == 'expression':
+				month = node.next_node
+				month.upos = 'ADJ'
+				if month.form[-3:] == 'iis':
+					month.lemma = month.form.replace('iis', 'ius')
+				elif month.form[-4:] == 'ibus':
+					month.lemma = month.form.replace('ibus', 'is')
+				else:
+					month.lemma = month.form
+				month.feats = 'Case=Acc|Gender=Fem|Number=Plur' if node.feats['Case'] == 'Acc' else 'Case=Abl|Gender=Fem|Number=Plur'
+				month.deprel, month.parent = 'amod' , node	
+		elif node.form == 'Terminalia': # just one occurrence
+			node.lemma, node.upos, node.feats, node.deprel, node.parent = node.form, 'NOUN', 'Case=Acc|Gender=Neut|Number=Plur', 'nmod', node.prev_node.prev_node
+		elif node.form.lower() in nums and node.next_node.lemma.lower().startswith(('expression', 'ian', 'febr', 'mar', 'april', 'mai', 'iun', 'quint', 'sext', 'sept', 'octob', 'novem', 'dec', 'kal', 'non', 'id')):
+			if node.upos == 'ADV':
+				node.lemma, node.upos = node.form, 'NUM'
+			if node.deprel == 'advmod' and node.parent.upos == 'VERB':
+				node.deprel = 'obl:tmod'
 		
+					
 	# atque
 	if node.lemma == 'atque' and node.deprel not in ['root', 'cc']:
 		node.upos = 'CCONJ'
@@ -135,20 +300,20 @@ for node in doc.nodes:
 			aeque = node.parent
 			kid = [k for k in node.children][0]
 			kid.parent = aeque.parent
-			kid.deprel = 'advcl:cmpr'
+			kid.deprel = 'advcl:cmp'
 			node.parent = kid
 		if node.prev_node.lemma == 'dissimilis':
 			dissimilis = node.prev_node
 			node.next_node.parent = dissimilis
 			node.parent = node.next_node
 			node.deprel = 'mark'
-			node.next_node.deprel = 'advcl:cmpr'
+			node.next_node.deprel = 'advcl:cmp'
 		elif node.next_node.lemma == 'si':
 			node.deprel = 'mark'
 			si = node.next_node
 			si.parent.parent = node.parent
 			node.parent = si.parent
-			node.parent.deprel = 'advcl:cmpr'
+			node.parent.deprel = 'advcl:cmp'
 			si.parent = node
 			si.deprel = 'fixed'
 		elif node.prev_node.lemma == 'simul':
@@ -160,8 +325,7 @@ for node in doc.nodes:
 		
 	# interjections
 	if node.upos == 'INTJ' and node.deprel == 'vocative':
-		node.deprel = 'discourse'
-			
+		node.deprel = 'discourse'	
 			
 	# discourse particles	
 	if node.lemma == 'ergo' and node.deprel != 'discourse': # only 4 cases
@@ -183,40 +347,6 @@ for node in doc.nodes:
 		node.upos, node.deprel = 'PART', 'advmod:emph'		
 		
 		
-	# ADVerbs
-	if node.lemma == 'tamen' and node.deprel == 'discourse':
-		node.deprel = 'advmod'
-	if node.deprel == 'advmod' and node.upos != 'ADV':
-		adp = [k for k in node.children if k.deprel == 'case']
-		if adp:
-			node.deprel = 'obl'
-		elif node.feats['Case'] == 'Dat':
-			node.deprel = 'obl:arg'
-		elif node.feats['Case'] == 'Abl':
-			node.deprel = 'obl'
-		elif node.parent.upos == 'NOUN' and node.upos == 'ADJ' and node.feats['Case'] == node.parent.feats['Case'] and node.feats['Number'] == node.parent.feats['Number']:
-			node.deprel = 'amod'
-		elif node.upos == 'ADJ':
-			node.deprel = 'advcl:pred' # mostly accurate, despite some rare exceptions
-		elif node.lemma == 'ut':
-			node.upos = 'ADV'
-		elif node.lemma in ['donec', 'quia', 'quoniam', 'si']:
-			node.deprel = 'mark'
-		elif node.lemma == 'vel':
-			node.deprel = 'advmod:emph'
-	if node.lemma in ['et', 'vel'] and node.upos == 'ADV' and node.deprel in ['advmod', 'discourse']:
-		node.deprel = 'advmod:emph'
-	# locative and temporal adverbs
-	if node.form in ['alibi', 'foris', 'hic', 'hinc', 'huc', 'ibi', 'ibidem', 'illuc', 'inde', 'procul', 'qua', 'quo', 'ubi', 'ubicumque', 'ubique', 'unde', 'undique'] and node.form == node.lemma and node.deprel == 'advmod':
-		node.deprel = 'advmod:lmod'
-		node.feats['AdvType'] = 'Loc'
-	if node.form in ['ante', 'cotidie', 'hodie', 'iam', 'interim', 'nonnunquam', 'nunc', 'olim', 'post', 'postea', 'pridem', 'prius', 'quando', 'quandoque', 'saepe', 'semper', 'tum', 'tunc'] and node.form == node.lemma and node.deprel == 'advmod':
-		node.deprel = 'advmod:tmod'
-		node.feats['AdvType'] = 'Tim'
-	# negation	
-	if node.lemma in ['haud', 'non'] and node.deprel not in ['conj', 'root']:
-		node.upos, node.deprel = 'PART', 'advmod:neg'		
-		
 	
 	# NUMerals
 	if node.upos == 'NUM' and node.parent.upos == 'NUM' and node.deprel in ['fixed', 'nummod'] and node.parent.deprel in ['flat', 'nummod']:
@@ -225,6 +355,9 @@ for node in doc.nodes:
 		else:
 			node.deprel = 'flat'
 	
+	# ADPositions
+	if node.upos == 'ADP' and node.precedes(node.parent):
+		node.feats['AdpType'] = 'Prep'
 		
 	# indirect objects
 	if node.deprel == 'iobj':
@@ -263,12 +396,15 @@ for node in doc.nodes:
 			sib = next((s for s in node.siblings if s.upos in ['NOUN', 'PROPN']), False)
 			if sib:
 				node.deprel = 'det'
-				node.parent = sib
-	if node.upos == 'DET' and node.feats['Degree'] == 'Sup':
-		node.feats['Degree'] = 'Abs'	
+				node.parent = sib	
 	if node.deprel == 'det' and node.feats['Case'] == 'Gen' and node.parent.feats['Case'] != 'Gen' and node.parent.upos != 'VERB': # dominus eius
 		node.deprel = 'nmod'
 
+
+	# Degree
+	if node.feats['Degree'] == 'Sup':
+		node.feats['Degree'] = 'Abs'
+	
 		
 	# dep
 	if node.deprel == 'dep':
@@ -430,6 +566,8 @@ for node in doc.nodes:
 
 
 	# comparative clauses
+	if node.deprel == 'advcl:cmpr':
+		node.deprel = 'advcl:cmp'	
 	# quam
 	if node.lemma == 'quam' and node.parent.feats['Degree'] == 'Cmp' and node.deprel != 'mark':
 		node.upos, node.deprel = 'SCONJ', 'mark'
@@ -437,26 +575,26 @@ for node in doc.nodes:
 		cmp = node.parent
 		advcl = [d for d in node.children if d.deprel != 'conj']
 		if len(advcl) == 1:
-			advcl[0].deprel = 'advcl:cmpr'
+			advcl[0].deprel = 'advcl:cmp'
 			advcl[0].parent = cmp
 			node.parent = advcl[0]	
 		elif len(advcl) > 1:
 			verb = next((a for a in advcl if a.feats['VerbForm'] == 'Fin'), False)
 			if verb:
 				verb.parent = cmp
-				verb.deprel = 'advcl:cmpr'
+				verb.deprel = 'advcl:cmp'
 				node.parent = verb
 			else:
 				nom = next((a for a in advcl if a.feats['Case'] == 'Nom'), False)
 				if nom:
 					nom.parent = cmp
-					nom.deprel = 'advcl:cmpr'
+					nom.deprel = 'advcl:cmp'
 					node.parent = nom
 				else:
 					acc = next((a for a in advcl if a.feats['Case'] == 'Acc'), False)
 					if acc:
 						acc.parent = cmp
-						acc.deprel = 'advcl:cmpr'
+						acc.deprel = 'advcl:cmp'
 						node.parent = acc
 	elif node.lemma == 'quam' and node.parent.form in ['amplius', 'celerius', 'citius', 'diutius', 'durius', 'facilius', 'gloriosus', 'gravius', 'honestius', 'latius', 'longius', 'magis', 'melius', 'minus', 'neglegentius', 'paratius', 'plus', 'potius', 'prius', 'rarius', 'tardius', 'tutius']:
 		node.upos, node.deprel = 'SCONJ', 'mark'
@@ -464,7 +602,7 @@ for node in doc.nodes:
 		magis = node.parent
 		advcl = [d for d in node.children if d.deprel != 'conj']
 		if len(advcl) == 1:
-			advcl[0].deprel = 'advcl:cmpr'
+			advcl[0].deprel = 'advcl:cmp'
 			advcl[0].parent = magis.parent
 			node.parent = advcl[0]
 	elif node.lemma == 'quam' and node.prev_node.form.lower() in ['ante', 'prius', 'post', 'postea']:
@@ -480,27 +618,27 @@ for node in doc.nodes:
 			ante.parent = node.parent.parent
 		# node.parent è giusto
 		if node.deprel == 'advcl':
-			node.deprel = 'advcl:cmpr' # era già advcl
+			node.deprel = 'advcl:cmp' # era già advcl
 	
 	# ut
 	if node.lemma == 'ut' and node.upos == 'ADV' and node.parent.deprel in ['advcl', 'dislocated']: # ADV upos was assigned to comparative ut
 		node.upos, node.deprel = 'SCONJ', 'mark'
 		if node.parent.feats['Mood'] == 'Ind': # ut dixi
-			node.parent.deprel = 'advcl:cmpr'
+			node.parent.deprel = 'advcl:cmp'
 			node.feats['ConjType'] = 'Cmpr'
 		elif node.parent.feats['VerbForm'] == 'Part': # ut imperatum est
 			aux = [s for s in node.siblings if s.deprel == 'aux:pass' and s.form in ['est', 'sunt']] # mood is not annotated wrt to sum
 			if aux:
-				node.parent.deprel = 'advcl:cmpr'
+				node.parent.deprel = 'advcl:cmp'
 				node.feats['ConjType'] = 'Cmpr'
 		elif node.parent.upos not in ['AUX', 'VERB']:
 			copula = [s for s in node.siblings if s.deprel == 'cop' and s.form in ['est', 'sunt']] # mood is not annotated wrt to sum
 			tobe = [s for s in node.siblings if s.deprel == 'cop']
 			if copula:
-				node.parent.deprel = 'advcl:cmpr'
+				node.parent.deprel = 'advcl:cmp'
 				node.feats['ConjType'] = 'Cmpr'
 			elif not tobe:
-				node.parent.deprel = 'advcl:cmpr'
+				node.parent.deprel = 'advcl:cmp'
 				node.feats['ConjType'] = 'Cmpr'	
 	if node.lemma == 'ut' and node.deprel == 'appos':
 		if node.parent.deprel == 'advmod':
@@ -509,40 +647,40 @@ for node in doc.nodes:
 			node.deprel, node.upos = 'mark', 'SCONJ'
 			if len(kids) == 1:
 				kids[0].parent = adv.parent
-				kids[0].deprel = 'advcl:cmpr'
+				kids[0].deprel = 'advcl:cmp'
 				node.feats['ConjType'] = 'Cmpr'
 				node.parent = kids[0]
 			elif len(kids) > 1:
 				verb = next((k for k in kids if k.feats['VerbForm'] == 'Fin'), False)
 				if verb:
 					verb.parent = adv.parent
-					verb.deprel = 'advcl:cmpr'
+					verb.deprel = 'advcl:cmp'
 					node.feats['ConjType'] = 'Cmpr'
 					node.parent = verb
 				else:
 					nom = next((k for k in kids if k.feats['Case'] == 'Nom'), False)
 					if nom:
 						nom.parent = adv.parent
-						nom.deprel = 'advcl:cmpr'
+						nom.deprel = 'advcl:cmp'
 						node.feats['ConjType'] = 'Cmpr'
 						node.parent = nom
 					else:
 						acc = next((k for k in kids if k.feats['Case'] == 'Acc'), False)
 						if acc:
 							acc.parent = adv.parent
-							acc.deprel = 'advcl:cmpr'
+							acc.deprel = 'advcl:cmp'
 							node.feats['ConjType'] = 'Cmpr'
 							node.parent = acc
 	if node.lemma == 'ut' and node.parent.deprel == 'appos' and node.deprel == 'orphan':
 		node.upos, node.deprel, node.feats['ConjType'] = 'SCONJ', 'mark', 'Cmpr'
-		node.parent.deprel = 'advcl:cmpr'
+		node.parent.deprel = 'advcl:cmp'
 	# tam...quam
 	if node.lemma == 'tam':
 		node.upos = 'ADV'
 	if node.parent.lemma == 'tam' and node.parent.lemma != 'tamquam' and node.lemma == 'quam':
 		kid = [k for k in node.children][0]
 		kid.parent = node.parent.parent
-		kid.deprel = 'advcl:cmpr'
+		kid.deprel = 'advcl:cmp'
 		node.parent.deprel = 'advmod:emph'
 		node.parent = kid
 		node.deprel = 'mark'
@@ -554,38 +692,38 @@ for node in doc.nodes:
 		kids = [k for k in node.children if k.deprel != 'conj' and k.parent.deprel != 'conj']
 		if len(kids) == 1:
 			kids[0].parent = node.parent
-			kids[0].deprel = 'advcl:cmpr'
+			kids[0].deprel = 'advcl:cmp'
 			node.parent = kids[0]
 		elif len(kids) > 1:
 			nom = next((k for k in kids if k.feats['Case'] == 'Nom'), False)
 			if nom:
 				nom.parent = node.parent
-				nom.deprel = 'advcl:cmpr'
+				nom.deprel = 'advcl:cmp'
 				node.parent = nom
 			else:
 				acc = next((k for k in kids if k.feats['Case'] == 'Acc'), False)
 				if acc:
 					acc.parent = node.parent
-					acc.deprel = 'advcl:cmpr'
+					acc.deprel = 'advcl:cmp'
 					node.parent = acc
 				else:
 					obl = next((k for k in kids if k.feats['Case'] == 'Abl'), False)
 					if obl:
 						obl.parent = node.parent
-						obl.deprel = 'advcl:cmpr'
+						obl.deprel = 'advcl:cmp'
 						node.parent = obl
 	if node.parent.deprel == 'advcl' and node.lemma in ['quam', 'quemadmodum', 'sicut', 'velut']:
 		node.upos, node.deprel = 'SCONJ', 'mark'
 		node.feats['ConjType'] = 'Cmpr' 
 		if not 'quam' in node.prev_node.lemma: # magari cambia quando risolvi antequam priusquam etc.
-			node.parent.deprel = 'advcl:cmpr'
+			node.parent.deprel = 'advcl:cmp'
 	if node.parent.lemma == 'sicut' and node.deprel == 'advcl':
 		sicut = node.parent
 		cop = [k for k in sicut.children if k.deprel == 'cop' and k < sicut]
 		if not cop:
 			sicut.upos, sicut.deprel = 'SCONJ', 'mark'
 			sicut.feats['ConjType'], sicut.feats['Compound'] = 'Cmpr', 'Yes' 
-			node.deprel = 'advcl:cmpr'
+			node.deprel = 'advcl:cmp'
 			node.parent = sicut.parent
 			sicut.parent = node
 	if node.lemma == 'sicut' and node.deprel in ['advcl', 'advmod']:
@@ -596,25 +734,25 @@ for node in doc.nodes:
 			node.feats['ConjType'], node.feats['Compound'] = 'Cmpr', 'Yes' 
 			if len(kids) == 1:
 				kids[0].parent = node.parent
-				kids[0].deprel = 'advcl:cmpr'
+				kids[0].deprel = 'advcl:cmp'
 				node.parent = kids[0]
 			elif len(kids) > 1:
 				verb = next((k for k in kids if k.feats['VerbForm'] == 'Fin'), False)
 				if verb:
 						verb.parent = node.parent
-						verb.deprel = 'advcl:cmpr'
+						verb.deprel = 'advcl:cmp'
 						node.parent = verb
 				else:
 					nom = next((k for k in kids if k.feats['Case'] == 'Nom'), False)
 					if nom:
 						nom.parent = node.parent
-						nom.deprel = 'advcl:cmpr'
+						nom.deprel = 'advcl:cmp'
 						node.parent = nom
 					else:
 						acc = next((k for k in kids if k.feats['Case'] == 'Acc'), False)
 						if acc:
 							acc.parent = node.parent
-							acc.deprel = 'advcl:cmpr'
+							acc.deprel = 'advcl:cmp'
 							node.parent = acc
 
 	
@@ -635,7 +773,7 @@ for node in doc.nodes:
 		node.deprel = 'advcl'
 		quam.parent = node 
 	
-	# ablative absolute		
+	# absolute ablative		
 	if node.parent.deprel == 'advcl' and node.parent.feats['Case'] == 'Abl' and node.feats['Case'] == 'Abl' and node.deprel.startswith('nsubj'):
 		case = [s for s in node.siblings if s.deprel == 'case']
 		if len(case) == 0:
@@ -755,7 +893,6 @@ for node in doc.nodes:
 	# fix non-projectivity of punctuation	
 	pun = udapi.block.ud.fixpunct.FixPunct()
 	pun.process_node(node)	
-		
 		
 		
 with open(f'{output_folder}/HM-la_proiel-ud-{split}.conllu', 'w') as output:
