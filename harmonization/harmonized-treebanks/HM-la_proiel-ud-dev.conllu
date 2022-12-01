@@ -49,8 +49,8 @@
 # text = beati qui lugent quoniam ipsi consolabuntur
 # sent_id = 12846
 1	beati	beatus	ADJ	A-	Case=Nom|Degree=Pos|Gender=Masc|Number=Plur	0	root	_	Ref=MATT_5.5
-2	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	1	nsubj	_	Ref=MATT_5.5
-3	lugent	lugeo	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	2	acl:relcl	_	Ref=MATT_5.5
+2	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	3	nsubj	_	Ref=MATT_5.5
+3	lugent	lugeo	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	1	csubj	_	Ref=MATT_5.5
 4	quoniam	quoniam	SCONJ	G-	_	6	mark	_	Ref=MATT_5.5
 5	ipsi	ipse	DET	Pp	Case=Nom|Gender=Masc|Number=Plur|Person=3|PronType=Prs	6	nsubj	_	Ref=MATT_5.5
 6	consolabuntur	consolor	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin|Voice=Pass	1	advcl	_	Ref=MATT_5.5
@@ -59,8 +59,8 @@
 # text = beati qui esuriunt et sitiunt iustitiam quoniam ipsi saturabuntur
 # sent_id = 12848
 1	beati	beatus	ADJ	A-	Case=Nom|Degree=Pos|Gender=Masc|Number=Plur	0	root	_	Ref=MATT_5.6
-2	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	1	nsubj	_	Ref=MATT_5.6
-3	esuriunt	esurio	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	2	acl:relcl	_	Ref=MATT_5.6
+2	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	3	nsubj	_	Ref=MATT_5.6
+3	esuriunt	esurio	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	1	csubj	_	Ref=MATT_5.6
 4	et	et	CCONJ	C-	_	5	cc	_	Ref=MATT_5.6
 5	sitiunt	sitio	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	3	conj	_	Ref=MATT_5.6
 6	iustitiam	iustitia	NOUN	Nb	Case=Acc|Gender=Fem|Number=Sing	5	obj	_	Ref=MATT_5.6
@@ -103,9 +103,9 @@
 # text = beati qui persecutionem patiuntur propter iustitiam quoniam ipsorum est regnum caelorum
 # sent_id = 12856
 1	beati	beatus	ADJ	A-	Case=Nom|Degree=Pos|Gender=Masc|Number=Plur	0	root	_	Ref=MATT_5.10
-2	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	1	nsubj	_	Ref=MATT_5.10
+2	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	4	nsubj	_	Ref=MATT_5.10
 3	persecutionem	persecutio	NOUN	Nb	Case=Acc|Gender=Fem|Number=Sing	4	obj	_	Ref=MATT_5.10
-4	patiuntur	patior	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	2	acl:relcl	_	Ref=MATT_5.10
+4	patiuntur	patior	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	1	csubj	_	Ref=MATT_5.10
 5	propter	propter	ADP	R-	AdpType=Prep	6	case	_	Ref=MATT_5.10
 6	iustitiam	iustitia	NOUN	Nb	Case=Acc|Gender=Fem|Number=Sing	4	obl	_	Ref=MATT_5.10
 7	quoniam	quoniam	SCONJ	G-	_	8	mark	_	Ref=MATT_5.10
@@ -381,9 +381,9 @@
 # source = Jerome's Vulgate, Matthew 5
 # text = qui autem occiderit reus erit iudicio
 # sent_id = 12876
-1	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	4	nsubj	_	Ref=MATT_5.21
+1	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	3	nsubj	_	Ref=MATT_5.21
 2	autem	autem	CCONJ	Df	_	4	cc	_	Ref=MATT_5.21
-3	occiderit	occido	VERB	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	1	acl:relcl	_	LId=1|Ref=MATT_5.21
+3	occiderit	occido	VERB	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	4	csubj	_	LId=1|Ref=MATT_5.21
 4	reus	reus	NOUN	Nb	Case=Nom|Gender=Masc|Number=Sing	0	root	_	Ref=MATT_5.21
 5	erit	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	4	cop	_	Ref=MATT_5.21
 6	iudicio	iudicium	NOUN	Nb	Case=Dat|Gender=Neut|Number=Sing	4	nmod	_	Ref=MATT_5.21
@@ -412,9 +412,9 @@
 # source = Jerome's Vulgate, Matthew 5
 # text = qui autem dixerit fratri suo racha reus erit concilio
 # sent_id = 12879
-1	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	7	nsubj	_	Ref=MATT_5.22
+1	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	3	nsubj	_	Ref=MATT_5.22
 2	autem	autem	CCONJ	Df	_	7	cc	_	Ref=MATT_5.22
-3	dixerit	dico	VERB	V-	Aspect=Perf|Mood=Sub|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	1	acl:relcl	_	Ref=MATT_5.22
+3	dixerit	dico	VERB	V-	Aspect=Perf|Mood=Sub|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	7	csubj	_	Ref=MATT_5.22
 4	fratri	frater	NOUN	Nb	Case=Dat|Gender=Masc|Number=Sing	3	obl:arg	_	Ref=MATT_5.22
 5	suo	suus	DET	Pt	Case=Dat|Gender=Masc|Number=Sing|Person=3|Poss=Yes|Reflex=Yes	4	det	_	Ref=MATT_5.22
 6	racha	racha	X	F-	_	3	obj	_	Ref=MATT_5.22
@@ -425,9 +425,9 @@
 # source = Jerome's Vulgate, Matthew 5
 # text = qui autem dixerit fatue reus erit gehennae ignis
 # sent_id = 12881
-1	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	5	nsubj	_	Ref=MATT_5.22
+1	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	3	nsubj	_	Ref=MATT_5.22
 2	autem	autem	CCONJ	Df	_	5	cc	_	Ref=MATT_5.22
-3	dixerit	dico	VERB	V-	Aspect=Perf|Mood=Sub|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	1	acl:relcl	_	Ref=MATT_5.22
+3	dixerit	dico	VERB	V-	Aspect=Perf|Mood=Sub|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	5	csubj	_	Ref=MATT_5.22
 4	fatue	fatuus	ADJ	A-	Case=Voc|Degree=Pos|Gender=Masc|Number=Sing	3	obj	_	Ref=MATT_5.22
 5	reus	reus	NOUN	Nb	Case=Nom|Gender=Masc|Number=Sing	0	root	_	Ref=MATT_5.22
 6	erit	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	5	cop	_	Ref=MATT_5.22
@@ -649,8 +649,8 @@
 # source = Jerome's Vulgate, Matthew 5
 # text = quicumque dimiserit uxorem suam det illi libellum repudii
 # sent_id = 12899
-1	quicumque	quicumque	DET	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	5	nsubj	_	Ref=MATT_5.31
-2	dimiserit	dimitto	VERB	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	1	acl:relcl	_	Ref=MATT_5.31
+1	quicumque	quicumque	DET	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	2	nsubj	_	Ref=MATT_5.31
+2	dimiserit	dimitto	VERB	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	5	csubj	_	Ref=MATT_5.31
 3	uxorem	uxor	NOUN	Nb	Case=Acc|Gender=Fem|Number=Sing	2	obj	_	Ref=MATT_5.31
 4	suam	suus	DET	Pt	Case=Acc|Gender=Fem|Number=Sing|Person=3|Poss=Yes|Reflex=Yes	3	det	_	Ref=MATT_5.31
 5	det	do	VERB	V-	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=MATT_5.31
@@ -686,9 +686,9 @@
 # text = et qui dimissam duxerit adulterat
 # sent_id = 12902
 1	et	et	CCONJ	C-	_	5	cc	_	Ref=MATT_5.32
-2	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	5	nsubj	_	Ref=MATT_5.32
+2	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	4	nsubj	_	Ref=MATT_5.32
 3	dimissam	dimitto	VERB	V-	Aspect=Perf|Case=Acc|Gender=Fem|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	4	obj	_	Ref=MATT_5.32
-4	duxerit	duco	VERB	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	2	acl:relcl	_	Ref=MATT_5.32
+4	duxerit	duco	VERB	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	5	csubj	_	Ref=MATT_5.32
 5	adulterat	adultero	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=MATT_5.32
 
 # source = Jerome's Vulgate, Matthew 5
@@ -783,10 +783,10 @@
 # source = Jerome's Vulgate, Matthew 5
 # text = quod autem his abundantius est a malo est
 # sent_id = 12912
-1	quod	qui	PRON	Pr	Case=Nom|Gender=Neut|Number=Sing|PronType=Rel	7	nsubj	_	Ref=MATT_5.37
+1	quod	qui	PRON	Pr	Case=Nom|Gender=Neut|Number=Sing|PronType=Rel	4	nsubj	_	Ref=MATT_5.37
 2	autem	autem	CCONJ	Df	_	7	cc	_	Ref=MATT_5.37
 3	his	hic	DET	Pd	Case=Abl|Gender=Neut|Number=Plur	4	obl:arg	_	Ref=MATT_5.37
-4	abundantius	abundans	ADJ	A-	Case=Nom|Degree=Cmp|Gender=Neut|Number=Sing	1	acl:relcl	_	Ref=MATT_5.37
+4	abundantius	abundans	ADJ	A-	Case=Nom|Degree=Cmp|Gender=Neut|Number=Sing	7	csubj	_	Ref=MATT_5.37
 5	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	4	cop	_	Ref=MATT_5.37
 6	a	ab	ADP	R-	AdpType=Prep	7	case	_	Ref=MATT_5.37
 7	malo	malus	ADJ	A-	Case=Abl|Degree=Pos|Gender=Neut|Number=Sing	0	root	_	Ref=MATT_5.37
@@ -1309,9 +1309,9 @@
 # source = Jerome's Vulgate, Mark 5
 # text = qui autem pascebant eos fugerunt et nuntiaverunt in civitatem et in agros
 # sent_id = 10572
-1	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	5	nsubj	_	Ref=MARK_5.14
+1	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	3	nsubj	_	Ref=MARK_5.14
 2	autem	autem	CCONJ	Df	_	5	cc	_	Ref=MARK_5.14
-3	pascebant	pasco	VERB	V-	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	1	acl:relcl	_	Ref=MARK_5.14
+3	pascebant	pasco	VERB	V-	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	5	csubj	_	Ref=MARK_5.14
 4	eos	is	PRON	Pp	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	3	obj	_	Ref=MARK_5.14
 5	fugerunt	fugio	VERB	V-	Aspect=Perf|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	Ref=MARK_5.14
 6	et	et	CCONJ	C-	_	7	cc	_	Ref=MARK_5.14
@@ -1365,8 +1365,8 @@
 1	et	et	CCONJ	C-	_	2	cc	_	Ref=MARK_5.16
 2	narraverunt	narro	VERB	V-	Aspect=Perf|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	Ref=MARK_5.16
 3	illis	ille	DET	Pd	Case=Dat|Gender=Masc|Number=Plur	2	obl:arg	_	Ref=MARK_5.16
-4	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	2	nsubj	_	Ref=MARK_5.16
-5	viderant	video	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pqp|VerbForm=Fin|Voice=Act	4	acl:relcl	_	Ref=MARK_5.16
+4	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	5	nsubj	_	Ref=MARK_5.16
+5	viderant	video	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pqp|VerbForm=Fin|Voice=Act	2	csubj	_	Ref=MARK_5.16
 6	qualiter	qualiter	ADV	Du	PronType=Int	7	advmod	_	Ref=MARK_5.16
 7	factum	facio	VERB	V-	Aspect=Perf|Case=Nom|Gender=Neut|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	2	ccomp	_	Ref=MARK_5.16
 8	esset	sum	AUX	V-	Aspect=Imp|Mood=Sub|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	7	aux:pass	_	Ref=MARK_5.16
@@ -2773,8 +2773,8 @@
 # sent_id = 16639
 1	non	non	PART	Df	Polarity=Neg	2	advmod:neg	_	Ref=LUKE_5.31
 2	egent	egeo	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=LUKE_5.31
-3	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	2	nsubj	_	Ref=LUKE_5.31
-4	sani	sanus	ADJ	A-	Case=Nom|Degree=Pos|Gender=Masc|Number=Plur	3	acl:relcl	_	Ref=LUKE_5.31
+3	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	4	nsubj	_	Ref=LUKE_5.31
+4	sani	sanus	ADJ	A-	Case=Nom|Degree=Pos|Gender=Masc|Number=Plur	2	csubj	_	Ref=LUKE_5.31
 5	sunt	sum	AUX	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	4	cop	_	Ref=LUKE_5.31
 6	medico	medicus	NOUN	Nb	Case=Abl|Gender=Masc|Number=Sing	2	obl:arg	_	Ref=LUKE_5.31
 7	sed	sed	CCONJ	C-	_	10	cc	_	Ref=LUKE_5.31
@@ -4032,8 +4032,8 @@
 7	quia	quia	SCONJ	G-	_	8	mark	_	Ref=JOHN_5.15
 8	Iesus	Iesus	PROPN	Ne	Case=Nom|Gender=Masc|Number=Sing	5	ccomp	_	Ref=JOHN_5.15
 9	esset	sum	AUX	V-	Aspect=Imp|Mood=Sub|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	8	cop	_	Ref=JOHN_5.15
-10	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	8	nsubj	_	Ref=JOHN_5.15
-11	fecit	facio	VERB	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	10	acl:relcl	_	Ref=JOHN_5.15
+10	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	11	nsubj	_	Ref=JOHN_5.15
+11	fecit	facio	VERB	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	8	csubj	_	Ref=JOHN_5.15
 12	eum	is	PRON	Pp	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	11	obj	_	Ref=JOHN_5.15
 13	sanum	sanus	ADJ	A-	Case=Acc|Degree=Pos|Gender=Masc|Number=Sing	11	xcomp:pred	_	Ref=JOHN_5.15
 
@@ -4217,9 +4217,9 @@
 # source = Jerome's Vulgate, John 5
 # text = qui non honorificat Filium non honorificat Patrem qui misit illum
 # sent_id = 63016
-1	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	6	nsubj	_	Ref=JOHN_5.23
+1	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	3	nsubj	_	Ref=JOHN_5.23
 2	non	non	PART	Df	Polarity=Neg	3	advmod:neg	_	Ref=JOHN_5.23
-3	honorificat	honorifico	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	1	acl:relcl	_	Ref=JOHN_5.23
+3	honorificat	honorifico	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	6	csubj	_	Ref=JOHN_5.23
 4	Filium	filius	NOUN	Nb	Case=Acc|Gender=Masc|Number=Sing	3	obj	_	Ref=JOHN_5.23
 5	non	non	PART	Df	Polarity=Neg	6	advmod:neg	_	Ref=JOHN_5.23
 6	honorificat	honorifico	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=JOHN_5.23
@@ -4236,10 +4236,10 @@
 3	dico	dico	VERB	V-	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=JOHN_5.24
 4	vobis	vos	PRON	Pp	Case=Dat|Gender=Masc|Number=Plur|Person=2|PronType=Prs	3	obl:arg	_	Ref=JOHN_5.24
 5	quia	quia	SCONJ	G-	_	16	mark	_	Ref=JOHN_5.24
-6	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	16	nsubj	_	Ref=JOHN_5.24
+6	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	9	nsubj	_	Ref=JOHN_5.24
 7	verbum	verbum	NOUN	Nb	Case=Acc|Gender=Neut|Number=Sing	9	obj	_	Ref=JOHN_5.24
 8	meum	meus	DET	Ps	Case=Acc|Gender=Neut|Number=Sing|Person=1|Poss=Yes	7	det	_	Ref=JOHN_5.24
-9	audit	audio	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	6	acl:relcl	_	Ref=JOHN_5.24
+9	audit	audio	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	16	csubj	_	Ref=JOHN_5.24
 10	et	et	CCONJ	C-	_	11	cc	_	Ref=JOHN_5.24
 11	credit	credo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	9	conj	_	Ref=JOHN_5.24
 12	ei	is	PRON	Pp	Case=Dat|Gender=Masc|Number=Sing|Person=3|PronType=Prs	11	obl:arg	_	Ref=JOHN_5.24
@@ -4285,8 +4285,8 @@
 # text = et qui audierint vivent
 # sent_id = 18730
 1	et	et	CCONJ	C-	_	4	cc	_	Ref=JOHN_5.25
-2	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	4	nsubj	_	Ref=JOHN_5.25
-3	audierint	audio	VERB	V-	Aspect=Perf|Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	2	acl:relcl	_	Ref=JOHN_5.25
+2	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	3	nsubj	_	Ref=JOHN_5.25
+3	audierint	audio	VERB	V-	Aspect=Perf|Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	4	csubj	_	Ref=JOHN_5.25
 4	vivent	vivo	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	0	root	_	Ref=JOHN_5.25
 
 # source = Jerome's Vulgate, John 5
@@ -4352,9 +4352,9 @@
 # sent_id = 18734
 1	et	et	CCONJ	C-	_	2	cc	_	Ref=JOHN_5.29
 2	procedent	procedo	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	0	root	_	Ref=JOHN_5.29
-3	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	2	nsubj	_	Ref=JOHN_5.29
+3	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	5	nsubj	_	Ref=JOHN_5.29
 4	bona	bonus	ADJ	A-	Case=Acc|Degree=Pos|Gender=Neut|Number=Plur	5	obj	_	Ref=JOHN_5.29
-5	fecerunt	facio	VERB	V-	Aspect=Perf|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	3	acl:relcl	_	Ref=JOHN_5.29
+5	fecerunt	facio	VERB	V-	Aspect=Perf|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	2	csubj	_	Ref=JOHN_5.29
 6	in	in	ADP	R-	AdpType=Prep	7	case	_	Ref=JOHN_5.29
 7	resurrectionem	resurrectio	NOUN	Nb	Case=Acc|Gender=Fem|Number=Sing	2	obl	_	Ref=JOHN_5.29
 8	vitae	vita	NOUN	Nb	Case=Gen|Gender=Fem|Number=Sing	7	nmod	_	Ref=JOHN_5.29
@@ -4421,9 +4421,9 @@
 # sent_id = 18739
 1	alius	alius	DET	Px	Case=Nom|Gender=Neut|Number=Sing	0	root	_	Ref=JOHN_5.32
 2	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	1	cop	_	Ref=JOHN_5.32
-3	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	1	nsubj	_	Ref=JOHN_5.32
+3	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	5	nsubj	_	Ref=JOHN_5.32
 4	testimonium	testimonium	NOUN	Nb	Case=Acc|Gender=Neut|Number=Sing	5	obj	_	Ref=JOHN_5.32
-5	perhibet	perhibeo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	3	acl:relcl	_	Ref=JOHN_5.32
+5	perhibet	perhibeo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	1	csubj	_	Ref=JOHN_5.32
 6	de	de	ADP	R-	AdpType=Prep	7	case	_	Ref=JOHN_5.32
 7	me	ego	PRON	Pp	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	4	det	_	Ref=JOHN_5.32
 
@@ -4600,12 +4600,12 @@
 # source = Jerome's Vulgate, John 5
 # text = et illae sunt quae testimonium perhibent de me
 # sent_id = 18754
-1	et	et	CCONJ	C-	_	4	cc	_	Ref=JOHN_5.39
-2	illae	ille	DET	Pd	Case=Nom|Gender=Fem|Number=Plur	4	nsubj	_	Ref=JOHN_5.39
-3	sunt	sum	AUX	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	4	cop	_	Ref=JOHN_5.39
-4	quae	qui	PRON	Pr	Case=Nom|Gender=Fem|Number=Plur|PronType=Rel	0	root	_	Ref=JOHN_5.39
-5	testimonium	testimonium	NOUN	Nb	Case=Acc|Gender=Neut|Number=Sing	4	obj	_	Ref=JOHN_5.39
-6	perhibent	perhibeo	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	4	acl:relcl	_	Ref=JOHN_5.39
+1	et	et	CCONJ	C-	_	6	cc	_	Ref=JOHN_5.39
+2	illae	ille	DET	Pd	Case=Nom|Gender=Fem|Number=Plur	6	nsubj:outer	_	Ref=JOHN_5.39
+3	sunt	sum	AUX	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	6	cop	_	Ref=JOHN_5.39
+4	quae	qui	PRON	Pr	Case=Nom|Gender=Fem|Number=Plur|PronType=Rel	6	nsubj	_	Ref=JOHN_5.39
+5	testimonium	testimonium	NOUN	Nb	Case=Acc|Gender=Neut|Number=Sing	6	obj	_	Ref=JOHN_5.39
+6	perhibent	perhibeo	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=JOHN_5.39
 7	de	de	ADP	R-	AdpType=Prep	8	case	_	Ref=JOHN_5.39
 8	me	ego	PRON	Pp	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	5	det	_	Ref=JOHN_5.39
 
@@ -4710,8 +4710,8 @@
 # text = est qui accuset vos Moses in quo vos speratis
 # sent_id = 18761
 1	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	5	cop	_	Ref=JOHN_5.45
-2	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	5	nsubj	_	Ref=JOHN_5.45
-3	accuset	accuso	VERB	V-	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	2	acl:relcl	_	Ref=JOHN_5.45
+2	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	3	nsubj	_	Ref=JOHN_5.45
+3	accuset	accuso	VERB	V-	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	5	csubj	_	Ref=JOHN_5.45
 4	vos	vos	PRON	Pp	Case=Acc|Gender=Masc|Number=Plur|Person=2|PronType=Prs	3	obj	_	Ref=JOHN_5.45
 5	Moses	Moses	PROPN	Ne	Case=Nom|Gender=Masc|Number=Sing	0	root	_	Ref=JOHN_5.45
 6	in	in	ADP	R-	AdpType=Prep	7	case	_	Ref=JOHN_5.45
@@ -6529,15 +6529,15 @@
 # text = nonne hic est qui expugnabat in Hierusalem eos qui invocabant nomen istud
 # sent_id = 23921
 1-2	nonne	_	_	_	_	_	_	_	Ref=ACTS_9.21
-1	non	non	PART	Du	Polarity=Neg	5	advmod:neg	_	_
-2	ne	ne	PART	_	Clitic=Yes|PartType=Int	5	discourse	_	_
-3	hic	hic	DET	Pd	Case=Nom|Gender=Masc|Number=Sing	5	nsubj	_	Ref=ACTS_9.21
-4	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	5	cop	_	Ref=ACTS_9.21
-5	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	0	root	_	Ref=ACTS_9.21
-6	expugnabat	expugno	VERB	V-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	5	acl:relcl	_	Ref=ACTS_9.21
+1	non	non	PART	Du	Polarity=Neg	6	advmod:neg	_	_
+2	ne	ne	PART	_	Clitic=Yes|PartType=Int	6	discourse	_	_
+3	hic	hic	DET	Pd	Case=Nom|Gender=Masc|Number=Sing	6	nsubj:outer	_	Ref=ACTS_9.21
+4	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	6	cop	_	Ref=ACTS_9.21
+5	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	6	nsubj	_	Ref=ACTS_9.21
+6	expugnabat	expugno	VERB	V-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	Ref=ACTS_9.21
 7	in	in	ADP	R-	AdpType=Prep	8	case	_	Ref=ACTS_9.21
-8	Hierusalem	Hierosolyma	PROPN	Ne	_	5	obl	_	Ref=ACTS_9.21
-9	eos	is	PRON	Pp	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	5	obj	_	Ref=ACTS_9.21
+8	Hierusalem	Hierosolyma	PROPN	Ne	_	6	obl	_	Ref=ACTS_9.21
+9	eos	is	PRON	Pp	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	6	obj	_	Ref=ACTS_9.21
 10	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	11	nsubj	_	Ref=ACTS_9.21
 11	invocabant	invoco	VERB	V-	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	9	acl:relcl	_	Ref=ACTS_9.21
 12	nomen	nomen	NOUN	Nb	Case=Acc|Gender=Neut|Number=Sing	11	obj	_	Ref=ACTS_9.21
@@ -7891,8 +7891,8 @@
 11	in	in	ADP	R-	AdpType=Prep	13	case	_	Ref=ACTS_10.35
 12	omni	omnis	DET	Px	Case=Abl|Number=Sing	13	det	_	Ref=ACTS_10.35
 13	gente	gens	NOUN	Nb	Case=Abl|Gender=Fem|Number=Sing	20	obl	_	Ref=ACTS_10.35
-14	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	20	nsubj	_	Ref=ACTS_10.35
-15	timet	timeo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	14	acl:relcl	_	Ref=ACTS_10.35
+14	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	15	nsubj	_	Ref=ACTS_10.35
+15	timet	timeo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	20	csubj	_	Ref=ACTS_10.35
 16	eum	is	PRON	Pp	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	15	obj	_	Ref=ACTS_10.35
 17	et	et	CCONJ	C-	_	18	cc	_	Ref=ACTS_10.35
 18	operatur	operor	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	15	conj	_	Ref=ACTS_10.35
@@ -8481,8 +8481,8 @@
 17	iniustitiam	iniustitia	NOUN	Nb	Case=Acc|Gender=Fem|Number=Sing	18	obl	_	Ref=ROM_1.18
 18	detinent	detineo	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	12	acl:relcl	_	Ref=ROM_1.18
 19	quia	quia	SCONJ	G-	_	24	mark	_	Ref=ROM_1.19
-20	quod	qui	PRON	Pr	Case=Nom|Gender=Neut|Number=Sing|PronType=Rel	24	nsubj	_	Ref=ROM_1.19
-21	notum	notus	ADJ	A-	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing	20	acl:relcl	_	Ref=ROM_1.19
+20	quod	qui	PRON	Pr	Case=Nom|Gender=Neut|Number=Sing|PronType=Rel	21	nsubj	_	Ref=ROM_1.19
+21	notum	notus	ADJ	A-	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing	24	csubj	_	Ref=ROM_1.19
 22	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	21	aux	_	Ref=ROM_1.19
 23	Dei	deus	NOUN	Nb	Case=Gen|Gender=Masc|Number=Sing	20	nmod	_	Ref=ROM_1.19
 24	manifestum	manifestus	ADJ	A-	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing	1	advcl	_	Ref=ROM_1.19
@@ -8719,9 +8719,9 @@
 14	sensum	sensus	NOUN	Nb	Case=Acc|Gender=Masc|Number=Sing	9	obl	_	Ref=ROM_1.28
 15	ut	ut	SCONJ	G-	_	16	mark	_	Ref=ROM_1.28
 16	faciant	facio	VERB	V-	Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	9	advcl	_	Ref=ROM_1.28
-17	quae	qui	PRON	Pr	Case=Nom|Gender=Neut|Number=Plur|PronType=Rel	16	obj	_	Ref=ROM_1.28
+17	quae	qui	PRON	Pr	Case=Nom|Gender=Neut|Number=Plur|PronType=Rel	19	nsubj	_	Ref=ROM_1.28
 18	non	non	PART	Df	Polarity=Neg	19	advmod:neg	_	Ref=ROM_1.28
-19	conveniunt	convenio	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	17	acl:relcl	_	Ref=ROM_1.28
+19	conveniunt	convenio	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	16	ccomp	_	Ref=ROM_1.28
 20	repletos	repletus	ADJ	A-	Case=Acc|Degree=Pos|Gender=Masc|Number=Sing	9	advcl:pred	_	Ref=ROM_1.29
 21	omni	omnis	DET	Px	Case=Abl|Gender=Fem|Number=Sing	22	det	_	Ref=ROM_1.29
 22	iniquitate	iniquitas	NOUN	Nb	Case=Abl|Gender=Fem|Number=Sing	20	obl:arg	_	Ref=ROM_1.29
@@ -8747,9 +8747,9 @@
 6	non	non	PART	Df	Polarity=Neg	7	advmod:neg	_	Ref=ROM_1.32
 7	intellexerunt	intellego	VERB	V-	Aspect=Perf|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	Ref=ROM_1.32
 8	quoniam	quoniam	SCONJ	G-	_	12	mark	_	Ref=ROM_1.32
-9	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	12	nsubj	_	Ref=ROM_1.32
+9	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	11	nsubj	_	Ref=ROM_1.32
 10	talia	talis	DET	Pd	Case=Acc|Gender=Neut|Number=Plur	11	obj	_	Ref=ROM_1.32
-11	agunt	ago	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	9	acl:relcl	_	Ref=ROM_1.32
+11	agunt	ago	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	12	csubj	_	Ref=ROM_1.32
 12	digni	dignus	ADJ	A-	Case=Nom|Degree=Pos|Gender=Masc|Number=Plur	7	ccomp	_	Ref=ROM_1.32
 13	sunt	sum	AUX	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	12	cop	_	Ref=ROM_1.32
 14	morte	mors	NOUN	Nb	Case=Abl|Gender=Fem|Number=Sing	12	obl:arg	_	Ref=ROM_1.32
@@ -8813,12 +8813,12 @@
 # text = beatus qui legit et qui audiunt verba prophetiae et servant ea quae in ea scripta sunt
 # sent_id = 33462
 1	beatus	beatus	ADJ	A-	Case=Nom|Degree=Pos|Gender=Masc|Number=Sing	0	root	_	Ref=REV_1.3
-2	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	1	nsubj	_	Ref=REV_1.3
-3	legit	lego	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	2	acl:relcl	_	Ref=REV_1.3
-4	et	et	CCONJ	C-	_	5	cc	_	Ref=REV_1.3
-5	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	3	conj	_	Ref=REV_1.3
-6	audiunt	audio	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	5	acl:relcl	_	Ref=REV_1.3
-7	verba	verbum	NOUN	Nb	Case=Nom|Gender=Neut|Number=Plur	5	nsubj	_	Ref=REV_1.3
+2	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	3	nsubj	_	Ref=REV_1.3
+3	legit	lego	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	1	csubj	_	Ref=REV_1.3
+4	et	et	CCONJ	C-	_	6	cc	_	Ref=REV_1.3
+5	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	6	nsubj:outer	_	Ref=REV_1.3
+6	audiunt	audio	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	3	conj	_	Ref=REV_1.3
+7	verba	verbum	NOUN	Nb	Case=Nom|Gender=Neut|Number=Plur	6	nsubj	_	Ref=REV_1.3
 8	prophetiae	prophetia	NOUN	Nb	Case=Gen|Gender=Fem|Number=Sing	7	nmod	_	Ref=REV_1.3
 9	et	et	CCONJ	C-	_	10	cc	_	Ref=REV_1.3
 10	servant	servo	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	3	conj	_	Ref=REV_1.3
@@ -9299,8 +9299,8 @@
 # sent_id = 33499
 1	haec	hic	DET	Pd	Case=Acc|Gender=Neut|Number=Plur	2	obj	_	Ref=REV_2.1
 2	dicit	dico	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=REV_2.1
-3	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	2	nsubj	_	Ref=REV_2.1
-4	tenet	teneo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	3	acl:relcl	_	Ref=REV_2.1
+3	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	4	nsubj	_	Ref=REV_2.1
+4	tenet	teneo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	2	csubj	_	Ref=REV_2.1
 5	septem	septem	NUM	Ma	_	6	nummod	_	Ref=REV_2.1
 6	stellas	stella	NOUN	Nb	Case=Acc|Gender=Fem|Number=Plur	4	obj	_	Ref=REV_2.1
 7	in	in	ADP	R-	AdpType=Prep	8	case	_	Ref=REV_2.1
@@ -9438,8 +9438,8 @@
 # source = Jerome's Vulgate, Revelation 2
 # text = qui habet aurem audiat quid Spiritus dicat ecclesiis
 # sent_id = 33509
-1	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	4	nsubj	_	Ref=REV_2.7
-2	habet	habeo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	1	acl:relcl	_	Ref=REV_2.7
+1	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	2	nsubj	_	Ref=REV_2.7
+2	habet	habeo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	4	csubj	_	Ref=REV_2.7
 3	aurem	auris	NOUN	Nb	Case=Acc|Gender=Fem|Number=Sing	2	obj	_	Ref=REV_2.7
 4	audiat	audio	VERB	V-	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=REV_2.7
 5	quid	quis	PRON	Pi	Case=Acc|Gender=Neut|Number=Sing|PronType=Int	7	obj	_	Ref=REV_2.7
@@ -9570,8 +9570,8 @@
 # source = Jerome's Vulgate, Revelation 2
 # text = qui habet aurem audiat quid Spiritus dicat ecclesiis
 # sent_id = 33519
-1	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	4	nsubj	_	Ref=REV_2.11
-2	habet	habeo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	1	acl:relcl	_	Ref=REV_2.11
+1	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	2	nsubj	_	Ref=REV_2.11
+2	habet	habeo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	4	csubj	_	Ref=REV_2.11
 3	aurem	auris	NOUN	Nb	Case=Acc|Gender=Fem|Number=Sing	2	obj	_	Ref=REV_2.11
 4	audiat	audio	VERB	V-	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=REV_2.11
 5	quid	quis	PRON	Pi	Case=Acc|Gender=Neut|Number=Sing|PronType=Int	7	obj	_	Ref=REV_2.11
@@ -9604,8 +9604,8 @@
 # sent_id = 33522
 1	haec	hic	DET	Pd	Case=Acc|Gender=Neut|Number=Plur	2	obj	_	Ref=REV_2.12
 2	dicit	dico	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=REV_2.12
-3	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	2	nsubj	_	Ref=REV_2.12
-4	habet	habeo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	3	acl:relcl	_	Ref=REV_2.12
+3	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	4	nsubj	_	Ref=REV_2.12
+4	habet	habeo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	2	csubj	_	Ref=REV_2.12
 5	rompheam	romphea	NOUN	Nb	Case=Acc|Gender=Fem|Number=Sing	4	obj	_	Ref=REV_2.12
 6	utraque	uterque	DET	Px	Case=Abl|Gender=Fem|Number=Sing	7	det	_	Ref=REV_2.12
 7	parte	pars	NOUN	Nb	Case=Abl|Gender=Fem|Number=Sing	8	obl	_	Ref=REV_2.12
@@ -9723,8 +9723,8 @@
 # source = Jerome's Vulgate, Revelation 2
 # text = qui habet aurem audiat quid Spiritus dicat ecclesiis
 # sent_id = 33531
-1	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	4	nsubj	_	Ref=REV_2.17
-2	habet	habeo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	1	acl:relcl	_	Ref=REV_2.17
+1	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	2	nsubj	_	Ref=REV_2.17
+2	habet	habeo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	4	csubj	_	Ref=REV_2.17
 3	aurem	auris	NOUN	Nb	Case=Acc|Gender=Fem|Number=Sing	2	obj	_	Ref=REV_2.17
 4	audiat	audio	VERB	V-	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=REV_2.17
 5	quid	quis	PRON	Pi	Case=Acc|Gender=Neut|Number=Sing|PronType=Int	7	obj	_	Ref=REV_2.17
@@ -9758,9 +9758,9 @@
 7	quod	qui	PRON	Pr	Case=Acc|Gender=Neut|Number=Sing|PronType=Rel	9	obj	_	Ref=REV_2.17
 8	nemo	nemo	ADJ	Px	Case=Nom|Gender=Fem,Masc|Number=Sing	9	nsubj	_	Ref=REV_2.17
 9	scit	scio	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	4	acl:relcl	_	Ref=REV_2.17
-10	nisi	nisi	SCONJ	Df	_	11	mark	_	Ref=REV_2.17
-11	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	8	advcl	_	Ref=REV_2.17
-12	accipit	accipio	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	11	acl:relcl	_	Ref=REV_2.17
+10	nisi	nisi	SCONJ	Df	_	12	mark	_	Ref=REV_2.17
+11	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	12	nsubj	_	Ref=REV_2.17
+12	accipit	accipio	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	8	advcl	_	Ref=REV_2.17
 
 # source = Jerome's Vulgate, Revelation 2
 # text = et angelo Thyatirae ecclesiae scribe
@@ -9881,8 +9881,8 @@
 # text = et qui moechantur cum ea in tribulationem maximam nisi paenitentiam egerint ab operibus eius
 # sent_id = 33542
 1	et	et	CCONJ	C-	_	0	root	_	Ref=REV_2.22
-2	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	1	obj	_	Ref=REV_2.22
-3	moechantur	moechor	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	2	acl:relcl	_	Ref=REV_2.22
+2	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	3	nsubj	_	Ref=REV_2.22
+3	moechantur	moechor	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	1	ccomp	_	Ref=REV_2.22
 4	cum	cum	ADP	R-	AdpType=Prep	5	case	_	Ref=REV_2.22
 5	ea	is	PRON	Pp	Case=Abl|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	obl	_	Ref=REV_2.22
 6	in	in	ADP	R-	AdpType=Prep	7	case	_	Ref=REV_2.22
@@ -10028,8 +10028,8 @@
 # source = Jerome's Vulgate, Revelation 2
 # text = qui habet aurem audiat quid Spiritus dicat ecclesiis
 # sent_id = 33550
-1	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	4	nsubj	_	Ref=REV_2.29
-2	habet	habeo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	1	acl:relcl	_	Ref=REV_2.29
+1	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	2	nsubj	_	Ref=REV_2.29
+2	habet	habeo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	4	csubj	_	Ref=REV_2.29
 3	aurem	auris	NOUN	Nb	Case=Acc|Gender=Fem|Number=Sing	2	obj	_	Ref=REV_2.29
 4	audiat	audio	VERB	V-	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=REV_2.29
 5	quid	quis	PRON	Pi	Case=Acc|Gender=Neut|Number=Sing|PronType=Int	7	obj	_	Ref=REV_2.29
@@ -10864,8 +10864,8 @@
 # sent_id = 160610
 1	Circa	circa	ADP	R-	AdpType=Prep	2	case	_	Ref=3.12.4
 2	crus	crus	NOUN	Nb	Case=Acc|Gender=Neut|Number=Sing	4	obl	_	Ref=3.12.4
-3	quicquid	quisquis	PRON	Pr	Case=Nom|Gender=Neut|Number=Sing|PronType=Rel	5	nsubj:pass	_	Ref=3.12.4
-4	nascitur	nascor	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	3	acl:relcl	_	Ref=3.12.4
+3	quicquid	quisquis	PRON	Pr	Case=Nom|Gender=Neut|Number=Sing|PronType=Rel	4	nsubj	_	Ref=3.12.4
+4	nascitur	nascor	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	5	csubj	_	Ref=3.12.4
 5	amputandum	amputo	VERB	V-	Case=Nom|Gender=Neut|Number=Sing|VerbForm=Gdv	0	root	_	Ref=3.12.4
 6	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	5	aux:pass	_	Ref=3.12.4
 7	si	si	SCONJ	G-	_	9	mark	_	Ref=3.12.4
@@ -10890,9 +10890,9 @@
 11	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	12	aux:pass	_	Ref=3.12.4
 12	cauatus	cavo	VERB	V-	Aspect=Perf|Case=Nom|Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	13	advcl	_	Ref=3.12.4
 13	purgamus	purgo	VERB	V-	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=3.12.4
-14	quicquid	quisquis	PRON	Pr	Case=Nom|Gender=Neut|Number=Sing|PronType=Rel	13	obj	_	Ref=3.12.4
+14	quicquid	quisquis	PRON	Pr	Case=Nom|Gender=Neut|Number=Sing|PronType=Rel	16	nsubj	_	Ref=3.12.4
 15	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	16	aux:pass	_	Ref=3.12.4
-16	mortuum	morior	VERB	V-	Aspect=Perf|Case=Nom|Gender=Neut|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	14	acl:relcl	_	Ref=3.12.4
+16	mortuum	morior	VERB	V-	Aspect=Perf|Case=Nom|Gender=Neut|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	13	ccomp	_	Ref=3.12.4
 17	plagas	plaga	NOUN	Nb	Case=Acc|Gender=Fem|Number=Plur	21	obj	_	Ref=3.12.4
 18	que	que	CCONJ	C-	_	21	cc	_	Ref=3.12.4
 19	eas	is	DET	Pd	Case=Acc|Gender=Fem|Number=Plur	17	det	_	Ref=3.12.4
@@ -11439,8 +11439,8 @@
 34	tua	tuus	DET	Ps	Case=Abl|Gender=Fem|Number=Sing|Person=2|Poss=Yes	33	obl:arg	_	Ref=1.10.6
 35	te	tu	PRON	Pp	Case=Acc|Gender=Masc|Number=Sing|Person=2|PronType=Prs	36	nsubj	_	Ref=1.10.6
 36	agere	ago	VERB	V-	Tense=Pres|VerbForm=Inf|Voice=Act	33	ccomp	_	Ref=1.10.6
-37	quod	qui	PRON	Pr	Case=Nom|Gender=Neut|Number=Sing|PronType=Rel	36	obj	_	Ref=1.10.6
-38	agendum	ago	VERB	V-	Case=Nom|Gender=Neut|Number=Sing|VerbForm=Gdv	37	acl:relcl	_	Ref=1.10.6
+37	quod	qui	PRON	Pr	Case=Nom|Gender=Neut|Number=Sing|PronType=Rel	38	nsubj:pass	_	Ref=1.10.6
+38	agendum	ago	VERB	V-	Case=Nom|Gender=Neut|Number=Sing|VerbForm=Gdv	36	ccomp	_	Ref=1.10.6
 39	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	38	aux:pass	_	Ref=1.10.6
 40	hoc	hic	DET	Pd	Case=Abl|Gender=Masc,Neut|Number=Sing	41	det	_	Ref=1.10.6
 41	tempore	tempus	NOUN	Nb	Case=Abl|Gender=Neut|Number=Sing	38	obl	_	Ref=1.10.6
@@ -12233,10 +12233,10 @@
 2	rem	res	NOUN	Nb	Case=Acc|Gender=Fem|Number=Sing	4	obj	_	Ref=1.12.4
 3	nullam	nullus	DET	Px	Case=Acc|Gender=Fem|Number=Sing	2	det	_	Ref=1.12.4
 4	habebis	habeo	VERB	V-	Mood=Ind|Number=Sing|Person=2|Tense=Fut|VerbForm=Fin|Voice=Act	9	advcl	_	Ref=1.12.4
-5	quod	qui	PRON	Pr	Case=Nom|Gender=Neut|Number=Sing|PronType=Rel	9	obj	_	Ref=1.12.4
+5	quod	qui	PRON	Pr	Case=Nom|Gender=Neut|Number=Sing|PronType=Rel	8	nsubj	_	Ref=1.12.4
 6	in	in	ADP	R-	AdpType=Prep	7	case	_	Ref=1.12.4
 7	buccam	bucca	NOUN	Nb	Case=Acc|Gender=Fem|Number=Sing	8	obl	_	Ref=1.12.4
-8	venerit	venio	VERB	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	5	acl:relcl	_	Ref=1.12.4
+8	venerit	venio	VERB	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	9	ccomp	_	Ref=1.12.4
 9	scribito	scribo	VERB	V-	Mood=Imp|Number=Sing|Person=2|Tense=Fut|VerbForm=Fin|Voice=Act	0	root	_	Ref=1.12.4
 
 # source = Epistulae ad Atticum, Book 1, letter 12
@@ -13888,8 +13888,8 @@
 2	dudum	dudum	ADV	Df	_	4	advmod	_	Ref=4.5.1
 3	enim	enim	PART	Df	_	4	discourse	_	Ref=4.5.1
 4	circumrodo	circumrodo	VERB	V-	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	10	parataxis	_	Ref=4.5.1
-5	quod	qui	PRON	Pr	Case=Nom|Gender=Neut|Number=Sing|PronType=Rel	4	obj	_	Ref=4.5.1
-6	devorandum	devoro	VERB	V-	Case=Nom|Gender=Neut|Number=Sing|VerbForm=Gdv	5	acl:relcl	_	Ref=4.5.1
+5	quod	qui	PRON	Pr	Case=Nom|Gender=Neut|Number=Sing|PronType=Rel	6	nsubj:pass	_	Ref=4.5.1
+6	devorandum	devoro	VERB	V-	Case=Nom|Gender=Neut|Number=Sing|VerbForm=Gdv	4	ccomp	_	Ref=4.5.1
 7	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	6	aux:pass	_	Ref=4.5.1
 8	subturpicula	subturpiculus	ADJ	A-	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	10	xcomp:pred	_	Ref=4.5.1
 9	mihi	ego	PRON	Pp	Case=Dat|Gender=Masc|Number=Sing|Person=1|PronType=Prs	10	obl	_	Ref=4.5.1
@@ -17464,8 +17464,8 @@
 7	equitatu	equitatus	NOUN	Nb	Case=Abl|Gender=Masc|Number=Sing	8	obl	_	Ref=4.11.6
 8	antecesserant	antecedo	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pqp|VerbForm=Fin|Voice=Act	3	acl:relcl	_	Ref=4.11.6
 9	mittit	mitto	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=4.11.6
-10	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	9	obj	_	Ref=4.11.6
-11	nuntiarent	nuntio	VERB	V-	Aspect=Imp|Mood=Sub|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	10	acl:relcl	_	Ref=4.11.6
+10	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	11	nsubj	_	Ref=4.11.6
+11	nuntiarent	nuntio	VERB	V-	Aspect=Imp|Mood=Sub|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	9	ccomp	_	Ref=4.11.6
 12	ne	ne	SCONJ	G-	_	15	mark	_	Ref=4.11.6
 13	hostes	hostis	NOUN	Nb	Case=Abl|Gender=Masc|Number=Plur	15	obj	_	Ref=4.11.6
 14	proelio	proelium	NOUN	Nb	Case=Abl|Gender=Neut|Number=Sing	15	obl:arg	_	Ref=4.11.6
@@ -18246,10 +18246,10 @@
 # source = De officiis, Book 1, section 23
 # text = qui autem non defendit ne c obsistit si potest iniuriae tam est in vitio quam si parentes aut amicos aut patriam deserat
 # sent_id = 86104
-1	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	14	nsubj	_	Ref=1.23
+1	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	4	nsubj	_	Ref=1.23
 2	autem	autem	CCONJ	Df	_	14	cc	_	Ref=1.23
 3	non	non	PART	Df	Polarity=Neg	4	advmod:neg	_	Ref=1.23
-4	defendit	defendo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	1	acl:relcl	_	Ref=1.23
+4	defendit	defendo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	14	csubj	_	Ref=1.23
 5	ne	ne	ADV	Df	Polarity=Neg	7	advmod	_	Ref=1.23
 6	c	que	CCONJ	C-	_	7	cc	_	Ref=1.23
 7	obsistit	obsisto	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	4	conj	_	Ref=1.23
@@ -18797,7 +18797,7 @@
 # sent_id = 86134
 1	Sunt	sum	AUX	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=1.29
 2	etiam	etiam	ADV	Df	_	1	advmod:emph	_	Ref=1.29
-3	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	1	nsubj	_	Ref=1.29
+3	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	17	nsubj	_	Ref=1.29
 4	aut	aut	CCONJ	C-	_	5	cc	_	Ref=1.29
 5	studio	studium	NOUN	Nb	Case=Abl|Gender=Neut|Number=Sing	17	obl	_	Ref=1.29
 6	rei	res	NOUN	Nb	Case=Gen|Gender=Fem|Number=Sing	8	nsubj	_	Ref=1.29
@@ -18811,7 +18811,7 @@
 14	se	se	PRON	Pk	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs|Reflex=Yes	16	nsubj	_	Ref=1.29
 15	negotium	negotium	NOUN	Nb	Case=Acc|Gender=Neut|Number=Sing	16	obj	_	Ref=1.29
 16	agere	ago	VERB	V-	Tense=Pres|VerbForm=Inf|Voice=Act	17	ccomp	_	Ref=1.29
-17	dicant	dico	VERB	V-	Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	3	acl:relcl	_	Ref=1.29
+17	dicant	dico	VERB	V-	Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	1	csubj	_	Ref=1.29
 18	ne	ne	ADV	Df	Polarity=Neg	22	advmod	_	Ref=1.29
 19	c	que	CCONJ	C-	_	22	cc	_	Ref=1.29
 20	facere	facio	VERB	V-	Tense=Pres|VerbForm=Inf|Voice=Act	22	xcomp	_	Ref=1.29

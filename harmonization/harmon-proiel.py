@@ -513,38 +513,19 @@ for node in doc.nodes:
 	# elliptical relative clauses
 	if node.deprel == 'nsubj' and node.parent.deprel == 'nsubj' and node.feats['PronType'] == 'Rel':
 		rel = node.parent
-		node.parent = rel.parent
-		rel.parent = node
-		node.deprel = rel.deprel
-		rel.deprel = 'acl:relcl'
+		rel.deprel = 'csubj'
 	if node.deprel == 'nsubj' and node.parent.deprel == 'obj' and node.feats['PronType'] == 'Rel':
 		rel = node.parent
-		node.parent = rel.parent
-		rel.parent = node
-		node.deprel = rel.deprel
-		rel.deprel = 'acl:relcl'
+		rel.deprel = 'ccomp'
 	# two subjects in relative structure
 	if node.deprel == 'nsubj':
-		sib = [s for s in node.siblings]
 		bis = [b for b in node.siblings if b.deprel == 'nsubj']
 		if bis:
-			bis.append(node)
-			pron = [b for b in bis if b.feats['PronType'] == 'Rel' and b.upos == 'PRON']
-			if pron:
-				pron = pron[0]
-				bis.remove(pron)
-				other = bis[0]
+			if (node.parent.ord - node.ord) < (node.parent.ord - bis[0].ord): # distance between node's parent and node
+				bis[0].deprel = 'nsubj:outer'
 			else:
-				continue
-			upper = pron.parent
-			pron.deprel = upper.deprel
-			pron.parent = upper.parent
-			upper.deprel = 'acl:relcl'
-			upper.parent = pron
-			other.parent = pron
-			for s in sib:
-				if s != pron:
-					s.parent = pron
+				node.deprel = 'nsubj:outer'
+
 
 	# fixed in advclauses
 	if node.deprel == 'fixed':

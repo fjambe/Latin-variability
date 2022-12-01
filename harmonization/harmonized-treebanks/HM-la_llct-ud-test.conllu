@@ -24871,9 +24871,9 @@
 # sent_id = test-s799
 # text = que vero fecerit, predictos duo milia mancusos si ad se esse conposituros, medietatem camere regis et medietatem parte ipsius eclesie et anc noticia pro securitate ipsius episcopii facere comonuimus.
 # reference = document_id='86:45'-span='196'
-1	que	qui	PRON	p|p|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing|PronType=Rel	13	nsubj	_	_
+1	que	qui	PRON	p|p|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing|PronType=Rel	3	nsubj	_	_
 2	vero	uero	ADV	d|d|-|-|-|-|-|-|-|-	_	3	discourse	_	_
-3	fecerit	facio	VERB	v|v|3|s|t|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	1	acl:relcl	_	SpaceAfter=No
+3	fecerit	facio	VERB	v|v|3|s|t|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	13	csubj	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	3	punct	_	_
 5	predictos	praedictus	DET	a|a|-|p|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Plur|PronType=Dem	8	det	_	_
 6	duo	duo	NUM	a|a|-|p|-|-|-|n|a|-	Case=Acc|Gender=Neut|Number=Plur|NumType=Card	8	nummod	_	_

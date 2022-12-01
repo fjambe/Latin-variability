@@ -129,25 +129,6 @@ for node in doc.nodes:
 	# qualis
 	if node.lemma == 'qualis' and node.deprel == 'acl':
 		node.deprel = 'acl:relcl'
-	# inversion with elliptical subjects in relative clauses
-	if node.feats['PronType'] == 'Rel' and node.upos == 'PRON' and node.parent.deprel == 'csubj':
-		head = node.parent
-		dependents = [d for d in head.siblings]
-		subjects = []
-		for d in dependents:
-			if d.deprel.startswith('nsubj'):
-				subjects.append(d)
-		if len(subjects) == 0:
-			if head.parent.feats['Voice'] == 'Act':
-				node.deprel = 'nsubj'
-			if head.parent.feats['Voice'] == 'Pass':
-				if head.parent.lemma[-1] == 'r':
-					node.deprel = 'nsubj'
-				else:
-					node.deprel = 'nsubj:pass'
-			node.parent = head.parent
-			head.deprel = 'acl:relcl'
-			head.parent = node
 	# inverting head-dep in 'sum' dependencies in relative clauses
 	if node.lemma == 'qui' and node.deprel == 'obl' and node.parent.lemma == 'sum' and node.parent.deprel == 'acl:relcl':
 		dependents = [s for s in node.siblings]

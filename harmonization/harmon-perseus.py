@@ -335,8 +335,6 @@ for node in doc.nodes:
 		node.feats['PronType'] = 'Rel'
 	if node.parent.deprel == 'acl' and node.lemma in ['qui', 'ubi']:
 		node.parent.deprel = 'acl:relcl'
-	if node.parent.deprel == 'csubj' and node.lemma == 'qui' and node.upos == 'PRON':
-		node.parent.deprel = 'acl:relcl'
 	if node.deprel == 'acl':
 		dependents = [d for d in node.descendants if d.lemma == 'qui' and node.upos == 'PRON']
 		if dependents:
@@ -427,24 +425,6 @@ for node in doc.nodes:
 			else:
 				node.parent = node.prev_node
 
-			
-	# inversion with elliptical subjects in relative clauses
-	if node.deprel == 'acl:relcl' and node.parent.upos == 'VERB':
-		pron = [d for d in node.descendants if d.lemma == 'qui' and d.upos == 'PRON']
-		if pron:
-			pron[0].parent = node.parent
-			node.parent = pron[0]
-			if pron[0].feats['Case'] == 'Acc':
-				pron[0].deprel = 'obj'	
-			elif pron[0].feats['Case'] == 'Nom':
-				if node.parent.feats['Voice'] == 'Act':
-					pron[0].deprel = 'nsubj'
-				if node.parent.feats['Voice'] == 'Pass':
-					if node.parent.lemma[-1] == 'r':
-						pron[0].deprel = 'nsubj'
-					else:
-						pron[0].deprel = 'nsubj:pass'	
-	
 	
 # third round of corrections						
 for node in doc.nodes:		

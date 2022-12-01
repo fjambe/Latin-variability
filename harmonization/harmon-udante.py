@@ -11,9 +11,9 @@ import udapi.block.ud.la.addmwt
 import udapi.block.ud.convert1to2
 
 split = sys.argv[1] # train/dev/test
-UD_folder = 'path/to/folder/containing/all/UD/Latin/treebanks'
+UD_folder = '/home/federica/Desktop/latin/UD_devbranch' # path to the folder containing all UD Latin treebanks
 filename = f'{UD_folder}/UD_Latin-UDante-dev/la_udante-ud-{split}.conllu'
-output_folder = '/path/to/folder/where/output/is/stored'
+output_folder = '/home/federica/Desktop/latin/harmonization/harmonized-treebanks'
 doc = udapi.Document(filename)
 
 
@@ -44,6 +44,62 @@ for node in doc.nodes:
 			node.deprel = 'appos'
 		else:
 			node.deprel = 'nmod'
+			
+	# relative clauses
+	if node.deprel == 'acl:relcl' and node.parent.feats['PronType'] == 'Rel':
+		pron = node.parent
+		if pron.deprel != 'root':
+			if node.upos != 'AUX': # sum
+				node.parent = pron.parent
+				if pron.deprel == 'nsubj':
+					node.deprel = 'csubj'
+				elif pron.deprel == 'nsubj:pass':
+					node.deprel = 'csubj:pass'
+				elif pron.deprel == 'dislocated:nsubj':
+					node.deprel = 'dislocated:csubj'
+				elif pron.deprel == 'obj':
+					node.deprel = 'ccomp'
+				elif pron.deprel.startswith('advmod') or pron.deprel.startswith('obl'):
+					node.deprel = 'advcl'
+				elif pron.deprel.startswith('advcl') or pron.deprel == 'conj':
+					node.deprel = pron.deprel
+				else:
+					continue
+					
+				pron.parent = node
+				if pron.feats['Case'] == 'Nom':
+					if node.feats['Voice'] == 'Pass' and node.lemma[-1] != 'r': # non-deponent verb
+						pron.deprel = 'nsubj:pass'
+					else:
+						pron.deprel = 'nsubj'
+				elif pron.feats['Case'] == 'Acc':
+					pron.deprel = 'obj'
+				elif pron.feats['Case'] == 'Abl':
+					pron.deprel = 'obl'
+				elif pron.upos == 'ADV':
+					continue # pron.deprel does not change
+					
+			else:
+				node.deprel = 'cop'
+				if pron.deprel == 'nsubj':
+					node.deprel = 'csubj'
+				elif pron.deprel == 'nsubj:pass':
+					node.deprel = 'csubj:pass'
+				elif pron.deprel == 'dislocated:nsubj':
+					node.deprel = 'dislocated:csubj'
+				elif pron.deprel == 'obj':
+					node.deprel = 'ccomp'
+				elif pron.deprel.startswith('advmod') or pron.deprel.startswith('obl'):
+					node.deprel = 'advcl'
+				elif pron.deprel.startswith('advcl') or pron.deprel == 'conj':
+					node.deprel = pron.deprel
+				else:
+					continue
+				
+				
+	# cmpr
+	if node.deprel.endswith(':cmpr'):
+		node.deprel = node.deprel[:-1]
 				
 with open(f'{output_folder}/HM-la_udante-ud-{split}.conllu', 'w') as output:
 	output.write(doc.to_conllu_string())
