@@ -13,8 +13,8 @@ import udapi.block.ud.setspaceafterfromtext
 import udapi.block.ud.fixpunct
 
 split = sys.argv[1] # train/dev/test
-UD_folder = '/home/federica/Desktop/latin/UDv210-Latin' # path to the folder containing all UD Latin treebanks
-filename = f'{UD_folder}/UD_Latin-PROIEL/la_proiel-ud-{split}.conllu'
+UD_folder = '/home/federica/Desktop/latin/UD_devbranch' # path to the folder containing all UD Latin treebanks
+filename = f'{UD_folder}/UD_Latin-PROIEL-dev/la_proiel-ud-{split}.conllu'
 output_folder = '/home/federica/Desktop/latin/harmonization/harmonized-treebanks'
 doc = udapi.Document(filename)
 

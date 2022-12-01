@@ -14,8 +14,8 @@ import udapi.block.ud.fixpunct
 
 
 split = sys.argv[1] # train/test
-UD_folder = '/home/federica/Desktop/latin/UDv210-Latin' # path to the folder containing all UD Latin treebanks
-filename = f'{UD_folder}/UD_Latin-Perseus/la_perseus-ud-{split}.conllu'
+UD_folder = '/home/federica/Desktop/latin/UD_devbranch' # path to the folder containing all UD Latin treebanks
+filename = f'{UD_folder}/UD_Latin-Perseus-dev/la_perseus-ud-{split}.conllu'
 output_folder = '/home/federica/Desktop/latin/harmonization/harmonized-treebanks'
 doc = udapi.Document(filename)		
 
