@@ -225,10 +225,20 @@ for node in doc.nodes:
 			elif month.form.endswith('ibus') or month.form.endswith('iis'):
 				month.feats['Case'] = 'Abl'
 				node.feats['Case'] = 'Abl'
-		elif not calend and node.feats['Polarity'] != 'Neg':
-			node.form = node.form[:-1] if node.form[-1] == '.' else node.form
-			node.lemma = 'kalendae' if node.form.lower().startswith('kal') else 'nonae'
-			node.misc['DeletedPunct'] = '.'
+		elif not calend and node.lemma.lower() not in ['nonne', 'nondum', 'nonaginta', 'nonus', 'nonnumquam', 'nonnullus', 'nonnihil', 'Nonius']:
+			if node.form[-1] == '.': # else remains the same
+				node.form = node.form[:-1]
+				node.misc['DeletedPunct'] = '.'
+			if node.form.lower().startswith('kal'):		
+				node.lemma = 'kalendae'
+			elif node.form.lower() in ['idus', 'idibus']:
+				node.lemma = 'idus'
+			elif node.form in ['Nonas', 'Nonis', 'Nonarum']:
+				node.lemma = 'nonae'
+                node.feats['Case'] = 'Acc' if node.form == 'Nonas' else ''
+                node.feats['Case'] = 'Abl' if node.form == 'Nonis' else 'Gen'
+
+
 		node.root.text = None
 		node.root.text = node.root.get_sentence()
 	
