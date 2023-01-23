@@ -222,9 +222,11 @@ sub compare_files
             # gold unchanged, parse changed deprel, still bad: GLD=SYS=D0
             # gold unchanged, parse changed parent, still bad: GLD=SYS=0
             # gold unchanged, parse fixed deprel (same good parent): GLD=SYS+D
+            # gold unchanged, parse fixed parent (same good deprel): GLD=SYS+P
             # gold unchanged, parse fixed parent and deprel: GLD=SYS+PD
             # gold unchanged, parse fixed parent but deprel is bad: GLD=SYS+P
             # gold unchanged, parse spoiled deprel (same good parent): GLD=SYS-D
+            # gold unchanged, parse spoiled parent (same good deprel): GLD=SYS-P
             # gold unchanged, parse spoiled parent (regardless deprel): GLD=SYS-PD
             # gold changed deprel, parse correct before and after: GLD!D!SYS=1
             # gold changed deprel, parse wrong before and after (same or different error): GLD!D!SYS=0
@@ -262,7 +264,7 @@ sub compare_files
                 }
                 elsif($f1[6] != $gf1[6] && $f2[6] == $gf2[6])
                 {
-                    if($f2[7] eq $gf2[7])
+                    if($f1[7] ne $gf1[7] && $f2[7] eq $gf2[7])
                     {
                         $x = 'GLD=SYS+PD';
                     }
@@ -273,7 +275,14 @@ sub compare_files
                 }
                 elsif($f1[6] == $gf1[6] && $f2[6] != $gf2[6])
                 {
-                    $x = 'GLD=SYS-PD';
+                    if($f1[7] eq $gf1[7] && $f2[7] ne $gf2[7])
+                    {
+                        $x = 'GLD=SYS-PD';
+                    }
+                    else
+                    {
+                        $x = 'GLD=SYS-P';
+                    }
                 }
                 elsif($f1[6] != $gf1[6] && $f2[6] != $gf2[6])
                 {
