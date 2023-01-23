@@ -157,7 +157,7 @@ else
             my @models = sort(keys(%{$testfile{'before'}{$parser}}));
             foreach my $model (@models)
             {
-                my $label = "$treebank $parser $model before-after";
+                my $label = "$treebank $parser by$model before-after";
                 $label .= ' ' x (40-length($label));
                 my $parse0 = $testfile{'before'}{$parser}{$model}{$treebank};
                 my $parse1 = $testfile{'after'}{$parser}{$model}{$treebank};
