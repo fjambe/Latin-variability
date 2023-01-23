@@ -380,7 +380,7 @@ sub compare_files
     if($output eq 'summary')
     {
         #my $evaluation = join(', ', map {"$nt{$_} $_"} (sort(keys(%nt))));
-        my $evaluation = join(', ', map {"$nt{$_} $_"} (sort {$nt{$b} <=> $nt{$a}} (keys(%nt))));
+        my $evaluation = join(', ', map {"$nt{$_} $_"} (sort {my $r = $nt{$b} <=> $nt{$a}; unless($r) {$r = $a cmp $b} $r} (keys(%nt))));
         print("SUMMARY $label compared $ns_compared/$ns1 sents: $evaluation\n");
     }
 }
