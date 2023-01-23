@@ -279,10 +279,10 @@ sub compare_files
                     {
                         $x = 'GLD=SYS-PD';
                     }
-                    elsif($f1[7] eq $gf1[7] && $f2[7] eq $gf2[7] && $f1[7] eq $f2[7])
-                    {
-                        $x = 'GLD=SYS-P:'.$f2[7];
-                    }
+                    #elsif($f1[7] eq $gf1[7] && $f2[7] eq $gf2[7] && $f1[7] eq $f2[7])
+                    #{
+                    #    $x = 'GLD=SYS-P:'.$f2[7];
+                    #}
                     else
                     {
                         $x = 'GLD=SYS-P';
