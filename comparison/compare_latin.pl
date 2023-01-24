@@ -407,6 +407,11 @@ sub compare_files
                     $x = 'GLD!PD!OTHER';
                 }
             }
+            # To reduce confusion, remove the SYS info from the tag if comparing the gold files.
+            if($label =~ m/ gold /)
+            {
+                $x =~ s/SYS=1//;
+            }
             $nt{$x}++;
             $totalnt{$x}++; # global hash
             # If required, print the CoNLL-U file with the comparison in MISC.
