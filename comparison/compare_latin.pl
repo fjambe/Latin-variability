@@ -18,6 +18,7 @@ sub usage
     print STDERR ("    too much, as only those sentences will be compared that have the same number of nodes.\n");
     print STDERR ("    The script takes CoNLL-U test files from hard-coded paths on the ÚFAL network.\n");
     print STDERR ("    By default it prints the summary.\n");
+    print STDERR ("    deprel ... Prints a detailed summary: deprels included in category labels where appropriate.\n");
     print STDERR ("    conllu ... Prints a CoNLL-U file where the comparison is annotated in the MISC column.\n");
     print STDERR ("    wcc ...... Prints the sentence/word statistics for each file and exits.\n");
     print STDERR ("    --help ... Prints this usage information and exits.\n");
@@ -36,7 +37,7 @@ if($help)
     usage();
     exit;
 }
-if($ARGV[0] =~ m/^(wcc|conllu)$/i)
+if($ARGV[0] =~ m/^(deprel|conllu|wcc)$/i)
 {
     $output = lc($ARGV[0]);
 }
@@ -167,6 +168,13 @@ else
             }
         }
     }
+    if($output ne 'conllu')
+    {
+        print("----------------------------------------------------------------------------------------------------\n");
+        #my $evaluation = join(', ', map {"$totalnt{$_} $_"} (sort(keys(%totalnt))));
+        my $evaluation = join(', ', map {"$totalnt{$_} $_"} (sort {my $r = $totalnt{$b} <=> $totalnt{$a}; unless($r) {$r = $a cmp $b} $r} (keys(%totalnt))));
+        print("SUMMARY TOTAL: $evaluation\n");
+    }
 }
 
 
@@ -182,8 +190,6 @@ sub compare_files
     my $gold1 = shift;
     my $gold2 = shift;
     my $output = shift;
-    ###!!! We should be able to turn on/off (from the command line) printing of the CoNLL-U file and of the summary.
-    my $print_summary = 0;
     my @doc1 = read_conllu($file1);
     my @doc2 = read_conllu($file2);
     my @gdoc1 = read_conllu($gold1);
@@ -249,59 +255,88 @@ sub compare_files
                 }
                 elsif($f1[6] == $gf1[6] && $f2[6] == $gf2[6])
                 {
+                    # We know that the parse changed and it was not the parent, so it must have been the deprel.
                     if($f1[7] ne $gf1[7] && $f2[7] eq $gf2[7])
                     {
                         $x = 'GLD=SYS+D';
+                        $x .= ':'.$f1[7].'>'.$f2[7] if($output eq 'deprel');
                     }
                     elsif($f1[7] eq $gf1[7] && $f2[7] ne $gf2[7])
                     {
                         $x = 'GLD=SYS-D';
+                        $x .= ':'.$f1[7].'>'.$f2[7] if($output eq 'deprel');
                     }
                     elsif($f1[7] ne $gf1[7] && $f2[7] ne $gf2[7])
                     {
                         $x = 'GLD=SYS=D0';
+                        $x .= ':'.$f1[7].'>'.$f2[7].'(>'.$gf2[7].')' if($output eq 'deprel');
                     }
                 }
                 elsif($f1[6] != $gf1[6] && $f2[6] == $gf2[6])
                 {
+                    # The parent has been fixed. What about the deprel?
                     if($f1[7] ne $gf1[7] && $f2[7] eq $gf2[7])
                     {
                         $x = 'GLD=SYS+PD';
+                        $x .= ':'.$f1[7].'>'.$f2[7] if($output eq 'deprel');
+                    }
+                    # The remaining possibilities:
+                    # - The parent has been fixed, the deprel was already OK and stayed so (hence it did not change, because the gold deprel did not).
+                    # - The parent has been fixed but the deprel is still wrong (changed or not).
+                    # - The parent was fixed but the deprel was spoiled.
+                    elsif($f1[7] eq $gf1[7] && $f2[7] eq $gf2[7])
+                    {
+                        $x = 'GLD=SYS+P1D';
+                        $x .= ':'.$f2[7] if($output eq 'deprel');
                     }
                     else
                     {
                         $x = 'GLD=SYS+P';
+                        $x .= ':'.$f1[7].'>'.$f2[7] if($output eq 'deprel');
                     }
                 }
                 elsif($f1[6] == $gf1[6] && $f2[6] != $gf2[6])
                 {
+                    # The parent has been spoiled. What about the deprel?
                     if($f1[7] eq $gf1[7] && $f2[7] ne $gf2[7])
                     {
                         $x = 'GLD=SYS-PD';
+                        $x .= ':'.$f1[7].'>'.$f2[7] if($output eq 'deprel');
                     }
-                    #elsif($f1[7] eq $gf1[7] && $f2[7] eq $gf2[7] && $f1[7] eq $f2[7])
-                    #{
-                    #    $x = 'GLD=SYS-P:'.$f2[7];
-                    #}
+                    # The remaining possibilities:
+                    # - The parent has been spoiled, the deprel was already OK and stayed so (hence it did not change, because the gold deprel did not).
+                    # - The parent has been spoiled and the deprel is still wrong (changed or not).
+                    # - The parent was spoiled but the deprel was fixed.
+                    elsif($f1[7] eq $gf1[7] && $f2[7] eq $gf2[7])
+                    {
+                        $x = 'GLD=SYS-P1D';
+                        $x .= ':'.$f2[7] if($output eq 'deprel');
+                    }
                     else
                     {
                         $x = 'GLD=SYS-P';
+                        $x .= ':'.$f1[7].'>'.$f2[7] if($output eq 'deprel');
                     }
                 }
                 elsif($f1[6] != $gf1[6] && $f2[6] != $gf2[6])
                 {
                     $x = 'GLD=SYS=0';
+                    # It probably does not make sense to report the deprels here.
                 }
                 else
                 {
+                    # This is a sanity check that we covered all possibilities
+                    # above. We should not end up here.
                     $x = 'GLD=OTHER';
                 }
             }
+            # Gold deprel changed but the relation still connects the same two nodes.
             elsif($gf1[6] == $gf2[6] && $gf1[7] ne $gf2[7])
             {
                 if($f1[6] == $gf1[6] && $f2[6] == $gf2[6] && $f1[7] eq $gf1[7] && $f2[7] eq $gf2[7])
                 {
                     $x = 'GLD!D!SYS=1';
+                    $x .= ':'.$f1[7].'>'.$f2[7] if($output eq 'deprel');
                 }
                 elsif(($f1[6] != $gf1[6] || $f1[7] ne $gf1[7]) && ($f2[6] != $gf2[6] || $f2[7] ne $gf2[7]))
                 {
@@ -310,21 +345,27 @@ sub compare_files
                 elsif($f1[6] == $gf1[6] && $f2[6] == $gf2[6] && $f1[7] ne $gf1[7] && $f2[7] eq $gf2[7])
                 {
                     $x = 'GLD!D!SYS+D';
+                    $x .= ':'.$f1[7].'>'.$f2[7] if($output eq 'deprel');
                 }
                 elsif($f1[6] != $gf1[6] && $f2[6] == $gf2[6] && $f2[7] eq $gf2[7])
                 {
                     $x = 'GLD!D!SYS+PD';
+                    $x .= ':'.$f1[7].'>'.$f2[7] if($output eq 'deprel');
                 }
                 elsif($f1[6] == $gf1[6] && $f2[6] == $gf2[6] && $f1[7] eq $gf1[7] && $f2[7] ne $gf2[7])
                 {
                     $x = 'GLD!D!SYS-D';
+                    $x .= ':'.$f1[7].'>'.$f2[7] if($output eq 'deprel');
                 }
                 elsif($f1[6] == $gf1[6] && $f2[6] != $gf2[6])
                 {
                     $x = 'GLD!D!SYS-PD';
+                    $x .= ':'.$f1[7].'>'.$f2[7] if($output eq 'deprel');
                 }
                 else
                 {
+                    # This is a sanity check that we covered all possibilities
+                    # above. We should not end up here.
                     $x = 'GLD!D!OTHER';
                 }
             }
@@ -333,6 +374,7 @@ sub compare_files
                 if($f1[6] == $gf1[6] && $f2[6] == $gf2[6] && $f1[7] eq $gf1[7] && $f2[7] eq $gf2[7])
                 {
                     $x = 'GLD!PD!SYS=1';
+                    $x .= ':'.$f1[7].'>'.$f2[7] if($output eq 'deprel');
                 }
                 elsif(($f1[6] != $gf1[6] || $f1[7] ne $gf1[7]) && ($f2[6] != $gf2[6] || $f2[7] ne $gf2[7]))
                 {
@@ -341,25 +383,32 @@ sub compare_files
                 elsif($f1[6] == $gf1[6] && $f2[6] == $gf2[6] && $f1[7] ne $gf1[7] && $f2[7] eq $gf2[7])
                 {
                     $x = 'GLD!PD!SYS+D';
+                    $x .= ':'.$f1[7].'>'.$f2[7] if($output eq 'deprel');
                 }
                 elsif($f1[6] != $gf1[6] && $f2[6] == $gf2[6] && $f2[7] eq $gf2[7])
                 {
                     $x = 'GLD!PD!SYS+PD';
+                    $x .= ':'.$f1[7].'>'.$f2[7] if($output eq 'deprel');
                 }
                 elsif($f1[6] == $gf1[6] && $f2[6] == $gf2[6] && $f1[7] eq $gf1[7] && $f2[7] ne $gf2[7])
                 {
                     $x = 'GLD!PD!SYS-D';
+                    $x .= ':'.$f1[7].'>'.$f2[7] if($output eq 'deprel');
                 }
                 elsif($f1[6] == $gf1[6] && $f2[6] != $gf2[6])
                 {
                     $x = 'GLD!PD!SYS-PD';
+                    $x .= ':'.$f1[7].'>'.$f2[7] if($output eq 'deprel');
                 }
                 else
                 {
+                    # This is a sanity check that we covered all possibilities
+                    # above. We should not end up here.
                     $x = 'GLD!PD!OTHER';
                 }
             }
             $nt{$x}++;
+            $totalnt{$x}++; # global hash
             # If required, print the CoNLL-U file with the comparison in MISC.
             if($output eq 'conllu')
             {
@@ -377,7 +426,7 @@ sub compare_files
         }
         print("\n") if($output eq 'conllu');
     }
-    if($output eq 'summary')
+    if($output ne 'conllu')
     {
         #my $evaluation = join(', ', map {"$nt{$_} $_"} (sort(keys(%nt))));
         my $evaluation = join(', ', map {"$nt{$_} $_"} (sort {my $r = $nt{$b} <=> $nt{$a}; unless($r) {$r = $a cmp $b} $r} (keys(%nt))));
