@@ -695,7 +695,7 @@
 37	et	et	CCONJ	c|c|-|-|-|-|-|-|-|-	_	39	cc	_	_
 38	non	non	PART	d|d|-|-|-|-|-|-|-|-	Polarity=Neg	39	advmod:neg	_	_
 39	adinplevero	adimpleo	VERB	v|v|1|s|t|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Fut|VerbForm=Fin|Voice=Act	36	conj	_	_
-40	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	42	mark	_	_
+40	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	42	mark	_	_
 41	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	42	advmod	_	_
 42	promisit	promitto	VERB	v|v|1|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	36	advcl:cmp	_	SpaceAfter=No
 43	,	,	PUNCT	Punc	_	36	punct	_	_
@@ -960,7 +960,7 @@
 40	aliquantis	aliquantus	DET	a|a|-|p|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Plur|PronType=Ind	41	det	_	_
 41	rebus	res	NOUN	n|n|-|p|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Plur	37	obl	_	SpaceAfter=No
 42	,	,	PUNCT	Punc	_	41	punct	_	_
-43	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	45	mark	_	_
+43	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	45	mark	_	_
 44	et	et	ADV	d|d|-|-|-|-|-|-|-|-	_	45	advmod:emph	_	_
 45	factum	facio	VERB	t|t|-|s|r|p|p|n|n|-	Aspect=Perf|Case=Nom|Gender=Neut|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	37	advcl:cmp	_	_
 46	est	sum	AUX	v|v|3|s|p|i|a|-|-|-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	45	aux:pass	_	SpaceAfter=No
@@ -1627,7 +1627,7 @@
 14	suprascripte	suprascriptus	DET	a|a|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing|PronType=Dem	15	det	_	_
 15	ecclesie	ecclesia	NOUN	n|n|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing	13	nmod	_	SpaceAfter=No
 16	,	,	PUNCT	Punc	_	18	punct	_	_
-17	quam	quam	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	18	mark	_	_
+17	quam	quam	SCONJ	c|c|-|-|-|-|-|-|-|-	_	18	mark	_	_
 18	recepimus	recipio	VERB	v|v|1|p|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	8	advcl:cmp	_	SpaceAfter=No
 19	,	,	PUNCT	Punc	_	29	punct	_	_
 20	ut	ut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	29	mark	_	_
@@ -1813,7 +1813,7 @@
 3	Viventius	Viuentius	PROPN	Propn|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	2	appos	_	_
 4	presbitero	presbyter	NOUN	n|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	3	appos	_	SpaceAfter=No
 5	,	,	PUNCT	Punc	_	2	punct	_	_
-6	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	8	mark	_	_
+6	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	8	mark	_	_
 7	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	8	advmod	_	_
 8	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	10	advcl:cmp	_	SpaceAfter=No
 9	,	,	PUNCT	Punc	_	8	punct	_	_
@@ -1827,7 +1827,7 @@
 1	ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	8	nsubj	_	_
 2	Deusdede	Deusdedit	PROPN	Propn|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	1	appos	_	SpaceAfter=No
 3	,	,	PUNCT	Punc	_	1	punct	_	_
-4	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	6	mark	_	_
+4	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	6	mark	_	_
 5	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	6	advmod	_	_
 6	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	8	advcl:cmp	_	SpaceAfter=No
 7	,	,	PUNCT	Punc	_	6	punct	_	_
@@ -1849,7 +1849,7 @@
 9	,	,	PUNCT	Punc	_	10	punct	_	_
 10	qui	qui	PRON	p|p|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	16	nsubj	_	SpaceAfter=No
 11	,	,	PUNCT	Punc	_	10	punct	_	_
-12	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	14	mark	_	_
+12	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	14	mark	_	_
 13	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	14	advmod	_	_
 14	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	16	advcl:cmp	_	SpaceAfter=No
 15	,	,	PUNCT	Punc	_	14	punct	_	_
@@ -1864,7 +1864,7 @@
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	9	nsubj	_	_
 3	Atrualdus	Atrualdus	PROPN	Propn|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	2	punct	_	_
-5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	7	mark	_	_
+5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	7	mark	_	_
 6	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	7	advmod	_	_
 7	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	9	advcl:cmp	_	SpaceAfter=No
 8	,	,	PUNCT	Punc	_	7	punct	_	_
@@ -1887,7 +1887,7 @@
 10	,	,	PUNCT	Punc	_	11	punct	_	_
 11	qui	qui	PRON	p|p|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	17	nsubj	_	SpaceAfter=No
 12	,	,	PUNCT	Punc	_	11	punct	_	_
-13	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	15	mark	_	_
+13	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	15	mark	_	_
 14	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	15	advmod	_	_
 15	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	17	advcl:cmp	_	SpaceAfter=No
 16	,	,	PUNCT	Punc	_	15	punct	_	_
@@ -1902,7 +1902,7 @@
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	9	nsubj	_	_
 3	Vunichisi	Winighisus	PROPN	Propn|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	2	punct	_	_
-5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	7	mark	_	_
+5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	7	mark	_	_
 6	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	7	advmod	_	_
 7	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	9	advcl:cmp	_	SpaceAfter=No
 8	,	,	PUNCT	Punc	_	7	punct	_	_
@@ -3285,7 +3285,7 @@
 5	taliter	taliter	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Dem	7	advmod	_	_
 6	non	non	PART	d|d|-|-|-|-|-|-|-|-	Polarity=Neg	7	advmod:neg	_	_
 7	adimpleverimus	adimpleo	VERB	v|v|1|p|t|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Plur|Person=1|Tense=Fut|VerbForm=Fin|Voice=Act	27	advcl	_	_
-8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	10	mark	_	_
+8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	10	mark	_	_
 9	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	10	advmod	_	_
 10	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	7	advcl:cmp	_	SpaceAfter=No
 11	,	,	PUNCT	Punc	_	18	punct	_	_
@@ -4230,7 +4230,7 @@
 5	taliter	taliter	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Dem	7	advmod	_	_
 6	non	non	PART	d|d|-|-|-|-|-|-|-|-	Polarity=Neg	7	advmod:neg	_	_
 7	adimpleverimus	adimpleo	VERB	v|v|1|p|t|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Plur|Person=1|Tense=Fut|VerbForm=Fin|Voice=Act	31	advcl	_	_
-8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	10	mark	_	_
+8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	10	mark	_	_
 9	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	10	advmod	_	_
 10	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	7	advcl:cmp	_	SpaceAfter=No
 11	,	,	PUNCT	Punc	_	22	punct	_	_
@@ -5194,7 +5194,7 @@
 5	taliter	taliter	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Dem	7	advmod	_	_
 6	non	non	PART	d|d|-|-|-|-|-|-|-|-	Polarity=Neg	7	advmod:neg	_	_
 7	adimpleverimus	adimpleo	VERB	v|v|1|p|t|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Plur|Person=1|Tense=Fut|VerbForm=Fin|Voice=Act	28	advcl	_	_
-8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	10	mark	_	_
+8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	10	mark	_	_
 9	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	10	advmod	_	_
 10	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	7	advcl:cmp	_	_
 11	aut	aut	CCONJ	c|c|-|-|-|-|-|-|-|-	_	19	cc	_	_
@@ -6737,7 +6737,7 @@
 96	et	et	CCONJ	c|c|-|-|-|-|-|-|-|-	_	97	cc	_	_
 97	confirmavit	confirmo	VERB	v|v|3|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	95	conj	_	SpaceAfter=No
 98	,	,	PUNCT	Punc	_	103	punct	_	_
-99	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	103	mark	_	_
+99	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	103	mark	_	_
 100	in	in	ADP	r|r|-|-|-|-|-|-|-|-	_	102	case	_	_
 101	ipsa	ipse	DET	p|p|-|s|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Sing|PronType=Dem	102	det	_	_
 102	ordinationes	ordinatio	NOUN	n|n|-|s|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Sing	103	obl	_	_
@@ -6852,7 +6852,7 @@
 38	et	et	CCONJ	c|c|-|-|-|-|-|-|-|-	_	40	cc	_	_
 39	non	non	PART	d|d|-|-|-|-|-|-|-|-	Polarity=Neg	40	advmod:neg	_	_
 40	peresolsero	perexsoluo	VERB	v|v|1|s|t|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Fut|VerbForm=Fin|Voice=Act	37	conj	_	_
-41	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	43	mark	_	_
+41	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	43	mark	_	_
 42	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	43	advmod	_	_
 43	promisi	promitto	VERB	v|v|1|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	37	advcl:cmp	_	SpaceAfter=No
 44	,	,	PUNCT	Punc	_	37	punct	_	_
@@ -7905,7 +7905,7 @@
 11	adimpleta	adimpleo	VERB	t|t|-|p|r|p|p|n|n|-	Aspect=Perf|Case=Nom|Gender=Neut|Number=Plur|Tense=Past|VerbForm=Part|Voice=Pass	0	root	_	_
 12	et	et	CCONJ	c|c|-|-|-|-|-|-|-|-	_	13	cc	_	_
 13	conservata	conseruo	VERB	t|t|-|p|r|p|p|n|n|-	Aspect=Perf|Case=Nom|Gender=Neut|Number=Plur|Tense=Past|VerbForm=Part|Voice=Pass	11	conj	_	_
-14	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	16	mark	_	_
+14	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	16	mark	_	_
 15	superius	superius	ADV	d|d|-|-|-|-|-|-|-|c	Degree=Cmp	16	advmod	_	_
 16	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	11	advcl:cmp	_	SpaceAfter=No
 17	,	,	PUNCT	Punc	_	18	punct	_	_
@@ -8361,7 +8361,7 @@
 5	taliter	taliter	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Dem	7	advmod	_	_
 6	non	non	PART	d|d|-|-|-|-|-|-|-|-	Polarity=Neg	7	advmod:neg	_	_
 7	adimpleverimus	adimpleo	VERB	v|v|1|p|t|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Plur|Person=1|Tense=Fut|VerbForm=Fin|Voice=Act	25	advcl	_	_
-8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	10	mark	_	_
+8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	10	mark	_	_
 9	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	10	advmod	_	_
 10	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	7	advcl:cmp	_	SpaceAfter=No
 11	,	,	PUNCT	Punc	_	16	punct	_	_
@@ -8432,9 +8432,9 @@
 # text = signa + + + + + manus Alperti et Deudati seo Marchi et Richimundi adque Richiperti germani, qui hunc libello fieri rogaverunt.
 # reference = document_id='85:12'-span='118'
 1	signa	signum	NOUN	n|n|-|p|-|-|-|n|n|-	Case=Nom|Gender=Neut|Number=Plur	0	root	_	_
-2	+	+	PUNCT	SYM	_	7	punct	_	_
-3	+	+	PUNCT	SYM	_	7	punct	_	_
-4	+	+	PUNCT	SYM	_	7	punct	_	_
+2	+	+	PUNCT	SYM	_	1	punct	_	_
+3	+	+	PUNCT	SYM	_	1	punct	_	_
+4	+	+	PUNCT	SYM	_	1	punct	_	_
 5	+	+	PUNCT	SYM	_	7	punct	_	_
 6	+	+	PUNCT	SYM	_	7	punct	_	_
 7	manus	manus	NOUN	n|n|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing	1	nmod	_	_
@@ -9175,7 +9175,7 @@
 5	taliter	taliter	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Dem	7	advmod	_	_
 6	non	non	PART	d|d|-|-|-|-|-|-|-|-	Polarity=Neg	7	advmod:neg	_	_
 7	adimpleverimus	adimpleo	VERB	v|v|1|p|t|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Plur|Person=1|Tense=Fut|VerbForm=Fin|Voice=Act	26	advcl	_	_
-8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	10	mark	_	_
+8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	10	mark	_	_
 9	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	10	advmod	_	_
 10	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	7	advcl:cmp	_	SpaceAfter=No
 11	,	,	PUNCT	Punc	_	17	punct	_	_
@@ -9511,7 +9511,7 @@
 5	taliter	taliter	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Dem	7	advmod	_	_
 6	non	non	PART	d|d|-|-|-|-|-|-|-|-	Polarity=Neg	7	advmod:neg	_	_
 7	adimpleverimus	adimpleo	VERB	v|v|1|p|t|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Plur|Person=1|Tense=Fut|VerbForm=Fin|Voice=Act	25	advcl	_	_
-8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	10	mark	_	_
+8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	10	mark	_	_
 9	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	10	advmod	_	_
 10	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	7	advcl:cmp	_	SpaceAfter=No
 11	,	,	PUNCT	Punc	_	17	punct	_	_
@@ -9762,7 +9762,7 @@
 36	comutationem	commutatio	NOUN	n|n|-|s|-|-|-|f|a|-	Case=Acc|Gender=Fem|Number=Sing	37	obj	_	_
 37	facere	facio	VERB	v|v|-|-|p|n|a|-|-|-	Aspect=Imp|Tense=Pres|VerbForm=Inf|Voice=Act	38	xcomp	_	_
 38	deberemus	debeo	VERB	v|v|1|p|i|s|a|-|-|-	Aspect=Imp|Mood=Sub|Number=Plur|Person=1|Tense=Past|VerbForm=Fin|VerbType=Mod|Voice=Act	13	csubj	_	_
-39	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	41	mark	_	_
+39	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	41	mark	_	_
 40	et	et	ADV	d|d|-|-|-|-|-|-|-|-	_	41	advmod:emph	_	_
 41	factum	facio	VERB	t|t|-|s|r|p|p|n|n|-	Aspect=Perf|Case=Nom|Gender=Neut|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	38	advcl:cmp	_	_
 42	est	sum	AUX	v|v|3|s|p|i|a|-|-|-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	41	aux:pass	_	SpaceAfter=No
@@ -10072,7 +10072,7 @@
 63	suprascripte	suprascriptus	DET	a|a|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing|PronType=Dem	64	det	_	_
 64	ecclesie	ecclesia	NOUN	n|n|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing	62	nmod	_	_
 65	vestre	uester	DET	a|a|2|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing|Number[psor]=Plur|Person[psor]=2|Poss=Yes|PronType=Prs	64	det	_	_
-66	quam	quam	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	67	mark	_	_
+66	quam	quam	SCONJ	c|c|-|-|-|-|-|-|-|-	_	67	mark	_	_
 67	recipisset	recipio	VERB	v|v|1|s|l|s|a|-|-|-	Aspect=Perf|Mood=Sub|Number=Sing|Person=1|Tense=Pqp|VerbForm=Fin|Voice=Act	58	advcl:cmp	_	SpaceAfter=No
 68	,	,	PUNCT	Punc	_	76	punct	_	_
 69	ut	ut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	76	mark	_	_
@@ -10233,7 +10233,7 @@
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
 3	Teopaldo	Teutpaldus	PROPN	Propn|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	2	punct	_	_
-5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	9	mark	_	_
+5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	9	mark	_	_
 6	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	7	case	_	_
 7	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	9	obl	_	_
 8	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	9	advmod	_	_
@@ -10259,7 +10259,7 @@
 1	+	+	PUNCT	SYM	_	9	punct	_	_
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	9	nsubj	_	_
 3	Teupertus	Teutpertus	PROPN	Propn|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	2	appos	_	_
-4	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	8	mark	_	_
+4	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	8	mark	_	_
 5	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	6	case	_	_
 6	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	8	obl	_	_
 7	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	8	advmod	_	_
@@ -10302,7 +10302,7 @@
 3	Adalfridi	Adalfridus	PROPN	Propn|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	2	appos	_	_
 4	schabinus	scabinus	NOUN	n|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	3	appos	_	SpaceAfter=No
 5	,	,	PUNCT	Punc	_	2	punct	_	_
-6	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	8	mark	_	_
+6	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	8	mark	_	_
 7	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	8	advmod	_	_
 8	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	10	advcl:cmp	_	SpaceAfter=No
 9	,	,	PUNCT	Punc	_	8	punct	_	_
@@ -10332,7 +10332,7 @@
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
 3	Aliprandu	Alprandus	PROPN	Propn|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	2	punct	_	_
-5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	9	mark	_	_
+5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	9	mark	_	_
 6	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	7	case	_	_
 7	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	9	obl	_	_
 8	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	9	advmod	_	_
@@ -10349,7 +10349,7 @@
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
 3	Richimundo	Richimundus	PROPN	Propn|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	2	punct	_	_
-5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	9	mark	_	_
+5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	9	mark	_	_
 6	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	7	case	_	_
 7	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	9	obl	_	_
 8	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	9	advmod	_	_
@@ -11229,7 +11229,7 @@
 5	taliter	taliter	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Dem	7	advmod	_	_
 6	non	non	PART	d|d|-|-|-|-|-|-|-|-	Polarity=Neg	7	advmod:neg	_	_
 7	adimpleverimus	adimpleo	VERB	v|v|1|p|t|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Plur|Person=1|Tense=Fut|VerbForm=Fin|Voice=Act	30	advcl	_	_
-8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	10	mark	_	_
+8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	10	mark	_	_
 9	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	10	advmod	_	_
 10	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	7	advcl:cmp	_	SpaceAfter=No
 11	,	,	PUNCT	Punc	_	21	punct	_	_
@@ -12156,7 +12156,7 @@
 5	sic	sic	ADV	d|d|-|-|-|-|-|-|-|-	_	7	advmod	_	_
 6	non	non	PART	d|d|-|-|-|-|-|-|-|-	Polarity=Neg	7	advmod:neg	_	_
 7	adimpleverimus	adimpleo	VERB	v|v|1|p|t|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Plur|Person=1|Tense=Fut|VerbForm=Fin|Voice=Act	27	advcl	_	_
-8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	10	mark	_	_
+8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	10	mark	_	_
 9	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	10	advmod	_	_
 10	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	7	advcl:cmp	_	SpaceAfter=No
 11	,	,	PUNCT	Punc	_	18	punct	_	_
@@ -12989,7 +12989,7 @@
 21	ipsius	ipse	DET	p|p|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing|PronType=Dem	22	det	_	_
 22	ecclesie	ecclesia	NOUN	n|n|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing	20	nmod	_	SpaceAfter=No
 23	,	,	PUNCT	Punc	_	25	punct	_	_
-24	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	25	mark	_	_
+24	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	25	mark	_	_
 25	dicebat	dico	VERB	v|v|3|s|i|i|a|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	18	advcl:cmp	_	SpaceAfter=No
 26	,	,	PUNCT	Punc	_	28	punct	_	_
 27	et	et	CCONJ	c|c|-|-|-|-|-|-|-|-	_	28	cc	_	_
@@ -13096,7 +13096,7 @@
 17	superius	superius	ADV	d|d|-|-|-|-|-|-|-|c	Degree=Cmp	18	advmod	_	_
 18	dicti	dico	VERB	t|t|-|p|r|p|p|f|b|-	Aspect=Perf|Case=Abl|Gender=Fem|Number=Plur|Tense=Past|VerbForm=Part|Voice=Pass	14	acl	_	SpaceAfter=No
 19	,	,	PUNCT	Punc	_	23	punct	_	_
-20	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	23	mark	_	_
+20	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	23	mark	_	_
 21	inter	inter	ADP	r|r|-|-|-|-|-|-|-|-	_	22	case	_	_
 22	nos	nos	PRON	p|p|1|p|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Plur|Person=1|PronType=Prs	23	obl	_	_
 23	vuadiatum	wadio	VERB	t|t|-|s|r|p|p|n|a|-	Aspect=Perf|Case=Acc|Gender=Neut|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	12	advcl:cmp	_	_
@@ -13309,7 +13309,7 @@
 9	ipsos	ipse	DET	p|p|-|p|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Plur|PronType=Dem	8	det	_	_
 10	recipiendum	recipio	VERB	t|t|-|s|p|d|p|n|a|-	Aspect=Imp|Case=Acc|Gender=Neut|Number=Sing|Tense=Pres|VerbForm=Ger|Voice=Pass	3	ccomp	_	SpaceAfter=No
 11	,	,	PUNCT	Punc	_	15	punct	_	_
-12	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	15	mark	_	_
+12	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	15	mark	_	_
 13	nobis	nos	PRON	p|p|1|p|-|-|-|m|d|-	Case=Dat|Gender=Masc|Number=Plur|Person=1|PronType=Prs	15	obl:arg	_	_
 14	vuadiam	wadia	NOUN	n|n|-|s|-|-|-|f|a|-	Case=Acc|Gender=Fem|Number=Sing	15	obj	_	_
 15	dedi	do	VERB	v|v|3|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	3	advcl:cmp	_	SpaceAfter=No
@@ -14131,7 +14131,7 @@
 5	sic	sic	ADV	d|d|-|-|-|-|-|-|-|-	_	7	advmod	_	_
 6	non	non	PART	d|d|-|-|-|-|-|-|-|-	Polarity=Neg	7	advmod:neg	_	_
 7	adimpleverimus	adimpleo	VERB	v|v|1|p|t|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Plur|Person=1|Tense=Fut|VerbForm=Fin|Voice=Act	32	advcl	_	_
-8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	10	mark	_	_
+8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	10	mark	_	_
 9	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	10	advmod	_	_
 10	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	7	advcl:cmp	_	SpaceAfter=No
 11	,	,	PUNCT	Punc	_	23	punct	_	_
@@ -15213,7 +15213,7 @@
 5	taliter	taliter	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Dem	7	advmod	_	_
 6	non	non	PART	d|d|-|-|-|-|-|-|-|-	Polarity=Neg	7	advmod:neg	_	_
 7	adimpleverimus	adimpleo	VERB	v|v|1|p|t|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Plur|Person=1|Tense=Fut|VerbForm=Fin|Voice=Act	26	advcl	_	_
-8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	10	mark	_	_
+8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	10	mark	_	_
 9	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	10	advmod	_	_
 10	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	7	advcl:cmp	_	SpaceAfter=No
 11	,	,	PUNCT	Punc	_	17	punct	_	_
@@ -16006,7 +16006,7 @@
 33	comutationem	commutatio	NOUN	n|n|-|s|-|-|-|f|a|-	Case=Acc|Gender=Fem|Number=Sing	34	obj	_	_
 34	facere	facio	VERB	v|v|-|-|p|n|a|-|-|-	Aspect=Imp|Tense=Pres|VerbForm=Inf|Voice=Act	35	xcomp	_	_
 35	deberemus	debeo	VERB	v|v|1|p|i|s|a|-|-|-	Aspect=Imp|Mood=Sub|Number=Plur|Person=1|Tense=Past|VerbForm=Fin|VerbType=Mod|Voice=Act	12	csubj	_	_
-36	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	38	mark	_	_
+36	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	38	mark	_	_
 37	et	et	ADV	d|d|-|-|-|-|-|-|-|-	_	38	advmod:emph	_	_
 38	factum	facio	VERB	t|t|-|s|r|p|p|n|n|-	Aspect=Perf|Case=Nom|Gender=Neut|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	34	advcl:cmp	_	_
 39	est	sum	AUX	v|v|3|s|p|i|a|-|-|-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	38	aux:pass	_	SpaceAfter=No
@@ -16369,7 +16369,7 @@
 71	vestro	uester	DET	a|a|2|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing|Number[psor]=Plur|Person[psor]=2|Poss=Yes|PronType=Prs	70	det	_	_
 72	sancti	sanctus	ADJ	a|a|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	73	amod	_	_
 73	Martini	Martinus	PROPN	Propn|n|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	70	nmod	_	_
-74	quam	quam	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	75	mark	_	_
+74	quam	quam	SCONJ	c|c|-|-|-|-|-|-|-|-	_	75	mark	_	_
 75	recipisset	recipio	VERB	v|v|1|s|l|s|a|-|-|-	Aspect=Perf|Mood=Sub|Number=Sing|Person=1|Tense=Pqp|VerbForm=Fin|Voice=Act	64	advcl:cmp	_	_
 76	ut	ut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	83	mark	_	_
 77	magis	magis	ADV	d|d|-|-|-|-|-|-|-|-	_	83	advmod	_	_
@@ -16523,7 +16523,7 @@
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
 3	Isimbaldo	Isimbaldus	PROPN	Propn|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	2	punct	_	_
-5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	9	mark	_	_
+5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	9	mark	_	_
 6	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	7	case	_	_
 7	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	9	obl	_	_
 8	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	9	advmod	_	_
@@ -16550,7 +16550,7 @@
 12	memorie	memoria	NOUN	n|n|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing	13	nmod	_	_
 13	Adalaldi	Adalaldus	PROPN	Propn|n|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	10	nmod	_	SpaceAfter=No
 14	,	,	PUNCT	Punc	_	1	punct	_	_
-15	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	17	mark	_	_
+15	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	17	mark	_	_
 16	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	17	advmod	_	_
 17	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	18	advcl:cmp	_	_
 18	missus	missus	NOUN	n|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	0	root	_	_
@@ -16569,7 +16569,7 @@
 7	quondam	quondam	ADJ	a|a|-|-|-|-|-|-|-|-	_	8	amod	_	_
 8	Osprandi	Osprandus	PROPN	Propn|n|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	6	nmod	_	SpaceAfter=No
 9	,	,	PUNCT	Punc	_	1	punct	_	_
-10	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	12	mark	_	_
+10	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	12	mark	_	_
 11	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	12	advmod	_	_
 12	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	13	advcl:cmp	_	_
 13	missus	missus	NOUN	n|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	0	root	_	_
@@ -16583,7 +16583,7 @@
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
 3	Adalmannus	Adalmannus	PROPN	Propn|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	2	punct	_	_
-5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	9	mark	_	_
+5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	9	mark	_	_
 6	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	7	case	_	_
 7	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	9	obl	_	_
 8	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	9	advmod	_	_
@@ -16605,7 +16605,7 @@
 7	quondam	quondam	ADJ	a|a|-|-|-|-|-|-|-|-	_	8	amod	_	_
 8	Ermitei	Ermiteus	PROPN	Propn|n|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	6	nmod	_	SpaceAfter=No
 9	,	,	PUNCT	Punc	_	1	punct	_	_
-10	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	12	mark	_	_
+10	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	12	mark	_	_
 11	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	12	advmod	_	_
 12	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	13	advcl:cmp	_	_
 13	missus	missus	NOUN	n|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	0	root	_	_
@@ -16619,7 +16619,7 @@
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
 3	Romaldo	Romualdus	PROPN	Propn|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	2	punct	_	_
-5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	9	mark	_	_
+5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	9	mark	_	_
 6	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	7	case	_	_
 7	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	9	obl	_	_
 8	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	9	advmod	_	_
@@ -18876,7 +18876,7 @@
 5	taliter	taliter	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Dem	7	advmod	_	_
 6	non	non	PART	d|d|-|-|-|-|-|-|-|-	Polarity=Neg	7	advmod:neg	_	_
 7	adimpleverimus	adimpleo	VERB	v|v|1|p|t|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Plur|Person=1|Tense=Fut|VerbForm=Fin|Voice=Act	26	advcl	_	_
-8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	10	mark	_	_
+8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	10	mark	_	_
 9	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	10	advmod	_	_
 10	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	7	advcl:cmp	_	SpaceAfter=No
 11	,	,	PUNCT	Punc	_	17	punct	_	_
@@ -19786,7 +19786,7 @@
 37	facere	facio	VERB	v|v|-|-|p|n|a|-|-|-	Aspect=Imp|Tense=Pres|VerbForm=Inf|Voice=Act	38	xcomp	_	_
 38	deberemus	debeo	VERB	v|v|1|p|i|s|a|-|-|-	Aspect=Imp|Mood=Sub|Number=Plur|Person=1|Tense=Past|VerbForm=Fin|VerbType=Mod|Voice=Act	13	csubj	_	SpaceAfter=No
 39	,	,	PUNCT	Punc	_	42	punct	_	_
-40	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	42	mark	_	_
+40	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	42	mark	_	_
 41	et	et	ADV	d|d|-|-|-|-|-|-|-|-	_	42	advmod:emph	_	_
 42	factum	facio	VERB	t|t|-|s|r|p|p|n|n|-	Aspect=Perf|Case=Nom|Gender=Neut|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	37	advcl:cmp	_	_
 43	est	sum	AUX	v|v|3|s|p|i|a|-|-|-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	42	aux:pass	_	SpaceAfter=No
@@ -20311,7 +20311,7 @@
 34	facere	facio	VERB	v|v|-|-|p|n|a|-|-|-	Aspect=Imp|Tense=Pres|VerbForm=Inf|Voice=Act	35	xcomp	_	_
 35	deberemus	debeo	VERB	v|v|1|p|i|s|a|-|-|-	Aspect=Imp|Mood=Sub|Number=Plur|Person=1|Tense=Past|VerbForm=Fin|VerbType=Mod|Voice=Act	12	csubj	_	SpaceAfter=No
 36	,	,	PUNCT	Punc	_	39	punct	_	_
-37	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	39	mark	_	_
+37	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	39	mark	_	_
 38	et	et	ADV	d|d|-|-|-|-|-|-|-|-	_	39	advmod:emph	_	_
 39	factum	facio	VERB	t|t|-|s|r|p|p|n|n|-	Aspect=Perf|Case=Nom|Gender=Neut|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	34	advcl:cmp	_	_
 40	est	sum	AUX	v|v|3|s|p|i|a|-|-|-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	39	aux:pass	_	SpaceAfter=No
@@ -20772,7 +20772,7 @@
 57	ecclesie	ecclesia	NOUN	n|n|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing	55	nmod	_	_
 58	sancti	sanctus	ADJ	a|a|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	59	amod	_	_
 59	Fridiani	Fridianus	PROPN	Propn|n|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	57	nmod	_	_
-60	quam	quam	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	61	mark	_	_
+60	quam	quam	SCONJ	c|c|-|-|-|-|-|-|-|-	_	61	mark	_	_
 61	recepisset	recipio	VERB	v|v|1|s|l|s|a|-|-|-	Aspect=Perf|Mood=Sub|Number=Sing|Person=1|Tense=Pqp|VerbForm=Fin|Voice=Act	51	advcl:cmp	_	SpaceAfter=No
 62	,	,	PUNCT	Punc	_	70	punct	_	_
 63	ut	ut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	70	mark	_	_
@@ -20958,7 +20958,7 @@
 3	manus	manus	NOUN	n|n|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing	1	nmod	_	_
 4	Ebruardi	Ebruardus	PROPN	Propn|n|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	3	nmod	_	SpaceAfter=No
 5	,	,	PUNCT	Punc	_	1	punct	_	_
-6	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	10	mark	_	_
+6	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	10	mark	_	_
 7	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	8	case	_	_
 8	ipso	ipse	DET	p|p|-|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|PronType=Dem	10	obl	_	_
 9	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	10	advmod	_	_
@@ -20975,7 +20975,7 @@
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
 3	Arimundo	Arimundus	PROPN	Propn|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	2	punct	_	_
-5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	9	mark	_	_
+5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	9	mark	_	_
 6	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	7	case	_	_
 7	ipso	ipse	DET	p|p|-|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|PronType=Dem	9	obl	_	_
 8	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	9	advmod	_	_
@@ -20993,7 +20993,7 @@
 3	manus	manus	NOUN	n|n|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing	1	nmod	_	_
 4	Rachiperti	Rachipertus	PROPN	Propn|n|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	3	nmod	_	SpaceAfter=No
 5	,	,	PUNCT	Punc	_	1	punct	_	_
-6	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	10	mark	_	_
+6	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	10	mark	_	_
 7	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	8	case	_	_
 8	ipso	ipse	DET	p|p|-|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|PronType=Dem	10	obl	_	_
 9	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	10	advmod	_	_
@@ -21010,7 +21010,7 @@
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
 3	Rottari	Rothari	PROPN	Propn|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	2	punct	_	_
-5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	9	mark	_	_
+5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	9	mark	_	_
 6	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	7	case	_	_
 7	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	9	obl	_	_
 8	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	9	advmod	_	_
@@ -21038,7 +21038,7 @@
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
 3	Gosperto	Cospertus	PROPN	Propn|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	2	punct	_	_
-5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	9	mark	_	_
+5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	9	mark	_	_
 6	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	7	case	_	_
 7	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	9	obl	_	_
 8	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	9	advmod	_	_
@@ -21056,7 +21056,7 @@
 3	manus	manus	NOUN	n|n|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing	1	nmod	_	_
 4	Ghisilari	Ghisilarus	PROPN	Propn|n|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	3	nmod	_	SpaceAfter=No
 5	,	,	PUNCT	Punc	_	1	punct	_	_
-6	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	10	mark	_	_
+6	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	10	mark	_	_
 7	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	8	case	_	_
 8	ipso	ipse	DET	p|p|-|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|PronType=Dem	10	obl	_	_
 9	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	10	advmod	_	_
@@ -21644,7 +21644,7 @@
 36	aliquit	aliquis	PRON	p|p|-|s|-|-|-|n|a|-	Case=Acc|Gender=Neut|Number=Sing|PronType=Ind	37	nmod	_	_
 37	rebus	res	NOUN	n|n|-|p|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Plur	33	obl	_	SpaceAfter=No
 38	,	,	PUNCT	Punc	_	37	punct	_	_
-39	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	41	mark	_	_
+39	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	41	mark	_	_
 40	et	et	ADV	d|d|-|-|-|-|-|-|-|-	_	41	advmod:emph	_	_
 41	factum	facio	VERB	t|t|-|s|r|p|p|n|n|-	Aspect=Perf|Case=Nom|Gender=Neut|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	33	advcl:cmp	_	_
 42	est	sum	AUX	v|v|3|s|p|i|a|-|-|-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	41	aux:pass	_	SpaceAfter=No
@@ -22028,7 +22028,7 @@
 73	pars	pars	NOUN	n|n|-|s|-|-|-|f|n|-	Case=Nom|Gender=Fem|Number=Sing	71	obl:arg	_	_
 74	suprascripte	suprascriptus	DET	a|a|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing|PronType=Dem	75	det	_	_
 75	ecclesie	ecclesia	NOUN	n|n|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing	73	nmod	_	_
-76	quam	quam	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	77	mark	_	_
+76	quam	quam	SCONJ	c|c|-|-|-|-|-|-|-|-	_	77	mark	_	_
 77	recepi	recipio	VERB	v|v|1|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	69	advcl:cmp	_	SpaceAfter=No
 78	,	,	PUNCT	Punc	_	88	punct	_	_
 79	ut	ut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	88	mark	_	_
@@ -22194,7 +22194,7 @@
 3	Petrus	Petrus	PROPN	Propn|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	2	appos	_	_
 4	notarius	notarius	NOUN	n|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	3	appos	_	SpaceAfter=No
 5	,	,	PUNCT	Punc	_	2	punct	_	_
-6	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	10	mark	_	_
+6	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	10	mark	_	_
 7	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	8	case	_	_
 8	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	10	obl	_	_
 9	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	10	advmod	_	_
@@ -22211,7 +22211,7 @@
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
 3	Sicolfo	Sicholfus	PROPN	Propn|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	2	punct	_	_
-5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	9	mark	_	_
+5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	9	mark	_	_
 6	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	7	case	_	_
 7	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	9	obl	_	_
 8	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	9	advmod	_	_
@@ -22228,7 +22228,7 @@
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
 3	Ridaldo	Ridaldus	PROPN	Propn|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	2	punct	_	_
-5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	9	mark	_	_
+5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	9	mark	_	_
 6	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	7	case	_	_
 7	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	9	obl	_	_
 8	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	9	advmod	_	_
@@ -22257,7 +22257,7 @@
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
 3	Romualdo	Romualdus	PROPN	Propn|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	2	punct	_	_
-5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	9	mark	_	_
+5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	9	mark	_	_
 6	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	7	case	_	_
 7	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	9	obl	_	_
 8	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	9	advmod	_	_
@@ -22290,7 +22290,7 @@
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
 3	Petrus	Petrus	PROPN	Propn|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	2	punct	_	_
-5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	9	mark	_	_
+5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	9	mark	_	_
 6	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	7	case	_	_
 7	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	9	obl	_	_
 8	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	9	advmod	_	_
@@ -22338,7 +22338,7 @@
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
 3	Iohannes	Johannes	PROPN	Propn|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	2	punct	_	_
-5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	9	mark	_	_
+5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	9	mark	_	_
 6	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	7	case	_	_
 7	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	9	obl	_	_
 8	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	9	advmod	_	_
@@ -22466,7 +22466,7 @@
 37	facere	facio	VERB	v|v|-|-|p|n|a|-|-|-	Aspect=Imp|Tense=Pres|VerbForm=Inf|Voice=Act	38	xcomp	_	_
 38	deberemus	debeo	VERB	v|v|1|p|i|s|a|-|-|-	Aspect=Imp|Mood=Sub|Number=Plur|Person=1|Tense=Past|VerbForm=Fin|VerbType=Mod|Voice=Act	13	csubj	_	SpaceAfter=No
 39	,	,	PUNCT	Punc	_	42	punct	_	_
-40	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	42	mark	_	_
+40	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	42	mark	_	_
 41	et	et	ADV	d|d|-|-|-|-|-|-|-|-	_	42	advmod:emph	_	_
 42	factum	facio	VERB	t|t|-|s|r|p|p|n|n|-	Aspect=Perf|Case=Nom|Gender=Neut|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	37	advcl:cmp	_	_
 43	est	sum	AUX	v|v|3|s|p|i|a|-|-|-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	42	aux:pass	_	SpaceAfter=No
@@ -22805,7 +22805,7 @@
 8	potestatem	potestas	NOUN	n|n|-|s|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Sing	7	obl	_	_
 9	nam	nam	PART	c|c|-|-|-|-|-|-|-|-	_	19	discourse	_	SpaceAfter=No
 10	,	,	PUNCT	Punc	_	9	punct	_	_
-11	ut	ut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	12	mark	_	_
+11	ut	ut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	12	mark	_	_
 12	dictum	dico	VERB	t|t|-|s|r|p|p|n|n|-	Aspect=Perf|Case=Nom|Gender=Neut|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	19	advcl:cmp	_	_
 13	est	sum	AUX	v|v|3|s|p|i|a|-|-|-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	12	aux:pass	_	SpaceAfter=No
 14	,	,	PUNCT	Punc	_	12	punct	_	_
@@ -23078,7 +23078,7 @@
 64	parte	pars	NOUN	n|n|-|s|-|-|-|f|a|-	Case=Acc|Gender=Fem|Number=Sing	62	obl:arg	_	_
 65	suprascripte	suprascriptus	DET	a|a|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing|PronType=Dem	66	det	_	_
 66	ecclesie	ecclesia	NOUN	n|n|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing	64	nmod	_	_
-67	quam	quam	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	68	mark	_	_
+67	quam	quam	SCONJ	c|c|-|-|-|-|-|-|-|-	_	68	mark	_	_
 68	recipisset	recipio	VERB	v|v|3|s|l|s|a|-|-|-	Aspect=Perf|Mood=Sub|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin|Voice=Act	60	advcl:cmp	_	SpaceAfter=No
 69	,	,	PUNCT	Punc	_	75	punct	_	_
 70	ut	ut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	75	mark	_	_
@@ -23240,7 +23240,7 @@
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
 3	Baldibertus	Baldipertus	PROPN	Propn|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	2	punct	_	_
-5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	9	mark	_	_
+5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	9	mark	_	_
 6	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	7	case	_	_
 7	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	9	obl	_	_
 8	super	super	ADV	d|d|-|-|-|-|-|-|-|-	_	9	advmod	_	_
@@ -23258,7 +23258,7 @@
 3	manus	manus	NOUN	n|n|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing	1	nmod	_	_
 4	Rachiperti	Rachipertus	PROPN	Propn|n|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	3	nmod	_	SpaceAfter=No
 5	,	,	PUNCT	Punc	_	1	punct	_	_
-6	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	8	mark	_	_
+6	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	8	mark	_	_
 7	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	8	advmod	_	_
 8	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	10	advcl:cmp	_	SpaceAfter=No
 9	,	,	PUNCT	Punc	_	8	punct	_	_
@@ -23272,7 +23272,7 @@
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
 3	Iohannes	Johannes	PROPN	Propn|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	2	punct	_	_
-5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	9	mark	_	_
+5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	9	mark	_	_
 6	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	7	case	_	_
 7	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	9	obl	_	_
 8	super	super	ADV	d|d|-|-|-|-|-|-|-|-	_	9	advmod	_	_
@@ -23293,7 +23293,7 @@
 6	Teutio	Teutius	PROPN	Propn|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	7	xcomp:pred	_	_
 7	vocatur	uoco	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	4	acl:relcl	_	SpaceAfter=No
 8	,	,	PUNCT	Punc	_	1	punct	_	_
-9	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	11	mark	_	_
+9	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	11	mark	_	_
 10	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	11	advmod	_	_
 11	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	13	advcl:cmp	_	SpaceAfter=No
 12	,	,	PUNCT	Punc	_	11	punct	_	_
@@ -23307,7 +23307,7 @@
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
 3	Cumprando	Gumprandus	PROPN	Propn|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	2	punct	_	_
-5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	9	mark	_	_
+5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	9	mark	_	_
 6	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	7	case	_	_
 7	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	9	obl	_	_
 8	super	super	ADV	d|d|-|-|-|-|-|-|-|-	_	9	advmod	_	_
@@ -23325,7 +23325,7 @@
 3	Teudiprand	Teudiprandus	PROPN	Propn|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	2	appos	_	_
 4	notarius	notarius	NOUN	n|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	3	appos	_	SpaceAfter=No
 5	,	,	PUNCT	Punc	_	2	punct	_	_
-6	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	10	mark	_	_
+6	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	10	mark	_	_
 7	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	8	case	_	_
 8	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	10	obl	_	_
 9	super	super	ADV	d|d|-|-|-|-|-|-|-|-	_	10	advmod	_	_
@@ -23342,7 +23342,7 @@
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
 3	Ubertus	Umbertus	PROPN	Propn|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	2	punct	_	_
-5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	9	mark	_	_
+5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	9	mark	_	_
 6	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	7	case	_	_
 7	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	9	obl	_	_
 8	super	super	ADV	d|d|-|-|-|-|-|-|-|-	_	9	advmod	_	_
@@ -23545,7 +23545,7 @@
 34	facere	facio	VERB	v|v|-|-|p|n|a|-|-|-	Aspect=Imp|Tense=Pres|VerbForm=Inf|Voice=Act	35	xcomp	_	_
 35	deberemus	debeo	VERB	v|v|1|p|i|s|a|-|-|-	Aspect=Imp|Mood=Sub|Number=Plur|Person=1|Tense=Past|VerbForm=Fin|VerbType=Mod|Voice=Act	12	csubj	_	SpaceAfter=No
 36	,	,	PUNCT	Punc	_	39	punct	_	_
-37	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	39	mark	_	_
+37	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	39	mark	_	_
 38	et	et	ADV	d|d|-|-|-|-|-|-|-|-	_	39	advmod:emph	_	_
 39	factum	facio	VERB	t|t|-|s|r|p|p|n|n|-	Aspect=Perf|Case=Nom|Gender=Neut|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	34	advcl:cmp	_	_
 40	est	sum	AUX	v|v|3|s|p|i|a|-|-|-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	39	aux:pass	_	SpaceAfter=No
@@ -24167,7 +24167,7 @@
 71	ecclesie	ecclesia	NOUN	n|n|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing	69	nmod	_	_
 72	sancti	sanctus	ADJ	a|a|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	73	amod	_	_
 73	Silvestri	Syluester	PROPN	Propn|n|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	71	nmod	_	_
-74	quam	quam	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	75	mark	_	_
+74	quam	quam	SCONJ	c|c|-|-|-|-|-|-|-|-	_	75	mark	_	_
 75	recepisset	recipio	VERB	v|v|1|s|l|s|a|-|-|-	Aspect=Perf|Mood=Sub|Number=Sing|Person=1|Tense=Pqp|VerbForm=Fin|Voice=Act	65	advcl:cmp	_	SpaceAfter=No
 76	,	,	PUNCT	Punc	_	82	punct	_	_
 77	ut	ut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	82	mark	_	_
@@ -24323,7 +24323,7 @@
 2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
 3	Andrea	Andreas	PROPN	Propn|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	2	appos	_	SpaceAfter=No
 4	,	,	PUNCT	Punc	_	2	punct	_	_
-5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	9	mark	_	_
+5	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	9	mark	_	_
 6	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	7	case	_	_
 7	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	9	obl	_	_
 8	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	9	advmod	_	_
@@ -24341,7 +24341,7 @@
 3	Teudiprandus	Teudiprandus	PROPN	Propn|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	2	appos	_	_
 4	notarius	notarius	NOUN	n|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	3	appos	_	SpaceAfter=No
 5	,	,	PUNCT	Punc	_	2	punct	_	_
-6	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	10	mark	_	_
+6	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	10	mark	_	_
 7	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	8	case	_	_
 8	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	10	obl	_	_
 9	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	10	advmod	_	_
@@ -24359,7 +24359,7 @@
 3	Albolfo	Albolfus	PROPN	Propn|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	2	appos	_	_
 4	clerico	clericus	NOUN	n|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	3	appos	_	SpaceAfter=No
 5	,	,	PUNCT	Punc	_	2	punct	_	_
-6	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	10	mark	_	_
+6	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	10	mark	_	_
 7	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	8	case	_	_
 8	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	10	obl	_	_
 9	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	10	advmod	_	_
@@ -24381,7 +24381,7 @@
 7	quondam	quondam	ADJ	a|a|-|-|-|-|-|-|-|-	_	8	amod	_	_
 8	Vuarnifridi	Warnifridus	PROPN	Propn|n|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	6	nmod	_	SpaceAfter=No
 9	,	,	PUNCT	Punc	_	1	punct	_	_
-10	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	12	mark	_	_
+10	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	12	mark	_	_
 11	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	12	advmod	_	_
 12	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	14	advcl:cmp	_	SpaceAfter=No
 13	,	,	PUNCT	Punc	_	12	punct	_	_
@@ -24398,7 +24398,7 @@
 4	et	et	CCONJ	c|c|-|-|-|-|-|-|-|-	_	5	cc	_	_
 5	schabinus	scabinus	NOUN	n|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	3	conj	_	SpaceAfter=No
 6	,	,	PUNCT	Punc	_	1	punct	_	_
-7	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	9	mark	_	_
+7	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	9	mark	_	_
 8	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	9	advmod	_	_
 9	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	13	advcl:cmp	_	_
 10	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	11	case	_	_
@@ -24414,7 +24414,7 @@
 1	ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	10	nsubj	_	_
 2	Fraimundo	Fraimundus	PROPN	Propn|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	1	appos	_	SpaceAfter=No
 3	,	,	PUNCT	Punc	_	1	punct	_	_
-4	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	8	mark	_	_
+4	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	8	mark	_	_
 5	de	de	ADP	r|r|-|-|-|-|-|-|-|-	_	6	case	_	_
 6	me	ego	PRON	p|p|1|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	8	obl	_	_
 7	super	super	ADV	d|d|-|-|-|-|-|-|-|-	_	8	advmod	_	_
@@ -24436,7 +24436,7 @@
 7	quondam	quondam	ADJ	a|a|-|-|-|-|-|-|-|-	_	8	amod	_	_
 8	Anghalperti	Angilpertus	PROPN	Propn|n|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	6	nmod	_	SpaceAfter=No
 9	,	,	PUNCT	Punc	_	1	punct	_	_
-10	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	12	mark	_	_
+10	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	12	mark	_	_
 11	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	12	advmod	_	_
 12	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	14	advcl:cmp	_	SpaceAfter=No
 13	,	,	PUNCT	Punc	_	12	punct	_	_
@@ -27426,7 +27426,7 @@
 5	sic	sic	ADV	d|d|-|-|-|-|-|-|-|-	_	7	advmod	_	_
 6	non	non	PART	d|d|-|-|-|-|-|-|-|-	Polarity=Neg	7	advmod:neg	_	_
 7	adimpleverimus	adimpleo	VERB	v|v|1|p|t|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Plur|Person=1|Tense=Fut|VerbForm=Fin|Voice=Act	0	root	_	_
-8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	ConjType=Cmpr	10	mark	_	_
+8	sicut	sicut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	10	mark	_	_
 9	superius	superius	ADV	d|d|-|-|-|-|-|-|-|c	Degree=Cmp	10	advmod	_	_
 10	legitur	lego	VERB	v|v|3|s|p|i|p|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Pass	7	advcl:cmp	_	SpaceAfter=No
 11	,	,	PUNCT	Punc	_	12	punct	_	_

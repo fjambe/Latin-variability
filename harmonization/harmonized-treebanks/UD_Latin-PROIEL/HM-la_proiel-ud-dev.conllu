@@ -353,7 +353,7 @@
 7	iustitia	iustitia	NOUN	Nb	Case=Nom|Gender=Fem|Number=Sing	6	nsubj	_	Ref=MATT_5.20
 8	vestra	vester	DET	Ps	Case=Nom|Gender=Fem|Number=Sing|Person=2|Poss=Yes	7	det	_	Ref=MATT_5.20
 9	plus	multum	ADV	Df	Degree=Cmp	6	advmod	_	Ref=MATT_5.20
-10	quam	quam	SCONJ	Df	ConjType=Cmpr|PronType=Rel	11	mark	_	LId=1|Ref=MATT_5.20
+10	quam	quam	SCONJ	Df	PronType=Rel	11	mark	_	LId=1|Ref=MATT_5.20
 11	scribarum	scriba	NOUN	Nb	Case=Gen|Gender=Masc|Number=Plur	9	advcl:cmp	_	Ref=MATT_5.20
 12	et	et	CCONJ	C-	_	13	cc	_	Ref=MATT_5.20
 13	Pharisaeorum	Pharisaeus	NOUN	Nb	Case=Gen|Gender=Masc|Number=Plur	11	conj	_	Ref=MATT_5.20
@@ -1030,7 +1030,7 @@
 2	ergo	ergo	ADV	Df	_	4	discourse	_	Ref=MATT_5.48
 3	vos	vos	PRON	Pp	Case=Nom|Gender=Masc|Number=Plur|Person=2|PronType=Prs	4	nsubj	_	Ref=MATT_5.48
 4	perfecti	perfectus	ADJ	A-	Case=Nom|Degree=Pos|Gender=Masc|Number=Plur	0	root	_	Ref=MATT_5.48
-5	sicut	sicut	SCONJ	Dq	ConjType=Cmpr|PronType=Rel	10	mark	_	Ref=MATT_5.48
+5	sicut	sicut	SCONJ	Dq	PronType=Rel	10	mark	_	Ref=MATT_5.48
 6	et	et	ADV	Df	_	7	advmod:emph	_	Ref=MATT_5.48
 7	Pater	pater	NOUN	Nb	Case=Nom|Gender=Masc|Number=Sing	10	nsubj	_	Ref=MATT_5.48
 8	vester	vester	DET	Ps	Case=Nom|Gender=Masc|Number=Sing|Person=2|Poss=Yes	7	det	_	Ref=MATT_5.48
@@ -2045,7 +2045,7 @@
 # source = Jerome's Vulgate, Luke 5
 # text = ut cessavit autem loqui dixit ad Simonem
 # sent_id = 16580
-1	ut	ut	SCONJ	Dq	ConjType=Cmpr|PronType=Rel	2	mark	_	Ref=LUKE_5.4
+1	ut	ut	SCONJ	Dq	PronType=Rel	2	mark	_	Ref=LUKE_5.4
 2	cessavit	cesso	VERB	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	5	advcl:cmp	_	Ref=LUKE_5.4
 3	autem	autem	CCONJ	Df	_	5	cc	_	Ref=LUKE_5.4
 4	loqui	loquor	VERB	V-	Tense=Pres|VerbForm=Inf|Voice=Pass	2	xcomp	_	Ref=LUKE_5.4
@@ -2332,7 +2332,7 @@
 8	pro	pro	ADP	R-	AdpType=Prep	9	case	_	Ref=LUKE_5.14
 9	emundatione	emundatio	NOUN	Nb	Case=Abl|Gender=Fem|Number=Sing	7	obl	_	Ref=LUKE_5.14
 10	tua	tuus	DET	Ps	Case=Abl|Gender=Fem|Number=Sing|Person=2|Poss=Yes	9	det	_	Ref=LUKE_5.14
-11	sicut	sicut	SCONJ	Dq	ConjType=Cmpr|PronType=Rel	12	mark	_	Ref=LUKE_5.14
+11	sicut	sicut	SCONJ	Dq	PronType=Rel	12	mark	_	Ref=LUKE_5.14
 12	praecepit	praecipio	VERB	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	7	advcl:cmp	_	Ref=LUKE_5.14
 13	Moses	Moses	PROPN	Ne	Case=Nom|Gender=Masc|Number=Sing	12	nsubj	_	Ref=LUKE_5.14
 14	in	in	ADP	R-	AdpType=Prep	15	case	_	Ref=LUKE_5.14
@@ -2486,7 +2486,7 @@
 # sent_id = 16614
 1	quorum	qui	PRON	Pr	Case=Gen|Gender=Masc|Number=Plur|PronType=Rel	2	nmod	_	Ref=LUKE_5.20
 2	fidem	fides	NOUN	Nb	Case=Acc|Gender=Fem|Number=Sing	4	obj	_	Ref=LUKE_5.20
-3	ut	ut	SCONJ	Dq	ConjType=Cmpr|PronType=Rel	4	mark	_	Ref=LUKE_5.20
+3	ut	ut	SCONJ	Dq	PronType=Rel	4	mark	_	Ref=LUKE_5.20
 4	vidit	video	VERB	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	5	advcl:cmp	_	Ref=LUKE_5.20
 5	dixit	dico	VERB	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	Ref=LUKE_5.20
 
@@ -2534,7 +2534,7 @@
 # source = Jerome's Vulgate, Luke 5
 # text = ut cognovit autem Iesus cogitationes eorum respondens dixit ad illos
 # sent_id = 16619
-1	ut	ut	SCONJ	Dq	ConjType=Cmpr|PronType=Rel	2	mark	_	Ref=LUKE_5.22
+1	ut	ut	SCONJ	Dq	PronType=Rel	2	mark	_	Ref=LUKE_5.22
 2	cognovit	cognosco	VERB	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	8	advcl:cmp	_	Ref=LUKE_5.22
 3	autem	autem	CCONJ	Df	_	8	cc	_	Ref=LUKE_5.22
 4	Iesus	Iesus	PROPN	Ne	Case=Nom|Gender=Masc|Number=Sing	2	nsubj	_	Ref=LUKE_5.22
@@ -3041,7 +3041,7 @@
 15	non	non	PART	Du	Polarity=Neg	17	advmod:neg	_	_
 16	ne	ne	PART	_	Clitic=Yes|PartType=Int	17	discourse	_	_
 17	dimittit	dimitto	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=LUKE_15.4
-18	nonaginta	nonae	NOUN	Ma	Gender=Fem|Number=Plur	17	nmod	_	DeletedPunct=.|Ref=LUKE_15.4
+18	nonaginta	nonaginta	NOUN	Ma	Gender=Fem|Number=Plur	17	nmod	_	Ref=LUKE_15.4
 19	novem	novem	NUM	Ma	_	18	nummod	_	Ref=LUKE_15.4
 20	in	in	ADP	R-	AdpType=Prep	21	case	_	Ref=LUKE_15.4
 21	deserto	desertum	NOUN	Nb	Case=Abl|Gender=Neut|Number=Sing	17	obl	_	Ref=LUKE_15.4
@@ -3111,7 +3111,7 @@
 13	habente	habeo	VERB	V-	Case=Abl|Gender=Masc|Number=Sing|Tense=Pres|VerbForm=Part|Voice=Act	5	acl	_	Ref=LUKE_15.7
 14	quam	quam	ADV	Df	_	6	advmod	_	LId=1|Ref=LUKE_15.7
 15	super	super	ADP	R-	AdpType=Prep	18	case	_	Ref=LUKE_15.7
-16	nonaginta	nonae	NOUN	Ma	Gender=Fem|Number=Plur	18	nmod	_	DeletedPunct=.|Ref=LUKE_15.7
+16	nonaginta	nonaginta	NOUN	Ma	Gender=Fem|Number=Plur	18	nmod	_	Ref=LUKE_15.7
 17	novem	novem	NUM	Ma	_	16	appos	_	Ref=LUKE_15.7
 18	iustis	iustus	ADJ	A-	Case=Abl|Degree=Pos|Gender=Masc|Number=Plur	14	nmod	_	Ref=LUKE_15.7
 19	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	21	nsubj	_	Ref=LUKE_15.7
@@ -3388,7 +3388,7 @@
 # sent_id = 17574
 1	fac	facio	VERB	V-	Mood=Imp|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=LUKE_15.19
 2	me	ego	PRON	Pp	Case=Acc|Gender=Masc|Number=Sing|Person=1|PronType=Prs	1	obj	_	Ref=LUKE_15.19
-3	sicut	sicut	SCONJ	Df	Compound=Yes|ConjType=Cmpr	4	mark	_	Ref=LUKE_15.19
+3	sicut	sicut	SCONJ	Df	Compound=Yes	4	mark	_	Ref=LUKE_15.19
 4	unum	unus	NUM	Ma	Case=Acc|Gender=Masc|Number=Sing	1	xcomp:pred	_	Ref=LUKE_15.19
 5	de	de	ADP	R-	AdpType=Prep	6	case	_	Ref=LUKE_15.19
 6	mercennariis	mercennarius	NOUN	Nb	Case=Abl|Gender=Masc|Number=Plur	4	nmod	_	Ref=LUKE_15.19
@@ -4174,7 +4174,7 @@
 # source = Jerome's Vulgate, John 5
 # text = sicut enim Pater suscitat mortuos et vivificat sic et Filius quos vult vivificat
 # sent_id = 18725
-1	sicut	sicut	SCONJ	Dq	Compound=Yes|ConjType=Cmpr|PronType=Rel	4	mark	_	Ref=JOHN_5.21
+1	sicut	sicut	SCONJ	Dq	Compound=Yes|PronType=Rel	4	mark	_	Ref=JOHN_5.21
 2	enim	enim	PART	Df	_	13	discourse	_	Ref=JOHN_5.21
 3	Pater	pater	NOUN	Nb	Case=Nom|Gender=Masc|Number=Sing	4	nsubj	_	Ref=JOHN_5.21
 4	suscitat	suscito	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	13	dislocated	_	Ref=JOHN_5.21
@@ -4210,7 +4210,7 @@
 7	omnes	omnis	DET	Px	Case=Nom|Gender=Masc|Number=Plur	8	nsubj	_	Ref=JOHN_5.23
 8	honorificent	honorifico	VERB	V-	Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	4	advcl	_	Ref=JOHN_5.23
 9	Filium	filius	NOUN	Nb	Case=Acc|Gender=Masc|Number=Sing	8	obj	_	Ref=JOHN_5.23
-10	sicut	sicut	SCONJ	Dq	ConjType=Cmpr|PronType=Rel	11	mark	_	Ref=JOHN_5.23
+10	sicut	sicut	SCONJ	Dq	PronType=Rel	11	mark	_	Ref=JOHN_5.23
 11	honorificant	honorifico	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	8	advcl:cmp	_	Ref=JOHN_5.23
 12	Patrem	pater	NOUN	Nb	Case=Acc|Gender=Masc|Number=Sing	11	obj	_	Ref=JOHN_5.23
 
@@ -4292,7 +4292,7 @@
 # source = Jerome's Vulgate, John 5
 # text = sicut enim Pater habet vitam in se met ipso sic dedit et Filio vitam habere in se met ipso
 # sent_id = 18731
-1	sicut	sicut	SCONJ	Dq	Compound=Yes|ConjType=Cmpr|PronType=Rel	4	mark	_	Ref=JOHN_5.26
+1	sicut	sicut	SCONJ	Dq	Compound=Yes|PronType=Rel	4	mark	_	Ref=JOHN_5.26
 2	enim	enim	PART	Df	_	11	discourse	_	Ref=JOHN_5.26
 3	Pater	pater	NOUN	Nb	Case=Nom|Gender=Masc|Number=Sing	4	nsubj	_	Ref=JOHN_5.26
 4	habet	habeo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	11	dislocated	_	Ref=JOHN_5.26
@@ -4381,7 +4381,7 @@
 # source = Jerome's Vulgate, John 5
 # text = sicut audio iudico et iudicium meum iustum est quia non quaero voluntatem meam sed voluntatem eius qui misit me
 # sent_id = 18736
-1	sicut	sicut	SCONJ	Df	ConjType=Cmpr	2	mark	_	Ref=JOHN_5.30
+1	sicut	sicut	SCONJ	Df	_	2	mark	_	Ref=JOHN_5.30
 2	audio	audio	VERB	V-	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	3	advcl:cmp	_	Ref=JOHN_5.30
 3	iudico	iudico	VERB	V-	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=JOHN_5.30
 4	et	et	CCONJ	C-	_	7	cc	_	Ref=JOHN_5.30
@@ -5284,7 +5284,7 @@
 # source = Jerome's Vulgate, Acts 5
 # text = ut audierunt autem hos sermones magistratus templi et principes sacerdotum ambigebant de illis quidnam fieret
 # sent_id = 23662
-1	ut	ut	SCONJ	Dq	ConjType=Cmpr|PronType=Rel	2	mark	_	Ref=ACTS_5.24
+1	ut	ut	SCONJ	Dq	PronType=Rel	2	mark	_	Ref=ACTS_5.24
 2	audierunt	audio	VERB	V-	Aspect=Perf|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	11	advcl:cmp	_	Ref=ACTS_5.24
 3	autem	autem	CCONJ	Df	_	11	cc	_	Ref=ACTS_5.24
 4	hos	hic	DET	Pd	Case=Acc|Gender=Masc|Number=Plur	5	det	_	Ref=ACTS_5.24
@@ -5418,7 +5418,7 @@
 2	oportet	oportet	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=ACTS_5.29
 3	Deo	deus	NOUN	Nb	Case=Dat|Gender=Masc|Number=Sing	1	obl:arg	_	Ref=ACTS_5.29
 4	magis	magis	ADV	Df	Degree=Cmp	1	advmod	_	Ref=ACTS_5.29
-5	quam	quam	SCONJ	Df	ConjType=Cmpr|PronType=Rel	6	mark	_	LId=1|Ref=ACTS_5.29
+5	quam	quam	SCONJ	Df	PronType=Rel	6	mark	_	LId=1|Ref=ACTS_5.29
 6	hominibus	homo	NOUN	Nb	Case=Dat|Gender=Masc|Number=Plur	4	advcl:cmp	_	Ref=ACTS_5.29
 
 # source = Jerome's Vulgate, Acts 5
@@ -7136,7 +7136,7 @@
 4	manifeste	manifeste	ADV	Df	Degree=Pos	1	advmod	_	Ref=ACTS_10.3
 5	quasi	quasi	ADV	Df	_	7	advmod	_	Ref=ACTS_10.3
 6	hora	hora	NOUN	Nb	Case=Abl|Gender=Fem|Number=Sing	1	obl	_	Ref=ACTS_10.3
-7	nona	nonae	NOUN	Mo	Gender=Fem|Number=Plur	6	nmod	_	DeletedPunct=.|Ref=ACTS_10.3
+7	nona	nonus	NOUN	Mo	Gender=Fem|Number=Plur	6	nmod	_	Ref=ACTS_10.3
 8	diei	dies	NOUN	Nb	Case=Gen|Gender=Fem,Masc|Number=Sing	6	nmod	_	Ref=ACTS_10.3
 9	angelum	angelus	NOUN	Nb	Case=Acc|Gender=Masc|Number=Sing	1	obj	_	Ref=ACTS_10.3
 10	Dei	deus	NOUN	Nb	Case=Gen|Gender=Masc|Number=Sing	9	nmod	_	Ref=ACTS_10.3
@@ -7769,7 +7769,7 @@
 9	orans	oro	VERB	V-	Case=Nom|Gender=Masc|Number=Sing|Tense=Pres|VerbForm=Part|Voice=Act	0	root	_	Ref=ACTS_10.30
 10	eram	sum	AUX	V-	Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	9	aux	_	Ref=ACTS_10.30
 11	hora	hora	NOUN	Nb	Case=Abl|Gender=Fem|Number=Sing	9	obl	_	Ref=ACTS_10.30
-12	nona	nonae	NOUN	Mo	Gender=Fem|Number=Plur	11	nmod	_	DeletedPunct=.|Ref=ACTS_10.30
+12	nona	nonus	NOUN	Mo	Gender=Fem|Number=Plur	11	nmod	_	Ref=ACTS_10.30
 13	in	in	ADP	R-	AdpType=Prep	14	case	_	Ref=ACTS_10.30
 14	domo	domus	NOUN	Nb	Case=Abl|Gender=Fem|Number=Sing	9	obl	_	Ref=ACTS_10.30
 15	mea	meus	DET	Ps	Case=Abl|Gender=Fem|Number=Sing|Person=1|Poss=Yes	14	det	_	Ref=ACTS_10.30
@@ -8149,7 +8149,7 @@
 11	Spiritum	spiritus	NOUN	Nb	Case=Acc|Gender=Masc|Number=Sing	13	obj	_	Ref=ACTS_10.47
 12	Sanctum	sanctus	ADJ	A-	Case=Acc|Degree=Pos|Gender=Masc,Neut|Number=Sing	11	amod	_	Ref=ACTS_10.47
 13	acceperunt	accipio	VERB	V-	Aspect=Perf|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	9	acl:relcl	_	Ref=ACTS_10.47
-14	sicut	sicut	SCONJ	Df	Compound=Yes|ConjType=Cmpr	16	mark	_	Ref=ACTS_10.47
+14	sicut	sicut	SCONJ	Df	Compound=Yes	16	mark	_	Ref=ACTS_10.47
 15	et	et	ADV	Df	_	16	advmod:emph	_	Ref=ACTS_10.47
 16	nos	nos	PRON	Pp	Case=Nom|Gender=Masc|Number=Plur|Person=1|PronType=Prs	13	advcl:cmp	_	Ref=ACTS_10.47
 
@@ -8379,7 +8379,7 @@
 21	et	et	ADV	Df	_	23	advmod:emph	_	Ref=ROM_1.13
 22	in	in	ADP	R-	AdpType=Prep	23	case	_	Ref=ROM_1.13
 23	vobis	vos	PRON	Pp	Case=Abl|Gender=Masc|Number=Plur|Person=2|PronType=Prs	20	obl	_	Ref=ROM_1.13
-24	sicut	sicut	SCONJ	Df	ConjType=Cmpr	20	mark	_	Ref=ROM_1.13
+24	sicut	sicut	SCONJ	Df	_	20	mark	_	Ref=ROM_1.13
 25	et	et	ADV	Df	_	28	advmod:emph	_	Ref=ROM_1.13
 26	in	in	ADP	R-	AdpType=Prep	28	case	_	Ref=ROM_1.13
 27	ceteris	ceterus	DET	A-	Case=Abl|Degree=Pos|Number=Plur	28	det	_	Ref=ROM_1.13
@@ -8446,7 +8446,7 @@
 8	fide	fides	NOUN	Nb	Case=Abl|Gender=Fem|Number=Sing	6	obl	_	Ref=ROM_1.17
 9	in	in	ADP	R-	AdpType=Prep	10	case	_	Ref=ROM_1.17
 10	fidem	fides	NOUN	Nb	Case=Acc|Gender=Fem|Number=Sing	6	obl	_	Ref=ROM_1.17
-11	sicut	sicut	SCONJ	Dq	ConjType=Cmpr|PronType=Rel	12	mark	_	Ref=ROM_1.17
+11	sicut	sicut	SCONJ	Dq	PronType=Rel	12	mark	_	Ref=ROM_1.17
 12	scriptum	scribo	VERB	V-	Aspect=Perf|Case=Nom|Gender=Neut|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	6	advcl:cmp	_	Ref=ROM_1.17
 13	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	12	aux:pass	_	Ref=ROM_1.17
 
@@ -8532,7 +8532,7 @@
 3	cognovissent	cognosco	VERB	V-	Mood=Sub|Number=Plur|Person=3|Tense=Pqp|VerbForm=Fin|Voice=Act	8	advcl	_	Ref=ROM_1.21
 4	Deum	deus	NOUN	Nb	Case=Acc|Gender=Masc|Number=Sing	3	obj	_	Ref=ROM_1.21
 5	non	non	PART	Df	Polarity=Neg	6	advmod:neg	_	Ref=ROM_1.21
-6	sicut	sicut	SCONJ	Dq	Compound=Yes|ConjType=Cmpr|PronType=Rel	7	mark	_	Ref=ROM_1.21
+6	sicut	sicut	SCONJ	Dq	Compound=Yes|PronType=Rel	7	mark	_	Ref=ROM_1.21
 7	Deum	deus	NOUN	Nb	Case=Acc|Gender=Masc|Number=Sing	8	advcl:cmp	_	Ref=ROM_1.21
 8	glorificaverunt	glorifico	VERB	V-	Aspect=Perf|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	Ref=ROM_1.21
 9	aut	aut	CCONJ	C-	_	11	cc	_	Ref=ROM_1.21
@@ -8625,7 +8625,7 @@
 4	servierunt	servio	VERB	V-	Aspect=Perf|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	2	conj	_	Ref=ROM_1.25
 5	creaturae	creatura	NOUN	Nb	Case=Dat|Gender=Fem|Number=Sing	4	obl:arg	_	Ref=ROM_1.25
 6	potius	potius	ADV	Df	_	4	advmod	_	Ref=ROM_1.25
-7	quam	quam	SCONJ	Df	ConjType=Cmpr|PronType=Rel	8	mark	_	LId=1|Ref=ROM_1.25
+7	quam	quam	SCONJ	Df	PronType=Rel	8	mark	_	LId=1|Ref=ROM_1.25
 8	creatori	creator	NOUN	Nb	Case=Dat|Gender=Masc|Number=Sing	4	advcl:cmp	_	Ref=ROM_1.25
 9	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	11	nsubj	_	Ref=ROM_1.25
 10	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	11	cop	_	Ref=ROM_1.25
@@ -8704,7 +8704,7 @@
 # text = et sicut non probaverunt Deum habere in notitia tradidit eos Deus in reprobum sensum ut faciant quae non conveniunt repletos omni iniquitate malitia fornicatione avaritia nequitia plenos invidia homicidio contentione dolo malignitate
 # sent_id = 26573
 1	et	et	CCONJ	C-	_	9	cc	_	Ref=ROM_1.28
-2	sicut	sicut	SCONJ	Df	Compound=Yes|ConjType=Cmpr	4	mark	_	Ref=ROM_1.28
+2	sicut	sicut	SCONJ	Df	Compound=Yes	4	mark	_	Ref=ROM_1.28
 3	non	non	PART	Df	Polarity=Neg	4	advmod:neg	_	Ref=ROM_1.28
 4	probaverunt	probo	VERB	V-	Aspect=Perf|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	9	advcl:cmp	_	Ref=ROM_1.28
 5	Deum	deus	NOUN	Nb	Case=Acc|Gender=Masc|Number=Sing	6	obj	_	Ref=ROM_1.28
@@ -9118,7 +9118,7 @@
 3	eius	is	PRON	Pp	Case=Gen|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nmod	_	Ref=REV_1.15
 4	similes	similis	ADJ	A-	Case=Nom|Degree=Pos|Gender=Masc|Number=Plur	0	root	_	Ref=REV_1.15
 5	orichalco	orichalcum	NOUN	Nb	Case=Dat|Gender=Neut|Number=Sing	4	obl:arg	_	Ref=REV_1.15
-6	sicut	sicut	SCONJ	Df	Compound=Yes|ConjType=Cmpr	9	mark	_	Ref=REV_1.15
+6	sicut	sicut	SCONJ	Df	Compound=Yes	9	mark	_	Ref=REV_1.15
 7	in	in	ADP	R-	AdpType=Prep	8	case	_	Ref=REV_1.15
 8	camino	caminus	NOUN	Nb	Case=Abl|Gender=Masc|Number=Sing	9	obl	_	Ref=REV_1.15
 9	ardenti	ardeo	VERB	V-	Case=Dat|Gender=Masc|Number=Sing|Tense=Pres|VerbForm=Part|Voice=Act	5	acl	_	Ref=REV_1.15
@@ -10008,7 +10008,7 @@
 # source = Jerome's Vulgate, Revelation 2
 # text = sicut et ego accepi a Patre meo
 # sent_id = 50175
-1	sicut	sicut	SCONJ	Df	Compound=Yes|ConjType=Cmpr	4	mark	_	Ref=REV_2.28
+1	sicut	sicut	SCONJ	Df	Compound=Yes	4	mark	_	Ref=REV_2.28
 2	et	et	CCONJ	C-	_	3	cc	_	Ref=REV_2.28
 3	ego	ego	PRON	Pp	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	Ref=REV_2.28
 4	accepi	accipio	VERB	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	Ref=REV_2.28
@@ -10531,7 +10531,7 @@
 # text = Nam sicut radicibus uirgultorum prosunt laetamen et paleae ita insidentes frondibus has perforant atque arere conpellunt
 # sent_id = 160181
 1	Nam	nam	PART	Df	_	13	discourse	_	Ref=1.36.1
-2	sicut	sicut	SCONJ	Dq	Compound=Yes|ConjType=Cmpr|PronType=Rel	5	mark	_	Ref=1.36.1
+2	sicut	sicut	SCONJ	Dq	Compound=Yes|PronType=Rel	5	mark	_	Ref=1.36.1
 3	radicibus	radix	NOUN	Nb	Case=Dat|Gender=Fem|Number=Plur	5	obl:arg	_	Ref=1.36.1
 4	uirgultorum	virgultum	NOUN	Nb	Case=Gen|Gender=Neut|Number=Plur	3	nmod	_	Ref=1.36.1
 5	prosunt	prosum	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	13	dislocated	_	Ref=1.36.1
@@ -10582,7 +10582,7 @@
 # sent_id = 160463
 1	Hoc	hic	DET	Pd	Case=Abl|Gender=Masc|Number=Sing	2	det	_	Ref=2.16.1
 2	mense	mensis	NOUN	Nb	Case=Abl|Gender=Masc|Number=Sing	15	obl	_	Ref=2.16.1
-3	sicut	sicut	SCONJ	Dq	ConjType=Cmpr|PronType=Rel	5	mark	_	Ref=2.16.1
+3	sicut	sicut	SCONJ	Dq	PronType=Rel	5	mark	_	Ref=2.16.1
 4	Columella	Columella	PROPN	Ne	Case=Nom|Gender=Masc|Number=Sing	5	nsubj	_	Ref=2.16.1
 5	dicit	dico	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	15	advcl:cmp	_	Ref=2.16.1
 6	maturi	maturus	ADJ	A-	Case=Nom|Degree=Pos|Gender=Masc|Number=Plur	7	amod	_	Ref=2.16.1
@@ -10844,7 +10844,7 @@
 6	fecunda	fecundus	ADJ	A-	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	4	conj	_	Ref=3.12.3
 7	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	6	cop	_	Ref=3.12.3
 8	plus	multum	ADV	Df	Degree=Cmp	12	advmod	_	Ref=3.12.3
-9	quam	quam	SCONJ	Df	ConjType=Cmpr|PronType=Rel	11	mark	_	LId=1|Ref=3.12.3
+9	quam	quam	SCONJ	Df	PronType=Rel	11	mark	_	LId=1|Ref=3.12.3
 10	octo	octo	NUM	Ma	_	11	nummod	_	Ref=3.12.3
 11	palmites	palmes	NOUN	Nb	Case=Acc|Gender=Masc|Number=Plur	8	advcl:cmp	_	Ref=3.12.3
 12	habere	habeo	VERB	V-	Tense=Pres|VerbForm=Inf|Voice=Act	14	xcomp	_	Ref=3.12.3
@@ -10960,7 +10960,7 @@
 # text = Decisis sicut supra dixi male natis omnibus et ueteribus nouellos et fructuarios serua
 # sent_id = 160617
 1	Decisis	decido	VERB	V-	Aspect=Perf|Case=Abl|Gender=Masc|Number=Plur|Tense=Past|VerbForm=Part|Voice=Pass	13	advcl:abs	_	Ref=3.12.5
-2	sicut	sicut	SCONJ	Dq	ConjType=Cmpr|PronType=Rel	4	mark	_	Ref=3.12.5
+2	sicut	sicut	SCONJ	Dq	PronType=Rel	4	mark	_	Ref=3.12.5
 3	supra	supra	ADV	Df	Degree=Pos	4	advmod	_	Ref=3.12.5
 4	dixi	dico	VERB	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	13	advcl:cmp	_	Ref=3.12.5
 5	male	male	ADV	Df	Degree=Pos	6	advmod	_	Ref=3.12.5
@@ -11078,7 +11078,7 @@
 11	summo	summus	ADJ	A-	Case=Abl|Degree=Pos|Gender=Neut|Number=Sing	7	conj	_	Ref=3.12.6
 12	quia	quia	SCONJ	G-	_	17	mark	_	Ref=3.12.6
 13	haec	hic	DET	Pd	Case=Nom|Gender=Neut|Number=Plur	17	nsubj	_	Ref=3.12.6
-14	uelut	velut	SCONJ	Df	ConjType=Cmpr	17	mark	_	Ref=3.12.6
+14	uelut	velut	SCONJ	Df	_	17	mark	_	Ref=3.12.6
 15	pampinaria	pampinarium	NOUN	Nb	Case=Nom|Gender=Neut|Number=Plur	17	advcl:cmp	_	Ref=3.12.6
 16	minus	parvus	ADJ	A-	Case=Acc|Degree=Cmp|Gender=Neut|Number=Sing	17	obj	_	Ref=3.12.6
 17	adferunt	affero	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	1	advcl:cmp	_	Ref=3.12.6
@@ -11276,7 +11276,7 @@
 2	nostra	noster	DET	Ps	Case=Acc|Gender=Neut|Number=Plur|Person=1|Poss=Yes	1	det	_	Ref=1.10.3
 3	et	et	CCONJ	C-	_	4	cc	_	Ref=1.10.3
 4	Hermeraclas	Hermeracla	NOUN	Nb	Case=Acc|Gender=Masc|Number=Plur	1	conj	_	Ref=1.10.3
-5	ut	ut	SCONJ	Dq	ConjType=Cmpr|PronType=Rel	6	mark	_	Ref=1.10.3
+5	ut	ut	SCONJ	Dq	PronType=Rel	6	mark	_	Ref=1.10.3
 6	scribis	scribo	VERB	V-	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin|Voice=Act	11	advcl:cmp	_	Ref=1.10.3
 7	cum	cum	SCONJ	G-	_	9	mark	_	Ref=1.10.3
 8	commodissime	commode	ADV	Df	Degree=Abs	9	advmod	_	Ref=1.10.3
@@ -11444,7 +11444,7 @@
 39	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	38	aux:pass	_	Ref=1.10.6
 40	hoc	hic	DET	Pd	Case=Abl|Gender=Masc,Neut|Number=Sing	41	det	_	Ref=1.10.6
 41	tempore	tempus	NOUN	Nb	Case=Abl|Gender=Neut|Number=Sing	38	obl	_	Ref=1.10.6
-42	quam	quam	SCONJ	Df	ConjType=Cmpr|PronType=Rel	43	mark	_	LId=1|Ref=1.10.6
+42	quam	quam	SCONJ	Df	PronType=Rel	43	mark	_	LId=1|Ref=1.10.6
 43	mea	meus	DET	Ps	Case=Abl|Gender=Fem|Number=Sing|Person=1|Poss=Yes	32	advcl:cmp	_	Ref=1.10.6
 44	te	tu	PRON	Pp	Case=Acc|Gender=Masc|Number=Sing|Person=2|PronType=Prs	45	nsubj	_	Ref=1.10.6
 45	adesse	adsum	VERB	V-	Tense=Pres|VerbForm=Inf|Voice=Act	43	orphan	_	Ref=1.10.6
@@ -11626,7 +11626,7 @@
 39	potest	possum	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	21	acl:relcl	_	Ref=1.11.1
 40	facile	facile	ADV	Df	Degree=Pos	41	advmod	_	Ref=1.11.1
 41	delere	deleo	VERB	V-	Tense=Pres|VerbForm=Inf|Voice=Act	39	xcomp	_	Ref=1.11.1
-42	quam	quam	SCONJ	Df	ConjType=Cmpr	53	mark	_	LId=4|Ref=1.11.1
+42	quam	quam	SCONJ	Df	_	53	mark	_	LId=4|Ref=1.11.1
 43	tu	tu	PRON	Pp	Case=Nom|Gender=Masc|Number=Sing|Person=2|PronType=Prs	53	nsubj	_	Ref=1.11.1
 44	praesens	praesens	ADJ	A-	Case=Nom|Degree=Pos|Gender=Masc|Number=Sing	53	advcl:pred	_	Ref=1.11.1
 45	non	non	PART	Df	Polarity=Neg	46	advmod:neg	_	Ref=1.11.1
@@ -11799,7 +11799,7 @@
 # sent_id = 82289
 1	nobis	nos	PRON	Pp	Case=Dat|Gender=Masc|Number=Plur|Person=1|PronType=Prs	7	obl:arg	_	Ref=1.11.3
 2	eos	is	PRON	Pp	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	7	obj	_	Ref=1.11.3
-3	quem	quemadmodum	SCONJ	Dq	ConjType=Cmpr|PronType=Rel	6	mark	_	Ref=1.11.3
+3	quem	quemadmodum	SCONJ	Dq	PronType=Rel	6	mark	_	Ref=1.11.3
 4	ad	ad	ADV	Dq	PronType=Rel	3	fixed	_	Ref=1.11.3
 5	modum	modum	ADV	Dq	PronType=Rel	3	fixed	_	Ref=1.11.3
 6	scribis	scribo	VERB	V-	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin|Voice=Act	7	advcl:cmp	_	Ref=1.11.3
@@ -11813,7 +11813,7 @@
 3	eorum	is	PRON	Pp	Case=Gen|Gender=Masc|Number=Plur|Person=3|PronType=Prs	4	nmod	_	Ref=1.11.3
 4	studium	studium	NOUN	Nb	Case=Nom|Gender=Neut|Number=Sing	5	nsubj	_	Ref=1.11.3
 5	tenet	teneo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=1.11.3
-6	sicut	sicut	SCONJ	Df	Compound=Yes|ConjType=Cmpr	7	mark	_	Ref=1.11.3
+6	sicut	sicut	SCONJ	Df	Compound=Yes	7	mark	_	Ref=1.11.3
 7	odium	odium	NOUN	Nb	Case=Nom|Gender=Neut|Number=Sing	5	advcl:cmp	_	Ref=1.11.3
 8	iam	iam	ADV	Df	AdvType=Tim	6	advmod:tmod	_	Ref=1.11.3
 9	ceterarum	ceterus	DET	A-	Case=Gen|Degree=Pos|Gender=Fem|Number=Plur	10	det	_	Ref=1.11.3
@@ -11833,7 +11833,7 @@
 9	deteriores	deterior	ADJ	A-	Case=Acc|Degree=Cmp|Gender=Fem,Masc|Number=Plur	10	xcomp:pred	_	Ref=1.11.3
 10	offensurus	offendo	VERB	V-	Case=Nom|Gender=Masc|Number=Sing|Tense=Fut|VerbForm=Part|Voice=Act	3	ccomp	_	Ref=1.11.3
 11	sis	sum	AUX	V-	Mood=Sub|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin|Voice=Act	10	aux	_	Ref=1.11.3
-12	quam	quam	SCONJ	Df	ConjType=Cmpr|PronType=Rel	13	mark	_	LId=1|Ref=1.11.3
+12	quam	quam	SCONJ	Df	PronType=Rel	13	mark	_	LId=1|Ref=1.11.3
 13	reliquisti	relinquo	VERB	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin|Voice=Act	9	advcl:cmp	_	Ref=1.11.3
 
 # source = Epistulae ad Atticum, Book 1, letter 12
@@ -12209,7 +12209,7 @@
 8	me	ego	PRON	Pp	Case=Acc|Gender=Masc|Number=Sing|Person=1|PronType=Prs	16	obj	_	Ref=1.12.4
 9	que	que	CCONJ	C-	_	16	cc	_	Ref=1.12.4
 10	plus	multum	ADV	Df	Degree=Cmp	16	advmod	_	Ref=1.12.4
-11	quam	quam	SCONJ	Df	ConjType=Cmpr|PronType=Rel	15	mark	_	LId=1|Ref=1.12.4
+11	quam	quam	SCONJ	Df	PronType=Rel	15	mark	_	LId=1|Ref=1.12.4
 12	servi	servus	NOUN	Nb	Case=Gen|Gender=Masc|Number=Sing	13	nmod	_	Ref=1.12.4
 13	mors	mors	NOUN	Nb	Case=Nom|Gender=Fem|Number=Sing	15	nsubj:pass	_	Ref=1.12.4
 14	debere	debeo	VERB	V-	Tense=Pres|VerbForm=Inf|Voice=Act	15	xcomp	_	Ref=1.12.4
@@ -12242,7 +12242,7 @@
 # source = Epistulae ad Atticum, Book 1, letter 12
 # text = Kal Ianuariis Marco Messalla Marco Pisone consulibus
 # sent_id = 76042
-1	Kal	kalendae	NOUN	Df	Gender=Fem|Number=Plur	0	root	_	DeletedPunct=.|Ref=1.12.4
+1	Kal	kalendae	NOUN	Df	Gender=Fem|Number=Plur	0	root	_	Ref=1.12.4
 2	Ianuariis	ianuarius	ADJ	Df	Gender=Fem|Number=Plur	1	amod	_	Ref=1.12.4
 3	Marco	Marcus	PROPN	Ne	Case=Abl|Gender=Masc|Number=Sing	7	nsubj	_	Ref=1.12.4
 4	Messalla	Messalla	PROPN	Ne	Case=Abl|Gender=Masc|Number=Sing	3	flat:name	_	Ref=1.12.4
@@ -12319,7 +12319,7 @@
 # sent_id = 76799
 1	σκοπὸς	greek.expression	X	F-	_	0	root	_	Ref=2.18.1
 2	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	1	cop	_	Ref=2.18.1
-3	ut	ut	SCONJ	Dq	ConjType=Cmpr|PronType=Rel	4	mark	_	Ref=2.18.1
+3	ut	ut	SCONJ	Dq	PronType=Rel	4	mark	_	Ref=2.18.1
 4	suspicor	suspicor	VERB	V-	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Pass	1	advcl:cmp	_	Ref=2.18.1
 5	illis	ille	DET	Pd	Case=Dat|Gender=Masc|Number=Plur	1	obl:arg	_	Ref=2.18.1
 6	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	7	nsubj	_	Ref=2.18.1
@@ -12435,7 +12435,7 @@
 11	conviviis	convivium	NOUN	Nb	Case=Abl|Gender=Neut|Number=Plur	7	conj	_	Ref=2.18.2
 12	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	13	cop	_	Ref=2.18.2
 13	liberior	liber	ADJ	A-	Case=Nom|Degree=Cmp|Gender=Masc,Neut|Number=Sing	0	root	_	Ref=2.18.2
-14	quam	quam	SCONJ	Df	ConjType=Cmpr|PronType=Rel	15	mark	_	LId=1|Ref=2.18.2
+14	quam	quam	SCONJ	Df	PronType=Rel	15	mark	_	LId=1|Ref=2.18.2
 15	fuit	sum	AUX	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	13	advcl:cmp	_	Ref=2.18.2
 
 # source = Epistulae ad Atticum, Book 2, letter 18
@@ -12663,7 +12663,7 @@
 3	manu	manumitto	VERB	V-	Aspect=Perf|Case=Abl|Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	10	obl	_	Ref=2.18.4
 4	misso	misso	VERB	V-	Aspect=Perf|Case=Abl|Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	3	fixed	_	Ref=2.18.4
 5	et	et	CCONJ	C-	_	9	cc	_	Ref=2.18.4
-6	non	nonae	NOUN	A-	Gender=Fem|Number=Plur	9	nmod	_	DeletedPunct=.|Ref=2.18.4
+6	non	nonnullus	DET	A-	Gender=Fem|Number=Plur	9	nmod	_	Ref=2.18.4
 7	nullis	nullis	ADJ	A-	Case=Abl|Degree=Pos|Number=Plur	6	fixed	_	Ref=2.18.4
 8	aliis	alius	DET	Px	Case=Abl|Number=Plur	9	det	_	Ref=2.18.4
 9	rebus	res	NOUN	Nb	Case=Abl|Gender=Fem|Number=Plur	3	conj	_	Ref=2.18.4
@@ -12740,7 +12740,7 @@
 3	nihil	nihil	ADJ	Px	Case=Nom|Gender=Neut|Number=Sing	5	nsubj	_	Ref=2.19.1
 4	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	5	cop	_	Ref=2.19.1
 5	molestius	molestus	ADJ	A-	Case=Nom|Degree=Cmp|Gender=Neut|Number=Sing	0	root	_	Ref=2.19.1
-6	quam	quam	SCONJ	Df	ConjType=Cmpr|PronType=Rel	8	mark	_	LId=1|Ref=2.19.1
+6	quam	quam	SCONJ	Df	PronType=Rel	8	mark	_	LId=1|Ref=2.19.1
 7	Statium	Statius	PROPN	Ne	Case=Acc|Gender=Masc|Number=Sing	8	nsubj:pass	_	Ref=2.19.1
 8	manu	manumitto	VERB	V-	Aspect=Perf|Case=Acc|Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	5	advcl:cmp	_	Ref=2.19.1
 9	missum	missum	VERB	V-	Aspect=Perf|Case=Acc|Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	8	fixed	_	Ref=2.19.1
@@ -12916,7 +12916,7 @@
 13	ordinibus	ordo	NOUN	Nb	Case=Dat|Gender=Masc|Number=Plur	12	conj	_	Ref=2.19.2
 14	aetatibus	aetas	NOUN	Nb	Case=Dat|Gender=Fem|Number=Plur	12	conj	_	Ref=2.19.2
 15	offensum	offendo	VERB	V-	Aspect=Perf|Case=Acc|Gender=Masc,Neut|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	6	conj	_	Ref=2.19.2
-16	quam	quam	SCONJ	Df	ConjType=Cmpr|PronType=Rel	18	mark	_	LId=4|Ref=2.19.2
+16	quam	quam	SCONJ	Df	PronType=Rel	18	mark	_	LId=4|Ref=2.19.2
 17	hunc	hic	DET	Pd	Case=Acc|Gender=Masc|Number=Sing	18	det	_	Ref=2.19.2
 18	statum	status	NOUN	Nb	Case=Acc|Gender=Masc|Number=Sing	15	advcl:cmp	_	Ref=2.19.2
 19	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	21	nsubj	_	Ref=2.19.2
@@ -12925,7 +12925,7 @@
 22	magis	magis	ADV	Df	Degree=Cmp	6	advmod	_	Ref=2.19.2
 23	me	mehercule	INTJ	I-	_	1	discourse	_	Ref=2.19.2
 24	hercule	hercule	INTJ	I-	_	23	fixed	_	Ref=2.19.2
-25	quam	quam	SCONJ	Df	ConjType=Cmpr|PronType=Rel	26	mark	_	LId=1|Ref=2.19.2
+25	quam	quam	SCONJ	Df	PronType=Rel	26	mark	_	LId=1|Ref=2.19.2
 26	vellem	volo	VERB	V-	Aspect=Imp|Mood=Sub|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	22	advcl:cmp	_	LId=1|Ref=2.19.2
 27	non	non	PART	Df	Polarity=Neg	28	advmod:neg	_	Ref=2.19.2
 28	modo	modo	ADV	Df	_	29	advmod	_	Ref=2.19.2
@@ -13270,7 +13270,7 @@
 15	magis	magis	ADV	Df	Degree=Cmp	17	advmod	_	Ref=2.19.3
 16	odio	odium	NOUN	Nb	Case=Abl|Gender=Neut|Number=Sing	17	obl	_	Ref=2.19.3
 17	firmata	firmo	VERB	V-	Aspect=Perf|Case=Nom|Gender=Fem|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	2	conj	_	Ref=2.19.3
-18	quam	quam	SCONJ	Df	ConjType=Cmpr|PronType=Rel	19	mark	_	LId=1|Ref=2.19.3
+18	quam	quam	SCONJ	Df	PronType=Rel	19	mark	_	LId=1|Ref=2.19.3
 19	praesidio	praesidium	NOUN	Nb	Case=Abl|Gender=Neut|Number=Sing	15	advcl:cmp	_	Ref=2.19.3
 
 # source = Epistulae ad Atticum, Book 2, letter 19
@@ -13614,7 +13614,7 @@
 17	usque	usque	ADV	Df	_	18	advmod	_	Ref=3.17.1
 18	ad	ad	ADP	R-	_	10	obl	_	Ref=3.17.1
 19	prid	pridie	ADV	Df	_	18	advmod	_	Ref=3.17.1
-20	Kal	kalendae	NOUN	Df	Gender=Fem|Number=Plur	19	nmod	_	DeletedPunct=.|Ref=3.17.1
+20	Kal	kalendae	NOUN	Df	Gender=Fem|Number=Plur	19	nmod	_	Ref=3.17.1
 21	Sept	Sept	ADJ	Df	Gender=Fem|Number=Plur	20	amod	_	Ref=3.17.1
 
 # source = Epistulae ad Atticum, Book 3, letter 17
@@ -13717,7 +13717,7 @@
 11	intellego	intellego	VERB	V-	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=3.17.2
 12	esse	sum	AUX	V-	Tense=Pres|VerbForm=Inf|Voice=Act	13	cop	_	Ref=3.17.2
 13	languidiora	languidus	ADJ	A-	Case=Acc|Degree=Cmp|Gender=Neut|Number=Plur	11	ccomp	_	Ref=3.17.2
-14	quam	quam	SCONJ	Df	ConjType=Cmpr|PronType=Rel	16	mark	_	LId=1|Ref=3.17.2
+14	quam	quam	SCONJ	Df	PronType=Rel	16	mark	_	LId=1|Ref=3.17.2
 15	alii	alius	DET	Px	Case=Nom|Gender=Masc|Number=Plur	16	nsubj	_	Ref=3.17.2
 16	ostendunt	ostendo	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	13	advcl:cmp	_	Ref=3.17.2
 
@@ -13827,8 +13827,8 @@
 # sent_id = 77262
 1	data	do	VERB	V-	Aspect=Perf|Case=Nom|Gender=Fem|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	0	root	_	Ref=3.17.3
 2	pr	pridie	ADV	Df	_	1	advmod	_	Ref=3.17.3
-3	Nonas	nonae	NOUN	Df	Gender=Fem|Number=Plur	2	nmod	_	DeletedPunct=.|Ref=3.17.3
-4	Sept	Sept	ADJ	Df	Gender=Fem|Number=Plur	3	amod	_	Ref=3.17.3
+3	Nonas	nonae	NOUN	Df	Case=Gen|Gender=Fem|Number=Plur	2	nmod	_	Ref=3.17.3
+4	Sept	Sept	ADJ	Df	Case=Gen|Gender=Fem|Number=Plur	3	amod	_	Ref=3.17.3
 
 # source = Epistulae ad Atticum, Book 4, letter 5
 # text = ai n tu
@@ -14031,7 +14031,7 @@
 3	modici	modicus	ADJ	A-	Case=Nom|Degree=Pos|Gender=Masc|Number=Plur	0	root	_	Ref=4.5.2
 4	fuimus	sum	AUX	V-	Aspect=Perf|Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	3	cop	_	Ref=4.5.2
 5	ὑποθέσει	greek.expression	ADV	Df	_	3	advmod	_	Ref=4.5.2
-6	ut	ut	SCONJ	Dq	ConjType=Cmpr|PronType=Rel	7	mark	_	Ref=4.5.2
+6	ut	ut	SCONJ	Dq	PronType=Rel	7	mark	_	Ref=4.5.2
 7	scripsi	scribo	VERB	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	3	advcl:cmp	_	Ref=4.5.2
 
 # source = Epistulae ad Atticum, Book 4, letter 5
@@ -14334,7 +14334,7 @@
 3	me	ego	PRON	Pp	Case=Acc|Gender=Masc|Number=Sing|Person=1|PronType=Prs	4	obj	_	Ref=4.12.1
 4	diligis	diligo	VERB	V-	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin|Voice=Act	7	advcl	_	Ref=4.12.1
 5	postridie	postridie	ADV	Df	_	7	advmod	_	Ref=4.12.1
-6	Kal	kalendae	NOUN	Df	Gender=Fem|Number=Plur	5	nmod	_	DeletedPunct=.|Ref=4.12.1
+6	Kal	kalendae	NOUN	Df	Gender=Fem|Number=Plur	5	nmod	_	Ref=4.12.1
 7	cena	ceno	VERB	V-	Mood=Imp|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=4.12.1
 8	apud	apud	ADP	R-	AdpType=Prep	9	case	_	Ref=4.12.1
 9	me	ego	PRON	Pp	Case=Acc|Gender=Masc|Number=Sing|Person=1|PronType=Prs	7	obl	_	Ref=4.12.1
@@ -14351,7 +14351,7 @@
 # source = Epistulae ad Atticum, Book 4, letter 12
 # text = Kalendis cogito in hortis Crassipedis quasi in deversorio cenare
 # sent_id = 77662
-1	Kalendis	kalendae	NOUN	Nb	Gender=Fem|Number=Plur	9	nmod	_	DeletedPunct=.|Ref=4.12.1
+1	Kalendis	kalendae	NOUN	Nb	Gender=Fem|Number=Plur	9	nmod	_	Ref=4.12.1
 2	cogito	cogito	VERB	V-	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=4.12.1
 3	in	in	ADP	R-	AdpType=Prep	4	case	_	Ref=4.12.1
 4	hortis	hortus	NOUN	Nb	Case=Abl|Gender=Masc|Number=Plur	9	obl	_	Ref=4.12.1
@@ -14433,7 +14433,7 @@
 2	a	ante	ADP	Df	AdpType=Prep	3	case	_	DeletedPunct=.|Ref=4.13.1
 3	d	dies	NOUN	_	Case=Acc|Gender=Masc|Number=Sing	1	obl:tmod	_	DeletedPunct=.
 4	xiiii	xiiii	NUM	_	NumForm=Roman	3	nummod	_	_
-5	Kal	kalendae	NOUN	Df	Gender=Fem|Number=Plur	3	nmod	_	DeletedPunct=.|Ref=4.13.1
+5	Kal	kalendae	NOUN	Df	Gender=Fem|Number=Plur	3	nmod	_	Ref=4.13.1
 6	volumus	volo	VERB	V-	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	LId=1|Ref=4.13.1
 7	esse	sum	AUX	V-	Tense=Pres|VerbForm=Inf|Voice=Act	1	cop	_	Ref=4.13.1
 
@@ -14465,7 +14465,7 @@
 # text = comitiorum non nulla opinio est
 # sent_id = 77676
 1	comitiorum	comitium	NOUN	Nb	Case=Gen|Gender=Neut|Number=Plur	4	nmod	_	Ref=4.13.1
-2	non	nonae	NOUN	A-	Gender=Fem|Number=Plur	4	nmod	_	DeletedPunct=.|Ref=4.13.1
+2	non	nonnullus	DET	A-	Gender=Fem|Number=Plur	4	nmod	_	Ref=4.13.1
 3	nulla	nulla	ADJ	A-	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	2	fixed	_	Ref=4.13.1
 4	opinio	opinio	NOUN	Nb	Case=Nom|Gender=Fem|Number=Sing	5	nsubj	_	Ref=4.13.1
 5	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=4.13.1
@@ -14557,7 +14557,7 @@
 6	aiunt	aio	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=4.13.2
 7	profectum	proficiscor	VERB	V-	Aspect=Perf|Case=Acc|Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	6	ccomp	_	Ref=4.13.2
 8	paludatum	paludatus	ADJ	A-	Case=Acc|Degree=Pos|Gender=Masc,Neut|Number=Sing	7	advcl:pred	_	Ref=4.13.2
-9	quam	quam	SCONJ	Df	ConjType=Cmpr|PronType=Rel	11	mark	_	LId=1|Ref=4.13.2
+9	quam	quam	SCONJ	Df	PronType=Rel	11	mark	_	LId=1|Ref=4.13.2
 10	olim	olim	ADV	Df	_	11	orphan	_	Ref=4.13.2
 11	aequalem	aequalis	ADJ	A-	Case=Acc|Degree=Pos|Gender=Masc|Number=Sing	4	advcl:cmp	_	Ref=4.13.2
 12	eius	is	PRON	Pp	Case=Gen|Gender=Masc|Number=Sing|Person=3|PronType=Prs	11	nmod	_	Ref=4.13.2
@@ -14635,13 +14635,13 @@
 10	a	ante	ADP	Df	AdpType=Prep	11	case	_	Ref=4.14.1
 11	d	dies	NOUN	Df	Case=Acc|Gender=Masc|Number=Sing	16	obl:tmod	_	DeletedPunct=.|Ref=4.14.1
 12	vi	vi	NUM	Df	NumForm=Roman	11	nummod	_	Ref=4.14.1
-13	Idus	nonae	NOUN	Df	Gender=Fem|Number=Plur	11	nmod	_	DeletedPunct=.|Ref=4.14.1
-14	Maias	Maias	ADJ	Df	Gender=Fem|Number=Plur	13	amod	_	Ref=4.14.1
+13	Idus	idus	NOUN	Df	Gender=Fem|Number=Plur	11	nmod	_	Ref=4.14.1
+14	Maias	Maius	ADJ	Df	Gender=Fem|Number=Plur	13	amod	_	Ref=4.14.1
 15	putari	puto	VERB	V-	Tense=Pres|VerbForm=Inf|Voice=Pass	7	ccomp	_	Ref=4.14.1
 16	profectum	proficiscor	VERB	V-	Aspect=Perf|Case=Acc|Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	15	xcomp	_	Ref=4.14.1
 17	esse	sum	AUX	V-	Tense=Pres|VerbForm=Inf|Voice=Act	16	aux:pass	_	Ref=4.14.1
 18	tardius	tarde	ADV	Df	Degree=Cmp	16	advmod	_	Ref=4.14.1
-19	quam	quam	SCONJ	Df	ConjType=Cmpr|PronType=Rel	20	mark	_	LId=1|Ref=4.14.1
+19	quam	quam	SCONJ	Df	PronType=Rel	20	mark	_	LId=1|Ref=4.14.1
 20	dixeras	dico	VERB	V-	Mood=Ind|Number=Sing|Person=2|Tense=Pqp|VerbForm=Fin|Voice=Act	18	advcl:cmp	_	Ref=4.14.1
 21	quod	quod	SCONJ	G-	PronType=Rel	23	mark	_	Ref=4.14.1
 22	minus	parum	ADV	Df	Degree=Cmp	23	advmod	_	Ref=4.14.1
@@ -14700,7 +14700,7 @@
 14	manibus	manus	NOUN	Nb	Case=Abl|Gender=Fem|Number=Plur	15	xcomp:pred	_	Ref=4.14.1
 15	habeo	habeo	VERB	V-	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	11	acl:relcl	_	Ref=4.14.1
 16	quos	qui	PRON	Pr	Case=Acc|Gender=Masc|Number=Plur|PronType=Rel	21	obj	_	Ref=4.14.1
-17	ut	ut	SCONJ	Dq	ConjType=Cmpr|PronType=Rel	18	mark	_	Ref=4.14.1
+17	ut	ut	SCONJ	Dq	PronType=Rel	18	mark	_	Ref=4.14.1
 18	spero	spero	VERB	V-	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	21	advcl:cmp	_	Ref=4.14.1
 19	tibi	tu	PRON	Pp	Case=Dat|Gender=Masc|Number=Sing|Person=2|PronType=Prs	21	obl:arg	_	Ref=4.14.1
 20	valde	valde	ADV	Df	Degree=Pos	21	advmod	_	Ref=4.14.1
@@ -14864,7 +14864,7 @@
 12	venisse	venio	VERB	V-	Aspect=Perf|Tense=Past|VerbForm=Inf|Voice=Act	13	ccomp	_	Ref=5.16.2
 13	scito	scio	VERB	V-	Mood=Imp|Number=Sing|Person=2|Tense=Fut|VerbForm=Fin|Voice=Act	0	root	_	Ref=5.16.2
 14	pridie	pridie	ADV	Df	_	12	advmod	_	Ref=5.16.2
-15	Kal	kalendae	NOUN	Df	Gender=Fem|Number=Plur	14	nmod	_	DeletedPunct=.|Ref=5.16.2
+15	Kal	kalendae	NOUN	Df	Gender=Fem|Number=Plur	14	nmod	_	Ref=5.16.2
 16	Sextilis	Sextilis	ADJ	Df	Case=Gen|Gender=Masc|Number=Sing	15	nmod	_	Ref=5.16.2
 17	moratos	moror	VERB	V-	Aspect=Perf|Case=Acc|Gender=Masc|Number=Plur|Tense=Past|VerbForm=Part|Voice=Pass	12	conj	_	Ref=5.16.2
 18	triduum	triduum	NOUN	Nb	Case=Acc|Gender=Neut|Number=Sing	17	obl	_	Ref=5.16.2
@@ -15553,7 +15553,7 @@
 10	quae	qui	PRON	Pr	Case=Acc|Gender=Neut|Number=Plur|PronType=Rel	11	obj	_	Ref=1.31.2
 11	dixissent	dico	VERB	V-	Mood=Sub|Number=Plur|Person=3|Tense=Pqp|VerbForm=Fin|Voice=Act	9	acl:relcl	_	Ref=1.31.2
 12	enuntiarentur	enuntio	VERB	V-	Aspect=Imp|Mood=Sub|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Pass	4	acl	_	Ref=1.31.2
-13	quam	quam	SCONJ	Df	ConjType=Cmpr|PronType=Rel	18	mark	_	LId=1|Ref=1.31.2
+13	quam	quam	SCONJ	Df	PronType=Rel	18	mark	_	LId=1|Ref=1.31.2
 14	uti	ut	SCONJ	G-	_	18	mark	_	Ref=1.31.2
 15	ea	is	PRON	Pp	Case=Acc|Gender=Neut|Number=Plur|Person=3|PronType=Prs	18	obj	_	Ref=1.31.2
 16	quae	qui	PRON	Pr	Case=Acc|Gender=Neut|Number=Plur|PronType=Rel	17	obj	_	Ref=1.31.2
@@ -15640,7 +15640,7 @@
 # text = postea quam agros et cultum et copias Gallorum homines feri ac barbari adamassent traductos plures
 # sent_id = 52764
 1	postea	postea	ADV	G-	_	14	advmod	_	Ref=1.31.5
-2	quam	quam	SCONJ	G-	ConjType=Cmpr|PronType=Rel	13	mark	_	Ref=1.31.5
+2	quam	quam	SCONJ	G-	PronType=Rel	13	mark	_	Ref=1.31.5
 3	agros	ager	NOUN	Nb	Case=Acc|Gender=Masc|Number=Plur	13	obj	_	Ref=1.31.5
 4	et	et	CCONJ	C-	_	5	cc	_	Ref=1.31.5
 5	cultum	cultus	NOUN	Nb	Case=Acc|Gender=Masc|Number=Sing	3	conj	_	Ref=1.31.5
@@ -15816,7 +15816,7 @@
 2	peius	male	ADV	Df	Degree=Cmp	8	nsubj	_	Ref=1.31.10
 3	victoribus	victor	ADJ	A-	Case=Dat|Degree=Pos|Gender=Masc|Number=Plur	8	advcl:pred	_	Ref=1.31.10
 4	Sequanis	Sequani	NOUN	Nb	Case=Dat|Gender=Masc|Number=Plur	8	obl:arg	_	Ref=1.31.10
-5	quam	quam	SCONJ	Df	ConjType=Cmpr|PronType=Rel	6	mark	_	LId=1|Ref=1.31.10
+5	quam	quam	SCONJ	Df	PronType=Rel	6	mark	_	LId=1|Ref=1.31.10
 6	Haeduis	Aedui	NOUN	Nb	Case=Dat|Gender=Masc|Number=Plur	2	advcl:cmp	_	Ref=1.31.10
 7	victis	vinco	VERB	V-	Aspect=Perf|Case=Dat|Gender=Masc|Number=Plur|Tense=Past|VerbForm=Part|Voice=Pass	8	advcl	_	Ref=1.31.10
 8	accidisse	accido	VERB	V-	Aspect=Perf|Tense=Past|VerbForm=Inf|Voice=Act	0	root	_	Ref=1.31.10
@@ -16160,7 +16160,7 @@
 21	graviorem	gravis	ADJ	A-	Case=Acc|Degree=Cmp|Gender=Fem,Masc|Number=Sing	19	conj	_	Ref=1.32.4
 22	fortunam	fortuna	NOUN	Nb	Case=Acc|Gender=Fem|Number=Sing	19	nsubj	_	Ref=1.32.4
 23	Sequanorum	Sequani	NOUN	Nb	Case=Gen|Gender=Masc|Number=Plur	22	nmod	_	Ref=1.32.4
-24	quam	quam	SCONJ	Df	ConjType=Cmpr|PronType=Rel	25	mark	_	LId=1|Ref=1.32.4
+24	quam	quam	SCONJ	Df	PronType=Rel	25	mark	_	LId=1|Ref=1.32.4
 25	reliquorum	reliquus	DET	A-	Case=Gen|Degree=Pos|Gender=Masc|Number=Plur	19	advcl:cmp	_	Ref=1.32.4
 26	quod	quod	SCONJ	G-	PronType=Rel	37	mark	_	Ref=1.32.4
 27	soli	solus	DET	A-	Case=Nom|Degree=Pos|Gender=Masc|Number=Plur	37	nsubj	_	Ref=1.32.4
@@ -16465,13 +16465,13 @@
 1	deinde	deinde	ADV	Df	_	7	advmod	_	Ref=2.1.3
 2	quod	quod	SCONJ	G-	PronType=Rel	7	mark	_	Ref=2.1.3
 3	ab	ab	ADP	R-	AdpType=Prep	6	case	_	Ref=2.1.3
-4	non	nonae	NOUN	A-	Gender=Fem|Number=Plur	6	nmod	_	DeletedPunct=.|Ref=2.1.3
+4	non	nonnullus	DET	A-	Gender=Fem|Number=Plur	6	nmod	_	Ref=2.1.3
 5	nullis	nullis	ADJ	A-	Case=Abl|Degree=Pos|Number=Plur	4	fixed	_	Ref=2.1.3
 6	Gallis	Galli	NOUN	Nb	Case=Abl|Gender=Masc|Number=Plur	7	obl:agent	_	Ref=2.1.3
 7	sollicitarentur	sollicito	VERB	V-	Aspect=Imp|Mood=Sub|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Pass	0	root	_	Ref=2.1.3
 8	partim	partim	ADV	Df	_	27	advmod	_	Ref=2.1.3
 9	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	27	nsubj	_	Ref=2.1.3
-10	ut	ut	SCONJ	Dq	ConjType=Cmpr|PronType=Rel	16	mark	_	Ref=2.1.3
+10	ut	ut	SCONJ	Dq	PronType=Rel	16	mark	_	Ref=2.1.3
 11	Germanos	Germani	NOUN	Nb	Case=Acc|Gender=Masc|Number=Plur	15	nsubj:pass	_	Ref=2.1.3
 12	diutius	diu	ADV	Df	Degree=Cmp	15	advmod	_	Ref=2.1.3
 13	in	in	ADP	R-	AdpType=Prep	14	case	_	Ref=2.1.3
@@ -16503,7 +16503,7 @@
 # text = ab non nullis etiam quod in Gallia a potentioribus atque iis qui ad conducendos homines facultates habebant vulgo regna occupabantur
 # sent_id = 52963
 1	ab	ab	ADP	R-	AdpType=Prep	2	case	_	Ref=2.1.4
-2	non	nonae	NOUN	A-	Gender=Fem|Number=Plur	0	root	_	DeletedPunct=.|Ref=2.1.4
+2	non	nonnullus	DET	A-	Gender=Fem|Number=Plur	0	root	_	Ref=2.1.4
 3	nullis	nullis	ADJ	A-	Case=Abl|Degree=Pos|Gender=Masc|Number=Plur	2	fixed	_	Ref=2.1.4
 4	etiam	etiam	ADV	Df	_	2	advmod:emph	_	Ref=2.1.4
 5	quod	quod	SCONJ	G-	PronType=Rel	20	mark	_	Ref=2.1.4
@@ -17082,7 +17082,7 @@
 1	carinae	carina	NOUN	Nb	Case=Nom|Gender=Fem|Number=Plur	3	nsubj	_	Ref=3.13.1
 2	aliquanto	aliquanto	ADV	Df	_	3	advmod	_	Ref=3.13.1
 3	planiores	planus	ADJ	A-	Case=Nom|Degree=Cmp|Gender=Fem|Number=Plur	0	root	_	Ref=3.13.1
-4	quam	quam	SCONJ	Df	ConjType=Cmpr|PronType=Rel	6	mark	_	LId=1|Ref=3.13.1
+4	quam	quam	SCONJ	Df	PronType=Rel	6	mark	_	LId=1|Ref=3.13.1
 5	nostrarum	noster	DET	Ps	Case=Gen|Gender=Fem|Number=Plur|Person=1|Poss=Yes	6	det	_	Ref=3.13.1
 6	navium	navis	NOUN	Nb	Case=Gen|Gender=Fem|Number=Plur	3	advcl:cmp	_	Ref=3.13.1
 7	quo	quo	SCONJ	G-	_	14	mark	_	Ref=3.13.1
@@ -17513,7 +17513,7 @@
 26	trans	trans	ADP	R-	AdpType=Prep	27	case	_	Ref=4.12.1
 27	Mosam	Mosa	PROPN	Ne	Case=Acc|Gender=Fem|Number=Sing	28	obl	_	Ref=4.12.1
 28	profecti	proficiscor	VERB	V-	Aspect=Perf|Case=Nom|Gender=Masc|Number=Plur|Tense=Past|VerbForm=Part|Voice=Pass	21	acl:relcl	_	Ref=4.12.1
-29	nondum	nonae	NOUN	Df	Gender=Fem|Number=Plur	30	nmod	_	DeletedPunct=.|Ref=4.12.1
+29	nondum	nondum	NOUN	Df	Gender=Fem|Number=Plur	30	nmod	_	Ref=4.12.1
 30	redierant	redeo	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pqp|VerbForm=Fin|Voice=Act	19	advcl	_	Ref=4.12.1
 31	nihil	nihil	ADJ	Px	Case=Acc|Gender=Neut|Number=Sing	32	obj	_	Ref=4.12.1
 32	timentibus	timeo	VERB	V-	Case=Abl|Gender=Masc|Number=Plur|Tense=Pres|VerbForm=Part|Voice=Act	54	advcl:abs	_	Ref=4.12.1
@@ -17793,7 +17793,7 @@
 41	castra	castra	NOUN	Nb	Case=Acc|Gender=Neut|Number=Plur	42	obl	_	Ref=4.13.4
 42	venerunt	venio	VERB	V-	Aspect=Perf|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	17	acl	_	Ref=4.13.4
 43	simul	simul	ADV	Df	_	48	advmod	_	Ref=4.13.5
-44	ut	ut	SCONJ	Dq	ConjType=Cmpr|PronType=Rel	45	mark	_	Ref=4.13.5
+44	ut	ut	SCONJ	Dq	PronType=Rel	45	mark	_	Ref=4.13.5
 45	dicebatur	dico	VERB	V-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Pass	48	advcl:cmp	_	Ref=4.13.5
 46	sui	se	PRON	Pk	Case=Gen|Gender=Masc|Number=Plur|Person=3|PronType=Prs|Reflex=Yes	47	nsubj	_	Ref=4.13.5
 47	purgandi	purgo	VERB	V-	Case=Gen|Gender=Masc|Number=Sing|VerbForm=Gdv	48	acl	_	Ref=4.13.5
@@ -18073,7 +18073,7 @@
 # sent_id = 86099
 1	Sed	sed	CCONJ	C-	_	52	cc	_	Ref=1.22
 2	quoniam	quoniam	SCONJ	G-	_	12	mark	_	Ref=1.22
-3	ut	ut	SCONJ	Dq	ConjType=Cmpr|PronType=Rel	5	mark	_	Ref=1.22
+3	ut	ut	SCONJ	Dq	PronType=Rel	5	mark	_	Ref=1.22
 4	praeclare	praeclare	ADV	Df	Degree=Pos	5	advmod	_	Ref=1.22
 5	scriptum	scribo	VERB	V-	Aspect=Perf|Case=Nom|Gender=Neut|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	12	advcl:cmp	_	Ref=1.22
 6	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	5	aux:pass	_	Ref=1.22
@@ -18260,7 +18260,7 @@
 12	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	14	cop	_	Ref=1.23
 13	in	in	ADP	R-	AdpType=Prep	14	case	_	Ref=1.23
 14	vitio	vitium	NOUN	Nb	Case=Abl|Gender=Neut|Number=Sing	0	root	_	Ref=1.23
-15	quam	quam	SCONJ	Df	ConjType=Cmpr|PronType=Rel	22	mark	_	LId=4|Ref=1.23
+15	quam	quam	SCONJ	Df	PronType=Rel	22	mark	_	LId=4|Ref=1.23
 16	si	si	SCONJ	G-	_	22	mark	_	Ref=1.23
 17	parentes	parens	NOUN	Nb	Case=Acc|Gender=Masc|Number=Plur	22	obj	_	Ref=1.23
 18	aut	aut	CCONJ	C-	_	19	cc	_	Ref=1.23
@@ -18364,7 +18364,7 @@
 15	ad	ad	ADP	R-	AdpType=Prep	17	case	_	Ref=1.25
 16	gratificandi	gratificor	VERB	V-	Case=Gen|VerbForm=Ger	17	acl	_	Ref=1.25
 17	facultatem	facultas	NOUN	Nb	Case=Acc|Gender=Fem|Number=Sing	13	conj	_	Ref=1.25
-18	ut	ut	SCONJ	Dq	ConjType=Cmpr|PronType=Rel	22	mark	_	Ref=1.25
+18	ut	ut	SCONJ	Dq	PronType=Rel	22	mark	_	Ref=1.25
 19	nuper	nuper	ADV	Df	_	22	advmod	_	Ref=1.25
 20	Marcus	Marcus	PROPN	Ne	Case=Nom|Gender=Masc|Number=Sing	22	nsubj	_	Ref=1.25
 21	Crassus	Crassus	PROPN	Ne	Case=Nom|Gender=Masc|Number=Sing	20	flat:name	_	Ref=1.25
@@ -18606,7 +18606,7 @@
 7	aliquo	aliquis	DET	Px	Case=Abl|Gender=Masc,Neut|Number=Sing	8	det	_	Ref=1.27
 8	motu	motus	NOUN	Nb	Case=Abl|Gender=Masc|Number=Sing	9	obl	_	Ref=1.27
 9	accidunt	accido	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	4	acl:relcl	_	Ref=1.27
-10	quam	quam	SCONJ	Df	ConjType=Cmpr|PronType=Rel	11	mark	_	LId=1|Ref=1.27
+10	quam	quam	SCONJ	Df	PronType=Rel	11	mark	_	LId=1|Ref=1.27
 11	ea	is	PRON	Pp	Case=Nom|Gender=Neut|Number=Plur|Person=3|PronType=Prs	1	advcl:cmp	_	Ref=1.27
 12	quae	qui	PRON	Pr	Case=Nom|Gender=Neut|Number=Plur|PronType=Rel	16	nsubj:pass	_	Ref=1.27
 13	meditata	meditor	VERB	V-	Aspect=Perf|Case=Nom|Gender=Neut|Number=Plur|Tense=Past|VerbForm=Part|Voice=Pass	16	advcl	_	Ref=1.27

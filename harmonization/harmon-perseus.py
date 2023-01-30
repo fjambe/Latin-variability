@@ -16,11 +16,16 @@ import udapi.block.ud.fixpunct
 split = sys.argv[1] # train/test
 UD_folder = '/home/federica/Desktop/latin/UD_devbranch' # path to the folder containing all UD Latin treebanks
 filename = f'{UD_folder}/UD_Latin-Perseus-dev/la_perseus-ud-{split}.conllu'
-output_folder = '/home/federica/Desktop/latin/harmonization/harmonized-treebanks'
+output_folder = '/home/federica/Desktop/latin/GITHUB/Latin-variability/harmonization/harmonized-treebanks'
 doc = udapi.Document(filename)		
 
 
 determiners = ['aliqualis', 'aliqui', 'alius', 'alter', 'alteruter', 'ambo', 'ceterus', 'complura', 'complures', 'cunctus', 'eiusmodi', 'hic', 'huiusmodi', 'idem', 'ille', 'ipse', 'iste', 'meus', 'multus', 'neuter', 'nonnullus', 'noster', 'nullus', 'omnis', 'paucus', 'plerusque', 'qualis', 'quamplures', 'quantus', 'quantuslibet', 'qui', 'quicumque', 'quidam', 'quilibet', 'quispiam', 'quisquam', 'quisque', 'quot', 'reliquus', 'solus', 'suus', 'talis', 'tantus', 'tot', 'totidem', 'totus', 'tuus', 'uester', 'vester', 'voster', 'ullus', 'uniuersus', 'unusquisque', 'uterque']
+
+company = udapi.block.ud.la.addmwt.AddMwt()
+conv = udapi.block.ud.convert1to2.Convert1to2()
+pun = udapi.block.ud.fixpunct.FixPunct()
+space = udapi.block.ud.setspaceafterfromtext.SetSpaceAfterFromText()
 
 
 # Iterate over all nodes in the document (in all trees)
@@ -108,7 +113,6 @@ for node in doc.nodes:
 
 	
 	# MWT
-	company = udapi.block.ud.la.addmwt.AddMwt()
 	company.process_node(node)
 	# postprocessing of abbreviation+dot combinations, that in the previous step were provisionally treated like MWTs
 	# MWT line is removed, so that in the end they have been simply tokenised
@@ -118,12 +122,9 @@ for node in doc.nodes:
 			mwt.remove()
 			
 	# setting SpaceAfter=No when relevant
-	space = udapi.block.ud.setspaceafterfromtext.SetSpaceAfterFromText()
 	space.process_tree(node.root)
 	
-	
 	# reattach cc and punct to second conjunct
-	conv = udapi.block.ud.convert1to2.Convert1to2()
 	conv.reattach_coordinations(node)
 	
 	
@@ -262,7 +263,7 @@ for node in doc.nodes:
 		
 		
 	# AUXiliaries
-	if node.lemma == 'sum' and node.deprel in ['aux', 'aux:pass', 'cop']:
+	if node.lemma == 'sum' and node.udeprel in ['aux', 'cop']:
 		node.upos = 'AUX'
 	
 	# Degree
@@ -301,7 +302,7 @@ for node in doc.nodes:
 		
 			
 	# gerundives
-	if node.deprel.startswith('nsubj') and node.parent.feats['VerbForm'] == 'Gdv':
+	if node.udeprel == 'nsubj' and node.parent.feats['VerbForm'] == 'Gdv':
 		sib = [s for s in node.siblings if s.deprel == 'case']
 		if sib:
 			sib[0].deprel = 'mark'
@@ -352,7 +353,7 @@ for node in doc.nodes:
 	
 	
 	# absolute ablative
-	if node.parent.deprel == 'advcl' and node.parent.feats['Case'] == 'Abl' and node.feats['Case'] == 'Abl' and node.deprel.startswith('nsubj'):
+	if node.parent.deprel == 'advcl' and node.parent.feats['Case'] == 'Abl' and node.feats['Case'] == 'Abl' and node.udeprel == 'nsubj':
 		case = [s for s in node.siblings if s.deprel == 'case']
 		if len(case) == 0:
 			node.parent.deprel = 'advcl:abs'
@@ -367,7 +368,7 @@ for node in doc.nodes:
 	if node.parent.deprel == 'advcl' and node.lemma in ['quam', 'quemadmodum', 'sicut', 'tamquam', 'velut'] and node.upos == 'SCONJ':
 		node.parent.deprel = 'advcl:cmp'
 		if node.lemma == 'quam':
-			node.feats = 'ConjType=Cmpr|PronType=Rel'
+			node.feats = 'PronType=Rel'
 	# ut
 	if node.lemma == 'ut' and node.parent.deprel == 'advcl':
 		if node.parent.feats['Mood'] == 'Ind' and node.lemma in ['aio', 'consto', 'dico', 'infero', 'possum', 'praeadico', 'puto', 'scio', 'soleo', 'tabesco', 'video']: # ut dixi
@@ -440,10 +441,9 @@ for node in doc.nodes:
 			noun.deprel = 'appos'			
 
 	
-	# fix non-projectivity of punctuation	
-	pun = udapi.block.ud.fixpunct.FixPunct()
-	pun.process_tree(node.root)
+# fix non-projectivity of punctuation	
+pun.process_document(doc)
 	
 		
-with open(f'{output_folder}/HM-la_perseus-ud-{split}.conllu', 'w') as output:
+with open(f'{output_folder}/UD_Latin-Perseus/HM-la_perseus-ud-{split}.conllu', 'w') as output:
 	output.write(doc.to_conllu_string())

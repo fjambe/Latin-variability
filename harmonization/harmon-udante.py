@@ -7,13 +7,11 @@ Usage: python3 harmon-udante.py train/dev/test
 
 import sys
 import udapi
-import udapi.block.ud.la.addmwt
-import udapi.block.ud.convert1to2
 
 split = sys.argv[1] # train/dev/test
 UD_folder = '/home/federica/Desktop/latin/UD_devbranch' # path to the folder containing all UD Latin treebanks
 filename = f'{UD_folder}/UD_Latin-UDante-dev/la_udante-ud-{split}.conllu'
-output_folder = '/home/federica/Desktop/latin/harmonization/harmonized-treebanks'
+output_folder = '/home/federica/Desktop/latin/GITHUB/Latin-variability/harmonization/harmonized-treebanks'
 doc = udapi.Document(filename)
 
 
@@ -59,9 +57,9 @@ for node in doc.nodes:
 					node.deprel = 'dislocated:csubj'
 				elif pron.deprel == 'obj':
 					node.deprel = 'ccomp'
-				elif pron.deprel.startswith('advmod') or pron.deprel.startswith('obl'):
+				elif pron.udeprel == 'advmod' or pron.udeprel == 'obl':
 					node.deprel = 'advcl'
-				elif pron.deprel.startswith('advcl') or pron.deprel == 'conj':
+				elif pron.udeprel == 'advcl' or pron.deprel == 'conj':
 					node.deprel = pron.deprel
 				else:
 					continue
@@ -89,17 +87,17 @@ for node in doc.nodes:
 					node.deprel = 'dislocated:csubj'
 				elif pron.deprel == 'obj':
 					node.deprel = 'ccomp'
-				elif pron.deprel.startswith('advmod') or pron.deprel.startswith('obl'):
+				elif pron.udeprel == 'advmod' or pron.udeprel == 'obl':
 					node.deprel = 'advcl'
-				elif pron.deprel.startswith('advcl') or pron.deprel == 'conj':
+				elif pron.udeprel == 'advcl' or pron.deprel == 'conj':
 					node.deprel = pron.deprel
 				else:
 					continue
 				
 				
 	# cmpr
-	if node.deprel.endswith(':cmpr'):
+	if node.sdeprel == 'cmpr':
 		node.deprel = node.deprel[:-1]
 				
-with open(f'{output_folder}/HM-la_udante-ud-{split}.conllu', 'w') as output:
+with open(f'{output_folder}/UD_Latin-UDante/HM-la_udante-ud-{split}.conllu', 'w') as output:
 	output.write(doc.to_conllu_string())

@@ -1997,7 +1997,7 @@
 20	precibus	prex	NOUN	n-p---fb-	Case=Abl|Gender=Fem|Number=Plur	27	obl	_	LId=prex1
 21	'	'	PUNCT	u--------	_	20	punct	_	LId=QUOTE1
 22	dixerunt	dico	VERB	v3pria---	Aspect=Perf|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	6	conj	_	LId=dico2
-23	'	'	PUNCT	u--------	_	22	punct	_	LId=QUOTE1
+23	'	'	PUNCT	u--------	_	25	punct	_	LId=QUOTE1
 24	numina	numen	NOUN	n-p---nn-	Case=Nom|Gender=Neut|Number=Plur	27	nsubj	_	LId=numen1
 25	iustis	iustus	ADJ	a-p---fb-	Case=Abl|Gender=Fem|Number=Plur	20	amod	_	LId=justus1
 26	victa	vivo	VERB	v-prppnn-	Aspect=Perf|Case=Nom|Gender=Neut|Number=Plur|Tense=Past|VerbForm=Part|Voice=Pass	24	nmod	_	LId=vivo1
@@ -2366,7 +2366,7 @@
 # sent_id = phi0959.phi006.perseus-lat1.tb.xml@153
 # text = dixerat, ' ista decent umeros gestamina nostros, qui dare certa ferae, dare vulnera possumus hosti, qui modo pestifero tot iugera ventre prementem stravimus innumeris tumidum Pythona sagittis.
 1	dixerat	dico	VERB	v3slia---	Mood=Ind|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin|Voice=Act	0	root	_	SpaceAfter=No|LId=dico2
-2	,	,	PUNCT	u--------	_	5	punct	_	LId=comma1
+2	,	,	PUNCT	u--------	_	1	punct	_	LId=comma1
 3	'	'	PUNCT	u--------	_	5	punct	_	LId=QUOTE1
 4	ista	iste	DET	p-p---nn-	Case=Nom|Gender=Neut|Number=Plur	7	det	_	LId=iste1
 5	decent	decet	VERB	v3ppia---	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	1	acl:relcl	_	LId=decet1
@@ -2507,7 +2507,7 @@
 26	genitor	genitor	NOUN	n-s---mv-	Case=Voc|Gender=Masc|Number=Sing	22	vocative	_	LId=genitor1
 27	carissime	carus	ADJ	a-s---mvs	Case=Voc|Degree=Abs|Gender=Masc|Number=Sing	26	amod	_	SpaceAfter=No|LId=carus1
 28	,	,	PUNCT	u--------	_	26	punct	_	LId=comma1
-29	'	'	PUNCT	u--------	_	30	punct	_	LId=QUOTE1
+29	'	'	PUNCT	u--------	_	24	punct	_	LId=QUOTE1
 30	dixit	dico	VERB	v3sria---	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	11	parataxis	_	LId=dico2
 31	'	'	PUNCT	u--------	_	32	punct	_	LId=QUOTE1
 32	virginitate	virginitas	NOUN	n-s---fb-	Case=Abl|Gender=Fem|Number=Sing	33	obj	_	LId=virginitas1
@@ -2864,7 +2864,7 @@
 # text = Cui deus ' at quoniam coniunx mea non potes esse, arbor eris certe ' dixit ' mea.
 1	Cui	qui	PRON	p-s---fd-	Case=Dat|Gender=Fem|Number=Sing|PronType=Rel	16	obl:arg	_	LId=qui1
 2	deus	deus	NOUN	n-s---mn-	Case=Nom|Gender=Masc|Number=Sing	16	nsubj	_	LId=deus1
-3	'	'	PUNCT	u--------	_	2	punct	_	LId=QUOTE1
+3	'	'	PUNCT	u--------	_	6	punct	_	LId=QUOTE1
 4	at	at	CCONJ	c--------	_	12	advmod	_	LId=at1
 5	quoniam	quoniam	SCONJ	c--------	_	6	mark	_	LId=quoniam1
 6	coniunx	coniunx	NOUN	n-s---fn-	Case=Nom|Gender=Fem|Number=Sing	16	obj	_	LId=conjunx1
@@ -2942,7 +2942,7 @@
 25	et	et	CCONJ	c--------	_	30	cc	_	LId=et1
 26	sonitu	sonitus	NOUN	n-s---mb-	Case=Abl|Gender=Masc|Number=Sing	30	obl	_	LId=sonitus1
 27	plus	multus	ADV	d--------	_	30	advmod	_	LId=multus1
-28	quam	quam	SCONJ	c--------	ConjType=Cmpr|PronType=Rel	29	mark	_	LId=quam1
+28	quam	quam	SCONJ	c--------	PronType=Rel	29	mark	_	LId=quam1
 29	vicina	vicinus	ADJ	a-s---fb-	Case=Abl|Gender=Fem|Number=Sing	27	advcl:cmp	_	LId=vicinus1
 30	fatigat	fatigo	VERB	v3spia---	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	9	conj	_	SpaceAfter=No|LId=fatigo1
 31	.	.	PUNCT	u--------	_	9	punct	_	LId=punc1
@@ -3157,7 +3157,7 @@
 3	qui	qui	PRON	p-s---mn-	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	0	root	_	LId=qui1
 4	suadeat	suadeo	VERB	v3spsa---	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	3	acl:relcl	_	LId=suadeo1
 5	illinc	illinc	ADV	d--------	_	4	advmod	_	SpaceAfter=No|LId=illinc1
-6	,	,	PUNCT	u--------	_	8	punct	_	LId=comma1
+6	,	,	PUNCT	u--------	_	4	punct	_	LId=comma1
 7	hinc	hinc	ADV	d--------	AdvType=Loc	8	advmod:lmod	_	LId=hinc1
 8	dissuadet	dissuadeo	VERB	v3spia---	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	3	conj	_	LId=dissuadeo1
 9	amor	amor	NOUN	n-s---mn-	Case=Nom|Gender=Masc|Number=Sing	8	nsubj	_	SpaceAfter=No|LId=amor1
@@ -5322,7 +5322,7 @@
 4	mensa	mensa	NOUN	n-s---fb-	Case=Abl|Gender=Fem|Number=Sing	5	obl	_	LId=mensa1
 5	effundebatur	effundo	VERB	v3siip---	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Pass	0	root	_	SpaceAfter=No|LId=effundo1
 6	,	,	PUNCT	u--------	_	7	punct	_	LId=comma1
-7	quam	quam	SCONJ	c--------	ConjType=Cmpr|PronType=Rel	11	mark	_	LId=quam1
+7	quam	quam	SCONJ	c--------	PronType=Rel	11	mark	_	LId=quam1
 8	aliquis	aliquis	PRON	p-s---mn-	Case=Nom|Gender=Masc|Number=Sing	11	nsubj	_	LId=aliquis1
 9	in	in	ADP	r--------	_	10	case	_	LId=in1
 10	cella	cella	NOUN	n-s---fb-	Case=Abl|Gender=Fem|Number=Sing	11	obl	_	LId=cella1
@@ -6194,7 +6194,7 @@
 10	sibi	sui	PRON	p-s---md-	Case=Dat|Gender=Masc|Number=Sing	11	obl:arg	_	LId=sui1
 11	mavult	malo	VERB	v3spia---	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	5	acl:relcl	_	LId=malo1
 12	assem	assis	NOUN	n-s---ma-	Case=Acc|Gender=Masc|Number=Sing	11	obj	_	LId=assis1
-13	quam	quam	SCONJ	d--------	ConjType=Cmpr|PronType=Rel	14	mark	_	LId=quam1
+13	quam	quam	SCONJ	d--------	PronType=Rel	14	mark	_	LId=quam1
 14	vitam	vita	NOUN	n-s---fa-	Case=Acc|Gender=Fem|Number=Sing	12	advcl:cmp	_	LId=vita1
 15	nostram	noster	DET	a-s---fa-	Case=Acc|Gender=Fem|Number=Sing	14	det	_	SpaceAfter=No|LId=noster1
 16	?	?	PUNCT	u--------	_	4	punct	_	LId=punc1
@@ -6211,7 +6211,7 @@
 8	nummorum	nummus	NOUN	n-p---mg-	Case=Gen|Gender=Masc|Number=Plur	5	nmod	_	LId=nummus1
 9	accipit	accipio	VERB	v3spia---	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	3	conj	_	SpaceAfter=No|LId=accipio1
 10	,	,	PUNCT	u--------	_	11	punct	_	LId=comma1
-11	quam	quam	SCONJ	d--------	ConjType=Cmpr|PronType=Rel	14	mark	_	LId=quam1
+11	quam	quam	SCONJ	d--------	PronType=Rel	14	mark	_	LId=quam1
 12	alter	alter	DET	a-s---mn-	Case=Nom|Gender=Masc|Number=Sing	14	nsubj	_	LId=alter1
 13	patrimonium	patrimonium	NOUN	n-s---na-	Case=Acc|Gender=Neut|Number=Sing	14	obj	_	LId=patrimonium1
 14	habet	habeo	VERB	v3spia---	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	5	advcl:cmp	_	SpaceAfter=No|LId=habeo1
@@ -6463,7 +6463,7 @@
 3	matella	matella	NOUN	n-s---fn-	Case=Nom|Gender=Fem|Number=Sing	4	nsubj	_	LId=matella1
 4	digna	dignus	ADJ	a-s---fn-	Case=Nom|Gender=Fem|Number=Sing	0	root	_	LId=dignus1
 5	fuit	sum	AUX	v3sria---	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	4	cop	_	LId=sum1
-6	quam	quam	SCONJ	c--------	ConjType=Cmpr|PronType=Rel	8	mark	_	LId=quam1
+6	quam	quam	SCONJ	c--------	PronType=Rel	8	mark	_	LId=quam1
 7	taurus	taurus	NOUN	n-s---mn-	Case=Nom|Gender=Masc|Number=Sing	8	nsubj	_	LId=taurus1
 8	iactaret	iacto	VERB	v3sisa---	Aspect=Imp|Mood=Sub|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	1	advcl:cmp	_	SpaceAfter=No|LId=jacto1
 9	.	.	PUNCT	u--------	_	4	punct	_	LId=punc1
@@ -6620,7 +6620,7 @@
 4	tibi	tu	PRON	p-s---md-	Case=Dat|Gender=Masc|Number=Sing	6	obl:arg	_	LId=tu1
 5	plus	multus	DET	a-s----a-	Case=Acc|Number=Sing	6	obj	_	LId=multus1
 6	do	do	VERB	v1spia---	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	1	conj	_	LId=do1
-7	quam	quam	SCONJ	d--------	ConjType=Cmpr|PronType=Rel	8	mark	_	LId=quam1
+7	quam	quam	SCONJ	d--------	PronType=Rel	8	mark	_	LId=quam1
 8	accepi	accipio	VERB	v1sria---	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	5	advcl:cmp	_	SpaceAfter=No|LId=accipio1
 9	.	.	PUNCT	u--------	_	1	punct	_	LId=punc1
 
@@ -6986,7 +6986,7 @@
 5	magnum	magnus	ADJ	a-s---na-	Case=Acc|Gender=Neut|Number=Sing	3	obj	_	LId=magnus1
 6	tormentum	tormentum	NOUN	n-s---na-	Case=Acc|Gender=Neut|Number=Sing	5	nsubj	_	LId=tormentum1
 7	esse	sum	AUX	v--pna---	Tense=Pres|VerbForm=Inf|Voice=Act	5	cop	_	LId=sum1
-8	quam	quam	SCONJ	d--------	ConjType=Cmpr|PronType=Rel	9	mark	_	LId=quam1
+8	quam	quam	SCONJ	d--------	PronType=Rel	9	mark	_	LId=quam1
 9	continere	contineo	VERB	v--pna---	Tense=Pres|VerbForm=Inf|Voice=Act	4	advcl:cmp	_	SpaceAfter=No|LId=contineo1
 10	.	.	PUNCT	u--------	_	3	punct	_	LId=punc1
 
@@ -8138,7 +8138,7 @@
 2	fidem	fides	NOUN	n-s---fa-	Case=Acc|Gender=Fem|Number=Sing	4	obj	_	LId=fides1
 3	meam	meus	DET	a-s---fa-	Case=Acc|Gender=Fem|Number=Sing	2	det	_	LId=meus1
 4	malo	malo	VERB	v1spia---	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	LId=malo1
-5	quam	quam	SCONJ	c--------	ConjType=Cmpr|PronType=Rel	6	mark	_	LId=quam1
+5	quam	quam	SCONJ	c--------	PronType=Rel	6	mark	_	LId=quam1
 6	thesauros	thesaurus	NOUN	n-p---ma-	Case=Acc|Gender=Masc|Number=Plur	4	advcl:cmp	_	SpaceAfter=No|LId=thesaurus1
 7	.	.	PUNCT	u--------	_	4	punct	_	LId=punc1
 
@@ -11059,7 +11059,7 @@
 3	quod	qui	PRON	p-s---nn-	Case=Nom|Gender=Neut|Number=Sing|PronType=Rel	0	root	_	LId=qui1
 4	homines	homo	NOUN	n-p---ma-	Case=Acc|Gender=Masc|Number=Plur	5	obj	_	LId=homo1
 5	facit	facio	VERB	v3spia---	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	3	acl:relcl	_	SpaceAfter=No|LId=facio1
-6	,	,	PUNCT	u--------	_	8	punct	_	LId=comma1
+6	,	,	PUNCT	u--------	_	5	punct	_	LId=comma1
 7	cetera	ceterus	DET	a-p---nn-	Case=Nom|Gender=Neut|Number=Plur	9	det	_	LId=ceterus1
 8	quisquilia	quisquilia	NOUN	n-s---fn-	Case=Nom|Gender=Fem|Number=Sing	3	conj	_	LId=quisquilia1
 9	omnia	omnia	NOUN	n-p---nn-	Case=Nom|Gender=Neut|Number=Plur	8	nsubj	_	SpaceAfter=No|LId=omnia1
@@ -13037,7 +13037,7 @@
 2	rupti	rumpo	VERB	v-prppmn-	Aspect=Perf|Case=Nom|Gender=Masc|Number=Plur|Tense=Past|VerbForm=Part|Voice=Pass	4	advcl	_	_
 3	prius	prior	ADV	d-------c	Degree=Cmp	4	advmod	_	_
 4	Periere	pereo	VERB	v3pria---	Aspect=Perf|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	_
-5	quam	quam	SCONJ	d--------	ConjType=Cmpr|PronType=Rel	8	mark	_	_
+5	quam	quam	SCONJ	d--------	PronType=Rel	8	mark	_	_
 6	quod	qui	PRON	p-s---na-	Case=Acc|Gender=Neut|Number=Sing|PronType=Rel	7	obj	_	LId=qui1
 7	petierant	peto	VERB	v3plia---	Mood=Ind|Number=Plur|Person=3|Tense=Pqp|VerbForm=Fin|Voice=Act	8	acl:relcl	_	_
 8	contingerent	contingo	VERB	v3pisa---	Aspect=Imp|Mood=Sub|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	3	advcl:cmp	_	SpaceAfter=No|LId=contingo1
@@ -13690,7 +13690,7 @@
 4	aevum	aevum	NOUN	n-s---na-	Case=Acc|Gender=Neut|Number=Sing	5	obj	_	_
 5	ducitis	duco	VERB	v2ppia---	Mood=Ind|Number=Plur|Person=2|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	SpaceAfter=No
 6	,	,	PUNCT	u--------	_	10	punct	_	_
-7	Quam	quam	SCONJ	d--------	ConjType=Cmpr|PronType=Rel	10	mark	_	_
+7	Quam	quam	SCONJ	d--------	PronType=Rel	10	mark	_	_
 8	regem	rex	NOUN	n-s---ma-	Case=Acc|Gender=Masc|Number=Sing	10	xcomp	_	_
 9	me	ego	PRON	p-s---ma-	Case=Acc|Gender=Masc|Number=Sing	10	obj	_	_
 10	creatis	creo	VERB	v2ppia---	Mood=Ind|Number=Plur|Person=2|Tense=Pres|VerbForm=Fin|Voice=Act	3	advcl:cmp	_	_

@@ -14,11 +14,15 @@ import udapi.block.ud.fixpunct
 split = sys.argv[1] # train/dev/test
 UD_folder = '/home/federica/Desktop/latin/UD_devbranch' # path to the folder containing all UD Latin treebanks
 filename = f'{UD_folder}/UD_Latin-LLCT-dev/la_llct-ud-{split}.conllu'
-output_folder = '/home/federica/Desktop/latin/harmonization/harmonized-treebanks'
+output_folder = '/home/federica/Desktop/latin/GITHUB/Latin-variability/harmonization/harmonized-treebanks'
 doc = udapi.Document(filename)
 
 
 determiners = ['aliqualis', 'aliqui', 'alius', 'alter', 'alteruter', 'ambo', 'ceterus', 'complura', 'complures', 'cunctus', 'eiusmodi', 'hic', 'huiusmodi', 'idem', 'ille', 'ipse', 'iste', 'meus', 'multus', 'neuter', 'nonnullus', 'noster', 'nullus', 'omnis', 'paucus', 'plerusque', 'qualis', 'quamplures', 'quantus', 'quantuslibet', 'qui', 'quicumque', 'quidam', 'quilibet', 'quispiam', 'quisquam', 'quisque', 'quot', 'reliquus', 'solus', 'suus', 'talis', 'tantus', 'tot', 'totidem', 'totus', 'tuus', 'uester', 'vester', 'voster', 'ullus', 'uniuersus', 'unusquisque', 'uterque']
+
+company = udapi.block.ud.la.addmwt.AddMwt()
+conv = udapi.block.ud.convert1to2.Convert1to2()
+pun = udapi.block.ud.fixpunct.FixPunct()
 
 
 # Iterate over all nodes in the document (in all trees)
@@ -26,7 +30,6 @@ for node in doc.nodes:
 
 	# MWT
 	if node.form != 'tecum':
-		company = udapi.block.ud.la.addmwt.AddMwt()
 		company.process_node(node)
 	
 	
@@ -117,7 +120,7 @@ for node in doc.nodes:
 	# COMPLEX CONSTRUCTIONS
 	
 	# absolute ablative
-	if node.parent.deprel == 'advcl' and node.parent.feats['Case'] == 'Abl' and node.feats['Case'] == 'Abl' and node.deprel.startswith('nsubj'):
+	if node.parent.deprel == 'advcl' and node.parent.feats['Case'] == 'Abl' and node.feats['Case'] == 'Abl' and node.udeprel == 'nsubj':
 		case = [s for s in node.siblings if s.deprel == 'case']
 		if len(case) == 0:
 			node.parent.deprel = 'advcl:abs'
@@ -172,7 +175,6 @@ for node in doc.nodes:
 	compar = ['quam', 'quasi', 'quemadmodum', 'sicut', 'tamquam', 'uelut']
 	if node.parent.deprel == 'advcl' and node.lemma in compar:
 		node.parent.deprel = 'advcl:cmp'
-		node.feats['ConjType'] = 'Cmpr' 
 		if node.upos != 'SCONJ':
 			node.upos = 'SCONJ'
 		if node.deprel != 'mark':
@@ -181,17 +183,15 @@ for node in doc.nodes:
 	if node.lemma == 'ut' and node.parent.deprel == 'advcl':
 		if node.parent.feats['Mood'] == 'Ind' and node.parent.lemma in ['decerno', 'dico', 'lego', 'memoro']: # ut dixi
 			node.parent.deprel = 'advcl:cmp'
-			node.feats['ConjType'] = 'Cmpr' 
 		elif node.parent.feats['VerbForm'] == 'Part': # ut dictum est
 			aux = [s for s in node.siblings if s.deprel == 'aux:pass' and s.form in ['est', 'sunt']]
 			if aux:
 				node.parent.deprel = 'advcl:cmp'
-				node.feats['ConjType'] = 'Cmpr'
 	# comparative forms + quam
 	if node.lemma == 'quam' and node.parent.deprel == 'advcl' and 'ior' in node.parent.parent.form:
 		node.upos, node.deprel = 'SCONJ', 'mark' # already like this, just managing errors
 		node.parent.deprel = 'advcl:cmp'
-		node.feats['ConjType'], node.feats['PronType'] = 'Cmpr', 'Rel' 
+		node.feats['PronType'] = 'Rel' 
 		
 		
 	if node.parent.lemma == 'sum' and node.deprel == 'nsubj':
@@ -215,14 +215,12 @@ for node in doc.nodes:
 	
 						
 	# final reattachment of coordinations, since sometimes the previous modifications led to incorrect dependencies				
-	conv = udapi.block.ud.convert1to2.Convert1to2()
 	conv.reattach_coordinations(node)
 	
 	
-	# fix non-projectivity of punctuation
-	pun = udapi.block.ud.fixpunct.FixPunct()
-	pun.process_tree(node.root)
+# fix non-projectivity of punctuation
+pun.process_document(doc)
 
 	
-with open(f'{output_folder}/HM-la_llct-ud-{split}.conllu', 'w') as output:
+with open(f'{output_folder}/UD_Latin-LLCT/HM-la_llct-ud-{split}.conllu', 'w') as output:
 	output.write(doc.to_conllu_string())

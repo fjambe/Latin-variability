@@ -15,11 +15,15 @@ import udapi.block.ud.fixpunct
 split = sys.argv[1] # train/dev/test
 UD_folder = '/home/federica/Desktop/latin/UD_devbranch' # path to the folder containing all UD Latin treebanks
 filename = f'{UD_folder}/UD_Latin-ITTB-dev/la_ittb-ud-{split}.conllu'
-output_folder = '/home/federica/Desktop/latin/harmonization/harmonized-treebanks'
+output_folder = '/home/federica/Desktop/latin/GITHUB/Latin-variability/harmonization/harmonized-treebanks'
 doc = udapi.Document(filename)
 
 
 determiners = ['aliqualis', 'aliqui', 'alius', 'alter', 'alteruter', 'ambo', 'ceterus', 'complura', 'complures', 'cunctus', 'eiusmodi', 'hic', 'huiusmodi', 'idem', 'ille', 'ipse', 'iste', 'meus', 'multus', 'neuter', 'nonnullus', 'noster', 'nullus', 'omnis', 'paucus', 'plerusque', 'qualis', 'quamplures', 'quantus', 'quantuslibet', 'qui', 'quicumque', 'quidam', 'quilibet', 'quispiam', 'quisquam', 'quisque', 'quot', 'reliquus', 'solus', 'suus', 'talis', 'tantus', 'tot', 'totidem', 'totus', 'tuus', 'uester', 'vester', 'voster', 'ullus', 'uniuersus', 'unusquisque', 'uterque']
+
+company = udapi.block.ud.la.addmwt.AddMwt()
+space = udapi.block.ud.setspaceafterfromtext.SetSpaceAfterFromText()
+pun = udapi.block.ud.fixpunct.FixPunct()
 
 
 # Iterate over all nodes in the document (in all trees)
@@ -40,7 +44,6 @@ for node in doc.nodes:
 			node.deprel = 'flat'		
 
 	# MWT
-	company = udapi.block.ud.la.addmwt.AddMwt()
 	company.process_node(node)
 	# postprocessing of abbreviation+dot combinations, which in the previous step were provisionally treated like MWTs
 	# MWT line is removed, so that in the end they have been simply tokenised
@@ -49,9 +52,7 @@ for node in doc.nodes:
 		if mwt.form.endswith('.') and len(mwt.form) > 1 and mwt.form != '...':
 			mwt.remove()
 			
-				
 	# setting SpaceAfter=No when relevant
-	space = udapi.block.ud.setspaceafterfromtext.SetSpaceAfterFromText()
 	space.process_tree(node.root)
 	
 	
@@ -201,37 +202,31 @@ for node in doc.nodes:
 	compar = ['quam', 'quasi', 'quemadmodum', 'sicut', 'tamquam', 'uelut']
 	if node.parent.deprel == 'advcl:cmp' and node.lemma in compar and node.upos == 'ADV':
 		node.upos, node.deprel = 'SCONJ', 'mark'
-		node.feats['ConjType'] = 'Cmpr'
 	if node.parent.deprel == 'advcl' and node.lemma in compar and node.upos == 'SCONJ':
 		sib = [s for s in node.siblings if s.deprel == 'mark' and s.upos == 'SCONJ']
 		if sib:
 			if node < sib[0]:
 				node.parent.deprel = 'advcl:cmp'
 				node.deprel = 'mark'
-				node.feats['ConjType'] = 'Cmpr'
 	# ut
 	if node.lemma == 'ut' and node.parent.deprel == 'advcl' and node < node.parent:
 		if node.parent.feats['Mood'] == 'Ind': # ut dicitur
 			node.parent.deprel = 'advcl:cmp'
 			node.upos, node.deprel = 'SCONJ', 'mark'
-			node.feats['ConjType'] = 'Cmpr'
 		elif node.parent.feats['VerbForm'] == 'Part': # ut dictum/ostensum est
 			aux = [s for s in node.siblings if s.deprel == 'aux:pass' and s.form in ['est', 'sunt']] # mood is not annotated wrt to sum
 			if aux:
 				node.parent.deprel = 'advcl:cmp'
 				node.upos, node.deprel = 'SCONJ', 'mark'
-				node.feats['ConjType'] = 'Cmpr'
 		elif node.parent.upos not in ['AUX', 'VERB']:
 			copula = [s for s in node.siblings if s.deprel == 'cop' and s.form in ['est', 'sunt']] # mood is not annotated wrt to sum
 			tobe = [s for s in node.siblings if s.deprel == 'cop']
 			if copula:
 				node.parent.deprel = 'advcl:cmp'
 				node.upos, node.deprel = 'SCONJ', 'mark'
-				node.feats['ConjType'] = 'Cmpr'
 			elif not tobe:
 				node.parent.deprel = 'advcl:cmp'
 				node.upos, node.deprel = 'SCONJ', 'mark'
-				node.feats['ConjType'] = 'Cmpr'
 	# quasi
 	if node.lemma == 'quasi' and node.deprel == 'mark' and node.parent.deprel == 'advcl':
 		node.parent.deprel = 'advcl:cmp'
@@ -239,19 +234,19 @@ for node in doc.nodes:
 	if node.lemma == 'quam' and node.parent.deprel == 'advcl':
 		node.upos, node.deprel = 'SCONJ', 'mark' # already like this, just managing errors
 		node.parent.deprel = 'advcl:cmp'
-		node.feats['ConjType'], node.feats['PronType'] = 'Cmpr', 'Rel'
+		node.feats['PronType'] = 'Rel'
 	if node.lemma == 'quam' and node.parent.deprel == 'conj': # tam...quam
 		kids = [k for k in node.parent.siblings if k.lemma == 'tam']
 		if kids:
 			node.deprel, node.upos = 'mark', 'SCONJ'
-			node.feats['ConjType'], node.feats['PronType'] = 'Cmpr', 'Rel'
+			node.feats['PronType'] = 'Rel'
 			father = node.parent
 			father.deprel = 'advcl:cmp'
 			kids[0].deprel = 'advmod:emph'
 	
 	
 	# absolute ablative
-	if node.parent.deprel == 'advcl' and node.parent.feats['Case'] == 'Abl' and node.feats['Case'] == 'Abl' and node.deprel.startswith('nsubj'):
+	if node.parent.deprel == 'advcl' and node.parent.feats['Case'] == 'Abl' and node.feats['Case'] == 'Abl' and node.udeprel == 'nsubj':
 		case = [s for s in node.siblings if s.deprel == 'case']
 		if len(case) == 0:
 			node.parent.deprel = 'advcl:abs'
@@ -302,8 +297,8 @@ for node in doc.nodes:
 	if node.deprel == 'csubj' and node.parent.lemma in ['dico', 'pono', 'probo', 'requiro'] and node.parent.feats['Voice'] == 'Act':
 		node.deprel = 'ccomp'
 		
-	if node.deprel.startswith('nsubj'):
-		s = [s for s in node.siblings if s.deprel.startswith('csubj')]
+	if node.udeprel == 'nsubj':
+		s = [s for s in node.siblings if s.udeprel == 'csubj']
 		if s:
 			if s[0].feats['VerbForm'] == 'Inf':
 				if node.parent.lemma == 'possum':
@@ -323,7 +318,7 @@ for node in doc.nodes:
 	# inverting head-dep in 'sum' construcions (general)
 	if node.parent.lemma == 'sum' and node.deprel == 'nsubj':
 		sib = [s for s in node.siblings if s.deprel == 'obl'] # sib[0] = head of oblique NP 
-		csubj = [s for s in node.siblings if s.deprel.startswith('csubj')]
+		csubj = [s for s in node.siblings if s.udeprel == 'csubj']
 		dependents = [s for s in node.siblings]
 		est = node.parent
 		if sib:
@@ -335,7 +330,7 @@ for node in doc.nodes:
 				est.parent = sib[0]
 				est.deprel = 'cop'
 				for d in dependents:
-					if d != sib[0] and not re.search(r'test-s1348#41\b', str(d.address)) and not re.search(r'test-s1348#43\b', str(d.address)): # specific intervention needed to pass validation (otherwise, conj right-to-left)
+					if d != sib[0] and not re.search(r'test-s1348#41\b', str(d.address)) and not re.search(r'test-s1348#43\b', str(d.address)): # specific intervention needed for validation (otherwise, conj right-to-left)
 						d.parent = sib[0]
 						
 		elif csubj:
@@ -354,7 +349,7 @@ for node in doc.nodes:
 					node.deprel = 'nsubj:outer'
 			
 	elif node.form == 'esse' and node.parent.lemma == 'possum':
-		subj = [s for s in node.siblings if s.deprel.startswith('nsubj')]
+		subj = [s for s in node.siblings if s.udeprel == 'nsubj']
 		obl = [k for k in node.children if k.deprel == 'obl'] # obl[0] = head of oblique NP 
 		if subj and obl:
 			dependents = [s for s in node.children]
@@ -369,10 +364,9 @@ for node in doc.nodes:
 						d.parent = obl[0]
 						
 						
-	# fix non-projectivity of punctuation
-	pun = udapi.block.ud.fixpunct.FixPunct()
-	pun.process_tree(node.root)
+# fix non-projectivity of punctuation
+pun.process_document(doc)
 	
 	
-with open(f'{output_folder}/HM-la_ittb-ud-{split}.conllu', 'w') as output:
+with open(f'{output_folder}/UD_Latin-ITTB/HM-la_ittb-ud-{split}.conllu', 'w') as output:
 	output.write(doc.to_conllu_string())
