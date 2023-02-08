@@ -32,7 +32,7 @@ space = udapi.block.ud.setspaceafterfromtext.SetSpaceAfterFromText()
 for node in doc.nodes:
 
 	# node shifting: nec, neque
-	if node.form == 'ne' and node.prev_node.form in ['c', 'que']:
+	if node.form.lower() == 'ne' and node.prev_node.form.lower() in ['c', 'que']:
 		conj = node.prev_node
 		conj.shift_after_node(node)
 		conj.parent = node.parent
