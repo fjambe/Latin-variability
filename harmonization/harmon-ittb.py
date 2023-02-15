@@ -25,7 +25,6 @@ company = udapi.block.ud.la.addmwt.AddMwt()
 space = udapi.block.ud.setspaceafterfromtext.SetSpaceAfterFromText()
 pun = udapi.block.ud.fixpunct.FixPunct()
 
-
 # Iterate over all nodes in the document (in all trees)
 for node in doc.nodes:
 
@@ -317,7 +316,7 @@ for node in doc.nodes:
 
 	# inverting head-dep in 'sum' construcions (general)
 	if node.parent.lemma == 'sum' and node.deprel == 'nsubj':
-		sib = [s for s in node.siblings if s.deprel == 'obl'] # sib[0] = head of oblique NP 
+		sib = [s for s in node.siblings if s.deprel == 'obl' and s.form != 'etc'] # sib[0] = head of oblique NP 
 		csubj = [s for s in node.siblings if s.udeprel == 'csubj']
 		dependents = [s for s in node.siblings]
 		est = node.parent
@@ -362,11 +361,59 @@ for node in doc.nodes:
 				for d in dependents:
 					if d != obl[0]:
 						d.parent = obl[0]
-						
-						
+
+# correction of 'sum' still occurring as head						
+for node in doc.nodes:						
+    if node.lemma == 'sum' and node.deprel in ['root', 'conj', 'advcl'] and 'necesse' not in node.form:   
+        est_depend = [c for c in node.children] 
+        true_dep = [d for d in est_depend if d.udeprel in ['obl', 'advmod', 'ccomp', 'xcomp'] and d.sdeprel not in ['emph', 'neg']]
+        if node.prev_node.form.lower() == 'hoc' and node.next_node.form == 'quod' and node.next_node.next_node.lemma == 'dico': # hoc est quod dicitur/dicit			
+            dico = node.next_node.next_node
+            node.prev_node.deprel = 'nsubj:outer'
+            dico.deprel, dico.parent = node.deprel, node.parent
+            node.parent, node.deprel = dico, 'cop'
+            for other_dep in est_depend:
+                if other_dep != dico:
+                    other_dep.parent = dico
+        
+        elif any(c.udeprel == 'ccomp' for c in est_depend):
+            c = [c for c in est_depend if c.udeprel == 'ccomp'][0]
+            c.parent, c.deprel = node.parent, node.deprel
+            node.parent, node.deprel = c, 'cop'
+            for other_c in est_depend:
+                if other_c != c:
+                    other_c.parent = c
+            # explicit vs implicit ccomp clauses
+            subjects = [sub for sub in c.children if sub.udeprel == 'nsubj']
+            if c.feats['VerbForm'] == 'Fin' and len(subjects) > 1:
+                subjects[0].deprel = 'nsubj:outer'
+                                        
+        elif len(true_dep) == 0:
+            continue # 'sum' remains root
+        elif len(true_dep) == 1:
+            true_dep[0].parent, true_dep[0].deprel = node.parent, node.deprel
+            node.parent, node.deprel = true_dep[0], 'cop'
+            for other_dep in est_depend:
+                if other_dep != true_dep[0]:
+                    other_dep.parent = true_dep[0]
+        elif len(true_dep) > 1:
+            obl = [n for n in true_dep if n.udeprel == 'obl']
+            if obl:
+                obl[0].parent, obl[0].deprel = node.parent, node.deprel
+                node.parent, node.deprel = obl[0], 'cop'
+                for other_dep in est_depend:
+                    if other_dep != obl[0]:
+                        other_dep.parent = obl[0]
+            else:
+                true_dep[0].parent, true_dep[0].deprel = node.parent, node.deprel # pick the first non-subject dependent, since it is not possible to automatically decide which one should be the head  
+                node.parent, node.deprel = true_dep[0], 'cop'
+                for other_dep in est_depend:
+                    if other_dep != true_dep[0]:
+                        other_dep.parent = true_dep[0]
+                        
+
 # fix non-projectivity of punctuation
 pun.process_document(doc)
-	
-	
+
 with open(f'{output_folder}/UD_Latin-ITTB/HM-la_ittb-ud-{split}.conllu', 'w') as output:
 	output.write(doc.to_conllu_string())

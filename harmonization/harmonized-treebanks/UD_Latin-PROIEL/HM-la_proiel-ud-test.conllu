@@ -2236,16 +2236,16 @@
 # source = Jerome's Vulgate, Luke 6
 # text = et erat ibi homo et manus eius dextra erat arida
 # sent_id = 16667
-1	et	et	CCONJ	C-	_	2	cc	_	Ref=LUKE_6.6
-2	erat	sum	AUX	V-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	Ref=LUKE_6.6
-3	ibi	ibi	ADV	Df	AdvType=Loc	2	advmod:lmod	_	Ref=LUKE_6.6
-4	homo	homo	NOUN	Nb	Case=Nom|Gender=Masc|Number=Sing	2	nsubj	_	Ref=LUKE_6.6
+1	et	et	CCONJ	C-	_	3	cc	_	Ref=LUKE_6.6
+2	erat	sum	AUX	V-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	3	cop	_	Ref=LUKE_6.6
+3	ibi	ibi	ADV	Df	AdvType=Loc	0	root	_	Ref=LUKE_6.6
+4	homo	homo	NOUN	Nb	Case=Nom|Gender=Masc|Number=Sing	3	nsubj	_	Ref=LUKE_6.6
 5	et	et	CCONJ	C-	_	10	cc	_	Ref=LUKE_6.6
 6	manus	manus	NOUN	Nb	Case=Nom|Gender=Fem|Number=Sing	10	nsubj	_	Ref=LUKE_6.6
 7	eius	is	PRON	Pp	Case=Gen|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	nmod	_	Ref=LUKE_6.6
 8	dextra	dexter	ADJ	A-	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	6	amod	_	Ref=LUKE_6.6
 9	erat	sum	AUX	V-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	10	cop	_	Ref=LUKE_6.6
-10	arida	aridus	ADJ	A-	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	2	conj	_	Ref=LUKE_6.6
+10	arida	aridus	ADJ	A-	Case=Nom|Degree=Pos|Gender=Fem|Number=Sing	3	conj	_	Ref=LUKE_6.6
 
 # source = Jerome's Vulgate, Luke 6
 # text = observabant autem scribae et Pharisaei si in sabbato curaret ut invenirent accusare illum
@@ -2785,17 +2785,17 @@
 # source = Jerome's Vulgate, Luke 6
 # text = et si diligitis eos qui vos diligunt quae vobis est gratia
 # sent_id = 16712
-1	et	et	CCONJ	C-	_	10	cc	_	Ref=LUKE_6.32
+1	et	et	CCONJ	C-	_	9	cc	_	Ref=LUKE_6.32
 2	si	si	SCONJ	G-	_	3	mark	_	Ref=LUKE_6.32
-3	diligitis	diligo	VERB	V-	Mood=Ind|Number=Plur|Person=2|Tense=Pres|VerbForm=Fin|Voice=Act	10	advcl	_	Ref=LUKE_6.32
+3	diligitis	diligo	VERB	V-	Mood=Ind|Number=Plur|Person=2|Tense=Pres|VerbForm=Fin|Voice=Act	9	advcl	_	Ref=LUKE_6.32
 4	eos	is	PRON	Pp	Case=Acc|Gender=Masc|Number=Plur|Person=3|PronType=Prs	3	obj	_	Ref=LUKE_6.32
 5	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	7	nsubj	_	Ref=LUKE_6.32
 6	vos	vos	PRON	Pp	Case=Acc|Gender=Masc|Number=Plur|Person=2|PronType=Prs	7	obj	_	Ref=LUKE_6.32
 7	diligunt	diligo	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	4	acl:relcl	_	Ref=LUKE_6.32
 8	quae	qui	PRON	Pi	Case=Nom|Gender=Fem|Number=Sing|PronType=Int	11	det	_	Ref=LUKE_6.32
-9	vobis	vos	PRON	Pp	Case=Dat|Gender=Masc|Number=Plur|Person=2|PronType=Prs	10	obl:arg	_	Ref=LUKE_6.32
-10	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=LUKE_6.32
-11	gratia	gratia	NOUN	Nb	Case=Nom|Gender=Fem|Number=Sing	10	nsubj	_	Ref=LUKE_6.32
+9	vobis	vos	PRON	Pp	Case=Dat|Gender=Masc|Number=Plur|Person=2|PronType=Prs	0	root	_	Ref=LUKE_6.32
+10	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	9	cop	_	Ref=LUKE_6.32
+11	gratia	gratia	NOUN	Nb	Case=Nom|Gender=Fem|Number=Sing	9	nsubj	_	Ref=LUKE_6.32
 
 # source = Jerome's Vulgate, Luke 6
 # text = nam et peccatores diligentes se diligunt
@@ -2810,39 +2810,39 @@
 # source = Jerome's Vulgate, Luke 6
 # text = et si benefeceritis his qui vobis benefaciunt quae vobis est gratia siquidem et peccatores hoc faciunt
 # sent_id = 16714
-1	et	et	CCONJ	C-	_	10	cc	_	Ref=LUKE_6.33
+1	et	et	CCONJ	C-	_	9	cc	_	Ref=LUKE_6.33
 2	si	si	SCONJ	G-	_	3	mark	_	Ref=LUKE_6.33
-3	benefeceritis	benefacio	VERB	V-	Aspect=Perf|Mood=Ind|Number=Plur|Person=2|Tense=Fut|VerbForm=Fin|Voice=Act	10	advcl	_	Ref=LUKE_6.33
+3	benefeceritis	benefacio	VERB	V-	Aspect=Perf|Mood=Ind|Number=Plur|Person=2|Tense=Fut|VerbForm=Fin|Voice=Act	9	advcl	_	Ref=LUKE_6.33
 4	his	hic	DET	Pd	Case=Dat|Gender=Masc|Number=Plur	3	obl:arg	_	Ref=LUKE_6.33
 5	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Plur|PronType=Rel	7	nsubj	_	Ref=LUKE_6.33
 6	vobis	vos	PRON	Pp	Case=Dat|Gender=Masc|Number=Plur|Person=2|PronType=Prs	7	obl:arg	_	Ref=LUKE_6.33
 7	benefaciunt	benefacio	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	4	acl:relcl	_	Ref=LUKE_6.33
 8	quae	qui	PRON	Pi	Case=Nom|Gender=Fem|Number=Sing|PronType=Int	11	det	_	Ref=LUKE_6.33
-9	vobis	vos	PRON	Pp	Case=Dat|Gender=Masc|Number=Plur|Person=2|PronType=Prs	10	obl:arg	_	Ref=LUKE_6.33
-10	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=LUKE_6.33
-11	gratia	gratia	NOUN	Nb	Case=Nom|Gender=Fem|Number=Sing	10	nsubj	_	Ref=LUKE_6.33
+9	vobis	vos	PRON	Pp	Case=Dat|Gender=Masc|Number=Plur|Person=2|PronType=Prs	0	root	_	Ref=LUKE_6.33
+10	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	9	cop	_	Ref=LUKE_6.33
+11	gratia	gratia	NOUN	Nb	Case=Nom|Gender=Fem|Number=Sing	9	nsubj	_	Ref=LUKE_6.33
 12	siquidem	siquidem	SCONJ	G-	_	16	mark	_	Ref=LUKE_6.33
 13	et	et	ADV	Df	_	14	advmod:emph	_	Ref=LUKE_6.33
 14	peccatores	peccator	NOUN	Nb	Case=Nom|Gender=Masc|Number=Plur	16	nsubj	_	Ref=LUKE_6.33
 15	hoc	hic	DET	Pd	Case=Acc|Gender=Neut|Number=Sing	16	obj	_	Ref=LUKE_6.33
-16	faciunt	facio	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	10	advcl	_	Ref=LUKE_6.33
+16	faciunt	facio	VERB	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	9	advcl	_	Ref=LUKE_6.33
 
 # source = Jerome's Vulgate, Luke 6
 # text = et si mutuum dederitis his a quibus speratis recipere quae gratia est vobis
 # sent_id = 16716
-1	et	et	CCONJ	C-	_	12	cc	_	Ref=LUKE_6.34
+1	et	et	CCONJ	C-	_	13	cc	_	Ref=LUKE_6.34
 2	si	si	SCONJ	G-	_	4	mark	_	Ref=LUKE_6.34
 3	mutuum	mutuus	ADJ	A-	Case=Acc|Degree=Pos|Gender=Masc|Number=Sing	4	obj	_	Ref=LUKE_6.34
-4	dederitis	do	VERB	V-	Aspect=Perf|Mood=Ind|Number=Plur|Person=2|Tense=Fut|VerbForm=Fin|Voice=Act	12	advcl	_	Ref=LUKE_6.34
+4	dederitis	do	VERB	V-	Aspect=Perf|Mood=Ind|Number=Plur|Person=2|Tense=Fut|VerbForm=Fin|Voice=Act	13	advcl	_	Ref=LUKE_6.34
 5	his	hic	DET	Pd	Case=Dat|Gender=Masc|Number=Plur	4	obl:arg	_	Ref=LUKE_6.34
 6	a	ab	ADP	R-	AdpType=Prep	7	case	_	Ref=LUKE_6.34
 7	quibus	qui	PRON	Pr	Case=Abl|Gender=Masc|Number=Plur|PronType=Rel	9	obl	_	Ref=LUKE_6.34
 8	speratis	spero	VERB	V-	Mood=Ind|Number=Plur|Person=2|Tense=Pres|VerbForm=Fin|Voice=Act	5	acl:relcl	_	Ref=LUKE_6.34
 9	recipere	recipio	VERB	V-	Tense=Pres|VerbForm=Inf|Voice=Act	8	xcomp	_	Ref=LUKE_6.34
 10	quae	qui	PRON	Pi	Case=Nom|Gender=Fem|Number=Sing|PronType=Int	11	det	_	Ref=LUKE_6.34
-11	gratia	gratia	NOUN	Nb	Case=Nom|Gender=Fem|Number=Sing	12	nsubj	_	Ref=LUKE_6.34
-12	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=LUKE_6.34
-13	vobis	vos	PRON	Pp	Case=Dat|Gender=Masc|Number=Plur|Person=2|PronType=Prs	12	obl:arg	_	Ref=LUKE_6.34
+11	gratia	gratia	NOUN	Nb	Case=Nom|Gender=Fem|Number=Sing	13	nsubj	_	Ref=LUKE_6.34
+12	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	13	cop	_	Ref=LUKE_6.34
+13	vobis	vos	PRON	Pp	Case=Dat|Gender=Masc|Number=Plur|Person=2|PronType=Prs	0	root	_	Ref=LUKE_6.34
 
 # source = Jerome's Vulgate, Luke 6
 # text = nam et peccatores peccatoribus fenerantur ut recipiant aequalia
@@ -4268,10 +4268,10 @@
 # source = Jerome's Vulgate, John 6
 # text = est puer unus hic qui habet quinque panes hordiacios et duos pisces
 # sent_id = 18776
-1	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=JOHN_6.9
-2	puer	puer	NOUN	Nb	Case=Nom|Gender=Masc|Number=Sing	1	nsubj	_	Ref=JOHN_6.9
+1	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	4	cop	_	Ref=JOHN_6.9
+2	puer	puer	NOUN	Nb	Case=Nom|Gender=Masc|Number=Sing	4	nsubj	_	Ref=JOHN_6.9
 3	unus	unus	NUM	Ma	Case=Nom|Gender=Masc|Number=Sing	2	nummod	_	Ref=JOHN_6.9
-4	hic	hic	DET	Pd	Case=Nom|Gender=Masc|Number=Sing	1	obl	_	Ref=JOHN_6.9
+4	hic	hic	DET	Pd	Case=Nom|Gender=Masc|Number=Sing	0	root	_	Ref=JOHN_6.9
 5	qui	qui	PRON	Pr	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	6	nsubj	_	Ref=JOHN_6.9
 6	habet	habeo	VERB	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	2	acl:relcl	_	Ref=JOHN_6.9
 7	quinque	quinque	NUM	Ma	_	8	nummod	_	Ref=JOHN_6.9
@@ -4308,12 +4308,12 @@
 # source = Jerome's Vulgate, John 6
 # text = erat autem faenum multum in loco
 # sent_id = 18780
-1	erat	sum	AUX	V-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	Ref=JOHN_6.10
-2	autem	autem	CCONJ	Df	_	1	cc	_	Ref=JOHN_6.10|ToDo=cc-without-conj
-3	faenum	faenum	NOUN	Nb	Case=Nom|Gender=Neut|Number=Sing	1	nsubj	_	Ref=JOHN_6.10
+1	erat	sum	AUX	V-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	6	cop	_	Ref=JOHN_6.10
+2	autem	autem	CCONJ	Df	_	6	cc	_	Ref=JOHN_6.10|ToDo=cc-without-conj
+3	faenum	faenum	NOUN	Nb	Case=Nom|Gender=Neut|Number=Sing	6	nsubj	_	Ref=JOHN_6.10
 4	multum	multus	DET	A-	Case=Nom|Degree=Pos|Gender=Neut|Number=Sing	3	det	_	Ref=JOHN_6.10
 5	in	in	ADP	R-	AdpType=Prep	6	case	_	Ref=JOHN_6.10
-6	loco	locus	NOUN	Nb	Case=Abl|Gender=Masc|Number=Sing	1	obl	_	Ref=JOHN_6.10
+6	loco	locus	NOUN	Nb	Case=Abl|Gender=Masc|Number=Sing	0	root	_	Ref=JOHN_6.10
 
 # source = Jerome's Vulgate, John 6
 # text = discubuerunt ergo viri numero quasi quinque milia
@@ -6787,15 +6787,15 @@
 # source = Jerome's Vulgate, Acts 7
 # text = tabernaculum testimonii fuit patribus nostris in deserto sicut disposuit loquens ad Mosen ut faceret illud secundum formam quam viderat
 # sent_id = 23785
-1	tabernaculum	tabernaculum	NOUN	Nb	Case=Nom|Gender=Neut|Number=Sing	3	nsubj	_	Ref=ACTS_7.44
+1	tabernaculum	tabernaculum	NOUN	Nb	Case=Nom|Gender=Neut|Number=Sing	4	nsubj	_	Ref=ACTS_7.44
 2	testimonii	testimonium	NOUN	Nb	Case=Gen|Gender=Neut|Number=Sing	1	nmod	_	Ref=ACTS_7.44
-3	fuit	sum	AUX	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	Ref=ACTS_7.44
-4	patribus	pater	NOUN	Nb	Case=Dat|Gender=Masc|Number=Plur	3	obl:arg	_	Ref=ACTS_7.44
+3	fuit	sum	AUX	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	4	cop	_	Ref=ACTS_7.44
+4	patribus	pater	NOUN	Nb	Case=Dat|Gender=Masc|Number=Plur	0	root	_	Ref=ACTS_7.44
 5	nostris	noster	DET	Ps	Case=Dat|Number=Plur|Person=1|Poss=Yes	4	det	_	Ref=ACTS_7.44
 6	in	in	ADP	R-	AdpType=Prep	7	case	_	Ref=ACTS_7.44
-7	deserto	desertum	NOUN	Nb	Case=Abl|Gender=Neut|Number=Sing	3	obl	_	Ref=ACTS_7.44
+7	deserto	desertum	NOUN	Nb	Case=Abl|Gender=Neut|Number=Sing	4	obl	_	Ref=ACTS_7.44
 8	sicut	sicut	SCONJ	Dq	PronType=Rel	9	mark	_	Ref=ACTS_7.44
-9	disposuit	dispono	VERB	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	3	advcl:cmp	_	Ref=ACTS_7.44
+9	disposuit	dispono	VERB	V-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	4	advcl:cmp	_	Ref=ACTS_7.44
 10	loquens	loquor	VERB	V-	Case=Nom|Gender=Masc|Number=Sing|Tense=Pres|VerbForm=Part|Voice=Act	9	nsubj	_	Ref=ACTS_7.44
 11	ad	ad	ADP	R-	AdpType=Prep	12	case	_	Ref=ACTS_7.44
 12	Mosen	Moses	PROPN	Ne	Case=Acc|Gender=Masc|Number=Sing	10	obl	_	Ref=ACTS_7.44
@@ -7531,15 +7531,15 @@
 # source = Jerome's Vulgate, Acts 8
 # text = non est tibi pars ne que sors in sermone isto
 # sent_id = 23840
-1	non	non	PART	Df	Polarity=Neg	2	advmod:neg	_	Ref=ACTS_8.21
-2	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=ACTS_8.21
-3	tibi	tu	PRON	Pp	Case=Dat|Gender=Masc|Number=Sing|Person=2|PronType=Prs	2	obl:arg	_	Ref=ACTS_8.21
-4	pars	pars	NOUN	Nb	Case=Nom|Gender=Fem|Number=Sing	2	nsubj	_	Ref=ACTS_8.21
+1	non	non	PART	Df	Polarity=Neg	3	advmod:neg	_	Ref=ACTS_8.21
+2	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	3	cop	_	Ref=ACTS_8.21
+3	tibi	tu	PRON	Pp	Case=Dat|Gender=Masc|Number=Sing|Person=2|PronType=Prs	0	root	_	Ref=ACTS_8.21
+4	pars	pars	NOUN	Nb	Case=Nom|Gender=Fem|Number=Sing	3	nsubj	_	Ref=ACTS_8.21
 5	ne	ne	ADV	Df	Polarity=Neg	4	advmod	_	Ref=ACTS_8.21
 6	que	que	CCONJ	C-	_	7	cc	_	Ref=ACTS_8.21
 7	sors	sors	NOUN	Nb	Case=Nom|Gender=Fem|Number=Sing	4	conj	_	Ref=ACTS_8.21
 8	in	in	ADP	R-	AdpType=Prep	9	case	_	Ref=ACTS_8.21
-9	sermone	sermo	NOUN	Nb	Case=Abl|Gender=Masc|Number=Sing	2	obl	_	Ref=ACTS_8.21
+9	sermone	sermo	NOUN	Nb	Case=Abl|Gender=Masc|Number=Sing	3	obl	_	Ref=ACTS_8.21
 10	isto	iste	DET	Pd	Case=Abl|Gender=Masc,Neut|Number=Sing	9	det	_	Ref=ACTS_8.21
 
 # source = Jerome's Vulgate, Acts 8
@@ -8208,13 +8208,13 @@
 # source = Jerome's Vulgate, Romans 2
 # text = non est enim personarum acceptio apud Deum
 # sent_id = 26589
-1	non	non	PART	Df	Polarity=Neg	2	advmod:neg	_	Ref=ROM_2.11
-2	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=ROM_2.11
-3	enim	enim	PART	Df	_	2	discourse	_	Ref=ROM_2.11
+1	non	non	PART	Df	Polarity=Neg	7	advmod:neg	_	Ref=ROM_2.11
+2	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	7	cop	_	Ref=ROM_2.11
+3	enim	enim	PART	Df	_	7	discourse	_	Ref=ROM_2.11
 4	personarum	persona	NOUN	Nb	Case=Gen|Gender=Fem|Number=Plur	5	nmod	_	Ref=ROM_2.11
-5	acceptio	acceptio	NOUN	Nb	Case=Nom|Gender=Fem|Number=Sing	2	nsubj	_	Ref=ROM_2.11
+5	acceptio	acceptio	NOUN	Nb	Case=Nom|Gender=Fem|Number=Sing	7	nsubj	_	Ref=ROM_2.11
 6	apud	apud	ADP	R-	AdpType=Prep	7	case	_	Ref=ROM_2.11
-7	Deum	deus	NOUN	Nb	Case=Acc|Gender=Masc|Number=Sing	2	obl	_	Ref=ROM_2.11
+7	Deum	deus	NOUN	Nb	Case=Acc|Gender=Masc|Number=Sing	0	root	_	Ref=ROM_2.11
 
 # source = Jerome's Vulgate, Romans 2
 # text = quicumque enim sine lege peccaverunt sine lege et peribunt
@@ -9463,13 +9463,13 @@
 # source = Jerome's Vulgate, Revelation 4
 # text = et propter voluntatem tuam erant et creata sunt
 # sent_id = 225130
-1	et	et	CCONJ	C-	_	5	cc	_	Ref=REV_4.11
+1	et	et	CCONJ	C-	_	3	cc	_	Ref=REV_4.11
 2	propter	propter	ADP	R-	AdpType=Prep	3	case	_	Ref=REV_4.11
-3	voluntatem	voluntas	NOUN	Nb	Case=Acc|Gender=Fem|Number=Sing	5	obl	_	Ref=REV_4.11
+3	voluntatem	voluntas	NOUN	Nb	Case=Acc|Gender=Fem|Number=Sing	0	root	_	Ref=REV_4.11
 4	tuam	tuus	DET	Ps	Case=Acc|Gender=Fem|Number=Sing|Person=2|Poss=Yes	3	det	_	Ref=REV_4.11
-5	erant	sum	AUX	V-	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	Ref=REV_4.11
+5	erant	sum	AUX	V-	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	3	cop	_	Ref=REV_4.11
 6	et	et	CCONJ	C-	_	7	cc	_	Ref=REV_4.11
-7	creata	creo	VERB	V-	Aspect=Perf|Case=Nom|Gender=Neut|Number=Plur|Tense=Past|VerbForm=Part|Voice=Pass	5	conj	_	Ref=REV_4.11
+7	creata	creo	VERB	V-	Aspect=Perf|Case=Nom|Gender=Neut|Number=Plur|Tense=Past|VerbForm=Part|Voice=Pass	3	conj	_	Ref=REV_4.11
 8	sunt	sum	AUX	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	7	aux:pass	_	Ref=REV_4.11
 
 # source = Jerome's Vulgate, Revelation 5
@@ -11072,11 +11072,11 @@
 # source = Opus agriculturae, XIII. De solo et caelo et loco pangendis uineis congruenti et ea, quae illuc pertinet, disciplina
 # text = Quod si hoc est uitium melius in aquilonem uel fauonium uineta dirigimus
 # sent_id = 160348
-1	Quod	quod	ADV	Df	_	4	advmod	_	LId=1|Ref=2.13.6
-2	si	si	SCONJ	G-	_	4	mark	_	Ref=2.13.6
+1	Quod	quod	ADV	Df	_	12	advcl	_	LId=1|Ref=2.13.6
+2	si	si	SCONJ	G-	_	1	mark	_	Ref=2.13.6
 3	hoc	hic	DET	Pd	Case=Nom|Gender=Neut|Number=Sing	5	det	_	Ref=2.13.6
-4	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	12	advcl	_	Ref=2.13.6
-5	uitium	vitium	NOUN	Nb	Case=Nom|Gender=Neut|Number=Sing	4	nsubj	_	Ref=2.13.6
+4	est	sum	AUX	V-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	1	cop	_	Ref=2.13.6
+5	uitium	vitium	NOUN	Nb	Case=Nom|Gender=Neut|Number=Sing	1	nsubj	_	Ref=2.13.6
 6	melius	bene	ADV	Df	Degree=Cmp	12	advmod	_	Ref=2.13.6
 7	in	in	ADP	R-	AdpType=Prep	8	case	_	Ref=2.13.6
 8	aquilonem	aquilo	NOUN	Nb	Case=Acc|Gender=Masc|Number=Sing	12	obl	_	Ref=2.13.6
@@ -11428,14 +11428,14 @@
 # source = Epistulae ad Atticum, Book 1, letter 13
 # text = sunt autem post discessum a me tuum res dignae litteris nostris sed non committendae eius modi periculo ut aut interire aut aperiri aut intercipi possint
 # sent_id = 76049
-1	sunt	sum	AUX	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	Ref=1.13.2
-2	autem	autem	CCONJ	Df	_	1	cc	_	Ref=1.13.2|ToDo=cc-without-conj
+1	sunt	sum	AUX	V-	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	4	cop	_	Ref=1.13.2
+2	autem	autem	CCONJ	Df	_	4	cc	_	Ref=1.13.2|ToDo=cc-without-conj
 3	post	post	ADP	R-	AdpType=Prep	4	case	_	Ref=1.13.2
-4	discessum	discessus	NOUN	Nb	Case=Acc|Gender=Masc|Number=Sing	1	obl	_	Ref=1.13.2
+4	discessum	discessus	NOUN	Nb	Case=Acc|Gender=Masc|Number=Sing	0	root	_	Ref=1.13.2
 5	a	ab	ADP	R-	AdpType=Prep	6	case	_	Ref=1.13.2
 6	me	ego	PRON	Pp	Case=Abl|Gender=Masc|Number=Sing|Person=1|PronType=Prs	4	nmod	_	Ref=1.13.2
 7	tuum	tuus	DET	Ps	Case=Acc|Gender=Masc,Neut|Number=Sing|Person=2|Poss=Yes	4	det	_	Ref=1.13.2
-8	res	res	NOUN	Nb	Case=Nom|Gender=Fem|Number=Plur	1	nsubj	_	Ref=1.13.2
+8	res	res	NOUN	Nb	Case=Nom|Gender=Fem|Number=Plur	4	nsubj	_	Ref=1.13.2
 9	dignae	dignus	ADJ	A-	Case=Nom|Degree=Pos|Gender=Fem|Number=Plur	8	amod	_	Ref=1.13.2
 10	litteris	littera	NOUN	Nb	Case=Abl|Gender=Fem|Number=Plur	9	obl:arg	_	Ref=1.13.2
 11	nostris	noster	DET	Ps	Case=Abl|Number=Plur|Person=1|Poss=Yes	10	det	_	Ref=1.13.2
@@ -14972,10 +14972,10 @@
 2	vellem	volo	VERB	V-	Aspect=Imp|Mood=Sub|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	LId=1|Ref=5.18.1
 3	Romae	Roma	PROPN	Ne	Case=Gen|Gender=Fem|Number=Sing	2	ccomp	_	Ref=5.18.1
 4	esses	sum	AUX	V-	Aspect=Imp|Mood=Sub|Number=Sing|Person=2|Tense=Past|VerbForm=Fin|Voice=Act	3	cop	_	Ref=5.18.1
-5	si	si	SCONJ	G-	_	8	mark	_	Ref=5.18.1
-6	forte	forte	ADV	Df	_	8	advmod	_	Ref=5.18.1
-7	non	non	PART	Df	Polarity=Neg	8	advmod:neg	_	Ref=5.18.1
-8	es	sum	AUX	V-	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin|Voice=Act	2	advcl	_	Ref=5.18.1
+5	si	si	SCONJ	G-	_	6	mark	_	Ref=5.18.1
+6	forte	forte	ADV	Df	_	2	advcl	_	Ref=5.18.1
+7	non	non	PART	Df	Polarity=Neg	6	advmod:neg	_	Ref=5.18.1
+8	es	sum	AUX	V-	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin|Voice=Act	6	cop	_	Ref=5.18.1
 
 # source = Epistulae ad Atticum, Book 5, letter 18
 # text = nihil enim certi habebamus nisi accepisse nos tuas litteras a d x iiii Kal Sextil datas in quibus scriptum esset te in Epirum iturum circiter Kal Sextil
@@ -16379,9 +16379,9 @@
 # sent_id = 52992
 1	In	in	ADP	R-	AdpType=Prep	3	case	_	Ref=2.5.6
 2	eo	is	DET	Pd	Case=Abl|Gender=Fem,Masc|Number=Sing	3	det	_	Ref=2.5.6
-3	flumine	flumen	NOUN	Nb	Case=Abl|Gender=Neut|Number=Sing	5	obl	_	Ref=2.5.6
-4	pons	pons	NOUN	Nb	Case=Nom|Gender=Masc|Number=Sing	5	nsubj	_	Ref=2.5.6
-5	erat	sum	AUX	V-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	Ref=2.5.6
+3	flumine	flumen	NOUN	Nb	Case=Abl|Gender=Neut|Number=Sing	0	root	_	Ref=2.5.6
+4	pons	pons	NOUN	Nb	Case=Nom|Gender=Masc|Number=Sing	3	nsubj	_	Ref=2.5.6
+5	erat	sum	AUX	V-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	3	cop	_	Ref=2.5.6
 
 # source = Commentarii belli Gallici, Caes., Gall. 2.5
 # text = Ibi praesidium ponit et in altera parte fluminis Quintum Titurium Sabinum legatum cum sex cohortibus relinquit
@@ -16506,20 +16506,20 @@
 # source = Commentarii belli Gallici, Caes., Gall. 2.6
 # text = Nam cum tanta multitudo lapides ac tela coicerent in muro consistendi potestas erat nulli
 # sent_id = 53000
-1	Nam	nam	PART	Df	_	13	discourse	_	Ref=2.6.3
+1	Nam	nam	PART	Df	_	14	discourse	_	Ref=2.6.3
 2	cum	cum	SCONJ	G-	_	8	mark	_	Ref=2.6.3
 3	tanta	tantus	DET	Pd	Case=Nom|Gender=Fem|Number=Sing	4	det	_	Ref=2.6.3
 4	multitudo	multitudo	NOUN	Nb	Case=Nom|Gender=Fem|Number=Sing	8	nsubj	_	Ref=2.6.3
 5	lapides	lapis	NOUN	Nb	Case=Acc|Gender=Masc|Number=Plur	8	obj	_	Ref=2.6.3
 6	ac	atque	CCONJ	C-	_	7	cc	_	Ref=2.6.3
 7	tela	telum	NOUN	Nb	Case=Acc|Gender=Neut|Number=Plur	5	conj	_	Ref=2.6.3
-8	coicerent	coicio	VERB	V-	Aspect=Imp|Mood=Sub|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	13	advcl	_	Ref=2.6.3
+8	coicerent	coicio	VERB	V-	Aspect=Imp|Mood=Sub|Number=Plur|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	14	advcl	_	Ref=2.6.3
 9	in	in	ADP	R-	AdpType=Prep	10	case	_	Ref=2.6.3
 10	muro	murus	NOUN	Nb	Case=Abl|Gender=Masc|Number=Sing	11	obl	_	Ref=2.6.3
 11	consistendi	consisto	VERB	V-	Case=Gen|VerbForm=Ger	12	acl	_	Ref=2.6.3
-12	potestas	potestas	NOUN	Nb	Case=Nom|Gender=Fem|Number=Sing	13	nsubj	_	Ref=2.6.3
-13	erat	sum	AUX	V-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	Ref=2.6.3
-14	nulli	nullus	DET	Px	Case=Dat|Gender=Masc|Number=Sing	13	obl:arg	_	Ref=2.6.3
+12	potestas	potestas	NOUN	Nb	Case=Nom|Gender=Fem|Number=Sing	14	nsubj	_	Ref=2.6.3
+13	erat	sum	AUX	V-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	14	cop	_	Ref=2.6.3
+14	nulli	nullus	DET	Px	Case=Dat|Gender=Masc|Number=Sing	0	root	_	Ref=2.6.3
 
 # source = Commentarii belli Gallici, Caes., Gall. 2.6
 # text = Cum finem oppugnandi nox fecisset Iccius Remus summa nobilitate et gratia inter suos qui tum oppido praeerat unus ex iis qui legati de pace ad Caesarem venerant nuntium ad eum mittit

@@ -897,6 +897,35 @@ for node in doc.nodes:
         node.parent.deprel = 'advcl'
         
         
+        
+# correction of 'sum' still occurring as head						
+for node in doc.nodes:						
+    if node.lemma == 'sum' and node.deprel in ['root', 'conj', 'advcl'] and 'necesse' not in node.form:   
+        est_depend = [c for c in node.children] 
+        true_dep = [d for d in est_depend if d.udeprel in ['obl', 'advmod', 'ccomp', 'xcomp'] and d.sdeprel not in ['emph', 'neg']]                                    
+        if len(true_dep) == 0:
+            continue # 'sum' remains root
+        elif len(true_dep) == 1:
+            true_dep[0].parent, true_dep[0].deprel = node.parent, node.deprel
+            node.parent, node.deprel = true_dep[0], 'cop'
+            for other_dep in est_depend:
+                if other_dep != true_dep[0]:
+                    other_dep.parent = true_dep[0]
+        elif len(true_dep) > 1:
+            obl = [n for n in true_dep if n.udeprel == 'obl']
+            if obl:
+                obl[0].parent, obl[0].deprel = node.parent, node.deprel
+                node.parent, node.deprel = obl[0], 'cop'
+                for other_dep in est_depend:
+                    if other_dep != obl[0]:
+                        other_dep.parent = obl[0]
+            else:
+                true_dep[0].parent, true_dep[0].deprel = node.parent, node.deprel # pick the first non-subject dependent, since it is not possible to automatically decide which one should be the head  
+                node.parent, node.deprel = true_dep[0], 'cop'
+                for other_dep in est_depend:
+                    if other_dep != true_dep[0]:
+                        other_dep.parent = true_dep[0]
+                               
     
 # fix non-projectivity of punctuation    
 pun.process_document(doc)    

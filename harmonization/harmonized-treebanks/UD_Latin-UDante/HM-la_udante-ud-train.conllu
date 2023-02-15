@@ -23525,10 +23525,10 @@
 26	«	«	PUNCT	Pu	_	27	punct	_	SpaceAfter=No
 27	Cupio	cupio	VERB	va3ips1	Aspect=Imp|InflClass=LatI2|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	25	ccomp:reported	_	_
 28	dissolvi	dissoluo	VERB	vp3fp	Aspect=Imp|InflClass=LatX|InflClass[nominal]=Ind|VerbForm=Vnoun|Voice=Pass	27	ccomp	_	_
-29	et	et	CCONJ	co	_	30	cc	_	_
-30	esse	sum	AUX	va5fp	Aspect=Imp|InflClass=LatAnom|InflClass[nominal]=Ind|VerbForm=Inf	28	conj	_	_
+29	et	et	CCONJ	co	_	32	cc	_	_
+30	esse	sum	AUX	va5fp	Aspect=Imp|InflClass=LatAnom|InflClass[nominal]=Ind|VerbForm=Inf	32	cop	_	_
 31	cum	cum	ADP	e	_	32	case	_	_
-32	Cristo	christus	PROPN	Sms2b	Case=Abl|Gender=Masc|InflClass=IndEurO|NameType=Sur|Number=Sing	30	obl	_	SpaceAfter=No
+32	Cristo	christus	PROPN	Sms2b	Case=Abl|Gender=Masc|InflClass=IndEurO|NameType=Sur|Number=Sing	28	conj	_	SpaceAfter=No
 33	»	»	PUNCT	Pu	_	27	punct	_	_
 34	incompetentem	incompetens	ADJ	ams2a	Case=Acc|Gender=Masc|InflClass=IndEurI|Number=Sing|Polarity=Neg	36	advcl:pred	_	_
 35	iudicem	iudex	NOUN	sms3a	Case=Acc|Gender=Masc|InflClass=IndEurX|Number=Sing	36	obj	_	_

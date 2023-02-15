@@ -3545,11 +3545,11 @@
 64	est	sum	AUX	v|v|3|s|p|i|a|-|-|-	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	65	cop	_	_
 65	plebe	plebs	NOUN	n|n|-|s|-|-|-|f|a|-	Case=Acc|Gender=Fem|Number=Sing	57	acl:relcl	_	_
 66	battismali	baptismalis	ADJ	a|a|-|s|-|-|-|f|a|-	Case=Acc|Gender=Fem|Number=Sing	65	amod	_	_
-67	et	et	CCONJ	c|c|-|-|-|-|-|-|-|-	_	69	cc	_	_
-68	qui	qui	PRON	p|p|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	69	nsubj	_	_
-69	est	sum	VERB	v|v|3|s|p|i|a|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	65	conj	_	_
+67	et	et	CCONJ	c|c|-|-|-|-|-|-|-|-	_	71	cc	_	_
+68	qui	qui	PRON	p|p|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	71	nsubj	_	_
+69	est	sum	VERB	v|v|3|s|p|i|a|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	71	cop	_	_
 70	desup	desub	ADP	r|r|-|-|-|-|-|-|-|-	_	71	case	_	_
-71	potestate	potestas	NOUN	n|n|-|s|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Sing	69	obl	_	_
+71	potestate	potestas	NOUN	n|n|-|s|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Sing	65	conj	_	_
 72	episcupatu	episcopatus	NOUN	n|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	71	nmod	_	_
 73	vestro	uester	DET	a|a|2|s|-|-|-|n|a|-	Case=Acc|Gender=Neut|Number=Sing|Number[psor]=Plur|Person[psor]=2|Poss=Yes|PronType=Prs	72	nmod	_	_
 74	sancti	sanctus	ADJ	a|a|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	75	amod	_	_
@@ -6161,10 +6161,10 @@
 30	sunt	sum	VERB	v|v|3|p|p|i|a|-|-|-	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	12	acl	_	_
 31	reddendi	reddo	VERB	t|t|-|s|p|d|p|n|g|-	Aspect=Imp|Case=Gen|Gender=Neut|Number=Sing|Tense=Pres|VerbForm=Ger|Voice=Pass	29	acl:relcl	_	SpaceAfter=No
 32	,	,	PUNCT	Punc	_	33	punct	_	_
-33	ut	ut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	49	mark	_	_
+33	ut	ut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	36	mark	_	_
 34	singulis	singulus	ADJ	a|a|-|p|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Plur|NumType=Dist	36	amod	_	_
 35	quibusque	quisque	DET	p|p|-|p|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Plur|PronType=Ind	36	det	_	_
-36	anni	annus	NOUN	n|n|-|p|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Plur	49	obl	_	_
+36	anni	annus	NOUN	n|n|-|p|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Plur	3	advcl	_	_
 37	in	in	ADP	r|r|-|-|-|-|-|-|-|-	_	50	case	_	_
 38	mea	meus	DET	a|a|1|s|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Sing|Number[psor]=Sing|Person[psor]=1|Poss=Yes|PronType=Prs	50	det	_	_
 39	et	et	CCONJ	c|c|-|-|-|-|-|-|-|-	_	40	cc	_	_
@@ -6173,12 +6173,12 @@
 42	filio	filius	NOUN	n|n|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	40	nmod	_	_
 43	meo	meus	DET	a|a|1|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing|Number[psor]=Sing|Person[psor]=1|Poss=Yes|PronType=Prs	42	det	_	SpaceAfter=No
 44	,	,	PUNCT	Punc	_	38	punct	_	_
-45	diebus	dies	NOUN	n|n|-|p|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Plur	49	obl	_	_
+45	diebus	dies	NOUN	n|n|-|p|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Plur	36	obl	_	_
 46	vite	uita	NOUN	n|n|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing	45	nmod	_	_
 47	nostre	noster	DET	a|a|1|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing|Number[psor]=Plur|Person[psor]=1|Poss=Yes|PronType=Prs	46	det	_	SpaceAfter=No
 48	,	,	PUNCT	Punc	_	45	punct	_	_
-49	sint	sum	VERB	v|v|3|p|p|s|a|-|-|-	Aspect=Imp|Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	3	advcl	_	_
-50	potestatem	potestas	NOUN	n|n|-|s|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Sing	49	obl	_	_
+49	sint	sum	VERB	v|v|3|p|p|s|a|-|-|-	Aspect=Imp|Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	36	cop	_	_
+50	potestatem	potestas	NOUN	n|n|-|s|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Sing	36	obl	_	_
 51	ipsa	ipse	DET	p|p|-|s|-|-|-|f|a|-	Case=Acc|Gender=Fem|Number=Sing|PronType=Dem	52	det	_	_
 52	decimationem	decimatio	NOUN	n|n|-|s|-|-|-|f|a|-	Case=Acc|Gender=Fem|Number=Sing	53	obj	_	_
 53	recoligendi	recolligo	VERB	t|t|-|s|p|d|p|n|g|-	Aspect=Imp|Case=Gen|Gender=Neut|Number=Sing|Tense=Pres|VerbForm=Ger|Voice=Pass	50	acl	_	_
@@ -6191,10 +6191,10 @@
 # sent_id = dev-s183
 # text = sic tamen ipsa ecclesia sancti Quirici, cum predicta subdita et Monticello, et predicte petie de terre quas mihi dedisti, in mea qui supra Andreas clerico et suprascripti Adalmanni clerico filio meo sint potestatem diebus vite nostre eas abendi, inperandi, gubernandi, laborare faciendi, meliorandi et usufructuandi privato nomine;
 # reference = document_id='85:8'-span='50'
-1	sic	sic	ADV	d|d|-|-|-|-|-|-|-|-	_	35	advmod	_	_
-2	tamen	tamen	ADV	d|d|-|-|-|-|-|-|-|-	_	35	advmod	_	_
+1	sic	sic	ADV	d|d|-|-|-|-|-|-|-|-	_	36	advmod	_	_
+2	tamen	tamen	ADV	d|d|-|-|-|-|-|-|-|-	_	36	advmod	_	_
 3	ipsa	ipse	DET	p|p|-|s|-|-|-|f|n|-	Case=Nom|Gender=Fem|Number=Sing|PronType=Dem	4	det	_	_
-4	ecclesia	ecclesia	NOUN	n|n|-|s|-|-|-|f|n|-	Case=Nom|Gender=Fem|Number=Sing	35	nsubj	_	_
+4	ecclesia	ecclesia	NOUN	n|n|-|s|-|-|-|f|n|-	Case=Nom|Gender=Fem|Number=Sing	36	nsubj	_	_
 5	sancti	sanctus	ADJ	a|a|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	6	amod	_	_
 6	Quirici	Quiricus	PROPN	Propn|n|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	4	nmod	_	SpaceAfter=No
 7	,	,	PUNCT	Punc	_	10	punct	_	_
@@ -6225,9 +6225,9 @@
 32	clerico	clericus	NOUN	n|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	31	appos	_	_
 33	filio	filius	NOUN	n|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	31	appos	_	_
 34	meo	meus	DET	a|a|1|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing|Number[psor]=Sing|Person[psor]=1|Poss=Yes|PronType=Prs	33	det	_	_
-35	sint	sum	VERB	v|v|3|p|p|s|a|-|-|-	Aspect=Imp|Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	_
-36	potestatem	potestas	NOUN	n|n|-|s|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Sing	35	obl	_	_
-37	diebus	dies	NOUN	n|n|-|p|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Plur	35	obl	_	_
+35	sint	sum	VERB	v|v|3|p|p|s|a|-|-|-	Aspect=Imp|Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	36	cop	_	_
+36	potestatem	potestas	NOUN	n|n|-|s|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Sing	0	root	_	_
+37	diebus	dies	NOUN	n|n|-|p|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Plur	36	obl	_	_
 38	vite	uita	NOUN	n|n|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing	37	nmod	_	_
 39	nostre	noster	DET	a|a|1|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing|Number[psor]=Plur|Person[psor]=1|Poss=Yes|PronType=Prs	38	det	_	_
 40	eas	is	PRON	p|p|-|p|-|-|-|f|a|-	Case=Acc|Gender=Fem|Number=Plur|Person=3|PronType=Dem,Prs	41	obj	_	_
@@ -6245,7 +6245,7 @@
 52	usufructuandi	usufructuo	VERB	t|t|-|s|p|d|p|n|g|-	Aspect=Imp|Case=Gen|Gender=Neut|Number=Sing|Tense=Pres|VerbForm=Ger|Voice=Pass	41	conj	_	_
 53	privato	priuo	VERB	t|t|-|s|r|p|p|n|b|-	Aspect=Perf|Case=Abl|Gender=Neut|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	54	acl	_	_
 54	nomine	nomen	NOUN	n|n|-|s|-|-|-|n|b|-	Case=Abl|Gender=Neut|Number=Sing	52	obl	_	SpaceAfter=No
-55	;	;	PUNCT	Punc	_	35	punct	_	_
+55	;	;	PUNCT	Punc	_	36	punct	_	_
 
 # sent_id = dev-s184
 # text = et in ipsa ecclesia sancti Quirici per nostra dispositionem officium Dei et luminaria fieri debeas.
@@ -13786,12 +13786,12 @@
 # sent_id = dev-s435
 # text = + Ego Alpertus ibi fui.
 # reference = document_id='85:21'-span='114'
-1	+	+	PUNCT	SYM	_	5	punct	_	_
-2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	5	nsubj	_	_
+1	+	+	PUNCT	SYM	_	4	punct	_	_
+2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
 3	Alpertus	Alpertus	PROPN	Propn|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	2	appos	_	_
-4	ibi	ubi	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Rel	5	advmod	_	_
-5	fui	sum	VERB	v|v|3|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	SpaceAfter=No
-6	.	.	PUNCT	Punc	_	5	punct	_	_
+4	ibi	ubi	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Rel	0	root	_	_
+5	fui	sum	VERB	v|v|3|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	4	cop	_	SpaceAfter=No
+6	.	.	PUNCT	Punc	_	4	punct	_	_
 
 # sent_id = dev-s436
 # text = + Ego [Propn] in aliquid ibi fui.
@@ -13808,23 +13808,23 @@
 # sent_id = dev-s437
 # text = + Ego Alboni ibi fui.
 # reference = document_id='85:21'-span='116'
-1	+	+	PUNCT	SYM	_	5	punct	_	_
-2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	5	nsubj	_	_
+1	+	+	PUNCT	SYM	_	4	punct	_	_
+2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
 3	Alboni	Albonus	PROPN	Propn|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	2	appos	_	_
-4	ibi	ubi	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Rel	5	advmod	_	_
-5	fui	sum	VERB	v|v|1|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	SpaceAfter=No
-6	.	.	PUNCT	Punc	_	5	punct	_	_
+4	ibi	ubi	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Rel	0	root	_	_
+5	fui	sum	VERB	v|v|1|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	4	cop	_	SpaceAfter=No
+6	.	.	PUNCT	Punc	_	4	punct	_	_
 
 # sent_id = dev-s438
 # text = + Ego Albolfo clericus ibi fui.
 # reference = document_id='85:21'-span='117'
-1	+	+	PUNCT	SYM	_	6	punct	_	_
-2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	6	nsubj	_	_
+1	+	+	PUNCT	SYM	_	5	punct	_	_
+2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	5	nsubj	_	_
 3	Albolfo	Albolfus	PROPN	Propn|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	2	appos	_	_
 4	clericus	clericus	NOUN	n|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	3	appos	_	_
-5	ibi	ubi	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Rel	6	advmod	_	_
-6	fui	sum	VERB	v|v|1|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	SpaceAfter=No
-7	.	.	PUNCT	Punc	_	6	punct	_	_
+5	ibi	ubi	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Rel	0	root	_	_
+6	fui	sum	VERB	v|v|1|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	5	cop	_	SpaceAfter=No
+7	.	.	PUNCT	Punc	_	5	punct	_	_
 
 # sent_id = dev-s439
 # text = signum + manus Ati de Vichopelago, qui ibi fuit.
@@ -13844,52 +13844,52 @@
 # sent_id = dev-s440
 # text = + Ego Vuitingo ibi fui.
 # reference = document_id='85:21'-span='119'
-1	+	+	PUNCT	SYM	_	5	punct	_	_
-2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	5	nsubj	_	_
+1	+	+	PUNCT	SYM	_	4	punct	_	_
+2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
 3	Vuitingo	Witingus	PROPN	Propn|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	2	appos	_	_
-4	ibi	ubi	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Rel	5	advmod	_	_
-5	fui	sum	VERB	v|v|1|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	SpaceAfter=No
-6	.	.	PUNCT	Punc	_	5	punct	_	_
+4	ibi	ubi	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Rel	0	root	_	_
+5	fui	sum	VERB	v|v|1|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	4	cop	_	SpaceAfter=No
+6	.	.	PUNCT	Punc	_	4	punct	_	_
 
 # sent_id = dev-s441
 # text = + Ego Iohannes ibi fui.
 # reference = document_id='85:21'-span='120'
-1	+	+	PUNCT	SYM	_	5	punct	_	_
-2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	5	nsubj	_	_
+1	+	+	PUNCT	SYM	_	4	punct	_	_
+2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
 3	Iohannes	Johannes	PROPN	Propn|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	2	appos	_	_
-4	ibi	ubi	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Rel	5	advmod	_	_
-5	fui	sum	VERB	v|v|1|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	SpaceAfter=No
-6	.	.	PUNCT	Punc	_	5	punct	_	_
+4	ibi	ubi	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Rel	0	root	_	_
+5	fui	sum	VERB	v|v|1|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	4	cop	_	SpaceAfter=No
+6	.	.	PUNCT	Punc	_	4	punct	_	_
 
 # sent_id = dev-s442
 # text = + Ego Adonaldo ibi fui.
 # reference = document_id='85:21'-span='121'
-1	+	+	PUNCT	SYM	_	5	punct	_	_
-2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	5	nsubj	_	_
+1	+	+	PUNCT	SYM	_	4	punct	_	_
+2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
 3	Adonaldo	Adonaldus	PROPN	Propn|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	2	appos	_	_
-4	ibi	ubi	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Rel	5	advmod	_	_
-5	fui	sum	VERB	v|v|1|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	SpaceAfter=No
-6	.	.	PUNCT	Punc	_	5	punct	_	_
+4	ibi	ubi	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Rel	0	root	_	_
+5	fui	sum	VERB	v|v|1|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	4	cop	_	SpaceAfter=No
+6	.	.	PUNCT	Punc	_	4	punct	_	_
 
 # sent_id = dev-s443
 # text = + Ego Alateo ibi fui.
 # reference = document_id='85:21'-span='122'
-1	+	+	PUNCT	SYM	_	5	punct	_	_
-2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	5	nsubj	_	_
+1	+	+	PUNCT	SYM	_	4	punct	_	_
+2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
 3	Alateo	Alateus	PROPN	Propn|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	2	appos	_	_
-4	ibi	ubi	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Rel	5	advmod	_	_
-5	fui	sum	VERB	v|v|1|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	SpaceAfter=No
-6	.	.	PUNCT	Punc	_	5	punct	_	_
+4	ibi	ubi	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Rel	0	root	_	_
+5	fui	sum	VERB	v|v|1|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	4	cop	_	SpaceAfter=No
+6	.	.	PUNCT	Punc	_	4	punct	_	_
 
 # sent_id = dev-s444
 # text = + Ego Alisi ibi fui.
 # reference = document_id='85:21'-span='123'
-1	+	+	PUNCT	SYM	_	5	punct	_	_
-2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	5	nsubj	_	_
+1	+	+	PUNCT	SYM	_	4	punct	_	_
+2	Ego	ego	PRON	p|p|1|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
 3	Alisi	Alisus	PROPN	Propn|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	2	appos	_	_
-4	ibi	ubi	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Rel	5	advmod	_	_
-5	fui	sum	VERB	v|v|1|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	SpaceAfter=No
-6	.	.	PUNCT	Punc	_	5	punct	_	_
+4	ibi	ubi	ADV	d|d|-|-|-|-|-|-|-|-	PronType=Rel	0	root	_	_
+5	fui	sum	VERB	v|v|1|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin|Voice=Act	4	cop	_	SpaceAfter=No
+6	.	.	PUNCT	Punc	_	4	punct	_	_
 
 # sent_id = dev-s445
 # text = + In Dei omnipotentis nomine regnante domno nostro Karolus divina faventem clementiam imperatore augusto, anno imperii eis quarto, idus augustas, indictione secunda.
@@ -22840,15 +22840,15 @@
 43	hic	hic	ADV	d|d|-|-|-|-|-|-|-|-	AdvType=Loc|PronType=Dem	39	advmod:lmod	_	_
 44	civitate	ciuitas	NOUN	n|n|-|s|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Sing	39	obl	_	_
 45	Luca	Luca	PROPN	Propn|n|-|s|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Sing	44	flat	_	SpaceAfter=No
-46	,	,	PUNCT	Punc	_	52	punct	_	_
-47	et	et	CCONJ	c|c|-|-|-|-|-|-|-|-	_	52	cc	_	_
+46	,	,	PUNCT	Punc	_	54	punct	_	_
+47	et	et	CCONJ	c|c|-|-|-|-|-|-|-|-	_	54	cc	_	_
 48	ipse	ipse	DET	p|p|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|PronType=Dem	49	nmod	_	_
-49	ecclesie	ecclesia	NOUN	n|n|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing	52	nsubj	_	_
+49	ecclesie	ecclesia	NOUN	n|n|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing	54	nsubj	_	_
 50	sancti	sanctus	ADJ	a|a|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	51	amod	_	_
 51	Fridiani	Fridianus	PROPN	Propn|n|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	49	nmod	_	_
-52	est	sum	VERB	v|v|3|s|p|i|a|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	39	conj	_	_
+52	est	sum	VERB	v|v|3|s|p|i|a|-|-|-	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	54	cop	_	_
 53	desub	desub	ADP	r|r|-|-|-|-|-|-|-|-	_	54	case	_	_
-54	potestatem	potestas	NOUN	n|n|-|s|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Sing	52	obl	_	_
+54	potestatem	potestas	NOUN	n|n|-|s|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Sing	39	conj	_	_
 55	ipsius	ipse	DET	p|p|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing|PronType=Dem	56	det	_	_
 56	episcopatui	episcopatus	NOUN	n|n|-|s|-|-|-|m|g|-	Case=Gen|Gender=Masc|Number=Sing	54	nmod	_	_
 57	vestro	uester	DET	a|a|2|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing|Number[psor]=Plur|Person[psor]=2|Poss=Yes|PronType=Prs	56	det	_	_
@@ -26339,11 +26339,11 @@
 87	nobis	nos	PRON	p|p|1|p|-|-|-|m|d|-	Case=Dat|Gender=Masc|Number=Plur|Person=1|PronType=Prs	88	obl:arg	_	_
 88	dedisti	do	VERB	v|v|2|s|r|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin|Voice=Act	83	acl:relcl	_	SpaceAfter=No
 89	,	,	PUNCT	Punc	_	80	punct	_	_
-90	dum	dum	SCONJ	c|c|-|-|-|-|-|-|-|-	_	94	mark	_	_
-91	vita	uita	NOUN	n|n|-|s|-|-|-|f|n|-	Case=Nom|Gender=Fem|Number=Sing	94	nsubj	_	_
+90	dum	dum	SCONJ	c|c|-|-|-|-|-|-|-|-	_	93	mark	_	_
+91	vita	uita	NOUN	n|n|-|s|-|-|-|f|n|-	Case=Nom|Gender=Fem|Number=Sing	93	nsubj	_	_
 92	nostra	noster	DET	a|a|1|s|-|-|-|f|n|-	Case=Nom|Gender=Fem|Number=Sing|Number[psor]=Plur|Person[psor]=1|Poss=Yes|PronType=Prs	91	det	_	_
-93	ambarum	ambo	DET	p|p|-|p|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Plur|PronType=Tot	94	obl:arg	_	_
-94	fuerit	sum	VERB	v|v|3|s|t|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	74	advcl	_	SpaceAfter=No
+93	ambarum	ambo	DET	p|p|-|p|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Plur|PronType=Tot	74	advcl	_	_
+94	fuerit	sum	VERB	v|v|3|s|t|i|a|-|-|-	Aspect=Perf|Mood=Ind|Number=Sing|Person=3|Tense=Fut|VerbForm=Fin|Voice=Act	93	cop	_	SpaceAfter=No
 95	,	,	PUNCT	Punc	_	96	punct	_	_
 96	abendi	habeo	VERB	t|t|-|s|p|d|p|n|g|-	Aspect=Imp|Case=Gen|Gender=Neut|Number=Sing|Tense=Pres|VerbForm=Ger|Voice=Pass	77	acl	_	SpaceAfter=No
 97	,	,	PUNCT	Punc	_	98	punct	_	_
@@ -26359,21 +26359,21 @@
 107	privatum	priuo	VERB	t|t|-|s|r|p|p|n|b|-	Aspect=Perf|Case=Abl|Gender=Neut|Number=Sing|Tense=Past|VerbForm=Part|Voice=Pass	108	acl	_	_
 108	nomine	nomen	NOUN	n|n|-|s|-|-|-|n|b|-	Case=Abl|Gender=Neut|Number=Sing	109	obl	_	_
 109	usufructuandi	usufructuo	VERB	t|t|-|s|p|d|p|n|g|-	Aspect=Imp|Case=Gen|Gender=Neut|Number=Sing|Tense=Pres|VerbForm=Ger|Voice=Pass	96	conj	_	SpaceAfter=No
-110	,	,	PUNCT	Punc	_	120	punct	_	_
-111	et	et	CCONJ	c|c|-|-|-|-|-|-|-|-	_	120	cc	_	_
+110	,	,	PUNCT	Punc	_	114	punct	_	_
+111	et	et	CCONJ	c|c|-|-|-|-|-|-|-|-	_	114	cc	_	_
 112	post	post	ADP	r|r|-|-|-|-|-|-|-|-	_	114	case	_	_
-113	vero	uero	ADV	d|d|-|-|-|-|-|-|-|-	_	120	discourse	_	_
-114	decesso	decessus	NOUN	n|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	120	obl	_	_
+113	vero	uero	ADV	d|d|-|-|-|-|-|-|-|-	_	114	discourse	_	_
+114	decesso	decessus	NOUN	n|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	74	conj	_	_
 115	meo	meus	DET	a|a|1|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing|Number[psor]=Sing|Person[psor]=1|Poss=Yes|PronType=Prs	114	det	_	_
 116	qui	qui	DET	p|p|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|PronType=Ind	118	det	_	_
 117	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	116	fixed	_	_
 118	Gherimundo	Gherimundus	PROPN	Propn|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	115	nmod	_	_
 119	presbitero	presbyter	NOUN	n|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	118	appos	_	_
-120	sint	sum	VERB	v|v|3|p|p|s|a|-|-|-	Aspect=Imp|Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	74	conj	_	_
+120	sint	sum	VERB	v|v|3|p|p|s|a|-|-|-	Aspect=Imp|Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	114	cop	_	_
 121	et	et	CCONJ	c|c|-|-|-|-|-|-|-|-	_	122	cc	_	_
-122	permaneant	permaneo	VERB	v|v|3|p|p|s|a|-|-|-	Aspect=Imp|Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	120	conj	_	_
+122	permaneant	permaneo	VERB	v|v|3|p|p|s|a|-|-|-	Aspect=Imp|Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	114	conj	_	_
 123	in	in	ADP	r|r|-|-|-|-|-|-|-|-	_	124	case	_	_
-124	potestatem	potestas	NOUN	n|n|-|s|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Sing	120	obl	_	_
+124	potestatem	potestas	NOUN	n|n|-|s|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Sing	114	obl	_	_
 125	tua	tuus	DET	a|a|2|s|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Sing|Number[psor]=Sing|Person[psor]=2|Poss=Yes|PronType=Prs	124	det	_	_
 126	qui	qui	DET	p|p|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing|PronType=Ind	128	det	_	_
 127	supra	supra	ADV	d|d|-|-|-|-|-|-|-|-	_	126	fixed	_	_

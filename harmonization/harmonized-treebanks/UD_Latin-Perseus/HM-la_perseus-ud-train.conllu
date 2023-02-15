@@ -14420,8 +14420,8 @@
 # text = non sum ego qui fueram:
 1	non	non	PART	d--------	_	5	advmod:neg	_	LId=non1
 2	sum	sum	AUX	v1spia---	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	5	cop	_	LId=sum1
-3	ego	ego	PRON	p-s---mn-	Case=Nom|Gender=Masc|Number=Sing	5	nsubj	_	LId=ego1
-4	qui	qui	PRON	p-s---mn-	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	5	xcomp	_	LId=qui1
+3	ego	ego	PRON	p-s---mn-	Case=Nom|Gender=Masc|Number=Sing	5	nsubj:outer	_	LId=ego1
+4	qui	qui	PRON	p-s---mn-	Case=Nom|Gender=Masc|Number=Sing|PronType=Rel	5	nsubj	_	LId=qui1
 5	fueram	sum	VERB	v1slia---	Mood=Ind|Number=Sing|Person=1|Tense=Pqp|VerbForm=Fin|Voice=Act	0	root	_	SpaceAfter=No|LId=sum1
 6	:	:	PUNCT	u--------	_	5	punct	_	LId=punc1
 
@@ -18412,7 +18412,7 @@
 1	nunc	nunc	ADV	d--------	AdvType=Tim	3	advmod:tmod	_	LId=nunc1
 2	Orestillam	Orestilla	PROPN	n-s---fa-	Case=Acc|Gender=Fem|Number=Sing	3	obj	_	LId=Orestilla1
 3	commendo	commendo	VERB	v1spia---	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	_	LId=commendo1
-4	que	que	CCONJ	c--------	_	3	cc	_	LId=que1|ToDo=cc-in-coord
+4	que	que	CCONJ	c--------	_	7	cc	_	LId=que1
 5	tuae	tuus	DET	a-s---fd-	Case=Dat|Gender=Fem|Number=Sing	6	det	_	LId=tuus1
 6	fidei	fides	NOUN	n-s---fd-	Case=Dat|Gender=Fem|Number=Sing	3	obl:arg	_	LId=fides1
 7	trado	trado	VERB	v1spia---	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	3	conj	_	SpaceAfter=No|LId=trado1
