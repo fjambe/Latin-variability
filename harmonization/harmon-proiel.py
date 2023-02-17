@@ -31,7 +31,7 @@ space = udapi.block.ud.setspaceafterfromtext.SetSpaceAfterFromText()
 
 # Iterate over all nodes in the document (in all trees)
 for node in doc.nodes:
-    
+
     # MWT
     if node.form.lower() not in ['a.', 'a.d.', 'd.', 'kal.', 'kalend.', 'non.', 'non.iun.', 'decembr.', 'febr.', 'novembr.', 'quint.', 'sext.']: # dates are dealt with specifically, because they show more complexity and inconsistencies
         company.process_node(node)
@@ -41,11 +41,11 @@ for node in doc.nodes:
         mwt = node.multiword_token
         if mwt.form.endswith('.') and len(mwt.form) > 1 and mwt.form != '...':
             mwt.remove()
-    
+
     # setting SpaceAfter=No when relevant
     space.process_tree(node.root)
 
-    
+
     # nescio quid
     if node.prev_node.lemma == 'nescio' and node.prev_node.upos == 'AUX' and node.prev_node.deprel == 'aux':
         node.prev_node.upos = 'VERB'
@@ -56,21 +56,21 @@ for node in doc.nodes:
             nescio.deprel = node.deprel
         node.deprel = 'fixed'
         nescio.parent = node.parent
-        node.parent = nescio    
-        
+        node.parent = nescio
+
 
     if node.lemma == 'C.':
         node.lemma = 'Caius'
-        
+
     if node.deprel == 'advmod' and node.upos == 'X':
         node.upos = 'ADV'
-        
+
     if node.lemma == 'autem' and node.deprel != 'root':
         node.upos, node.deprel = 'CCONJ', 'cc'
-        
+
     if node.lemma == 'sic' and node.deprel not in ['advmod', 'root', 'conj', 'orphan']:
         node.deprel = 'advmod'
-        
+
     if node.lemma == 'invicem':
         node.upos = 'PRON'
         node.feats = 'Compound=Yes|InflClass=Ind|PronType=Rcp'
@@ -114,10 +114,10 @@ for node in doc.nodes:
     if node.form in ['ante', 'cotidie', 'hodie', 'iam', 'interim', 'nonnunquam', 'nunc', 'olim', 'post', 'postea', 'pridem', 'prius', 'quando', 'quandoque', 'saepe', 'semper', 'tum', 'tunc'] and node.form == node.lemma and node.deprel == 'advmod':
         node.deprel = 'advmod:tmod'
         node.feats['AdvType'] = 'Tim'
-    # negation    
+    # negation
     if node.lemma in ['haud', 'non'] and node.deprel not in ['conj', 'root']:
-        node.upos, node.deprel = 'PART', 'advmod:neg'        
-        
+        node.upos, node.deprel = 'PART', 'advmod:neg'
+
 
     # dates
     if node.form.lower().startswith('a.d'):
@@ -129,7 +129,7 @@ for node in doc.nodes:
         kids = [k for k in node.children if k.deprel != 'fixed']
         for k in kids:
             k.parent = d
-        ad = re.match( 'a\.d\..+', node.form.lower()) # a.d. numeral
+        ad = re.match('a\.d\..+', node.form.lower()) # a.d. numeral
         if node.form.lower() in ['a.d', 'a.d.']:
             num = [k for k in node.children if k.deprel == 'fixed' and k > d and k.form.lower() in nums]
             if num:
@@ -140,8 +140,11 @@ for node in doc.nodes:
             num = node.create_child()
             num.shift_after_node(d)
             num.form = node.form.split('.')[-1]
-            num.lemma, num.feats['NumForm'] = num.form, 'Roman'
-            num.upos, num.deprel, num.parent = 'NUM', 'nummod', d
+            num.lemma, num.parent = num.form, d
+            if num.form in nums:
+                num.feats['NumForm'], num.upos, num.deprel = 'Roman', 'NUM', 'nummod'
+            else:
+                num.feats, num.upos, num.deprel = num.parent.feats, 'ADJ', 'amod'
         node.form, node.lemma, node.upos, node.feats = 'a', 'ante', 'ADP', 'AdpType=Prep'
         node.misc['DeletedPunct'] = '.'
         if node.deprel != 'root':
