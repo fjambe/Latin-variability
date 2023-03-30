@@ -7,6 +7,7 @@ Usage: python3 harmon-udante.py train/dev/test
 
 import sys
 import udapi
+import udapi.block.ud.fixpunct
 
 split = sys.argv[1] # train/dev/test
 UD_folder = '/home/federica/Desktop/latin/UD_devbranch' # path to the folder containing all UD Latin treebanks
@@ -14,6 +15,7 @@ filename = f'{UD_folder}/UD_Latin-UDante-dev/la_udante-ud-{split}.conllu'
 output_folder = '/home/federica/Desktop/latin/GITHUB/Latin-variability/harmonization/harmonized-treebanks'
 doc = udapi.Document(filename)
 
+pun = udapi.block.ud.fixpunct.FixPunct()
 
 # Iterate over all nodes in the document (in all trees)
 for node in doc.nodes:
@@ -95,9 +97,17 @@ for node in doc.nodes:
 					continue
 				
 				
-	# cmpr
 	if node.sdeprel == 'cmpr':
 		node.deprel = node.deprel[:-1]
-				
+    if node.deprel == 'xcomp:pred':
+        node.deprel = 'xcomp'
+    if node.feats['Clitic']:
+        node.feats['Clitic'] = ''
+    if node.feats['ConjType']:
+        node.feats['ConjType'] = ''
+
+pun.process_document(doc)
+
+			
 with open(f'{output_folder}/UD_Latin-UDante/HM-la_udante-ud-{split}.conllu', 'w') as output:
 	output.write(doc.to_conllu_string())

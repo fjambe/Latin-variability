@@ -4897,7 +4897,7 @@
 85	ut	ut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	88	mark	_	_
 86	ad	ab	ADP	r|r|-|-|-|-|-|-|-|-	_	88	case	_	_
 87	presenti	praesens	ADJ	a|a|-|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing	88	amod	_	_
-88	die	dies	NOUN	n|n|-|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing	92	conj	_	SpaceAfter=No
+88	die	dies	NOUN	n|n|-|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing	112	obl	_	SpaceAfter=No
 89	,	,	PUNCT	Punc	_	88	punct	_	_
 90	tam	tam	CCONJ	d|d|-|-|-|-|-|-|-|-	_	92	cc	_	_
 91	in	in	ADP	r|r|-|-|-|-|-|-|-|-	_	92	case	_	_
@@ -4921,7 +4921,7 @@
 109	que	que	CCONJ	c|c|-|-|-|-|-|-|-|-	_	110	cc	_	_
 110	rectoribus	rector	NOUN	n|n|-|p|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Plur	103	conj	_	_
 111	sint	sum	VERB	v|v|3|p|p|s|a|-|-|-	Aspect=Imp|Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	88	cop	_	_
-112	potestatem	potestas	NOUN	n|n|-|s|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Sing	88	obl	_	_
+112	potestatem	potestas	NOUN	n|n|-|s|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Sing	81	advcl	_	_
 113	suprascripta	suprascriptus	DET	a|a|-|s|-|-|-|f|a|-	Case=Acc|Gender=Fem|Number=Sing|PronType=Dem	114	det	_	_
 114	casa	casa	NOUN	n|n|-|s|-|-|-|f|a|-	Case=Acc|Gender=Fem|Number=Sing	121	obj	_	_
 115	et	et	CCONJ	c|c|-|-|-|-|-|-|-|-	_	116	cc	_	_
@@ -15453,7 +15453,7 @@
 125	ut	ut	SCONJ	c|c|-|-|-|-|-|-|-|-	_	124	fixed	_	_
 126	ad	ab	ADP	r|r|-|-|-|-|-|-|-|-	_	128	case	_	_
 127	presenti	praesens	ADJ	a|a|-|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing	128	amod	_	_
-128	die	dies	NOUN	n|n|-|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing	132	conj	_	SpaceAfter=No
+128	die	dies	NOUN	n|n|-|s|-|-|-|m|b|-	Case=Abl|Gender=Masc|Number=Sing	147	obl	_	SpaceAfter=No
 129	,	,	PUNCT	Punc	_	128	punct	_	_
 130	tam	tam	CCONJ	d|d|-|-|-|-|-|-|-|-	_	132	cc	_	_
 131	in	in	ADP	r|r|-|-|-|-|-|-|-|-	_	132	case	_	_
@@ -15472,7 +15472,7 @@
 144	Leo	Leo	PROPN	Propn|n|-|s|-|-|-|m|n|-	Case=Nom|Gender=Masc|Number=Sing	141	nmod	_	_
 145	presbitero	presbyter	NOUN	n|n|-|s|-|-|-|m|a|-	Case=Acc|Gender=Masc|Number=Sing	144	appos	_	_
 146	sint	sum	VERB	v|v|3|p|p|s|a|-|-|-	Aspect=Imp|Mood=Sub|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	128	cop	_	_
-147	potestatem	potestas	NOUN	n|n|-|s|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Sing	128	obl	_	_
+147	potestatem	potestas	NOUN	n|n|-|s|-|-|-|f|b|-	Case=Abl|Gender=Fem|Number=Sing	122	advcl	_	_
 148	suprascripta	suprascriptus	DET	a|a|-|s|-|-|-|f|a|-	Case=Acc|Gender=Fem|Number=Sing|PronType=Dem	149	det	_	_
 149	ecclesia	ecclesia	NOUN	n|n|-|s|-|-|-|f|a|-	Case=Acc|Gender=Fem|Number=Sing	160	nmod	_	_
 150	sancte	sanctus	ADJ	a|a|-|s|-|-|-|f|g|-	Case=Gen|Gender=Fem|Number=Sing	151	amod	_	_

@@ -470,12 +470,7 @@ for node in doc.nodes:
     if node.deprel == 'appos' and node.parent.upos in ['NOUN', 'PROPN']:
         pron = [k for k in node.children if k.feats['PronType'] == 'Rel']
         if pron:
-            node.deprel = 'acl:relcl'
-            
-                
-    # xcomp:pred
-    if node.deprel == 'xcomp' and node.upos != 'VERB':
-        node.deprel = 'xcomp:pred'        
+            node.deprel = 'acl:relcl'       
 
 
     if node.lemma in ['quoniam', 'tamquam'] and node.deprel not in ['conj', 'root']:
@@ -528,6 +523,14 @@ for node in doc.nodes:
                 elif node.parent.upos == 'NOUN':
                     node.parent.deprel = 'acl'    
                     
+    
+    if node.deprel == 'xcomp:pred':
+        node.deprel = 'xcomp'
+    if node.feats['Clitic']:
+        node.feats['Clitic'] = ''
+    if node.feats['ConjType']:
+        node.feats['ConjType'] = ''
+             
                         
     # reattach cc and punct to second conjunct
     conv.reattach_coordinations(node)
@@ -636,9 +639,9 @@ for node in doc.nodes:
             ante.parent = node.parent
         else:
             ante.parent = node.parent.parent
-        # node.parent è giusto
+        # node.parent is correct
         if node.deprel == 'advcl':
-            node.deprel = 'advcl:cmp' # era già advcl
+            node.deprel = 'advcl:cmp' # already advcl
     
     # ut
     if node.lemma == 'ut' and node.upos == 'ADV' and node.parent.deprel in ['advcl', 'dislocated']: # ADV upos was assigned to comparative ut

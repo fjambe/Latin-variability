@@ -403,6 +403,12 @@ for node in doc.nodes:
 		name.parent = node
 
 
+    if node.deprel == 'xcomp:pred':
+        node.deprel = 'xcomp'
+    if node.feats['Clitic']:
+        node.feats['Clitic'] = ''
+    if node.feats['ConjType']:
+        node.feats['ConjType'] = ''
 		
 # second round of corrections, after the first ones are in place		
 for node in doc.nodes:	

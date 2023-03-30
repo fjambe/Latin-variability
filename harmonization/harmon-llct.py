@@ -213,6 +213,14 @@ for node in doc.nodes:
 					if d != sib[0]:
 						d.parent = sib[0]				
 	
+	
+    if node.deprel == 'xcomp:pred':
+        node.deprel = 'xcomp'
+    if node.feats['Clitic']:
+        node.feats['Clitic'] = ''
+    if node.feats['ConjType']:
+        node.feats['ConjType'] = ''
+	
 						
 	# final reattachment of coordinations, since sometimes the previous modifications led to incorrect dependencies				
 	conv.reattach_coordinations(node)
