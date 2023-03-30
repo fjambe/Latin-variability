@@ -10,7 +10,7 @@ import udapi
 
 treebank = sys.argv[1]
 split = sys.argv[2] # train/dev/test
-morpho_folder = '/lnet/work/people/gamba/GitHub/morpho_harmonization/morpho-harmonized-treebanks/'
+morpho_folder = f'/lnet/work/people/gamba/GitHub/morpho_harmonization/morpho-harmonized-treebanks/UD_Latin-{treebank}'
 if treebank == 'ITTB':
     filename = f'/lnet/work/people/gamba/GitHub/harmonization/harmonized-treebanks/UD_Latin-ITTB/HM-la_ittb-ud-{split}.conllu'
 elif treebank == 'LLCT':

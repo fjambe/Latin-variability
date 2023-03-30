@@ -10,7 +10,7 @@ import udapi
 
 treebank = sys.argv[1]
 split = sys.argv[2] # train/dev/test
-morpho_folder = '/lnet/work/people/gamba/GitHub/morpho_harmonization/morpho-harmonized-treebanks/'
+morpho_folder = f'/lnet/work/people/gamba/GitHub/morpho_harmonization/morpho-harmonized-treebanks/UD_Latin-{treebank}'
 if treebank == 'Perseus':
     filename = f'/lnet/work/people/gamba/UNIDEPS/UD_Latin-Perseus/la_perseus-ud-{split}.conllu'
 elif treebank == 'PROIEL':

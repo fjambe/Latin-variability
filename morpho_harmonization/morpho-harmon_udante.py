@@ -10,7 +10,7 @@ import udapi
 
 split = sys.argv[1] # train/dev/test
 treebank = 'UDante'
-morpho_folder = '/lnet/work/people/gamba/GitHub/morpho_harmonization/morpho-harmonized-treebanks/'
+morpho_folder = f'/lnet/work/people/gamba/GitHub/morpho_harmonization/morpho-harmonized-treebanks/UD_Latin-{treebank}'
 filename = f'/lnet/work/people/gamba/GitHub/harmonization/harmonized-treebanks/UD_Latin-UDante/HM-la_udante-ud-{split}.conllu'
 doc = udapi.Document(filename)
 
