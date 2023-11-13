@@ -308,12 +308,12 @@ for node in doc.nodes:
 						if s[0].feats['Voice'] == 'Pass':
 							node.deprel = 'nsubj:pass'
 							
-    if node.deprel == 'xcomp:pred':
-        node.deprel = 'xcomp'
-    if node.feats['Clitic']:
-        node.feats['Clitic'] = ''
-    if node.feats['ConjType']:
-        node.feats['ConjType'] = ''
+if node.deprel == 'xcomp:pred':
+	node.deprel = 'xcomp'
+if node.feats['Clitic']:
+	node.feats['Clitic'] = ''
+if node.feats['ConjType']:
+	node.feats['ConjType'] = ''
 
 
 # second round of interventions, after the first ones are in place
