@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 
-'''
+"""
 Script for morphological harmonisation of Perseus and PROIEL Latin treebanks.
 Usage: python3 morpho-harmon_pro-per.py Treebank train/(dev)/test
-'''
+"""
 
 import sys
 import udapi
 
 treebank = sys.argv[1]
-split = sys.argv[2] # train/dev/test
+split = sys.argv[2]  # train/dev/test
 morpho_folder = f'/lnet/work/people/gamba/GitHub/morpho_harmonization/morpho-harmonized-treebanks/UD_Latin-{treebank}'
 if treebank == 'Perseus':
     filename = f'/lnet/work/people/gamba/UNIDEPS/UD_Latin-Perseus/la_perseus-ud-{split}.conllu'
@@ -25,7 +25,6 @@ elif split == 'dev':
 elif split == 'test':
     from PROIEL_manual_corrections import test as store_dict
 
-
 if treebank == 'PROIEL':
 
     for node in doc.nodes:
@@ -33,14 +32,15 @@ if treebank == 'PROIEL':
         # replicating manual corrections
         # first, features
         # searching for a match; if match is found, apply changes
-        if any(match for match in store_dict['feats_info'] if match[0] == node.address()): 
+        if any(match for match in store_dict['feats_info'] if match[0] == node.address()):
             match = [match for match in store_dict['feats_info'] if match[0] == node.address()]
             match = match[0]
-            if match[1] == node.lemma: # compare lemma; right now, always the case
+            if match[1] == node.lemma:  # compare lemma; right now, always the case
                 old_annotation = match[2]
                 new_annotation = match[3]
                 if old_annotation and old_annotation[0] != '_':
-                    temp_dict = {item.split('=')[0]: item.split('=')[1] for item in old_annotation} # old feats to be changed
+                    temp_dict = {item.split('=')[0]: item.split('=')[1] for item in
+                                 old_annotation}  # old feats to be changed
                     for k in temp_dict:
                         for new_feat in new_annotation:
                             if new_feat.split('=')[0] == k:
@@ -49,23 +49,22 @@ if treebank == 'PROIEL':
                                 node.feats[k] = ''
                     if new_annotation and new_annotation[0] != '_':
                         for new_feat in new_annotation:
-                            f,v = new_feat.split('=')[0], new_feat.split('=')[1]
+                            f, v = new_feat.split('=')[0], new_feat.split('=')[1]
                             if f not in temp_dict:
                                 node.feats[f] = v
                     elif new_annotation and new_annotation[0] == '_':
                         node.feats = ''
                 else:
                     for new_feat in new_annotation:
-                        f,v = new_feat.split('=')[0], new_feat.split('=')[1]
+                        f, v = new_feat.split('=')[0], new_feat.split('=')[1]
                         node.feats[f] = v
 
         # then, UPOS tags
         # searching for a match; if match is found, apply changes
         if any(match for match in store_dict['upos_info'] if match[0] == node.address()):
-            match = [match for match in store_dict['upos_info'] if match[0] == node.address()][0] # only one match
-            if match[1] == node.lemma: # compare lemma; right now, always the case
-                node.upos = match[3] # new UPOS tag       
-
+            match = [match for match in store_dict['upos_info'] if match[0] == node.address()][0]  # only one match
+            if match[1] == node.lemma:  # compare lemma; right now, always the case
+                node.upos = match[3]  # new UPOS tag
 
         # correction of previous bugs (in syntax harmonisation)
         if node.lemma == 'nonae':
@@ -122,12 +121,14 @@ if treebank == 'PROIEL':
         # other
         if node.lemma == 'se' and node.upos == 'PRON':
             node.lemma = 'sui'
-            
-            
+
 # not treebank-specific
 for node in doc.nodes:
 
-    if node.lemma == 'nihil' and node.upos in ['ADJ', 'NOUN']: # respectively in Perseus and PROIEL
+    if node.deprel == 'xcomp:pred':
+        node.deprel = 'xcomp'
+
+    if node.lemma == 'nihil' and node.upos in ['ADJ', 'NOUN']:  # respectively in Perseus and PROIEL
         node.upos = 'PRON'
 
     if node.upos in ['VERB', 'AUX']:
@@ -144,7 +145,7 @@ for node in doc.nodes:
                 node.misc['TraditionalMood'], node.misc['TraditionalTense'] = 'Participium', 'Perfectum'
 
         if not node.feats['Aspect']:
-            if node.feats['Tense'] in ['Pres', 'Fut'] and node.feats['VerbForm'] != 'Part': # Aspect is already specified (Perf) for forms like voluerit, monstraro
+            if node.feats['Tense'] in ['Pres', 'Fut'] and node.feats['VerbForm'] != 'Part':  # Aspect is already specified (Perf) for forms like voluerit, monstraro
                 node.feats['Aspect'] = 'Imp'
             elif node.feats['Tense'] == 'Pqp':
                 node.feats['Aspect'] = 'Perf'
@@ -160,30 +161,30 @@ for node in doc.nodes:
             node.feats['VerbForm'], node.feats['Tense'], node.feats['Voice'], node.feats['Aspect'] = 'Conv', '', 'Act', 'Prosp'
             node.feats['Gender'], node.feats['Number'] = 'Masc', 'Sing'
             node.misc['TraditionalMood'] = 'Sup'
-        if node.feats['Mood'] == 'Ind':
-            node.misc['TraditionalMood'] = 'Indicativus'
-        if node.feats['Mood'] == 'Sub':
-            node.misc['TraditionalMood'] = 'Subiunctivus'
-        if node.feats['Mood'] == 'Imp':
-            node.misc['TraditionalMood'] = 'Imperativus'
+        elif node.feats['VerbForm'] == 'Inf':
+            aspect_mapping = {'Imp': 'Praesens', 'Inch': 'Praesens', 'Perf': 'Perfectum', 'Prosp': 'Futurum'}
+            node.feats['Tense'] = ''
+            node.misc['TraditionalMood'] = 'Infinitivus'
+            if node.feats['InflClass[nominal]']:
+                node.feats['InflClass[nominal]'] = ''
+            if node.feats['Aspect'] in aspect_mapping:
+                node.misc['TraditionalTense'] = aspect_mapping[node.feats['Aspect']]
         if node.feats['Mood'] in ['Imp', 'Ind', 'Sub']:
-            if node.feats['Tense'] == 'Pres':
-                node.misc['TraditionalTense'] = 'Praesens'
-            elif node.feats['Tense'] == 'Fut':
-                node.misc['TraditionalTense'] = 'Futurum'
+            mood_mapping = {'Ind': 'Indicativus', 'Sub': 'Subiunctivus', 'Imp': 'Imperativus'}
+            node.misc['TraditionalMood'] = mood_mapping[node.feats['Mood']]
+            tense_mapping = {'Pres': 'Praesens', 'Pqp': 'Plusquamperfectum', 'Fut': 'Futurum'}
+            if node.feats['Tense'] in tense_mapping:
+                node.misc['TraditionalTense'] = tense_mapping[node.feats['Tense']]
             elif node.feats['Tense'] == 'Past' and node.feats['Aspect'] == 'Perf':
                 node.misc['TraditionalTense'] = 'Perfectum'
             elif node.feats['Tense'] == 'Past' and node.feats['Aspect'] == 'Imp':
                 node.misc['TraditionalTense'] = 'Imperfectum'
-            elif node.feats['Tense'] == 'Pqp':
-                node.misc['TraditionalTense'] = 'Plusquamperfectum'
     if node.upos == 'AUX':
         node.feats['Voice'] = ''
 
-    
     # determiners and pronouns
     if node.lemma in ['nihil', 'aliquis', 'nemo', 'ecquis', 'quisquis'] and node.upos == 'DET':
-            node.upos = 'PRON'
+        node.upos = 'PRON'
     if node.lemma in ['aliquot', 'quotus', 'quispiam', 'uter'] and node.upos in ['NUM', 'PRON']:
         node.upos = 'DET'
         if node.deprel == 'nummod':
@@ -203,11 +204,10 @@ for node in doc.nodes:
             node.upos = 'PRON'
     if node.form.lower() == 'amplius' and node.lemma == 'amplus' and node.upos in ['ADV', 'PRON']:
         node.lemma, node.upos, node.feats = 'ample', 'ADV', 'Degree=Cmp'
-    
+
     # other
     if node.lemma == 'autem' and node.upos == 'CCONJ':
         node.upos, node.deprel, node.misc['ToDo'] = 'PART', 'discourse', ''
-
 
 # second round, not treebank-specific
 for node in doc.nodes:
@@ -240,7 +240,8 @@ for node in doc.nodes:
         elif node.lemma == 'qui' and (node.parent.deprel == 'acl:relcl' or node.misc['LId'] == 'quis2'):
             node.feats['PronType'] = 'Rel'
         elif node.lemma == 'quis':
-            #if node.misc['LId'] == 'quis2' or (node.misc['LId'] == 'quis1' and node.parent.deprel == 'acl'): # LId is specific of Perseus
+            # if node.misc['LId'] == 'quis2' or (node.misc['LId'] == 'quis1' and node.parent.deprel == 'acl'):
+            # LId is specific of Perseus
             if node.parent.deprel == 'acl':
                 node.lemma = 'qui'
                 node.feats['PronType'] = 'Rel'
@@ -262,7 +263,6 @@ for node in doc.nodes:
         if si and node.lemma == 'quis' and si[0] < node:
             node.feats['PronType'] = 'Ind'
 
-
     if node.upos == 'DET':
         if node.lemma in ['suus', 'meus', 'noster', 'tuus', 'uester', 'vester', 'voster']:
             node.feats['PronType'] = 'Prs'
@@ -278,41 +278,49 @@ for node in doc.nodes:
                 node.feats['Person[psor]'], node.feats['Number[psor]'] = '2', 'Plur'
             if node.lemma == 'suus':
                 node.feats['Person[psor]'] = '3'
-        elif node.lemma in ['aliquot', 'quidam', 'quivis', 'nullus', 'nonnullus', 'aliqui', 'qui', 'quilibet', 'unus', 'ullus', 'multus', 'plures', 'complura', 'complures', 'quamplures', 'quisque', 'paucus', 'reliquus', 'plerusque', 'aliqualis', 'quisquam', 'quispiam', 'qualiscumque']:
-                node.feats['PronType'] = 'Ind'
-                if node.lemma == 'complura':
-                    node.lemma = 'complures'
-                if node.lemma in ['aliquot', 'multus', 'plures', 'complures', 'quamplures', 'paucus']:
-                    node.feats['NumType'] = 'Card'
-                    if node.form.lower() == 'plus' and not node.feats['Gender']:
-                        node.feats['Gender'] = 'Neut'
+        elif node.lemma in ['aliquot', 'quidam', 'quivis', 'nullus', 'nonnullus', 'aliqui', 'qui', 'quilibet', 'unus',
+                            'ullus', 'multus', 'plures', 'complura', 'complures', 'quamplures', 'quisque', 'paucus',
+                            'reliquus', 'plerusque', 'aliqualis', 'quisquam', 'quispiam', 'qualiscumque']:
+            node.feats['PronType'] = 'Ind'
+            if node.lemma == 'complura':
+                node.lemma = 'complures'
+            if node.lemma in ['aliquot', 'multus', 'plures', 'complures', 'quamplures', 'paucus']:
+                node.feats['NumType'] = 'Card'
+                if node.form.lower() == 'plus' and not node.feats['Gender']:
+                    node.feats['Gender'] = 'Neut'
         elif node.lemma in ['omnis', 'totus', 'ambo', 'cunctus', 'unusquisque', 'uniuersus']:
-                node.feats['PronType'] = 'Tot'
+            node.feats['PronType'] = 'Tot'
         elif node.lemma in ['qualis', 'quantus', 'quicumque', 'quot']:
-                node.feats['PronType'] = 'Rel'
+            node.feats['PronType'] = 'Rel'
         elif node.lemma in ['qui', 'quot']:
-                node.feats['PronType'] = 'Int'
-        elif node.lemma in ['hic', 'ipse', 'ille', 'tantus', 'talis', 'is', 'iste', 'eiusmodi', 'huiusmodi', 'idem', 'totidem', 'tot']:
-                node.feats['PronType'] = 'Dem'
-                if node.lemma == 'ipse':
-                    node.feats['Person'] = ''
+            node.feats['PronType'] = 'Int'
+        elif node.lemma in ['hic', 'ipse', 'ille', 'tantus', 'talis', 'is', 'iste', 'eiusmodi', 'huiusmodi', 'idem',
+                            'totidem', 'tot']:
+            node.feats['PronType'] = 'Dem'
+            if node.lemma == 'ipse':
+                node.feats['Person'] = ''
         elif node.lemma in ['alius', 'alter', 'solus', 'ceterus', 'alteruter', 'neuter', 'uter', 'uterque']:
-                node.feats['PronType'] = 'Con'
+            node.feats['PronType'] = 'Con'
         if node.parent.lemma == 'dies' and ',' in node.parent.feats['Gender']:
             node.parent.feats['Gender'] = 'Masc'
             node.feats['Gender'] = node.parent.feats['Gender']
 
-
     if node.upos == 'NUM':
-        if node.lemma in ['unus', 'duo', 'tres', 'quattuor', 'quinque', 'sex', 'septem', 'octo', 'novem', 'decem', 'undecim', 'duodecim', 'quattuordecim', 'quindecim', 'sedecim', 'septendecim', 'duodeviginti', 'undeviginti', 'uiginti', 'viginti', 'duodetreginta', 'triginta', 'quadraginta', 'quinquaginta', 'sexaginta', 'septuaginta', 'octoginta', 'centum', 'ducenti', 'trecenti', 'quadringenti', 'quingenti', 'sescenti', 'octingenti', 'octogenti', 'mille', 'milia']:
+        if node.lemma in ['unus', 'duo', 'tres', 'quattuor', 'quinque', 'sex', 'septem', 'octo', 'novem', 'decem',
+                          'undecim', 'duodecim', 'quattuordecim', 'quindecim', 'sedecim', 'septendecim', 'duodeviginti',
+                          'undeviginti', 'uiginti', 'viginti', 'duodetreginta', 'triginta', 'quadraginta',
+                          'quinquaginta', 'sexaginta', 'septuaginta', 'octoginta', 'centum', 'ducenti', 'trecenti',
+                          'quadringenti', 'quingenti', 'sescenti', 'octingenti', 'octogenti', 'mille', 'milia']:
             node.feats['NumType'] = 'Card'
             node.feats['NumForm'] = 'Word'
-        if node.lemma.lower() in ['ii', 'iii', 'iiii', 'iv', 'v', 'vi', 'vii', 'viii', 'x', 'xi', 'xii', 'xiii', 'xiiii', 'xv', 'xvi', 'xvii', 'xxviii', 'dc']:
+        if node.lemma.lower() in ['ii', 'iii', 'iiii', 'iv', 'v', 'vi', 'vii', 'viii', 'x', 'xi', 'xii', 'xiii',
+                                  'xiiii', 'xv', 'xvi', 'xvii', 'xxviii', 'dc']:
             node.feats['NumType'] = 'Card'
             node.feats['NumForm'] = 'Roman'
             if node.feats['Number'] or node.feats['Gender'] or node.feats['Case']:
                 node.feats['Number'], node.feats['Gender'], node.feats['Case'] = '', '', ''
-        if node.lemma in ['primus', 'secundus', 'tertius', 'quartus', 'quintus', 'sextus', 'decimus', 'undecimus', 'duodecimus', 'vicesimus', 'vigesimus', 'septuagensumus', 'millesimus']:
+        if node.lemma in ['primus', 'secundus', 'tertius', 'quartus', 'quintus', 'sextus', 'decimus', 'undecimus',
+                          'duodecimus', 'vicesimus', 'vigesimus', 'septuagensumus', 'millesimus']:
             node.upos = 'ADJ'
             if node.deprel == 'nummod':
                 node.deprel = 'amod'
@@ -326,15 +334,15 @@ for node in doc.nodes:
             node.parent.feats['Gender'] = 'Masc'
             node.feats['Gender'] = node.parent.feats['Gender']
 
-
     if node.upos == 'ADJ':
-        if node.lemma in ['primus', 'secundus', 'tertius', 'quartus', 'quintus', 'sextus', 'septimus', 'octavus', 'nonus', 'decimus', 'undecimus', 'duodecimus', 'vicesimus', 'vigesimus', 'septuagensumus', 'millesimus']:
+        if node.lemma in ['primus', 'secundus', 'tertius', 'quartus', 'quintus', 'sextus', 'septimus', 'octavus',
+                          'nonus', 'decimus', 'undecimus', 'duodecimus', 'vicesimus', 'vigesimus', 'septuagensumus',
+                          'millesimus']:
             node.feats['NumType'] = 'Ord'
         if node.lemma == 'nemo':
             node.upos = 'PRON'
             node.feats['PronType'], node.feats['Polarity'] = 'Ind', 'Neg'
             node.feats['Gender'], node.feats['Number'] = '', ''
-
 
     if node.feats['Degree'] == 'Pos':
         node.feats['Degree'] = ''
@@ -344,7 +352,6 @@ for node in doc.nodes:
 
     if node.feats['Clitic']:
         node.feats['Clitic'] = ''
-
 
     if treebank == 'PROIEL':
         if (node.upos in ['ADJ', 'DET', 'PRON', 'NUM'] and node.deprel in ['amod', 'det', 'nummod']) or (node.feats['VerbForm'] == 'Part' and node.deprel in ['acl', 'orphan']):
@@ -382,7 +389,6 @@ for node in doc.nodes:
                     node.next_node.parent = conj
         node.misc['ToDo'] = ''
 
-
 # third round, following correction of pronouns and determiners
 for node in doc.nodes:
 
@@ -398,11 +404,11 @@ for node in doc.nodes:
         success = None
         if node.deprel == 'conj' and (node.feats['VerbForm'] == 'Part' or node.upos in ['ADJ', 'DET']):
             conjuncts = [c for c in node.siblings if c.deprel == 'conj' and (c.upos == 'ADJ' or c.feats['VerbForm'] == 'Part')]
-            if (node.parent.feats['Gender'] and not ',' in node.parent.feats['Gender']) and (node.parent.upos in ['ADJ', 'DET'] or node.parent.feats['VerbForm'] == 'Part' or (node.parent.upos == 'PRON' and node.parent.feats['PronType'] not in ['Prs', 'Rcp'])):
+            if (node.parent.feats['Gender'] and ',' not in node.parent.feats['Gender']) and (node.parent.upos in ['ADJ', 'DET'] or node.parent.feats['VerbForm'] == 'Part' or (node.parent.upos == 'PRON' and node.parent.feats['PronType'] not in ['Prs', 'Rcp'])):
                 node.feats['Gender'] = node.parent.feats['Gender']
             elif conjuncts:
                 for c in conjuncts:
-                    if c.feats['Gender'] and not ',' in c.feats['Gender']:
+                    if c.feats['Gender'] and ',' not in c.feats['Gender']:
                         node.feats['Gender'] = c.feats['Gender']
                         success = True
                         break
@@ -415,16 +421,18 @@ for node in doc.nodes:
         # e.g., civitates in quibus
         if node.feats['PronType'] == 'Rel' and node.parent.deprel == 'acl:relcl' and node.upos == 'PRON':
             grandparent = node.parent.parent
-            if grandparent.feats['Gender'] and not ',' in grandparent.feats['Gender']:
+            if grandparent.feats['Gender'] and ',' not in grandparent.feats['Gender']:
                 node.feats['Gender'] = grandparent.feats['Gender']
 
         # advcl:abs
         if node.deprel == 'advcl:abs':
-            nsubj = [c for c in node.children if c.udeprel == 'nsubj' and c.feats['Gender'] and not ',' in c.feats['Gender']]
+            nsubj = [c for c in node.children if
+                     c.udeprel == 'nsubj' and c.feats['Gender'] and ',' not in c.feats['Gender']]
             if nsubj:
                 node.feats['Gender'] = nsubj[0].feats['Gender']
-        if node.udeprel == 'nsubj' and node.parent.deprel == 'advcl:abs' and (node.upos != 'PRON' and node.feats['PronType'] not in ['Prs', 'Rcp']):
-            if node.parent.feats['Gender'] and not ',' in node.parent.feats['Gender']: #verifica
+        if node.udeprel == 'nsubj' and node.parent.deprel == 'advcl:abs' and (
+                node.upos != 'PRON' and node.feats['PronType'] not in ['Prs', 'Rcp']):
+            if node.parent.feats['Gender'] and ',' not in node.parent.feats['Gender']:  # verifica
                 node.feats['Gender'] = node.parent.feats['Gender']
 
         # cum sollicitior esset … profectus
@@ -450,7 +458,7 @@ for node in doc.nodes:
             node.feats['Gender'] = 'Masc'
         if node.lemma == 'scrobis':
             node.feats['Gender'] = 'Fem'
-        
+
         # dies
         if node.lemma == 'dies' and node.feats['Gender'] == 'Fem,Masc':
             genitive = [k for k in node.children if k.deprel == 'nmod' and node.feats['Case'] == 'Gen']
@@ -458,16 +466,18 @@ for node in doc.nodes:
                 node.feats['Gender'] = 'Fem'
             else:
                 node.feats['Gender'] = 'Masc'
-                children = [c for c in node.children if c.feats['Case'] == node.feats['Case'] and c.feats['Number'] == node.feats['Number']]
+                children = [c for c in node.children if
+                            c.feats['Case'] == node.feats['Case'] and c.feats['Number'] == node.feats['Number']]
                 if children:
                     for c in children:
                         c.feats['Gender'] = node.feats['Gender']
 
-    if node.upos in ['ADJ', 'DET'] or (node.feats['VerbForm'] == 'Part' and node.misc['TraditionalMood'] == 'Participium') or (node.upos == 'PRON' and node.feats['PronType'] not in ['Prs', 'Rcp']):
-        nsubj = [n for n in node.children if n.udeprel == 'nsubj' and n.feats['Gender'] and not ',' in n.feats['Gender']]
+    if node.upos in ['ADJ', 'DET'] or (
+            node.feats['VerbForm'] == 'Part' and node.misc['TraditionalMood'] == 'Participium') or (node.upos == 'PRON' and node.feats['PronType'] not in ['Prs', 'Rcp']):
+        nsubj = [n for n in node.children if
+                 n.udeprel == 'nsubj' and n.feats['Gender'] and not ',' in n.feats['Gender']]
         if nsubj:
             node.feats['Gender'] = nsubj[0].feats['Gender']
-
 
     # specific corrections
     if node.address() in ['26946#4', '33507#14']:
