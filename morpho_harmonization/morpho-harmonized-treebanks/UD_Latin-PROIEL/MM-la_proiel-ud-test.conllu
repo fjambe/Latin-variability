@@ -14945,11 +14945,11 @@
 # sent_id = 84869
 # text = ὁ δὲ οὐκ ἐμπάζετο μύθων
 # source = Epistulae ad Atticum, Book 4, letter 7
-1	ὁ	greek.expression	X	F-	_	2	nsubj	_	Ref=4.7.3
-2	δὲ	greek.expression	X	F-	_	0	root	_	Ref=4.7.3
-3	οὐκ	greek.expression	X	F-	_	2	flat:foreign	_	Ref=4.7.3
-4	ἐμπάζετο	greek.expression	X	F-	_	2	flat:foreign	_	Ref=4.7.3
-5	μύθων	greek.expression	X	F-	_	2	obl:arg	_	Ref=4.7.3
+1	ὁ	greek.expression	X	F-	Foreign=Yes	2	nsubj	_	Ref=4.7.3
+2	δὲ	greek.expression	X	F-	Foreign=Yes	0	root	_	Ref=4.7.3
+3	οὐκ	greek.expression	X	F-	Foreign=Yes	2	flat:foreign	_	Ref=4.7.3
+4	ἐμπάζετο	greek.expression	X	F-	Foreign=Yes	2	flat:foreign	_	Ref=4.7.3
+5	μύθων	greek.expression	X	F-	Foreign=Yes	2	obl:arg	_	Ref=4.7.3
 
 # sent_id = 84870
 # text = quod superest etiam puerum Ciceronem curabis et amabis ut facis
