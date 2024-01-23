@@ -14992,7 +14992,7 @@
 10	a	ante	ADP	Df	Abbr=Yes|AdpType=Prep	11	case	_	DeletedPunct=.|Ref=5.18.1
 11	d	dies	NOUN	_	Abbr=Yes|Case=Acc|Gender=Masc|Number=Sing	16	obl:tmod	_	DeletedPunct=.
 12	x	x	NUM	_	NumForm=Roman|NumType=Card	11	nummod	_	_
-13	iiii	iiii	NUM	Df	NumForm=Roman|NumType=Card	10	fixed	_	Ref=5.18.1
+13	iiii	iiii	NUM	Df	NumForm=Roman|NumType=Card	12	flat	_	Ref=5.18.1
 14	Kal	kalendae	NOUN	Df	Abbr=Yes|Gender=Fem|Number=Plur	11	nmod	_	Ref=5.18.1
 15	Sextil	Sextilis	ADJ	Df	Abbr=Yes|Gender=Fem|Number=Plur	14	amod	_	Ref=5.18.1
 16	datas	do	VERB	V-	Aspect=Perf|Case=Acc|Gender=Fem|Number=Plur|VerbForm=Part|Voice=Pass	9	acl	_	Ref=5.18.1|TraditionalMood=Participium|TraditionalTense=Perfectum
