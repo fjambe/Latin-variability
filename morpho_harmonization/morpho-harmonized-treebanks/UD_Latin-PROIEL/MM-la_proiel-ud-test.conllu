@@ -11269,7 +11269,7 @@
 4	Cornelio	Cornelius	PROPN	Ne	Case=Abl|Gender=Masc|Number=Sing	3	flat:name	_	Ref=1.13.1
 5	quam	qui	PRON	Pr	Case=Acc|Gender=Fem|Number=Sing|PronType=Rel	11	obj	_	Ref=1.13.1
 6	Tribus	Tres	PROPN	Ne	Case=Abl|Gender=Fem|Number=Plur	11	obl	_	Ref=1.13.1
-7	Tabernis	Tabernae	PROPN	Ne	Case=Abl|Gender=Fem|Number=Plur	6	fixed	_	Ref=1.13.1
+7	Tabernis	Tabernae	PROPN	Ne	Case=Abl|Gender=Fem|Number=Plur	6	flat:name	_	Ref=1.13.1
 8	ut	ut	SCONJ	Dq	PronType=Rel	9	mark	_	Ref=1.13.1
 9	opinor	opinor	VERB	V-	Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Pass	11	advcl:cmp	_	Ref=1.13.1|TraditionalMood=Indicativus|TraditionalTense=Praesens
 10	ei	is	PRON	Pp	Case=Dat|Gender=Masc|Number=Sing|Person=3|PronType=Prs	11	obl:arg	_	Ref=1.13.1
