@@ -17642,7 +17642,7 @@
 14	numerus	numerus	NOUN	Nb	Case=Nom|Gender=Masc|Number=Sing	16	nsubj	_	Ref=4.15.3
 15	capitum	caput	NOUN	Nb	Case=Gen|Gender=Neut|Number=Plur	14	nmod	_	Ref=4.15.3
 16	quadringentorum	quadringenti	NUM	Ma	NumForm=Word|NumType=Card	9	advcl	_	Ref=4.15.3
-17	triginta	triginta	NUM	Ma	NumForm=Word|NumType=Card	16	fixed	_	Ref=4.15.3
+17	triginta	triginta	NUM	Ma	NumForm=Word|NumType=Card	16	flat	_	Ref=4.15.3
 18	milium	mille	NUM	Ma	Case=Gen|Gender=Neut|Number=Plur|NumForm=Word|NumType=Card	16	nmod	_	Ref=4.15.3
 19	fuisset	sum	AUX	V-	Aspect=Perf|Mood=Sub|Number=Sing|Person=3|Tense=Pqp|VerbForm=Fin	16	cop	_	Ref=4.15.3|TraditionalMood=Subiunctivus|TraditionalTense=Plusquamperfectum
 20	se	sui	PRON	Pk	Case=Acc|Number=Plur|Person=3|PronType=Prs|Reflex=Yes	23	obj	_	Ref=4.15.3
