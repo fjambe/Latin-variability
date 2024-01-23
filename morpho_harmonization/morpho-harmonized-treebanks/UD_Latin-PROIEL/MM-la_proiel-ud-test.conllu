@@ -14833,8 +14833,8 @@
 1	de	de	ADP	R-	AdpType=Prep	2	case	_	Ref=4.7.2
 2	Metello	Metellus	PROPN	Ne	Case=Abl|Gender=Masc|Number=Sing	0	root	_	Ref=4.7.2
 3	οὐχ	greek.expression	X	F-	_	2	ccomp	_	Ref=4.7.2
-4	ὁσίη	greek.expression	X	F-	_	3	flat:foreign	_	Ref=4.7.2
-5	φθιμένοισιν	greek.expression	X	F-	_	3	orphan	_	Ref=4.7.2
+4	ὁσίη	greek.expression	X	F-	Foreign=Yes	3	flat:foreign	_	Ref=4.7.2
+5	φθιμένοισιν	greek.expression	X	F-	Foreign=Yes	3	orphan	_	Ref=4.7.2
 6	sed	sed	CCONJ	C-	_	13	cc	_	Ref=4.7.2
 7	tamen	tamen	ADV	Df	_	13	advmod	_	Ref=4.7.2
 8	multis	multus	DET	A-	Case=Abl|Gender=Masc|Number=Plur|NumType=Card|PronType=Ind	9	det	_	Ref=4.7.2
