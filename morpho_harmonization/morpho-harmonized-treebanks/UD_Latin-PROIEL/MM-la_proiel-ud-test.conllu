@@ -10551,7 +10551,7 @@
 5	longior	longus	ADJ	A-	Case=Nom|Degree=Cmp|Gender=Masc|Number=Sing	12	xcomp	_	Ref=2.3.1
 6	quam	quam	SCONJ	Df	PronType=Rel	7	mark	_	LId=1|Ref=2.3.1
 7	centum	centum	NUM	Ma	NumForm=Word|NumType=Card	5	advcl:cmp	_	Ref=2.3.1
-8	uiginti	uiginti	NUM	Ma	NumForm=Word|NumType=Card	7	fixed	_	Ref=2.3.1
+8	uiginti	uiginti	NUM	Ma	NumForm=Word|NumType=Card	7	flat	_	Ref=2.3.1
 9	pedum	pes	NOUN	Nb	Case=Gen|Gender=Masc|Number=Plur	7	nmod	_	Ref=2.3.1
 10	esse	sum	AUX	V-	Aspect=Imp|VerbForm=Inf	5	cop	_	Ref=2.3.1|TraditionalMood=Infinitivus|TraditionalTense=Praesens
 11	non	non	PART	Df	Polarity=Neg	12	advmod:neg	_	Ref=2.3.1
