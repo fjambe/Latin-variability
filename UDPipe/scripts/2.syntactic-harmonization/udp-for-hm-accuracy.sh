@@ -11,7 +11,7 @@ FILE=./udp-hm-parsed-testdata/THESIS-udp-$ltreebank-by-$model.conllu
 
 # Base paths
 BASE_UDP_MODEL_DIR="/lnet/work/people/gamba/UDPipe"
-BASE_HARMONIZED_DIR="/lnet/work/people/gamba/GitHub/harmonization/harmonized-treebanks"
+BASE_HARMONIZED_DIR="/lnet/work/people/gamba/GitHub/syntactic-harmonization/harmonized-treebanks"
 BASE_PARSED_OUTPUT_DIR="./udp-hm-parsed-testdata"
 BASE_MODEL_DIR="./HM-udp-models"
 EVAL_SCRIPT="/lnet/work/people/gamba/conll18_ud_eval.py"

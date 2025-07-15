@@ -11,7 +11,7 @@ ltreebank=${utreebank,,}  # lowercase version
 # Base paths
 BASE_UDP_MODEL_DIR="/lnet/work/people/gamba/UDPipe"
 BASE_MODEL_SUBDIR="$BASE_UDP_MODEL_DIR/udp-harmonisation/morphoharmo/MM-udp-models"
-BASE_HARMONIZED_DIR="/lnet/work/people/gamba/GitHub/morpho_harmonization/morpho-harmonized-treebanks"
+BASE_HARMONIZED_DIR="/lnet/work/people/gamba/GitHub/morpho-harmonization/morpho-harmonized-treebanks"
 BASE_PARSED_OUTPUT_DIR="./udp-mm-parsed-testdata"
 EVAL_SCRIPT="/lnet/work/people/gamba/conll18_ud_eval.py"
 

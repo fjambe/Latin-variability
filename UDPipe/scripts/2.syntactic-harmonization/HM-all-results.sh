@@ -4,7 +4,7 @@ arg1_values=(ittb llct perseus proiel udante)
 arg2_values=(ITTB LLCT Perseus PROIEL UDante)
 
 MAX_JOBS=4
-RESULTS_FILE="222THESIS-HM-all-results.csv"
+RESULTS_FILE="THESIS-HM-all-results.csv"
 TMP_DIR="./tmp-results"
 mkdir -p "$TMP_DIR"
 
